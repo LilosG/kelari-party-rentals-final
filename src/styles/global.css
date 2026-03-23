@@ -1,70 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+@import "./tokens.css";
 @import "tailwindcss";
 
-/* ── Tailwind CSS 4 Theme ──────────────────────────────────────────────────── */
+/* ── Tailwind CSS 4 Theme ───────────────────────────────────────────────── */
 
 @theme {
-  /* Brand colors (new token system) */
-  --color-brand-pink: #FF6F9C;
-  --color-brand-pink-light: #FFB6D9;
-  --color-brand-pink-dark: #C43068;
-  --color-brand-dark: #222222;
-  --color-brand-dark-soft: #2A2A2A;
-  --color-accent-sage: #A8C5A0;
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-pink-light: var(--brand-pink-light);
+  --color-brand-pink-dark: var(--brand-pink-dark);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-dark-soft: var(--brand-dark-soft);
+  --color-accent-sage: var(--accent-sage);
 
-  /* Legacy color tokens (keep for existing component references) */
-  --color-primary: #FF6F9C;
-  --color-primary-light: #F2D9E7;
-  --color-primary-dark: #9E2F5E;
-  --color-dark: #1C1C1E;
-  --color-dark-card: #252528;
-  --color-muted: #6B7280;
-  --color-soft-bg: #FDF8FA;
-  --color-border: #EDE0E8;
+  /* Legacy aliases retained for existing utility usage */
+  --color-primary: var(--brand-primary);
+  --color-primary-light: var(--brand-surface);
+  --color-primary-dark: var(--brand-primary-hover);
+  --color-dark: var(--brand-dark);
+  --color-dark-card: var(--brand-dark-soft);
+  --color-text: var(--brand-dark);
+  --color-muted: var(--neutral-600);
+  --color-soft-bg: var(--surface-soft);
+  --color-border: var(--border-soft);
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-display: var(--brand-font-display);
+  --font-body: var(--brand-font-body);
 
-  --radius-card: 16px;
-  --radius-button: 8px;
+  --radius-card: var(--radius-card);
+  --radius-button: var(--radius-button);
 
-  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 40px rgba(255, 111, 156, 0.18);
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
 }
 
-/* ── CSS Custom Properties ────────────────────────────────────────────────── */
+/* ── CSS Custom Properties consumed by component styles ─────────────────── */
 
 :root {
-  /* Brand colors (new token system) */
-  --color-brand-pink: #FF6F9C;
-  --color-brand-pink-light: #FFB6D9;
-  --color-brand-pink-dark: #C43068;
-  --color-brand-dark: #222222;
-  --color-brand-dark-soft: #2A2A2A;
-  --color-accent-sage: #A8C5A0;
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-pink-light: var(--brand-pink-light);
+  --color-brand-pink-dark: var(--brand-pink-dark);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-dark-soft: var(--brand-dark-soft);
+  --color-accent-sage: var(--accent-sage);
 
-  /* Legacy color tokens (keep for existing component references) */
-  --color-primary: #FF6F9C;
-  --color-primary-light: #F2D9E7;
-  --color-primary-dark: #9E2F5E;
-  --color-dark: #1C1C1E;
-  --color-dark-card: #252528;
-  --color-text: #1C1C1E;
-  --color-muted: #6B7280;
-  --color-soft-bg: #FDF8FA;
-  --color-border: #EDE0E8;
+  --color-primary: var(--brand-primary);
+  --color-primary-light: var(--brand-surface);
+  --color-primary-dark: var(--brand-primary-hover);
+  --color-dark: var(--brand-dark);
+  --color-dark-card: var(--brand-dark-soft);
+  --color-text: var(--brand-dark);
+  --color-muted: var(--neutral-600);
+  --color-soft-bg: var(--surface-soft);
+  --color-border: var(--border-soft);
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "DM Sans", system-ui, sans-serif;
-
-  --radius-card: 16px;
-  --radius-button: 8px;
-
-  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 40px rgba(255, 111, 156, 0.18);
+  --font-display: var(--brand-font-display);
+  --font-body: var(--brand-font-body);
 }
 
-/* ── Base Styles ──────────────────────────────────────────────────────────── */
+/* ── Base Styles ─────────────────────────────────────────────────────────── */
 
 html {
   font-family: var(--font-body);
@@ -74,29 +67,34 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: #525252; /* neutral-600 */
-  background-color: #fff;
+  color: var(--neutral-600);
+  background-color: #FFF;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.15;
-  color: #262626; /* neutral-800 */
+  line-height: var(--line-height-display);
+  color: var(--neutral-800);
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.15;
+  line-height: var(--line-height-display);
   color: var(--color-dark);
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
   display: block;
@@ -111,7 +109,7 @@ a:hover {
   color: var(--color-primary-dark);
 }
 
-/* ── Utility Layers ───────────────────────────────────────────────────────── */
+/* ── Utility Layers ──────────────────────────────────────────────────────── */
 
 @layer components {
   .btn-primary {
@@ -123,7 +121,7 @@ a:hover {
     font-weight: 600;
     font-size: 0.875rem;
     letter-spacing: 0.025em;
-    color: #fff;
+    color: #FFF;
     background-color: var(--color-primary);
     border-radius: var(--radius-button);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -133,8 +131,8 @@ a:hover {
 
   .btn-primary:hover {
     background-color: var(--color-primary-dark);
-    box-shadow: 0 4px 16px rgba(200, 68, 122, 0.3);
-    color: #fff;
+    box-shadow: var(--shadow-button-hover);
+    color: #FFF;
   }
 
   .btn-outline {
@@ -156,7 +154,7 @@ a:hover {
 
   .btn-outline:hover {
     background-color: var(--color-primary);
-    color: #fff;
+    color: #FFF;
   }
 
   .btn-outline-light {
@@ -168,7 +166,7 @@ a:hover {
     font-weight: 600;
     font-size: 0.875rem;
     letter-spacing: 0.025em;
-    color: #fff;
+    color: #FFF;
     background-color: transparent;
     border: 1.5px solid rgba(255, 255, 255, 0.4);
     border-radius: var(--radius-button);
@@ -182,7 +180,7 @@ a:hover {
   }
 
   .card {
-    background-color: #fff;
+    background-color: #FFF;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-card);
     box-shadow: var(--shadow-card);
@@ -204,52 +202,47 @@ a:hover {
     color: var(--color-primary);
   }
 
-  .heading-section {
+  .hero-title {
     font-family: var(--font-display);
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 1.15;
-    color: var(--color-dark);
+    font-size: var(--type-hero-title);
+    font-weight: 700;
+    line-height: var(--line-height-display);
   }
 
-  @media (min-width: 768px) {
-    .heading-section {
-      font-size: 44px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .heading-section {
-      font-size: 48px;
-    }
-  }
-
-  /* Keep backwards compat alias */
+  .section-title,
+  .heading-section,
   .section-heading {
     font-family: var(--font-display);
-    font-size: 36px;
+    font-size: var(--type-section-title);
     font-weight: 600;
-    line-height: 1.15;
+    line-height: var(--line-height-display);
     color: var(--color-dark);
   }
 
-  @media (min-width: 768px) {
-    .section-heading {
-      font-size: 44px;
-    }
+  .lead-paragraph {
+    font-family: var(--font-body);
+    font-size: var(--type-lead-paragraph);
+    line-height: var(--line-height-lead);
+  }
+
+  .card-padding {
+    padding: var(--space-card-padding);
   }
 
   .section-padding {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: var(--space-section-rhythm);
+    padding-bottom: var(--space-section-rhythm);
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
+  .section-padding-compact {
+    padding-top: calc(var(--space-section-rhythm) * 0.7);
+    padding-bottom: calc(var(--space-section-rhythm) * 0.7);
+  }
+
   @media (min-width: 768px) {
     .section-padding {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
       padding-left: 2rem;
       padding-right: 2rem;
     }

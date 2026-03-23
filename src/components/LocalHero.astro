@@ -35,18 +35,13 @@ const {
 
 const resolvedTitle = title ?? headline ?? "";
 const resolvedSubtitle = subtitle ?? subheadline ?? "";
-const resolvedImage =
-  backgroundImage ??
-  bgImage ??
-  "/images/hero-party.jpg";
+const resolvedImage = backgroundImage ?? bgImage ?? "/images/hero-party.jpg";
 
 // Build breadcrumbs from legacy city/service props if not passed directly
 const resolvedBreadcrumbs: { label: string; href: string }[] =
   breadcrumbsProp ??
   (() => {
-    const crumbs: { label: string; href: string }[] = [
-      { label: "Home", href: "/" },
-    ];
+    const crumbs: { label: string; href: string }[] = [{ label: "Home", href: "/" }];
     if (city) {
       crumbs.push({
         label: city,
@@ -90,7 +85,6 @@ const resolvedSecondaryCta = secondaryCta ?? {
   <!-- Content -->
   <div class="relative z-10 w-full">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-
       {resolvedBreadcrumbs.length > 0 && (
         <nav class="mb-6" aria-label="Breadcrumb">
           <ol class="flex flex-wrap items-center gap-1.5 text-sm text-white/70">
@@ -117,29 +111,28 @@ const resolvedSecondaryCta = secondaryCta ?? {
         </nav>
       )}
 
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-2xl">
+      <h1 class="hero-title text-white max-w-2xl">
         {resolvedTitle}
       </h1>
       {resolvedSubtitle && (
-        <p class="text-lg lg:text-xl text-white/90 mt-4 max-w-xl leading-relaxed">
+        <p class="lead-paragraph text-white/90 mt-4 max-w-xl">
           {resolvedSubtitle}
         </p>
       )}
       <div class="mt-8 flex flex-wrap gap-4">
         <a
           href={resolvedPrimaryCta.href}
-          class="bg-brand-pink hover:bg-brand-pink-dark text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          class="btn-primary px-8 py-4 text-lg shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)]"
         >
           {resolvedPrimaryCta.label}
         </a>
         <a
           href={resolvedSecondaryCta.href}
-          class="border-2 border-white text-white hover:bg-white hover:text-brand-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+          class="btn-outline-light border-2 border-white px-8 py-4 text-lg"
         >
           {resolvedSecondaryCta.label}
         </a>
       </div>
-
     </div>
   </div>
 </section>

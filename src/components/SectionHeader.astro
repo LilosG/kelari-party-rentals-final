@@ -28,16 +28,16 @@ const isCenter = align === "center";
     </p>
   )}
   <h2 class:list={[
-    "font-display text-3xl lg:text-4xl font-bold",
+    "section-title font-bold",
     dark ? "text-white" : "text-neutral-800",
   ]}>
     {title}
   </h2>
   {subtitle && (
     <p class:list={[
-      "text-neutral-500 text-lg mt-4",
+      "lead-paragraph mt-4",
       isCenter ? "mx-auto max-w-2xl" : "max-w-2xl",
-      dark ? "text-neutral-300" : "",
+      dark ? "text-neutral-300" : "text-neutral-500",
     ]}>
       {subtitle}
     </p>

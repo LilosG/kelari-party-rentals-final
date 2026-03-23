@@ -29,19 +29,47 @@ export interface SocialLinks {
 
 export interface DesignTokens {
   colors: {
+    brandPink: string;
+    brandPinkLight: string;
+    brandPinkDark: string;
+    brandDark: string;
+    brandDarkSoft: string;
+    accentSage: string;
     primary: string;
-    primaryLight: string;
-    primaryDark: string;
-    dark: string;
-    darkCard: string;
+    primaryHover: string;
+    surface: string;
+    bg: string;
+    bgSoft: string;
     text: string;
     muted: string;
     softBg: string;
     border: string;
+    neutral50: string;
+    neutral100: string;
+    neutral200: string;
+    neutral300: string;
+    neutral400: string;
+    neutral500: string;
+    neutral600: string;
+    neutral700: string;
+    neutral800: string;
+    neutral900: string;
+    neutral950: string;
   };
   fonts: {
     display: string;
     body: string;
+  };
+  type: {
+    heroTitle: string;
+    sectionTitle: string;
+    leadParagraph: string;
+    lineHeightDisplay: string;
+    lineHeightLead: string;
+  };
+  spacing: {
+    cardPadding: string;
+    sectionVerticalRhythm: string;
   };
   radii: {
     card: string;
@@ -50,6 +78,7 @@ export interface DesignTokens {
   shadows: {
     card: string;
     cardHover: string;
+    buttonHover: string;
   };
 }
 
@@ -110,27 +139,56 @@ export const social: SocialLinks = {
 
 export const tokens: DesignTokens = {
   colors: {
+    brandPink: "#FF6F9C",
+    brandPinkLight: "#FFB6D9",
+    brandPinkDark: "#C43068",
+    brandDark: "#222222",
+    brandDarkSoft: "#2A2A2A",
+    accentSage: "#A8C5A0",
     primary: "#FF6F9C",
-    primaryLight: "#F2D9E7",
-    primaryDark: "#9E2F5E",
-    dark: "#1C1C1E",
-    darkCard: "#252528",
-    text: "#1C1C1E",
-    muted: "#6B7280",
+    primaryHover: "#C43068",
+    surface: "#FFB6D9",
+    bg: "#222222",
+    bgSoft: "#2A2A2A",
+    text: "#222222",
+    muted: "#525252",
     softBg: "#FDF8FA",
     border: "#EDE0E8",
+    neutral50: "#FAFAFA",
+    neutral100: "#F5F5F5",
+    neutral200: "#E5E5E5",
+    neutral300: "#D4D4D4",
+    neutral400: "#A3A3A3",
+    neutral500: "#737373",
+    neutral600: "#525252",
+    neutral700: "#404040",
+    neutral800: "#262626",
+    neutral900: "#171717",
+    neutral950: "#0A0A0A",
   },
   fonts: {
-    display: "'Cormorant Garamond', serif",
-    body: "'DM Sans', sans-serif",
+    display: '"Playfair Display", Georgia, serif',
+    body: '"DM Sans", system-ui, sans-serif',
+  },
+  type: {
+    heroTitle: "clamp(2.5rem, 1.875rem + 2.75vw, 4.5rem)",
+    sectionTitle: "clamp(2rem, 1.6875rem + 1.375vw, 3rem)",
+    leadParagraph: "clamp(1.125rem, 1.046875rem + 0.34375vw, 1.375rem)",
+    lineHeightDisplay: "1.15",
+    lineHeightLead: "1.7",
+  },
+  spacing: {
+    cardPadding: "clamp(2rem, 1.6875rem + 1.375vw, 2.5rem)",
+    sectionVerticalRhythm: "clamp(4rem, 3.375rem + 2.75vw, 6rem)",
   },
   radii: {
     card: "16px",
     button: "8px",
   },
   shadows: {
-    card: "0 2px 20px rgba(0,0,0,0.08)",
-    cardHover: "0 8px 40px rgba(200,68,122,0.18)",
+    card: "0 2px 16px rgba(0, 0, 0, 0.08)",
+    cardHover: "0 8px 40px rgba(255, 111, 156, 0.18)",
+    buttonHover: "0 4px 16px rgba(200, 68, 122, 0.3)",
   },
 };
 
@@ -159,10 +217,6 @@ export const site: SiteConfig = {
       latitude: 33.1581,
       longitude: -117.3506,
     },
-    sameAs: [
-      social.facebook,
-      social.instagram,
-      social.google,
-    ],
+    sameAs: [social.facebook, social.instagram, social.google],
   },
 };
