@@ -15,7 +15,7 @@ export interface Props {
   title?: string;
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
-  padding?: "default" | "compact" | "none";
+  padding?: "default" | "compact" | "featured" | "none";
 }
 
 const {
@@ -30,45 +30,25 @@ const {
 const isDark = bg === "dark";
 ---
 
-<Section {bg} {padding}>
+<Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
     <div class="mb-10 md:mb-14">
-      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
+      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} width="wide" />
     </div>
   )}
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-    {/* Connector line on large screens */}
-    <div
-      class:list={[
-        "hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px border-t-2 border-dashed",
-        isDark ? "border-white/10" : "border-neutral-200",
-      ]}
-      aria-hidden="true"
-    />
-
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
     {steps.map((step, i) => (
-      <div class="relative flex flex-col items-center text-center">
-        {/* Number / Icon bubble */}
-        <div class="relative z-10 w-16 h-16 rounded-full bg-brand-pink text-white font-display text-2xl font-bold flex items-center justify-center mx-auto mb-6 shadow-md">
-          {step.icon ? (
-            <span class="text-2xl" aria-hidden="true">{step.icon}</span>
-          ) : (
-            <span>{step.number ?? String(i + 1)}</span>
-          )}
+      <div class:list={["card-surface relative", isDark && "card-surface-dark"]}>
+        <div class="card-body items-start text-left">
+          <div class="stat-card-value" aria-hidden="true">
+            {step.icon ? <span class="text-2xl">{step.icon}</span> : <span>{step.number ?? String(i + 1)}</span>}
+          </div>
+          <h3 class:list={["card-title text-lg", isDark && "text-white"]}>{step.title}</h3>
+          <p class:list={["card-copy card-copy-compact", isDark && "text-neutral-300"]}>
+            {step.description}
+          </p>
         </div>
-        <h3 class:list={[
-          "font-semibold text-lg text-center mt-2",
-          isDark ? "text-white" : "text-neutral-800",
-        ]}>
-          {step.title}
-        </h3>
-        <p class:list={[
-          "text-sm text-center mt-2 leading-relaxed",
-          isDark ? "text-neutral-300" : "text-neutral-600",
-        ]}>
-          {step.description}
-        </p>
       </div>
     ))}
   </div>

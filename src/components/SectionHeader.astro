@@ -5,6 +5,9 @@ export interface Props {
   subtitle?: string;
   align?: "center" | "left";
   dark?: boolean;
+  width?: "default" | "narrow" | "wide";
+  spacing?: "default" | "compact" | "featured";
+  class?: string;
 }
 
 const {
@@ -13,31 +16,54 @@ const {
   subtitle,
   align = "center",
   dark = false,
+  width = "default",
+  spacing = "default",
+  class: className,
 } = Astro.props;
 
 const isCenter = align === "center";
+
+const titleClass = {
+  compact: "text-3xl md:text-4xl",
+  default: "text-3xl md:text-4xl lg:text-5xl",
+  featured: "text-4xl md:text-5xl lg:text-6xl",
+}[spacing];
+
+const subtitleClass = {
+  compact: "mt-3 text-base md:text-lg",
+  default: "mt-4 text-lg",
+  featured: "mt-5 text-lg md:text-xl",
+}[spacing];
+
+const widthClass = {
+  narrow: "max-w-2xl",
+  default: "max-w-3xl",
+  wide: "max-w-4xl",
+}[width];
 ---
 
-<div class:list={[isCenter ? "text-center" : "text-left"]}>
+<div class:list={[isCenter ? "text-center mx-auto" : "text-left", widthClass, className]}>
   {eyebrow && (
     <p class:list={[
-      "font-body uppercase tracking-wider text-xs font-semibold mb-3",
-      dark ? "text-brand-pink-light" : "text-brand-pink",
+      "font-body uppercase tracking-[0.24em] text-[0.7rem] font-semibold mb-3 sm:mb-4",
+      dark ? "text-brand-pink-light" : "text-brand-pink-dark",
     ]}>
       {eyebrow}
     </p>
   )}
   <h2 class:list={[
-    "font-display text-3xl lg:text-4xl font-bold",
-    dark ? "text-white" : "text-neutral-800",
+    "font-display font-bold text-balance",
+    titleClass,
+    dark ? "text-white" : "text-neutral-900",
   ]}>
     {title}
   </h2>
   {subtitle && (
     <p class:list={[
-      "text-neutral-500 text-lg mt-4",
-      isCenter ? "mx-auto max-w-2xl" : "max-w-2xl",
-      dark ? "text-neutral-300" : "",
+      "leading-relaxed",
+      subtitleClass,
+      isCenter ? "mx-auto" : "",
+      dark ? "text-neutral-300" : "text-neutral-600",
     ]}>
       {subtitle}
     </p>

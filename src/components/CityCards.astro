@@ -16,7 +16,7 @@ export interface Props {
   title?: string;
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
-  padding?: "default" | "compact" | "none";
+  padding?: "default" | "compact" | "featured" | "none";
 }
 
 const {
@@ -27,8 +27,6 @@ const {
   bg = "light",
   padding = "default",
 } = Astro.props;
-
-const isDark = bg === "dark";
 
 const cityImages: Record<string, string> = {
   carlsbad: "/images/hero-party.jpg",
@@ -44,45 +42,30 @@ function getCityImage(city: CityCard): string {
 }
 ---
 
-<Section {bg} {padding}>
+<Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
     <div class="mb-10 md:mb-14">
-      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
+      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} width="wide" />
     </div>
   )}
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
     {cities.map((city) => (
-      <a
-        href={city.href}
-        class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-neutral-100 overflow-hidden group"
-      >
-        <div class="aspect-[4/3] overflow-hidden">
+      <a href={city.href} class="card-surface card-link group text-center">
+        <div class="card-image-wrap">
           <img
             src={getCityImage(city)}
             alt={city.name}
             width="1200"
             height="900"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            class="card-image"
             loading="lazy"
           />
         </div>
-        <div class="p-6 flex flex-col flex-1 text-center">
-          <h3 class:list={[
-            "font-display text-xl font-bold group-hover:text-brand-pink transition-colors",
-            isDark ? "text-white" : "text-neutral-800",
-          ]}>
-            {city.name}
-          </h3>
-          <p class:list={[
-            "mt-1.5 text-sm leading-relaxed",
-            isDark ? "text-neutral-400" : "text-neutral-500",
-          ]}>
-            {city.description}
-          </p>
-          <span class="mt-3 text-sm font-semibold text-brand-pink group-hover:underline">
-            Party rentals in {city.name} &rarr;
-          </span>
+        <div class="card-body items-center">
+          <h3 class="card-title text-xl group-hover:text-brand-pink transition-colors">{city.name}</h3>
+          <p class="card-copy card-copy-compact text-center text-neutral-500">{city.description}</p>
+          <span class="card-link-text">Party rentals in {city.name} <span aria-hidden="true">&rarr;</span></span>
         </div>
       </a>
     ))}
