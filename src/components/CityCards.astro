@@ -1,6 +1,7 @@
 ---
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
+import { getCityImage } from "../data/images";
 
 export interface CityCard {
   name: string;
@@ -30,17 +31,10 @@ const {
 
 const isDark = bg === "dark";
 
-const cityImages: Record<string, string> = {
-  carlsbad: "/images/hero-party.jpg",
-  encinitas: "/images/backyard-party.jpg",
-  oceanside: "/images/park-party.jpg",
-  "san-marcos": "/images/graduation-party.jpg",
-};
-
-function getCityImage(city: CityCard): string {
+function resolveCityImage(city: CityCard): string {
   if (city.image) return city.image;
   const slug = city.slug ?? city.href.split("/").filter(Boolean).pop() ?? "";
-  return cityImages[slug] ?? "/images/hero-party.jpg";
+  return getCityImage(slug);
 }
 ---
 
@@ -59,7 +53,7 @@ function getCityImage(city: CityCard): string {
       >
         <div class="aspect-[4/3] overflow-hidden">
           <img
-            src={getCityImage(city)}
+            src={resolveCityImage(city)}
             alt={city.name}
             width="1200"
             height="900"

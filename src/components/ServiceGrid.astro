@@ -2,6 +2,7 @@
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 import { services as allServices } from "../data/services";
+import { getServiceImage } from "../data/images";
 
 export interface ServiceCard {
   icon: string;
@@ -48,23 +49,6 @@ const {
 const resolvedEyebrow = eyebrow ?? overline;
 const resolvedTitle = title ?? heading;
 const isDark = bg === "dark";
-
-const serviceImages: Record<string, string> = {
-  "party-rentals": "/images/hero-party.jpg",
-  "birthday-party-rentals": "/images/birthday-party.jpg",
-  "backyard-party-rentals": "/images/backyard-party.jpg",
-  "baby-shower-rentals": "/images/baby-shower.jpg",
-  "graduation-party-rentals": "/images/graduation-party.jpg",
-  "engagement-party-rentals": "/images/engagement-party.jpg",
-  "park-party-rentals": "/images/park-party.jpg",
-  "delivery-setup-pickup": "/images/backyard-party.jpg",
-  "table-and-chair-rentals": "/images/gallery-tablescape.jpg",
-  "tent-and-canopy-rentals": "/images/gallery-canopy.jpg",
-};
-
-function getServiceImage(slug: string): string {
-  return serviceImages[slug] ?? "/images/hero-party.jpg";
-}
 
 let resolvedServices: (ServiceCard & { slug: string })[] = services
   ? services.map((s) => ({ ...s, slug: s.slug ?? s.href.split("/").filter(Boolean).pop() ?? "" }))

@@ -1,6 +1,7 @@
 ---
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
+import { getCityImage } from "../data/images";
 
 export interface AreaCard {
   name: string;
@@ -29,17 +30,10 @@ const {
 
 const isDark = bg === "dark";
 
-const cityImages: Record<string, string> = {
-  carlsbad: "/images/hero-party.jpg",
-  encinitas: "/images/backyard-party.jpg",
-  oceanside: "/images/park-party.jpg",
-  "san-marcos": "/images/graduation-party.jpg",
-};
-
 function getAreaImage(area: AreaCard): string {
   if (area.image) return area.image;
   const slug = area.href.split("/").filter(Boolean)[0] ?? "";
-  return cityImages[slug] ?? "/images/hero-party.jpg";
+  return getCityImage(slug);
 }
 ---
 

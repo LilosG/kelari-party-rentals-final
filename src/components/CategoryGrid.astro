@@ -1,6 +1,7 @@
 ---
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
+import { getCategoryImage } from "../data/images";
 
 export interface CategoryCard {
   name: string;
@@ -33,20 +34,10 @@ const {
 
 const isDark = bg === "dark";
 
-const categoryImages: Record<string, string> = {
-  tables: "/images/gallery-tablescape.jpg",
-  chairs: "/images/backyard-party.jpg",
-  "tents-canopies": "/images/gallery-canopy.jpg",
-  linens: "/images/baby-shower.jpg",
-  tableware: "/images/gallery-tablescape.jpg",
-  decorations: "/images/gallery-marquee.jpg",
-  lighting: "/images/engagement-party.jpg",
-};
-
-function getCategoryImage(cat: CategoryCard): string {
+function resolveCategoryImage(cat: CategoryCard): string {
   if (cat.image) return cat.image;
   const slug = cat.slug ?? cat.href.split("/").filter(Boolean).pop() ?? "";
-  return categoryImages[slug] ?? "/images/hero-party.jpg";
+  return getCategoryImage(slug);
 }
 
 const colClass = {
@@ -71,7 +62,7 @@ const colClass = {
       >
         <div class="aspect-[4/3] overflow-hidden">
           <img
-            src={getCategoryImage(cat)}
+            src={resolveCategoryImage(cat)}
             alt={cat.name}
             width="1200"
             height="900"

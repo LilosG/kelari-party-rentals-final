@@ -9,6 +9,7 @@ import QuoteForm from "../../components/QuoteForm.astro";
 
 import { site, nap } from "../../data/site";
 import { categories, type Category } from "../../data/categories";
+import { getCategoryImage } from "../../data/images";
 
 export function getStaticPaths() {
   return categories.map((cat) => ({
@@ -23,16 +24,7 @@ interface Props {
 
 const { category } = Astro.props;
 
-const categoryImages: Record<string, string> = {
-  tables: "/images/gallery-tablescape.jpg",
-  chairs: "/images/backyard-party.jpg",
-  "tents-canopies": "/images/gallery-canopy.jpg",
-  linens: "/images/baby-shower.jpg",
-  tableware: "/images/gallery-tablescape.jpg",
-  decorations: "/images/gallery-marquee.jpg",
-  lighting: "/images/engagement-party.jpg",
-};
-const bgImage = categoryImages[category.slug] ?? "/images/hero-party.jpg";
+const bgImage = getCategoryImage(category.slug);
 
 const otherCategories = categories.filter((c) => c.slug !== category.slug);
 

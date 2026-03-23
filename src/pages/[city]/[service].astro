@@ -20,6 +20,7 @@ import {
   getServiceBySlug,
   renderCityTemplate,
 } from "../../data/services";
+import { getServiceImage } from "../../data/images";
 
 export function getStaticPaths() {
   const paths: {
@@ -49,17 +50,7 @@ interface Props {
 
 const { city, service } = Astro.props;
 
-const serviceImages: Record<string, string> = {
-  "party-rentals": "/images/hero-party.jpg",
-  "birthday-party-rentals": "/images/birthday-party.jpg",
-  "backyard-party-rentals": "/images/backyard-party.jpg",
-  "baby-shower-rentals": "/images/baby-shower.jpg",
-  "graduation-party-rentals": "/images/graduation-party.jpg",
-  "engagement-party-rentals": "/images/engagement-party.jpg",
-  "park-party-rentals": "/images/park-party.jpg",
-  "delivery-setup-pickup": "/images/backyard-party.jpg",
-};
-const bgImage = serviceImages[service.slug] ?? "/images/hero-party.jpg";
+const bgImage = getServiceImage(service.slug);
 
 const pageTitle = renderCityTemplate(service.cityMeta.title, city.name);
 const pageDescription = renderCityTemplate(service.cityMeta.description, city.name);
