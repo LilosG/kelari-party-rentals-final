@@ -15,7 +15,7 @@ export interface Props {
   title?: string;
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
-  padding?: "default" | "compact" | "none";
+  padding?: "default" | "compact" | "featured" | "none";
 }
 
 const {
@@ -26,63 +26,25 @@ const {
   bg = "light",
   padding = "default",
 } = Astro.props;
-
-const isDark = bg === "dark";
-
-const cityImages: Record<string, string> = {
-  carlsbad: "/images/hero-party.jpg",
-  encinitas: "/images/backyard-party.jpg",
-  oceanside: "/images/park-party.jpg",
-  "san-marcos": "/images/graduation-party.jpg",
-};
-
-function getAreaImage(area: AreaCard): string {
-  if (area.image) return area.image;
-  const slug = area.href.split("/").filter(Boolean)[0] ?? "";
-  return cityImages[slug] ?? "/images/hero-party.jpg";
-}
 ---
 
-<Section {bg} {padding}>
+<Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
     <div class="mb-10 md:mb-14">
-      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
+      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} width="wide" />
     </div>
   )}
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
     {areas.map((area) => (
-      <a
-        href={area.href}
-        class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-neutral-100 overflow-hidden group"
-      >
-        <div class="aspect-[4/3] overflow-hidden">
-          <img
-            src={getAreaImage(area)}
-            alt={area.name}
-            width="1200"
-            height="900"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-5 flex flex-col flex-1 text-center">
-          <h3 class:list={[
-            "font-display text-lg font-bold group-hover:text-brand-pink transition-colors",
-            isDark ? "text-white" : "text-neutral-800",
-          ]}>
+      <a href={area.href} class="compact-link-card group">
+        <div>
+          <h3 class="font-display text-lg font-bold text-neutral-900 transition-colors group-hover:text-brand-pink">
             {area.name}
           </h3>
-          <p class:list={[
-            "mt-1 text-sm",
-            isDark ? "text-neutral-400" : "text-neutral-500",
-          ]}>
-            {area.tagline}
-          </p>
-          <span class="mt-3 text-sm font-semibold text-brand-pink group-hover:underline">
-            View {area.name} &rarr;
-          </span>
+          <p class="mt-1 text-sm leading-relaxed text-neutral-500">{area.tagline}</p>
         </div>
+        <span class="text-brand-pink transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
       </a>
     ))}
   </div>

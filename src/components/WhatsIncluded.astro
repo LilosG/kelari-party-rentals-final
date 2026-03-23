@@ -15,7 +15,7 @@ export interface Props {
   title?: string;
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
-  padding?: "default" | "compact" | "none";
+  padding?: "default" | "compact" | "featured" | "none";
 }
 
 const {
@@ -37,36 +37,25 @@ const colClass = {
 }[columns];
 ---
 
-<Section {bg} {padding}>
+<Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
     <div class="mb-10 md:mb-14">
-      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
+      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} width="wide" />
     </div>
   )}
 
   <div class={`grid gap-6 ${colClass}`}>
     {items.map((item) => (
-      <div class:list={[
-        "rounded-2xl p-6 border shadow-sm",
-        isDark
-          ? "bg-white/5 border-white/10"
-          : "bg-white border-neutral-100",
-      ]}>
-        <div class="w-14 h-14 rounded-full bg-brand-pink-light flex items-center justify-center mb-4">
-          <span class="text-2xl" aria-hidden="true">{item.icon}</span>
+      <div class:list={["card-surface", isDark && "card-surface-dark"]}>
+        <div class="card-body">
+          <div class="info-card-icon" aria-hidden="true">
+            <span>{item.icon}</span>
+          </div>
+          <h3 class:list={["card-title text-lg", isDark && "text-white"]}>{item.title}</h3>
+          <p class:list={["card-copy card-copy-compact", isDark && "text-neutral-300"]}>
+            {item.description}
+          </p>
         </div>
-        <h3 class:list={[
-          "font-semibold text-lg",
-          isDark ? "text-white" : "text-neutral-800",
-        ]}>
-          {item.title}
-        </h3>
-        <p class:list={[
-          "text-sm mt-2 leading-relaxed",
-          isDark ? "text-neutral-300" : "text-neutral-600",
-        ]}>
-          {item.description}
-        </p>
       </div>
     ))}
   </div>

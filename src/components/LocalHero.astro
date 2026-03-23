@@ -1,12 +1,13 @@
 ---
 export interface Props {
-  /** New interface */
   title?: string;
   subtitle?: string;
   backgroundImage?: string;
   breadcrumbs?: { label: string; href: string }[];
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  eyebrow?: string;
+  trustItems?: string[];
   /** @deprecated Use title instead */
   headline?: string;
   /** @deprecated Use subtitle instead */
@@ -26,6 +27,8 @@ const {
   breadcrumbs: breadcrumbsProp,
   primaryCta,
   secondaryCta,
+  eyebrow,
+  trustItems = [],
   headline,
   subheadline,
   bgImage,
@@ -35,18 +38,12 @@ const {
 
 const resolvedTitle = title ?? headline ?? "";
 const resolvedSubtitle = subtitle ?? subheadline ?? "";
-const resolvedImage =
-  backgroundImage ??
-  bgImage ??
-  "/images/hero-party.jpg";
+const resolvedImage = backgroundImage ?? bgImage ?? "/images/hero-party.jpg";
 
-// Build breadcrumbs from legacy city/service props if not passed directly
 const resolvedBreadcrumbs: { label: string; href: string }[] =
   breadcrumbsProp ??
   (() => {
-    const crumbs: { label: string; href: string }[] = [
-      { label: "Home", href: "/" },
-    ];
+    const crumbs: { label: string; href: string }[] = [{ label: "Home", href: "/" }];
     if (city) {
       crumbs.push({
         label: city,
@@ -75,71 +72,77 @@ const resolvedSecondaryCta = secondaryCta ?? {
 };
 ---
 
-<section class="relative min-h-[550px] lg:min-h-[650px] flex items-center">
-  <!-- Background image -->
+<section class="relative isolate overflow-hidden min-h-[560px] lg:min-h-[680px] flex items-center bg-brand-dark">
   <img
     src={resolvedImage}
     alt=""
     width="1200"
     height="900"
-    class="absolute inset-0 w-full h-full object-cover"
+    class="absolute inset-0 h-full w-full object-cover"
     aria-hidden="true"
   />
-  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,182,217,0.3),transparent_38%),linear-gradient(110deg,rgba(17,17,17,0.88)_0%,rgba(17,17,17,0.72)_42%,rgba(17,17,17,0.4)_72%,rgba(17,17,17,0.18)_100%)]"></div>
+  <div class="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent"></div>
 
-  <!-- Content -->
   <div class="relative z-10 w-full">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-18 md:py-22 lg:py-28">
+      <div class="max-w-3xl lg:max-w-2xl xl:max-w-3xl">
+        {resolvedBreadcrumbs.length > 0 && (
+          <nav class="mb-5" aria-label="Breadcrumb">
+            <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-white/70">
+              {resolvedBreadcrumbs.map((crumb, i) => (
+                <li class="flex items-center gap-2">
+                  {i > 0 && <span class="text-white/35" aria-hidden="true">/</span>}
+                  {i === resolvedBreadcrumbs.length - 1 ? (
+                    <span class="text-white" aria-current="page">{crumb.label}</span>
+                  ) : (
+                    <a href={crumb.href} class="transition-colors hover:text-white text-white/75">
+                      {crumb.label}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
 
-      {resolvedBreadcrumbs.length > 0 && (
-        <nav class="mb-6" aria-label="Breadcrumb">
-          <ol class="flex flex-wrap items-center gap-1.5 text-sm text-white/70">
-            {resolvedBreadcrumbs.map((crumb, i) => (
-              <li class="flex items-center gap-1.5">
-                {i > 0 && (
-                  <span class="text-white/40" aria-hidden="true">/</span>
-                )}
-                {i === resolvedBreadcrumbs.length - 1 ? (
-                  <span class="text-white" aria-current="page">
-                    {crumb.label}
-                  </span>
-                ) : (
-                  <a
-                    href={crumb.href}
-                    class="text-white/70 hover:text-white transition-colors"
-                  >
-                    {crumb.label}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ol>
-        </nav>
-      )}
+        {(eyebrow || trustItems.length > 0) && (
+          <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            {eyebrow && (
+              <span class="inline-flex w-fit items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm">
+                {eyebrow}
+              </span>
+            )}
+            {trustItems.length > 0 && (
+              <ul class="flex flex-wrap gap-2.5 text-sm text-white/85">
+                {trustItems.map((item) => (
+                  <li class="inline-flex items-center gap-2 rounded-full border border-white/12 bg-black/18 px-3.5 py-2 backdrop-blur-sm">
+                    <span class="h-1.5 w-1.5 rounded-full bg-brand-pink"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
 
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-2xl">
-        {resolvedTitle}
-      </h1>
-      {resolvedSubtitle && (
-        <p class="text-lg lg:text-xl text-white/90 mt-4 max-w-xl leading-relaxed">
-          {resolvedSubtitle}
-        </p>
-      )}
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a
-          href={resolvedPrimaryCta.href}
-          class="bg-brand-pink hover:bg-brand-pink-dark text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          {resolvedPrimaryCta.label}
-        </a>
-        <a
-          href={resolvedSecondaryCta.href}
-          class="border-2 border-white text-white hover:bg-white hover:text-brand-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-        >
-          {resolvedSecondaryCta.label}
-        </a>
+        <h1 class="font-display text-balance text-4xl font-bold leading-[1.02] text-white sm:text-5xl lg:text-6xl xl:text-[4.35rem] max-w-[14ch]">
+          {resolvedTitle}
+        </h1>
+        {resolvedSubtitle && (
+          <p class="mt-5 max-w-2xl text-base leading-relaxed text-white/88 sm:text-lg lg:mt-6 lg:text-xl">
+            {resolvedSubtitle}
+          </p>
+        )}
+        <div class="mt-8 flex flex-wrap gap-3.5 lg:mt-10">
+          <a href={resolvedPrimaryCta.href} class="btn-primary btn-primary-lg">
+            {resolvedPrimaryCta.label}
+          </a>
+          <a href={resolvedSecondaryCta.href} class="btn-secondary-on-dark btn-secondary-lg">
+            {resolvedSecondaryCta.label}
+          </a>
+        </div>
       </div>
-
     </div>
   </div>
 </section>

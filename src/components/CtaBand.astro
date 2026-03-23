@@ -11,28 +11,24 @@ export interface Props {
 const { title, subtitle, primaryCta, secondaryCta } = Astro.props;
 ---
 
-<Section bg="dark" padding="default">
-  <div class="text-center">
-    <h2 class="font-display text-3xl lg:text-4xl font-bold text-white">
-      {title}
-    </h2>
-    {subtitle && (
-      <p class="text-neutral-200 text-lg mt-4 max-w-2xl mx-auto">
-        {subtitle}
-      </p>
-    )}
-    <div class="mt-8 flex flex-wrap gap-4 justify-center">
-      <a
-        href={primaryCta.href}
-        class="bg-brand-pink hover:bg-brand-pink-dark text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-      >
+<Section bg="dark" spacing="featured" width="default">
+  <div class="cta-band-shell text-center">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="font-display text-3xl font-bold text-white md:text-4xl lg:text-5xl text-balance">
+        {title}
+      </h2>
+      {subtitle && (
+        <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-200 md:text-lg">
+          {subtitle}
+        </p>
+      )}
+    </div>
+    <div class="mt-8 flex flex-wrap justify-center gap-3.5 lg:mt-10">
+      <a href={primaryCta.href} class="btn-primary btn-primary-lg">
         {primaryCta.label}
       </a>
       {secondaryCta && (
-        <a
-          href={secondaryCta.href}
-          class="border-2 border-white text-white hover:bg-white hover:text-brand-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-        >
+        <a href={secondaryCta.href} class="btn-secondary-on-dark btn-secondary-lg">
           {secondaryCta.label}
         </a>
       )}

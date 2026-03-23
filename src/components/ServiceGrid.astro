@@ -18,16 +18,11 @@ export interface Props {
   title?: string;
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
-  padding?: "default" | "compact" | "none";
-  /** @deprecated Use title */
+  padding?: "default" | "compact" | "featured" | "none";
   heading?: string;
-  /** @deprecated Use eyebrow */
   overline?: string;
-  /** @deprecated Ignored — use bg prop */
   bgClass?: string;
-  /** @deprecated Pass services directly */
   slugs?: string[];
-  /** @deprecated Pass services with hrefs directly */
   citySlug?: string;
 }
 
@@ -90,7 +85,7 @@ const colClass = {
 }[columns];
 ---
 
-<Section {bg} {padding}>
+<Section {bg} spacing={padding} width="wide">
   {(resolvedTitle || resolvedEyebrow) && (
     <div class="mb-10 md:mb-14">
       <SectionHeader
@@ -98,36 +93,32 @@ const colClass = {
         title={resolvedTitle ?? ""}
         subtitle={subtitle}
         dark={isDark}
+        width="wide"
       />
     </div>
   )}
 
   <div class={`grid gap-5 md:gap-6 ${colClass}`}>
     {resolvedServices.map((service) => (
-      <a
-        href={service.href}
-        class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-neutral-100 overflow-hidden group"
-      >
-        <div class="aspect-[4/3] overflow-hidden">
+      <a href={service.href} class="card-surface card-link group">
+        <div class="card-image-wrap">
           <img
             src={getServiceImage(service.slug)}
             alt={service.name}
             width="1200"
             height="900"
-            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+            class="card-image"
             loading="lazy"
           />
         </div>
-        <div class="p-6">
-          <h3 class="font-semibold text-lg text-neutral-800 group-hover:text-brand-pink transition-colors">
+        <div class="card-body">
+          <h3 class="card-title text-lg group-hover:text-brand-pink transition-colors">
             {service.name}
           </h3>
-          <p class="text-neutral-600 text-sm mt-2 leading-relaxed line-clamp-3">
+          <p class="card-copy card-copy-compact line-clamp-3">
             {service.description}
           </p>
-          <span class="text-brand-pink font-semibold text-sm mt-4 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-            Learn more &rarr;
-          </span>
+          <span class="card-link-text">Learn more <span aria-hidden="true">&rarr;</span></span>
         </div>
       </a>
     ))}
