@@ -1,0 +1,145 @@
+---
+export interface Props {
+  /** New interface */
+  title?: string;
+  subtitle?: string;
+  backgroundImage?: string;
+  breadcrumbs?: { label: string; href: string }[];
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+  /** @deprecated Use title instead */
+  headline?: string;
+  /** @deprecated Use subtitle instead */
+  subheadline?: string;
+  /** @deprecated Use backgroundImage instead */
+  bgImage?: string;
+  /** @deprecated Pass breadcrumbs directly */
+  city?: string;
+  /** @deprecated Pass breadcrumbs directly */
+  service?: string;
+}
+
+const {
+  title,
+  subtitle,
+  backgroundImage,
+  breadcrumbs: breadcrumbsProp,
+  primaryCta,
+  secondaryCta,
+  headline,
+  subheadline,
+  bgImage,
+  city,
+  service,
+} = Astro.props;
+
+const resolvedTitle = title ?? headline ?? "";
+const resolvedSubtitle = subtitle ?? subheadline ?? "";
+const resolvedImage =
+  backgroundImage ??
+  bgImage ??
+  "/images/hero-party.jpg";
+
+// Build breadcrumbs from legacy city/service props if not passed directly
+const resolvedBreadcrumbs: { label: string; href: string }[] =
+  breadcrumbsProp ??
+  (() => {
+    const crumbs: { label: string; href: string }[] = [
+      { label: "Home", href: "/" },
+    ];
+    if (city) {
+      crumbs.push({
+        label: city,
+        href: `/${city.toLowerCase().replace(/\s+/g, "-")}/`,
+      });
+    }
+    if (service) {
+      const serviceSlug = service.toLowerCase().replace(/\s+/g, "-");
+      crumbs.push({
+        label: service,
+        href: city
+          ? `/${city.toLowerCase().replace(/\s+/g, "-")}/${serviceSlug}/`
+          : `/services/${serviceSlug}/`,
+      });
+    }
+    return crumbs.length > 1 ? crumbs : [];
+  })();
+
+const resolvedPrimaryCta = primaryCta ?? {
+  label: "Get a Free Quote",
+  href: "/quote/",
+};
+const resolvedSecondaryCta = secondaryCta ?? {
+  label: "(760) 000-0000",
+  href: "tel:7600000000",
+};
+---
+
+<section class="relative min-h-[550px] lg:min-h-[650px] flex items-center">
+  <!-- Background image -->
+  <img
+    src={resolvedImage}
+    alt=""
+    width="1200"
+    height="900"
+    class="absolute inset-0 w-full h-full object-cover"
+    aria-hidden="true"
+  />
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+      {resolvedBreadcrumbs.length > 0 && (
+        <nav class="mb-6" aria-label="Breadcrumb">
+          <ol class="flex flex-wrap items-center gap-1.5 text-sm text-white/70">
+            {resolvedBreadcrumbs.map((crumb, i) => (
+              <li class="flex items-center gap-1.5">
+                {i > 0 && (
+                  <span class="text-white/40" aria-hidden="true">/</span>
+                )}
+                {i === resolvedBreadcrumbs.length - 1 ? (
+                  <span class="text-white" aria-current="page">
+                    {crumb.label}
+                  </span>
+                ) : (
+                  <a
+                    href={crumb.href}
+                    class="text-white/70 hover:text-white transition-colors"
+                  >
+                    {crumb.label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-2xl">
+        {resolvedTitle}
+      </h1>
+      {resolvedSubtitle && (
+        <p class="text-lg lg:text-xl text-white/90 mt-4 max-w-xl leading-relaxed">
+          {resolvedSubtitle}
+        </p>
+      )}
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a
+          href={resolvedPrimaryCta.href}
+          class="bg-brand-pink hover:bg-brand-pink-dark text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          {resolvedPrimaryCta.label}
+        </a>
+        <a
+          href={resolvedSecondaryCta.href}
+          class="border-2 border-white text-white hover:bg-white hover:text-brand-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+        >
+          {resolvedSecondaryCta.label}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

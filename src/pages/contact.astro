@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LocalHero from "../components/LocalHero.astro";
+import TrustBar from "../components/TrustBar.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import QuoteForm from "../components/QuoteForm.astro";
+
+import { site, nap } from "../data/site";
+
+const title = "Contact Us | Kelari Party Rentals";
+const description =
+  "Get in touch with Kelari Party Rentals. Call, email, or visit us in Carlsbad. We respond within 2 hours during business hours.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    url: `${site.domain}/contact/`,
+    description,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
+      { "@type": "ListItem", position: 2, name: "Contact", item: `${site.domain}/contact/` },
+    ],
+  },
+];
+
+const contactDetails = [
+  {
+    label: "Phone",
+    value: nap.contact.phone,
+    href: `tel:${nap.contact.phone.replace(/\D/g, "")}`,
+    icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+  },
+  {
+    label: "Email",
+    value: nap.contact.email,
+    href: `mailto:${nap.contact.email}`,
+    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  },
+  {
+    label: "Address",
+    value: nap.address.full,
+    href: undefined,
+    icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z",
+  },
+  {
+    label: "Hours",
+    value: nap.contact.hours,
+    href: undefined,
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={`${site.domain}/contact/`}
+  schema={schema}
+>
+
+  <!-- 1 · Hero ─────────────────────────────────── -->
+  <LocalHero
+    title="Contact Us"
+    subtitle="Questions about rentals? Ready to book? We're here to help."
+    bgImage="/images/hero-party.jpg"
+  />
+
+  <!-- 2 · Trust Bar ────────────────────────────── -->
+  <TrustBar />
+
+  <!-- 3 · Contact Info + Map — white ───────────── -->
+  <Section bg="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+
+      <!-- Left: Contact Details -->
+      <div>
+        <SectionHeader
+          eyebrow="CONTACT INFO"
+          title="Get in Touch"
+          align="left"
+        />
+        <p class="mt-6 text-neutral-600 leading-relaxed">
+          Have a question about our rentals, delivery, or pricing? Want to check availability for your event? Reach out and we'll get back to you within 2 hours during business hours.
+        </p>
+
+        <div class="mt-8 space-y-5">
+          {contactDetails.map((item) => (
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 shrink-0 rounded-xl bg-brand-pink-light flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-0.5">{item.label}</p>
+                {item.href ? (
+                  <a href={item.href} class="text-neutral-800 font-medium hover:text-brand-pink transition-colors">
+                    {item.value}
+                  </a>
+                ) : (
+                  <p class="text-neutral-800 font-medium">{item.value}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Social -->
+        <div class="mt-8 pt-6 border-t border-neutral-200">
+          <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-3">Follow Us</p>
+          <div class="flex gap-4">
+            <a href={site.social.facebook} target="_blank" rel="noopener noreferrer"
+               class="text-sm font-medium text-neutral-600 hover:text-brand-pink transition-colors">
+              Facebook
+            </a>
+            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer"
+               class="text-sm font-medium text-neutral-600 hover:text-brand-pink transition-colors">
+              Instagram
+            </a>
+            <a href={site.social.google} target="_blank" rel="noopener noreferrer"
+               class="text-sm font-medium text-neutral-600 hover:text-brand-pink transition-colors">
+              Google
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Map -->
+      <div>
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-neutral-200 shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.5!2d-117.3506!3d33.1581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDA5JzI5LjIiTiAxMTfCsDIxJzAyLjIiVw!5e0!3m2!1sen!2sus!4v1"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title={`Map showing ${nap.name} location in ${nap.address.city}`}
+          ></iframe>
+        </div>
+        <p class="mt-3 text-sm text-neutral-500 text-center">
+          {nap.address.full}
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- 4 · Quote Form — dark ────────────────────── -->
+  <QuoteForm
+    heading="Send Us a Message"
+    subheading="Fill out the form below and we'll get back to you within 2 hours during business hours."
+  />
+
+</BaseLayout>

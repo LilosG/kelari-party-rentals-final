@@ -1,0 +1,45 @@
+---
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  align?: "center" | "left";
+  dark?: boolean;
+}
+
+const {
+  eyebrow,
+  title,
+  subtitle,
+  align = "center",
+  dark = false,
+} = Astro.props;
+
+const isCenter = align === "center";
+---
+
+<div class:list={[isCenter ? "text-center" : "text-left"]}>
+  {eyebrow && (
+    <p class:list={[
+      "font-body uppercase tracking-wider text-xs font-semibold mb-3",
+      dark ? "text-brand-pink-light" : "text-brand-pink",
+    ]}>
+      {eyebrow}
+    </p>
+  )}
+  <h2 class:list={[
+    "font-display text-3xl lg:text-4xl font-bold",
+    dark ? "text-white" : "text-neutral-800",
+  ]}>
+    {title}
+  </h2>
+  {subtitle && (
+    <p class:list={[
+      "text-neutral-500 text-lg mt-4",
+      isCenter ? "mx-auto max-w-2xl" : "max-w-2xl",
+      dark ? "text-neutral-300" : "",
+    ]}>
+      {subtitle}
+    </p>
+  )}
+</div>

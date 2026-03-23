@@ -1,0 +1,135 @@
+---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
+import { services as allServices } from "../data/services";
+
+export interface ServiceCard {
+  icon: string;
+  name: string;
+  description: string;
+  href: string;
+  slug?: string;
+}
+
+export interface Props {
+  services?: ServiceCard[];
+  columns?: 2 | 3 | 4;
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  bg?: "white" | "light" | "dark" | "pink-light";
+  padding?: "default" | "compact" | "none";
+  /** @deprecated Use title */
+  heading?: string;
+  /** @deprecated Use eyebrow */
+  overline?: string;
+  /** @deprecated Ignored — use bg prop */
+  bgClass?: string;
+  /** @deprecated Pass services directly */
+  slugs?: string[];
+  /** @deprecated Pass services with hrefs directly */
+  citySlug?: string;
+}
+
+const {
+  services,
+  columns = 4,
+  eyebrow,
+  title,
+  subtitle,
+  bg = "white",
+  padding = "default",
+  heading,
+  overline,
+  slugs,
+  citySlug,
+} = Astro.props;
+
+const resolvedEyebrow = eyebrow ?? overline;
+const resolvedTitle = title ?? heading;
+const isDark = bg === "dark";
+
+const serviceImages: Record<string, string> = {
+  "party-rentals": "/images/hero-party.jpg",
+  "birthday-party-rentals": "/images/birthday-party.jpg",
+  "backyard-party-rentals": "/images/backyard-party.jpg",
+  "baby-shower-rentals": "/images/baby-shower.jpg",
+  "graduation-party-rentals": "/images/graduation-party.jpg",
+  "engagement-party-rentals": "/images/engagement-party.jpg",
+  "park-party-rentals": "/images/park-party.jpg",
+  "delivery-setup-pickup": "/images/backyard-party.jpg",
+  "table-and-chair-rentals": "/images/gallery-tablescape.jpg",
+  "tent-and-canopy-rentals": "/images/gallery-canopy.jpg",
+};
+
+function getServiceImage(slug: string): string {
+  return serviceImages[slug] ?? "/images/hero-party.jpg";
+}
+
+let resolvedServices: (ServiceCard & { slug: string })[] = services
+  ? services.map((s) => ({ ...s, slug: s.slug ?? s.href.split("/").filter(Boolean).pop() ?? "" }))
+  : (() => {
+      const pool = slugs
+        ? slugs
+            .map((s) => allServices.find((sv) => sv.slug === s))
+            .filter((s): s is (typeof allServices)[0] => Boolean(s))
+        : allServices;
+      return pool.map((s) => ({
+        icon: s.icon,
+        name: s.shortName,
+        description: s.subheadline,
+        href: citySlug ? `/${citySlug}/${s.slug}/` : `/services/${s.slug}/`,
+        slug: s.slug,
+      }));
+    })();
+
+const colClass = {
+  2: "grid-cols-1 sm:grid-cols-2",
+  3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+}[columns];
+---
+
+<Section {bg} {padding}>
+  {(resolvedTitle || resolvedEyebrow) && (
+    <div class="mb-10 md:mb-14">
+      <SectionHeader
+        eyebrow={resolvedEyebrow}
+        title={resolvedTitle ?? ""}
+        subtitle={subtitle}
+        dark={isDark}
+      />
+    </div>
+  )}
+
+  <div class={`grid gap-5 md:gap-6 ${colClass}`}>
+    {resolvedServices.map((service) => (
+      <a
+        href={service.href}
+        class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-neutral-100 overflow-hidden group"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src={getServiceImage(service.slug)}
+            alt={service.name}
+            width="1200"
+            height="900"
+            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-lg text-neutral-800 group-hover:text-brand-pink transition-colors">
+            {service.name}
+          </h3>
+          <p class="text-neutral-600 text-sm mt-2 leading-relaxed line-clamp-3">
+            {service.description}
+          </p>
+          <span class="text-brand-pink font-semibold text-sm mt-4 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            Learn more &rarr;
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Section>

@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LocalHero from "../components/LocalHero.astro";
+import TrustBar from "../components/TrustBar.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CtaBand from "../components/CtaBand.astro";
+import QuoteForm from "../components/QuoteForm.astro";
+
+import { site, nap } from "../data/site";
+
+const title = "Frequently Asked Questions | Kelari Party Rentals";
+const description =
+  "Answers to common questions about party rentals, delivery, setup, pricing, and service area. Kelari Party Rentals — North County San Diego.";
+
+const generalFaqs = [
+  {
+    question: "What items do you rent?",
+    answer:
+      "We rent tables (rectangular, round, cocktail, kids'), chairs (folding, Chiavari, kids'), tents and canopies, linens (tablecloths, runners, napkins, sashes), tableware (plates, flatware, glassware, chargers), decorations (centerpieces, arches, backdrops), and lighting (string lights, uplighting, lanterns).",
+  },
+  {
+    question: "What areas do you serve?",
+    answer:
+      "We serve Carlsbad, Encinitas, Oceanside, San Marcos, and surrounding North County San Diego communities. See our full service area page for ZIP codes and neighborhoods.",
+  },
+  {
+    question: "Is delivery and setup really free?",
+    answer:
+      "Yes. Every rental includes free delivery to your venue, professional setup, and same-day pickup after your event. No hidden fees, no delivery surcharges.",
+  },
+  {
+    question: "How far in advance should I book?",
+    answer:
+      "We recommend booking 1–2 weeks in advance, and 2–3 weeks during peak season (May–October, graduation season, and holidays). Last-minute requests are welcome — call us to check availability.",
+  },
+  {
+    question: "Do you require a deposit?",
+    answer:
+      "A deposit may be required for larger orders. We'll discuss payment terms when we send your quote. We accept cash, credit cards, Venmo, and Zelle.",
+  },
+  {
+    question: "What happens if it rains?",
+    answer:
+      "For outdoor events, we recommend renting a tent or canopy for weather protection. If you need to cancel or reschedule due to weather, contact us as soon as possible and we'll work with you.",
+  },
+];
+
+const deliveryFaqs = [
+  {
+    question: "When do you deliver?",
+    answer:
+      "We typically deliver 1–2 hours before your event start time. Exact delivery windows are confirmed when you book.",
+  },
+  {
+    question: "When do you pick up?",
+    answer:
+      "We return within 2 hours after your event ends for same-day pickup. You don't need to clean or fold anything — just leave items where they are.",
+  },
+  {
+    question: "Can you deliver to a park?",
+    answer:
+      "Absolutely. We deliver to public parks throughout our service area. We recommend confirming your park reservation or permit ahead of time.",
+  },
+  {
+    question: "Do I need to be home for delivery?",
+    answer:
+      "Someone 18 or older needs to be present at the delivery location to confirm placement and sign off on the items.",
+  },
+];
+
+const pricingFaqs = [
+  {
+    question: "How do I get a quote?",
+    answer: `Fill out our online quote form or call us at ${nap.contact.phone}. Share your event date, guest count, and what items you're interested in, and we'll send a custom quote.`,
+  },
+  {
+    question: "Is there a minimum order?",
+    answer:
+      "We have a small minimum order for free delivery. Contact us for details — we're happy to work with events of all sizes.",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept cash, all major credit cards, Venmo, and Zelle.",
+  },
+  {
+    question: "Can I modify my order after booking?",
+    answer:
+      "Yes — you can add or remove items up to 48 hours before your event, subject to availability. Contact us to make changes.",
+  },
+];
+
+const allFaqs = [...generalFaqs, ...deliveryFaqs, ...pricingFaqs];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    url: `${site.domain}/faq/`,
+    description,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
+      { "@type": "ListItem", position: 2, name: "FAQ", item: `${site.domain}/faq/` },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={`${site.domain}/faq/`}
+  schema={schema}
+>
+
+  <!-- 1 · Hero ─────────────────────────────────── -->
+  <LocalHero
+    title="Frequently Asked Questions"
+    subtitle="Everything you need to know about renting with Kelari Party Rentals."
+    bgImage="/images/graduation-party.jpg"
+  />
+
+  <!-- 2 · Trust Bar ────────────────────────────── -->
+  <TrustBar />
+
+  <!-- 3 · General Questions — white ────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title="General Questions"
+    faqs={generalFaqs}
+    bg="white"
+  />
+
+  <!-- 4 · Delivery & Setup — light ─────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title="Delivery & Setup"
+    faqs={deliveryFaqs}
+    bg="light"
+  />
+
+  <!-- 5 · Pricing & Payment — white ────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title="Pricing & Payment"
+    faqs={pricingFaqs}
+    bg="white"
+  />
+
+  <!-- 6 · Still Have Questions — light ─────────── -->
+  <Section bg="light">
+    <div class="max-w-2xl mx-auto text-center">
+      <SectionHeader
+        eyebrow="NEED MORE HELP?"
+        title="Still Have Questions?"
+      />
+      <p class="mt-5 text-lg text-neutral-600">
+        We're happy to help. Call us at{" "}
+        <a href={`tel:${nap.contact.phone.replace(/\D/g, "")}`}
+           class="text-brand-pink font-semibold hover:underline">
+          {nap.contact.phone}
+        </a>{" "}
+        or send us a message below.
+      </p>
+    </div>
+  </Section>
+
+  <!-- 7 · CTA Band — dark ──────────────────────── -->
+  <CtaBand
+    title="Ready to Get Started?"
+    subtitle="Request a free quote for your next event. We respond within 2 hours during business hours."
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+  />
+
+  <!-- 8 · Quote Form — dark ────────────────────── -->
+  <QuoteForm />
+
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+interface Props {
+  heading?: string;
+}
+
+const {
+  heading,
+} = Astro.props;
+
+const occasions = [
+  { label: "Birthday Parties", href: "/services/birthday-party-rentals/" },
+  { label: "Baby Showers", href: "/services/baby-shower-rentals/" },
+  { label: "Graduations", href: "/services/graduation-party-rentals/" },
+  { label: "Engagements", href: "/services/engagement-party-rentals/" },
+  { label: "Backyard Parties", href: "/services/backyard-party-rentals/" },
+  { label: "Park Parties", href: "/services/park-party-rentals/" },
+];
+---
+
+<div class="bg-brand-dark py-5 md:py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {heading && (
+      <p class="text-sm text-white/50 text-center mb-3 font-medium">{heading}</p>
+    )}
+    <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
+      {occasions.map((occasion, i) => (
+        <>
+          {i > 0 && (
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-pink shrink-0" aria-hidden="true"></span>
+          )}
+          <a
+            href={occasion.href}
+            class="text-sm md:text-[15px] font-medium text-white hover:text-brand-pink transition-colors whitespace-nowrap"
+          >
+            {occasion.label}
+          </a>
+        </>
+      ))}
+    </div>
+  </div>
+</div>

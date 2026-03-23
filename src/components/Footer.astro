@@ -1,0 +1,173 @@
+---
+import { site, nap } from "../data/site";
+---
+
+<footer class="bg-brand-dark text-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+
+    <!-- Main grid: brand | links | mini form -->
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
+
+      <!-- Brand & NAP -->
+      <div>
+        <a href="/" class="inline-block mb-5 hover:opacity-90 transition-opacity">
+          <span class="font-display text-2xl font-bold text-brand-pink">
+            {nap.name}
+          </span>
+        </a>
+        <address class="not-italic text-sm text-neutral-400 space-y-1.5 leading-relaxed">
+          <p class="text-neutral-300">{nap.address.full}</p>
+          <p>
+            <a
+              href={`tel:${nap.contact.phone.replace(/\D/g, "")}`}
+              class="text-neutral-400 hover:text-brand-pink transition-colors"
+            >
+              {nap.contact.phone}
+            </a>
+          </p>
+          <p>
+            <a
+              href={`mailto:${nap.contact.email}`}
+              class="text-neutral-400 hover:text-brand-pink transition-colors"
+            >
+              {nap.contact.email}
+            </a>
+          </p>
+          <p class="text-neutral-400">{nap.contact.hours}</p>
+        </address>
+        <!-- Social -->
+        <div class="flex items-center gap-4 mt-6 text-sm">
+          <a
+            href={site.social.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-500 hover:text-brand-pink transition-colors"
+            aria-label="Facebook"
+          >
+            Facebook
+          </a>
+          <a
+            href={site.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-500 hover:text-brand-pink transition-colors"
+            aria-label="Instagram"
+          >
+            Instagram
+          </a>
+          <a
+            href={site.social.google}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-500 hover:text-brand-pink transition-colors"
+            aria-label="Google"
+          >
+            Google
+          </a>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      <div class="grid sm:grid-cols-2 gap-8">
+        <!-- Services -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.12em] text-white mb-4">
+            Services
+          </h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/services/party-rentals/" class="text-neutral-400 hover:text-brand-pink transition-colors">Party Rentals</a></li>
+            <li><a href="/services/birthday-party-rentals/" class="text-neutral-400 hover:text-brand-pink transition-colors">Birthday Parties</a></li>
+            <li><a href="/services/baby-shower-rentals/" class="text-neutral-400 hover:text-brand-pink transition-colors">Baby Showers</a></li>
+            <li><a href="/services/graduation-party-rentals/" class="text-neutral-400 hover:text-brand-pink transition-colors">Graduation Parties</a></li>
+            <li><a href="/services/park-party-rentals/" class="text-neutral-400 hover:text-brand-pink transition-colors">Park Parties</a></li>
+            <li><a href="/rentals/" class="text-neutral-400 hover:text-brand-pink transition-colors">Browse Rentals</a></li>
+          </ul>
+        </div>
+
+        <!-- Areas + Company -->
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xs font-bold uppercase tracking-[0.12em] text-white mb-4">
+              Service Areas
+            </h3>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="/carlsbad/" class="text-neutral-400 hover:text-brand-pink transition-colors">Carlsbad</a></li>
+              <li><a href="/encinitas/" class="text-neutral-400 hover:text-brand-pink transition-colors">Encinitas</a></li>
+              <li><a href="/oceanside/" class="text-neutral-400 hover:text-brand-pink transition-colors">Oceanside</a></li>
+              <li><a href="/san-marcos/" class="text-neutral-400 hover:text-brand-pink transition-colors">San Marcos</a></li>
+              <li><a href="/service-area/" class="text-neutral-400 hover:text-brand-pink transition-colors">Full Service Area</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-bold uppercase tracking-[0.12em] text-white mb-4">
+              Company
+            </h3>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="/about/" class="text-neutral-400 hover:text-brand-pink transition-colors">About Us</a></li>
+              <li><a href="/faq/" class="text-neutral-400 hover:text-brand-pink transition-colors">FAQ</a></li>
+              <li><a href="/contact/" class="text-neutral-400 hover:text-brand-pink transition-colors">Contact</a></li>
+              <li><a href="/quote/" class="text-neutral-400 hover:text-brand-pink transition-colors">Get a Quote</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini quote form -->
+      <div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <h3 class="font-display text-xl font-bold text-white mb-1">
+            Get a Free Quote
+          </h3>
+          <p class="text-neutral-400 text-sm mb-5">
+            We respond within 2 hours during business hours.
+          </p>
+          <form method="POST" action="/api/quote" class="space-y-3">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              autocomplete="name"
+              class="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-neutral-500 text-sm focus:outline-none focus:border-brand-pink transition-colors"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+              required
+              autocomplete="tel"
+              class="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-neutral-500 text-sm focus:outline-none focus:border-brand-pink transition-colors"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email address"
+              required
+              autocomplete="email"
+              class="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-neutral-500 text-sm focus:outline-none focus:border-brand-pink transition-colors"
+            />
+            <input
+              type="date"
+              name="event_date"
+              required
+              class="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-brand-pink transition-colors [color-scheme:dark]"
+            />
+            <button
+              type="submit"
+              class="w-full bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold py-2.5 rounded-lg text-sm transition-all mt-1"
+            >
+              Request a Free Quote
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
+      <p>&copy; {new Date().getFullYear()} {nap.name}. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>

@@ -1,1 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap");
 @import "tailwindcss";
+
+/* ── Tailwind CSS 4 Theme ──────────────────────────────────────────────────── */
+
+@theme {
+  /* Brand colors (new token system) */
+  --color-brand-pink: #FF6F9C;
+  --color-brand-pink-light: #FFB6D9;
+  --color-brand-pink-dark: #C43068;
+  --color-brand-dark: #222222;
+  --color-brand-dark-soft: #2A2A2A;
+  --color-accent-sage: #A8C5A0;
+
+  /* Legacy color tokens (keep for existing component references) */
+  --color-primary: #FF6F9C;
+  --color-primary-light: #F2D9E7;
+  --color-primary-dark: #9E2F5E;
+  --color-dark: #1C1C1E;
+  --color-dark-card: #252528;
+  --color-muted: #6B7280;
+  --color-soft-bg: #FDF8FA;
+  --color-border: #EDE0E8;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --radius-card: 16px;
+  --radius-button: 8px;
+
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 40px rgba(255, 111, 156, 0.18);
+}
+
+/* ── CSS Custom Properties ────────────────────────────────────────────────── */
+
+:root {
+  /* Brand colors (new token system) */
+  --color-brand-pink: #FF6F9C;
+  --color-brand-pink-light: #FFB6D9;
+  --color-brand-pink-dark: #C43068;
+  --color-brand-dark: #222222;
+  --color-brand-dark-soft: #2A2A2A;
+  --color-accent-sage: #A8C5A0;
+
+  /* Legacy color tokens (keep for existing component references) */
+  --color-primary: #FF6F9C;
+  --color-primary-light: #F2D9E7;
+  --color-primary-dark: #9E2F5E;
+  --color-dark: #1C1C1E;
+  --color-dark-card: #252528;
+  --color-text: #1C1C1E;
+  --color-muted: #6B7280;
+  --color-soft-bg: #FDF8FA;
+  --color-border: #EDE0E8;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --radius-card: 16px;
+  --radius-button: 8px;
+
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 40px rgba(255, 111, 156, 0.18);
+}
+
+/* ── Base Styles ──────────────────────────────────────────────────────────── */
+
+html {
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #525252; /* neutral-600 */
+  background-color: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #262626; /* neutral-800 */
+}
+
+h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--color-dark);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ── Utility Layers ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 26px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    color: #fff;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-button);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 4px 16px rgba(200, 68, 122, 0.3);
+    color: #fff;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 26px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1.5px solid var(--color-primary);
+    border-radius: var(--radius-button);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+
+  .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 26px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    color: #fff;
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius-button);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .card {
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .overline {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-primary);
+  }
+
+  .heading-section {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--color-dark);
+  }
+
+  @media (min-width: 768px) {
+    .heading-section {
+      font-size: 44px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-section {
+      font-size: 48px;
+    }
+  }
+
+  /* Keep backwards compat alias */
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--color-dark);
+  }
+
+  @media (min-width: 768px) {
+    .section-heading {
+      font-size: 44px;
+    }
+  }
+
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}

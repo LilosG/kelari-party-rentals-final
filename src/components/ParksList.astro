@@ -1,0 +1,73 @@
+---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
+
+export interface Park {
+  name: string;
+  href?: string;
+}
+
+export interface Props {
+  parks: Park[];
+  eyebrow?: string;
+  title?: string;
+  bg?: "white" | "light" | "dark" | "pink-light";
+  padding?: "default" | "compact" | "none";
+}
+
+const {
+  parks,
+  eyebrow,
+  title,
+  bg = "white",
+  padding = "compact",
+} = Astro.props;
+
+const isDark = bg === "dark";
+---
+
+<Section {bg} {padding}>
+  {(title || eyebrow) && (
+    <div class="mb-6">
+      <SectionHeader
+        eyebrow={eyebrow}
+        title={title ?? ""}
+        align="left"
+        dark={isDark}
+      />
+    </div>
+  )}
+
+  <div class="flex flex-wrap gap-2">
+    {parks.map((park) => (
+      park.href ? (
+        <a
+          href={park.href}
+          class:list={[
+            "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
+            isDark
+              ? "bg-white/10 text-neutral-200 border border-white/20 hover:border-brand-pink/50 hover:text-brand-pink"
+              : "bg-neutral-100 text-neutral-700 border border-neutral-200 hover:border-brand-pink hover:text-brand-pink hover:bg-brand-pink-light",
+          ]}
+        >
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          </svg>
+          {park.name}
+        </a>
+      ) : (
+        <span class:list={[
+          "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium",
+          isDark
+            ? "bg-white/10 text-neutral-200 border border-white/20"
+            : "bg-neutral-100 text-neutral-700 border border-neutral-200",
+        ]}>
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+          {park.name}
+        </span>
+      )
+    ))}
+  </div>
+</Section>

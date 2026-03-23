@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LocalHero from "../../components/LocalHero.astro";
+import TrustBar from "../../components/TrustBar.astro";
+import Section from "../../components/Section.astro";
+import WhatsIncluded from "../../components/WhatsIncluded.astro";
+import HowItWorks from "../../components/HowItWorks.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import CityCards from "../../components/CityCards.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import QuoteForm from "../../components/QuoteForm.astro";
+
+import { site, nap } from "../../data/site";
+import { services, type Service } from "../../data/services";
+import { cities } from "../../data/cities";
+import { howItWorksSteps } from "../../data/homepage";
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { service: service.slug },
+    props: { service },
+  }));
+}
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+
+const serviceImages: Record<string, string> = {
+  "party-rentals": "/images/hero-party.jpg",
+  "birthday-party-rentals": "/images/birthday-party.jpg",
+  "backyard-party-rentals": "/images/backyard-party.jpg",
+  "baby-shower-rentals": "/images/baby-shower.jpg",
+  "graduation-party-rentals": "/images/graduation-party.jpg",
+  "engagement-party-rentals": "/images/engagement-party.jpg",
+  "park-party-rentals": "/images/park-party.jpg",
+  "delivery-setup-pickup": "/images/backyard-party.jpg",
+};
+const bgImage = serviceImages[service.slug] ?? "/images/hero-party.jpg";
+
+const cityCards = cities
+  .filter((c) => c.services.includes(service.slug))
+  .map((c) => ({
+    name: c.name,
+    description: `${service.shortName} with free delivery and setup in ${c.name}.`,
+    href: `/${c.slug}/${service.slug}/`,
+  }));
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.name,
+    provider: {
+      "@type": "LocalBusiness",
+      name: nap.name,
+      url: site.domain,
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      name: "North County San Diego",
+    },
+    description: service.meta.description,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: service.meta.title,
+    url: `${site.domain}/services/${service.slug}/`,
+    description: service.meta.description,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.domain,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${site.domain}/services/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.name,
+        item: `${site.domain}/services/${service.slug}/`,
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={service.meta.title}
+  description={service.meta.description}
+  canonical={`${site.domain}/services/${service.slug}/`}
+  schema={schema}
+>
+
+  <!-- 1 · Hero ─────────────────────────────────── -->
+  <LocalHero
+    title={service.headline}
+    subtitle={service.subheadline}
+    bgImage={bgImage}
+  />
+
+  <!-- 2 · Trust Bar ────────────────────────────── -->
+  <TrustBar />
+
+  <!-- 3 · Intro — white ────────────────────────── -->
+  <Section bg="white">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
+        {service.intro}
+      </p>
+    </div>
+  </Section>
+
+  <!-- 4 · What's Included — light ──────────────── -->
+  <WhatsIncluded
+    eyebrow="FULL-SERVICE RENTALS"
+    title={`What's Included with ${service.name}`}
+    items={service.whatsIncluded}
+    columns={3}
+    bg="light"
+  />
+
+  <!-- 5 · How It Works — white ─────────────────── -->
+  <HowItWorks
+    eyebrow="HOW IT WORKS"
+    title="How It Works"
+    subtitle="We handle every step so you can focus on what matters — celebrating with your people."
+    steps={howItWorksSteps}
+    bg="white"
+  />
+
+  <!-- 6 · CTA Band — dark ──────────────────────── -->
+  <CtaBand
+    title={`Ready to Book ${service.shortName}?`}
+    subtitle="Free delivery, professional setup, and same-day pickup included with every rental. No hidden fees."
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+  />
+
+  <!-- 7 · City Cards — white ───────────────────── -->
+  <CityCards
+    eyebrow="SERVICE AREAS"
+    title={`${service.name} by City`}
+    subtitle={`Free delivery and setup for ${service.shortName.toLowerCase()} across North County San Diego. Choose your city for local details.`}
+    cities={cityCards}
+    bg="white"
+  />
+
+  <!-- 8 · FAQ — light ──────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={`${service.name} — Frequently Asked Questions`}
+    faqs={service.faqs}
+    bg="light"
+  />
+
+  <!-- 9 · Quote Form — dark ────────────────────── -->
+  <QuoteForm
+    heading={`Get a ${service.shortName} Quote`}
+    subheading={`Tell us about your event and we'll put together a custom ${service.name.toLowerCase()} package with free delivery.`}
+    service={service.slug}
+  />
+
+</BaseLayout>

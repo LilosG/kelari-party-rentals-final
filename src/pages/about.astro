@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LocalHero from "../components/LocalHero.astro";
+import TrustBar from "../components/TrustBar.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import CtaBand from "../components/CtaBand.astro";
+import QuoteForm from "../components/QuoteForm.astro";
+
+import { site, nap } from "../data/site";
+
+const title = "About Us | Kelari Party Rentals";
+const description =
+  "Kelari Party Rentals is a locally owned party rental company based in Carlsbad, CA. We provide tables, chairs, tents & décor with free delivery across North County San Diego.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    url: `${site.domain}/about/`,
+    description,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
+      { "@type": "ListItem", position: 2, name: "About", item: `${site.domain}/about/` },
+    ],
+  },
+];
+
+const values = [
+  {
+    title: "Stress-Free Service",
+    text: "We handle delivery, setup, and pickup. You don't lift a finger — that's the whole point.",
+  },
+  {
+    title: "Quality You Can See",
+    text: "Every table, chair, tent, and linen is inspected and cleaned before delivery. We take pride in how our items look at your event.",
+  },
+  {
+    title: "Transparent Pricing",
+    text: "Your quote is your price. No hidden delivery fees, no surprise charges, no fine print.",
+  },
+  {
+    title: "Locally Rooted",
+    text: "We live and work in North County San Diego. We know the neighborhoods, parks, and venues — and we care about this community.",
+  },
+  {
+    title: "Reliability",
+    text: "We show up on time, every time. Your event has a schedule and we respect it.",
+  },
+  {
+    title: "Personal Attention",
+    text: "We're a small team that treats every event like it matters — because it does. You're not a number to us.",
+  },
+];
+
+const stats = [
+  { value: "4", label: "Cities Served" },
+  { value: "7", label: "Rental Categories" },
+  { value: "7 Days", label: "Open Weekly" },
+  { value: "Free", label: "Delivery & Setup" },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={`${site.domain}/about/`}
+  schema={schema}
+>
+
+  <!-- 1 · Hero ─────────────────────────────────── -->
+  <LocalHero
+    title="About Kelari Party Rentals"
+    subtitle="Locally owned in Carlsbad. Dedicated to making every celebration stress-free."
+    bgImage="/images/backyard-party.jpg"
+  />
+
+  <!-- 2 · Trust Bar ────────────────────────────── -->
+  <TrustBar />
+
+  <!-- 3 · Our Story — white ────────────────────── -->
+  <Section bg="white">
+    <div class="max-w-3xl mx-auto">
+      <SectionHeader
+        eyebrow="WHO WE ARE"
+        title="Our Story"
+      />
+      <div class="mt-8 space-y-5 text-lg text-neutral-600 leading-relaxed">
+        <p>
+          Kelari Party Rentals was founded with a simple idea: celebrating life's milestones should be joyful, not stressful. Based right here in Carlsbad on El Camino Real, we serve families and event planners across North County San Diego.
+        </p>
+        <p>
+          We saw how much time and energy went into planning parties — renting from one place, borrowing from another, hauling everything yourself, setting it all up, and then doing it in reverse after the party. We knew there had to be a better way.
+        </p>
+        <p>
+          That's why every Kelari rental includes free delivery, professional setup, and same-day pickup. You tell us what you need, we bring it, set it up, and take it away. You focus on your guests, the cake, and the memories.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- 4 · Values — light ───────────────────────── -->
+  <Section bg="light">
+    <div class="mb-10 md:mb-14">
+      <SectionHeader
+        eyebrow="OUR VALUES"
+        title="What We Stand For"
+      />
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {values.map((item) => (
+        <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+          <h3 class="font-display text-lg font-bold text-neutral-800">{item.title}</h3>
+          <p class="mt-2 text-sm text-neutral-600 leading-relaxed">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- 5 · By the Numbers — white ───────────────── -->
+  <Section bg="white">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-center max-w-4xl mx-auto">
+      {stats.map((stat) => (
+        <div>
+          <p class="text-4xl md:text-5xl font-bold text-brand-pink font-display">{stat.value}</p>
+          <p class="mt-2 text-sm text-neutral-500 font-medium uppercase tracking-wide">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- 6 · CTA Band — dark ──────────────────────── -->
+  <CtaBand
+    title="Ready to Plan Your Event?"
+    subtitle="Get a free, no-obligation quote. We'll help you choose the right rentals for your celebration."
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+  />
+
+  <!-- 7 · Quote Form — dark ────────────────────── -->
+  <QuoteForm />
+
+</BaseLayout>

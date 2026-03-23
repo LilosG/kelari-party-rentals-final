@@ -1,0 +1,210 @@
+---
+import { nap } from "../data/site";
+
+interface Props {
+  heading?: string;
+  subheading?: string;
+  overline?: string;
+  city?: string;
+  service?: string;
+  variant?: "light" | "dark";
+}
+
+const {
+  heading = "Get a Free Quote",
+  subheading = "Tell us about your event and we'll put together a custom rental package — no obligation.",
+  overline = "Start Here",
+  city,
+  service,
+  variant = "dark",
+} = Astro.props;
+
+const isDark = variant === "dark";
+---
+
+<section id="quote-form" class={`section-padding py-16 md:py-24 relative overflow-hidden ${isDark ? "bg-brand-dark" : ""}`}>
+  {isDark && (
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-brand-pink/5 blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+    </div>
+  )}
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class={isDark ? "grid lg:grid-cols-2 gap-12 lg:gap-20" : ""}>
+
+      {isDark && (
+        <div class="flex flex-col justify-center">
+          <span class="overline mb-3">{overline}</span>
+          <h2 class="font-display text-[44px] font-semibold text-white leading-[1.15] mb-5">
+            {heading}
+          </h2>
+          <p class="font-body text-base text-white/75 leading-[1.7] max-w-[420px] mb-8">
+            {subheading}
+          </p>
+          <div class="flex flex-col gap-4">
+            <a href={`tel:${nap.contact.phone.replace(/\D/g, "")}`} class="flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-lg bg-brand-pink flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+              </div>
+              <div>
+                <span class="font-body text-xs text-white/50 block">Call us</span>
+                <span class="font-body text-sm font-semibold text-white group-hover:text-brand-pink transition-colors">{nap.contact.phone}</span>
+              </div>
+            </a>
+            <a href={`mailto:${nap.contact.email}`} class="flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-lg bg-brand-pink flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              </div>
+              <div>
+                <span class="font-body text-xs text-white/50 block">Email</span>
+                <span class="font-body text-sm font-semibold text-white group-hover:text-brand-pink transition-colors">{nap.contact.email}</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      )}
+
+      <div>
+        {!isDark && (
+          <div class="text-center mb-10 md:mb-12">
+            <span class="overline mb-3">{overline}</span>
+            <h2 class="heading-section">{heading}</h2>
+            <p class="mt-3 text-neutral-500 text-lg">{subheading}</p>
+          </div>
+        )}
+
+        <form
+          class="bg-white rounded-[20px] p-8 md:p-10 shadow-[0_2px_16px_rgba(0,0,0,0.08)]"
+          method="POST"
+          action="/api/quote"
+          data-city={city}
+          data-service={service}
+        >
+          {isDark && (
+            <h3 class="font-display text-xl font-semibold text-neutral-800 mb-6">Request a Quote</h3>
+          )}
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="quote-name" class="block text-sm font-medium text-neutral-800 mb-1.5">
+                Full Name <span class="text-brand-pink">*</span>
+              </label>
+              <input
+                type="text"
+                id="quote-name"
+                name="name"
+                required
+                autocomplete="name"
+                class="w-full px-4 py-3 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-colors"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label for="quote-phone" class="block text-sm font-medium text-neutral-800 mb-1.5">
+                Phone <span class="text-brand-pink">*</span>
+              </label>
+              <input
+                type="tel"
+                id="quote-phone"
+                name="phone"
+                required
+                autocomplete="tel"
+                class="w-full px-4 py-3 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-colors"
+                placeholder="(760) 000-0000"
+              />
+            </div>
+            <div>
+              <label for="quote-email" class="block text-sm font-medium text-neutral-800 mb-1.5">
+                Email <span class="text-brand-pink">*</span>
+              </label>
+              <input
+                type="email"
+                id="quote-email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full px-4 py-3 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-colors"
+                placeholder="you@email.com"
+              />
+            </div>
+            <div>
+              <label for="quote-date" class="block text-sm font-medium text-neutral-800 mb-1.5">
+                Event Date <span class="text-brand-pink">*</span>
+              </label>
+              <input
+                type="date"
+                id="quote-date"
+                name="event_date"
+                required
+                class="w-full px-4 py-3 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-colors"
+              />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4 mt-4">
+            <div>
+              <label for="quote-event-type" class="block text-sm font-medium text-neutral-800 mb-1.5">
+                Event Type
+              </label>
+              <select
+                id="quote-event-type"
+                name="event_type"
+                class="w-full px-4 py-3 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-colors bg-white"
+              >
+                <option value="">Select event type</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="baby-shower">Baby Shower</option>
+                <option value="graduation">Graduation Party</option>
+                <option value="engagement">Engagement Party</option>
+                <option value="backyard">Backyard Party</option>
+                <option value="park">Park Party</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="quote-guests" class="block text-sm font-medium text-neutral-800 mb-1.5">
+                Estimated Guests
+              </label>
+              <select
+                id="quote-guests"
+                name="guest_count"
+                class="w-full px-4 py-3 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-colors bg-white"
+              >
+                <option value="">Select range</option>
+                <option value="1-20">1–20 guests</option>
+                <option value="21-50">21–50 guests</option>
+                <option value="51-100">51–100 guests</option>
+                <option value="100+">100+ guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label for="quote-message" class="block text-sm font-medium text-neutral-800 mb-1.5">
+              Tell us about your event
+            </label>
+            <textarea
+              id="quote-message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-3 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-colors resize-y"
+              placeholder="What items are you looking for? Any special requests?"
+            ></textarea>
+          </div>
+
+          {city && <input type="hidden" name="city" value={city} />}
+          {service && <input type="hidden" name="service" value={service} />}
+
+          <button type="submit" class="w-full btn-primary py-[14px] text-base font-bold mt-4 gap-2">
+            Request My Free Quote
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </button>
+
+          <p class="font-body text-xs text-center text-neutral-500 mt-2">
+            We respond within 2 hours during business hours. No spam, ever.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
