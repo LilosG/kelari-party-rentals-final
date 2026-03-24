@@ -1,4 +1,6 @@
 ---
+import Button from "./Button.astro";
+
 export interface Props {
   title?: string;
   subtitle?: string;
@@ -72,7 +74,7 @@ const resolvedSecondaryCta = secondaryCta ?? {
 };
 ---
 
-<section class="relative isolate overflow-hidden flex items-center" style="min-height: 600px;">
+<section class="hero-shell relative isolate overflow-hidden flex items-center">
   <img
     src={resolvedImage}
     alt=""
@@ -82,12 +84,12 @@ const resolvedSecondaryCta = secondaryCta ?? {
     aria-hidden="true"
   />
   <!-- Warm atmospheric overlay -->
-  <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(10,5,15,0.88) 0%, rgba(10,5,15,0.75) 45%, rgba(10,5,15,0.55) 75%, rgba(10,5,15,0.30) 100%);"></div>
+  <div class="hero-overlay absolute inset-0"></div>
   <!-- Pink radial glow top-left -->
-  <div class="absolute -top-24 -left-24 w-[480px] h-[480px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(232,53,109,0.18) 0%, transparent 70%);"></div>
+  <div class="hero-pink-glow absolute -top-20 -left-20 w-[340px] h-[340px] rounded-full pointer-events-none"></div>
 
   <div class="relative z-10 w-full">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-2xl">
 
         {resolvedBreadcrumbs.length > 0 && (
@@ -107,8 +109,8 @@ const resolvedSecondaryCta = secondaryCta ?? {
           </nav>
         )}
 
-        <p class="inline-flex items-center gap-2 text-xs font-semibold mb-6 px-3 py-1.5 rounded-full border" style="color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.20); background: rgba(255,255,255,0.08);">
-          <span class="w-1.5 h-1.5 rounded-full shrink-0" style="background: #E8356D;"></span>
+        <p class="hero-chip inline-flex items-center gap-2 text-xs font-semibold mb-6 px-3 py-1.5 rounded-full border">
+          <span class="w-1.5 h-1.5 rounded-full shrink-0 bg-brand-pink"></span>
           North County San Diego
         </p>
         {eyebrow && eyebrow !== "North County San Diego" && (
@@ -128,35 +130,28 @@ const resolvedSecondaryCta = secondaryCta ?? {
           </ul>
         )}
 
-        <h1 class="font-display font-bold text-white leading-[1.05] tracking-tight text-[2.4rem] sm:text-[3.0rem] lg:text-[3.8rem] xl:text-[4.4rem] max-w-[18ch]" style="text-shadow: 0 2px 24px rgba(0,0,0,0.5);">
+        <h1 class="hero-title font-display font-bold text-white leading-[1.05] tracking-tight text-[2.4rem] sm:text-[3.0rem] lg:text-[3.8rem] xl:text-[4.4rem] max-w-[18ch]">
           {resolvedTitle.includes("Every Celebration") ? (
             <>
               {resolvedTitle.split("Every Celebration")[0]}
-              <em class="not-italic block" style="color: #E8356D; font-style: italic;">Every Celebration{resolvedTitle.split("Every Celebration")[1]}</em>
+              <em class="block italic text-brand-pink">Every Celebration{resolvedTitle.split("Every Celebration")[1]}</em>
             </>
           ) : resolvedTitle}
         </h1>
 
         {resolvedSubtitle && (
-          <p class="mt-6 text-lg text-white/80 leading-relaxed max-w-xl" style="text-shadow: 0 1px 8px rgba(0,0,0,0.3);">
+          <p class="hero-subtitle mt-6 text-lg text-white/80 leading-relaxed max-w-xl">
             {resolvedSubtitle}
           </p>
         )}
 
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a
-            href={resolvedPrimaryCta.href}
-            class="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-full text-base transition-all duration-300"
-            style="background: #E8356D; box-shadow: 0 8px 28px rgba(232,53,109,0.45);"
-          >
+        <div class="mt-8 flex flex-wrap gap-3">
+          <Button href={resolvedPrimaryCta.href} variant="brand" size="md">
             {resolvedPrimaryCta.label}
-          </a>
-          <a
-            href={resolvedSecondaryCta.href}
-            class="inline-flex items-center justify-center gap-2 border-2 border-white/80 text-white hover:bg-white hover:text-neutral-900 font-semibold px-8 py-4 rounded-full text-base transition-all duration-300"
-          >
+          </Button>
+          <Button href={resolvedSecondaryCta.href} variant="outline-light" size="md">
             {resolvedSecondaryCta.label}
-          </a>
+          </Button>
         </div>
       </div>
     </div>
