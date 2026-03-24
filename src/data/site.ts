@@ -110,19 +110,19 @@ export const social: SocialLinks = {
 
 export const tokens: DesignTokens = {
   colors: {
-    primary: "#FF6F9C",
-    primaryLight: "#F2D9E7",
-    primaryDark: "#9E2F5E",
-    dark: "#1C1C1E",
-    darkCard: "#252528",
-    text: "#1C1C1E",
-    muted: "#6B7280",
-    softBg: "#FDF8FA",
-    border: "#EDE0E8",
+    primary: "#E8356D",
+    primaryLight: "#FCE4EC",
+    primaryDark: "#B5264F",
+    dark: "#222222",
+    darkCard: "#2A2A2A",
+    text: "#404040",
+    muted: "#737373",
+    softBg: "#fdf8f9",
+    border: "#f0e4ea",
   },
   fonts: {
-    display: "'Cormorant Garamond', serif",
-    body: "'DM Sans', sans-serif",
+    display: "'Playfair Display', Georgia, serif",
+    body: "'DM Sans', system-ui, sans-serif",
   },
   radii: {
     card: "16px",

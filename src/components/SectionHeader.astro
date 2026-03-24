@@ -30,9 +30,9 @@ const widthClass = {
 }[width];
 
 const titleSize = {
-  compact: "text-3xl md:text-4xl lg:text-[2.6rem]",
-  default: "text-4xl md:text-5xl lg:text-[3.2rem]",
-  featured: "text-4xl md:text-5xl lg:text-[3.6rem] xl:text-[4rem]",
+  compact: "text-[1.9rem] md:text-[2.4rem] lg:text-[2.8rem]",
+  default: "text-[2.4rem] md:text-[3rem] lg:text-[3.6rem]",
+  featured: "text-[2.8rem] md:text-[3.6rem] lg:text-[4.2rem] xl:text-[4.8rem]",
 }[spacing];
 ---
 
@@ -54,7 +54,7 @@ const titleSize = {
   </h2>
   {subtitle && (
     <p class:list={[
-      "mt-4 text-base lg:text-lg leading-relaxed",
+      "mt-5 text-[1.05rem] lg:text-[1.15rem] leading-[1.75]",
       isCenter ? "mx-auto" : "",
       "max-w-2xl",
       dark ? "text-neutral-300" : "text-neutral-500",

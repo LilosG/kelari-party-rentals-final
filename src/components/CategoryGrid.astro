@@ -84,14 +84,14 @@ const colClass = {
         </div>
         <div class="p-5 flex flex-col flex-1">
           <h3 class:list={[
-            "font-display font-bold text-lg group-hover:text-brand-pink transition-colors",
+            "font-display font-bold text-xl group-hover:text-brand-pink transition-colors leading-tight",
             isDark ? "text-white" : "",
-          ]} style={isDark ? "" : "color: #111;"}>
+          ]} style={isDark ? "" : "color: #111111;"}>
             {cat.name}
           </h3>
           <p class:list={[
-            "text-sm mt-2 leading-relaxed flex-1",
-            isDark ? "text-neutral-300" : "text-neutral-600",
+            "text-[0.9rem] mt-2.5 leading-[1.65] flex-1",
+            isDark ? "text-neutral-300" : "text-neutral-500",
           ]}>
             {cat.description}
           </p>
