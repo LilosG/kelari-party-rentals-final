@@ -14,17 +14,18 @@ const { title, subtitle, primaryCta, secondaryCta } = Astro.props;
 <Section bg="dark" spacing="featured" width="wide">
   <div class="cta-band-shell text-center">
     <div class="cta-band-glow" aria-hidden="true"></div>
+    <div class="cta-band-glow cta-band-glow-secondary" aria-hidden="true"></div>
     <div class="relative z-10 mx-auto max-w-4xl">
       <p class="cta-band-eyebrow">Ready to plan with confidence?</p>
-      <h2 class="font-display text-balance text-[2.4rem] font-bold leading-[1.02] tracking-[-0.025em] text-white md:text-[3.2rem] lg:text-[4rem]">
+      <h2 class="font-display text-balance text-[2.5rem] font-bold leading-[0.98] tracking-[-0.03em] text-white md:text-[3.4rem] lg:text-[4.35rem]">
         {title}
       </h2>
       {subtitle && (
-        <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-200 md:text-lg lg:text-[1.15rem]">
+        <p class="mx-auto mt-6 max-w-3xl text-[1.05rem] leading-[1.72] text-neutral-200 md:text-[1.14rem] lg:text-[1.2rem]">
           {subtitle}
         </p>
       )}
-      <div class="mt-9 flex flex-wrap justify-center gap-4 lg:mt-11">
+      <div class="mt-10 flex flex-wrap justify-center gap-4 lg:mt-12">
         <a href={primaryCta.href} class="btn-primary btn-primary-lg">
           {primaryCta.label}
         </a>
