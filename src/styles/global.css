@@ -73,13 +73,13 @@
   --text-strong: #111111;
   --text-body: #404040;
   --text-subtle: #374151;
-  --hero-overlay-start: rgb(14 8 20 / 0.58);
-  --hero-overlay-mid: rgb(14 8 20 / 0.38);
-  --hero-overlay-end: rgb(14 8 20 / 0.14);
+  --hero-overlay-start: rgb(14 8 20 / 0.42);
+  --hero-overlay-mid: rgb(14 8 20 / 0.24);
+  --hero-overlay-end: rgb(14 8 20 / 0.08);
   --hero-chip-border: rgb(255 255 255 / 0.2);
   --hero-chip-bg: rgb(255 255 255 / 0.08);
   --hero-chip-text: rgb(255 255 255 / 0.85);
-  --hero-glow-pink: rgb(232 53 109 / 0.06);
+  --hero-glow-pink: rgb(232 53 109 / 0.02);
   --trust-icon-bg: rgb(232 53 109 / 0.15);
   --trust-subtext: rgb(255 255 255 / 0.45);
 }
@@ -280,14 +280,14 @@ a:hover {
       to right,
       var(--hero-overlay-start) 0%,
       var(--hero-overlay-mid) 45%,
-      rgb(14 8 20 / 0.22) 75%,
+      rgb(14 8 20 / 0.14) 75%,
       var(--hero-overlay-end) 100%
     );
   }
 
   .hero-pink-glow {
     background: radial-gradient(circle, var(--hero-glow-pink) 0%, transparent 70%);
-    filter: blur(10px);
+    filter: blur(14px);
   }
 
   .hero-chip {
@@ -297,11 +297,23 @@ a:hover {
   }
 
   .hero-title {
-    text-shadow: 0 1px 6px rgb(0 0 0 / 0.25);
+    text-shadow: none;
   }
 
   .hero-subtitle {
-    text-shadow: 0 1px 4px rgb(0 0 0 / 0.2);
+    text-shadow: none;
+  }
+
+  .hero-title-intro {
+    @apply font-medium text-white/92 leading-tight;
+  }
+
+  .hero-title-emphasis {
+    @apply mt-1.5 font-semibold tracking-tight leading-tight;
+  }
+
+  .hero-title-emphasis-tail {
+    @apply not-italic text-white;
   }
 
   .trust-strip {

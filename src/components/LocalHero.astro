@@ -72,6 +72,14 @@ const resolvedSecondaryCta = secondaryCta ?? {
   label: "(760) 000-0000",
   href: "tel:7600000000",
 };
+
+const hasEmphasisPattern = resolvedTitle.includes("Every Celebration");
+const introTitle = hasEmphasisPattern
+  ? resolvedTitle.split("Every Celebration")[0].trim()
+  : resolvedTitle;
+const emphasisTail = hasEmphasisPattern
+  ? resolvedTitle.split("Every Celebration")[1].trim()
+  : "";
 ---
 
 <section class="hero-shell relative isolate overflow-hidden flex items-center">
@@ -86,7 +94,7 @@ const resolvedSecondaryCta = secondaryCta ?? {
   <!-- Warm atmospheric overlay -->
   <div class="hero-overlay absolute inset-0"></div>
   <!-- Pink radial glow top-left -->
-  <div class="hero-pink-glow absolute -top-20 -left-20 w-[340px] h-[340px] rounded-full pointer-events-none"></div>
+  <div class="hero-pink-glow absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full pointer-events-none"></div>
 
   <div class="relative z-10 w-full">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -130,13 +138,18 @@ const resolvedSecondaryCta = secondaryCta ?? {
           </ul>
         )}
 
-        <h1 class="hero-title font-display font-bold text-white leading-[1.05] tracking-tight text-[2.4rem] sm:text-[3.0rem] lg:text-[3.8rem] xl:text-[4.4rem] max-w-[18ch]">
-          {resolvedTitle.includes("Every Celebration") ? (
+        <h1 class="hero-title font-display text-white leading-[1.06] tracking-tight text-[2.15rem] sm:text-[2.7rem] lg:text-[3.35rem] xl:text-[3.8rem] max-w-[19ch]">
+          {hasEmphasisPattern ? (
             <>
-              {resolvedTitle.split("Every Celebration")[0]}
-              <em class="block italic text-brand-pink">Every Celebration{resolvedTitle.split("Every Celebration")[1]}</em>
+              <span class="hero-title-intro block">{introTitle}</span>
+              <span class="hero-title-emphasis block">
+                <span class="text-brand-pink">Every Celebration</span>{" "}
+                <em class="hero-title-emphasis-tail">{emphasisTail}</em>
+              </span>
             </>
-          ) : resolvedTitle}
+          ) : (
+            <span class="hero-title-intro block">{resolvedTitle}</span>
+          )}
         </h1>
 
         {resolvedSubtitle && (
