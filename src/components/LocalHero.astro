@@ -72,7 +72,7 @@ const resolvedSecondaryCta = secondaryCta ?? {
 };
 ---
 
-<section class="relative isolate overflow-hidden min-h-[580px] lg:min-h-[680px] flex items-center">
+<section class="relative isolate overflow-hidden flex items-center" style="min-height: 600px;">
   <img
     src={resolvedImage}
     alt=""
@@ -81,7 +81,10 @@ const resolvedSecondaryCta = secondaryCta ?? {
     class="absolute inset-0 h-full w-full object-cover"
     aria-hidden="true"
   />
-  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
+  <!-- Warm atmospheric overlay -->
+  <div class="absolute inset-0" style="background: linear-gradient(105deg, rgba(15,10,20,0.82) 0%, rgba(15,10,20,0.65) 55%, rgba(15,10,20,0.3) 100%);"></div>
+  <!-- Pink radial glow top-left -->
+  <div class="absolute -top-24 -left-24 w-[480px] h-[480px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(232,53,109,0.18) 0%, transparent 70%);"></div>
 
   <div class="relative z-10 w-full">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
@@ -105,7 +108,7 @@ const resolvedSecondaryCta = secondaryCta ?? {
         )}
 
         {eyebrow && (
-          <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink-light mb-5">
+          <p class="font-body uppercase tracking-[0.2em] text-[0.7rem] font-bold text-brand-pink-light mb-5">
             {eyebrow}
           </p>
         )}
@@ -126,7 +129,7 @@ const resolvedSecondaryCta = secondaryCta ?? {
         </h1>
 
         {resolvedSubtitle && (
-          <p class="mt-6 text-lg text-white/90 leading-relaxed max-w-xl" style="text-shadow: 0 1px 8px rgba(0,0,0,0.3);">
+          <p class="mt-6 text-lg text-white/80 leading-relaxed max-w-xl" style="text-shadow: 0 1px 8px rgba(0,0,0,0.3);">
             {resolvedSubtitle}
           </p>
         )}
@@ -134,13 +137,14 @@ const resolvedSecondaryCta = secondaryCta ?? {
         <div class="mt-8 flex flex-wrap gap-4">
           <a
             href={resolvedPrimaryCta.href}
-            class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-8 py-4 rounded-lg text-base shadow-lg hover:shadow-xl transition-all duration-300"
+            class="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-full text-base transition-all duration-300"
+            style="background: #E8356D; box-shadow: 0 8px 28px rgba(232,53,109,0.45);"
           >
             {resolvedPrimaryCta.label}
           </a>
           <a
             href={resolvedSecondaryCta.href}
-            class="inline-flex items-center justify-center gap-2 border-2 border-white/80 text-white hover:bg-white hover:text-neutral-900 font-semibold px-8 py-4 rounded-lg text-base transition-all duration-300"
+            class="inline-flex items-center justify-center gap-2 border-2 border-white/80 text-white hover:bg-white hover:text-neutral-900 font-semibold px-8 py-4 rounded-full text-base transition-all duration-300"
           >
             {resolvedSecondaryCta.label}
           </a>

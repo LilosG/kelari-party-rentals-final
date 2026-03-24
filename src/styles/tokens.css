@@ -9,16 +9,16 @@
 
 :root {
   /* ── Brand colors ──────────────────────────────────────────────────────── */
-  --brand-pink:           #FF6F9C;
-  --brand-pink-light:     #FFB6D9;
-  --brand-pink-dark:      #C43068;
+  --brand-pink:           #E8356D;
+  --brand-pink-light:     #FCE4EC;
+  --brand-pink-dark:      #B5264F;
   --brand-dark:           #222222;
   --brand-dark-soft:      #2A2A2A;
   --accent-sage:          #A8C5A0;
 
   /* ── Brand color aliases (semantic) ───────────────────────────────────── */
   --brand-primary:        var(--brand-pink);
-  --brand-primary-hover:  #C43068;   /* ~10% darker for hover states */
+  --brand-primary-hover:  #B5264F;   /* ~10% darker for hover states */
   --brand-surface:        var(--brand-pink-light);
   --brand-bg:             var(--brand-dark);
   --brand-bg-soft:        var(--brand-dark-soft);

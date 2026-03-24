@@ -67,7 +67,10 @@ const colClass = {
     {categories.map((cat) => (
       <a
         href={cat.href}
-        class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+        class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col transition-transform duration-300 hover:-translate-y-1.5"
+        style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);"
+        onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)'"
+        onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'"
       >
         <div class="relative overflow-hidden aspect-[16/10]">
           <img
@@ -75,15 +78,15 @@ const colClass = {
             alt={cat.name}
             width="800"
             height="600"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
             loading="lazy"
           />
         </div>
         <div class="p-5 flex flex-col flex-1">
           <h3 class:list={[
             "font-display font-bold text-lg group-hover:text-brand-pink transition-colors",
-            isDark ? "text-white" : "text-neutral-900",
-          ]}>
+            isDark ? "text-white" : "",
+          ]} style={isDark ? "" : "color: #111;"}>
             {cat.name}
           </h3>
           <p class:list={[
@@ -92,7 +95,7 @@ const colClass = {
           ]}>
             {cat.description}
           </p>
-          <span class="inline-flex items-center gap-1 text-sm font-semibold text-brand-pink mt-4 group-hover:gap-2 transition-all duration-200">
+          <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200" style="color: #E8356D;">
             Browse {cat.name} <span aria-hidden="true">&rarr;</span>
           </span>
         </div>

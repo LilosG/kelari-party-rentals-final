@@ -1,5 +1,4 @@
 ---
-import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 
 export interface Testimonial {
@@ -25,56 +24,63 @@ const {
   title,
   subtitle,
   bg = "light",
-  padding = "default",
+  padding = "featured",
 } = Astro.props;
 
 const isDark = bg === "dark";
+
+const spacingClass = {
+  default: "py-16 lg:py-24",
+  compact: "py-10 lg:py-14",
+  featured: "py-20 lg:py-28",
+  none: "py-0",
+}[padding];
 ---
 
-<Section {bg} spacing={padding} width="wide">
-  {(title || eyebrow) && (
-    <div class="mb-12 md:mb-16">
-      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
-    </div>
-  )}
+<section class={spacingClass} style="background: #fdf8f9;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {(title || eyebrow) && (
+      <div class="mb-12 md:mb-16">
+        <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
+      </div>
+    )}
 
-  <div class="-mx-4 px-4 sm:mx-0 sm:px-0 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0">
-    <div class="flex gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 min-w-max sm:min-w-0">
-      {testimonials.map((t) => (
-        <div class:list={[
-          "snap-start shrink-0 w-[300px] sm:w-auto rounded-2xl p-8 flex flex-col gap-4 border",
-          isDark ? "bg-white/5 border-white/10" : "bg-white border-neutral-100 shadow-sm",
-        ]}>
-          <div class="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
-            {Array.from({ length: 5 }, (_, i) => (
-              <svg
-                class:list={["w-4 h-4", i < t.rating ? "text-brand-pink" : "text-neutral-200"]}
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-          <p class:list={[
-            "text-base italic leading-relaxed flex-1",
-            isDark ? "text-neutral-300" : "text-neutral-700",
-          ]}>
-            &ldquo;{t.text}&rdquo;
-          </p>
-          <div class="pt-2 border-t border-neutral-100">
-            <p class:list={["font-semibold text-sm", isDark ? "text-white" : "text-neutral-900"]}>
-              {t.name}
+    <div class="-mx-4 px-4 sm:mx-0 sm:px-0 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0">
+      <div class="flex gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 min-w-max sm:min-w-0">
+        {testimonials.map((t) => (
+          <div
+            class="snap-start shrink-0 w-[300px] sm:w-auto rounded-2xl p-8 flex flex-col gap-4 bg-white"
+            style="border-left: 3px solid #E8356D; box-shadow: 0 2px 16px rgba(0,0,0,0.06);"
+          >
+            <div class="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
+              {Array.from({ length: 5 }, (_, i) => (
+                <svg
+                  class="w-4 h-4"
+                  style={i < t.rating ? "color: #E8356D;" : "color: #e5e5e5;"}
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base italic leading-relaxed flex-1 text-neutral-700">
+              &ldquo;{t.text}&rdquo;
             </p>
-            {t.location && (
-              <p class:list={["text-xs mt-0.5", isDark ? "text-neutral-400" : "text-neutral-500"]}>
-                {t.location}
+            <div class="pt-2 border-t border-neutral-100">
+              <p class="font-semibold text-sm text-neutral-900">
+                {t.name}
               </p>
-            )}
+              {t.location && (
+                <p class="text-xs mt-0.5 text-neutral-500">
+                  {t.location}
+                </p>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
-</Section>
+</section>

@@ -45,23 +45,20 @@ const items = [
 ];
 ---
 
-<div class:list={[
-  "border-b py-3.5",
-  isDark ? "bg-neutral-900 border-white/10" : "bg-white border-neutral-100",
-]}>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">
+<div style="background: #1a1a1a; border-bottom: 1px solid rgba(255,255,255,0.05);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <div class="flex flex-wrap justify-center gap-2">
       {items.map((item) => (
-        <div class="flex items-center gap-2">
-          <svg class="w-4 h-4 shrink-0 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full" style="border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.05);">
+          <svg class="w-3.5 h-3.5 shrink-0" style="color: #E8356D;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.path} />
           </svg>
           {item.href ? (
-            <a href={item.href} class:list={["text-sm font-medium hover:text-brand-pink transition-colors", isDark ? "text-neutral-300" : "text-neutral-600"]}>
+            <a href={item.href} class="text-xs font-medium transition-colors hover:text-white" style="color: rgba(255,255,255,0.70);">
               {item.label}
             </a>
           ) : (
-            <span class:list={["text-sm font-medium", isDark ? "text-neutral-300" : "text-neutral-600"]}>
+            <span class="text-xs font-medium" style="color: rgba(255,255,255,0.70);">
               {item.label}
             </span>
           )}

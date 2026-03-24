@@ -39,7 +39,7 @@ const titleSize = {
 <div class:list={[isCenter ? "text-center mx-auto" : "text-left", widthClass, className]}>
   {eyebrow && (
     <p class:list={[
-      "font-body uppercase tracking-widest text-xs font-bold mb-4",
+      "font-body uppercase tracking-[0.2em] text-[0.7rem] font-bold mb-4",
       dark ? "text-brand-pink-light" : "text-brand-pink",
     ]}>
       {eyebrow}
@@ -54,7 +54,7 @@ const titleSize = {
   </h2>
   {subtitle && (
     <p class:list={[
-      "mt-5 text-lg leading-relaxed",
+      "mt-4 text-base lg:text-lg leading-relaxed",
       isCenter ? "mx-auto" : "",
       "max-w-2xl",
       dark ? "text-neutral-300" : "text-neutral-500",
