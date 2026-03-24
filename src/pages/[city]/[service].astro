@@ -9,7 +9,7 @@ import NeighborhoodTags from "../../components/NeighborhoodTags.astro";
 import ParksList from "../../components/ParksList.astro";
 import CtaBand from "../../components/CtaBand.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
-import NearbyAreas from "../../components/NearbyAreas.astro";
+import CityCards from "../../components/CityCards.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 
 import { site, nap } from "../../data/site";
@@ -228,12 +228,13 @@ const schema = [
   />
 
   <!-- 10 · Nearby Cities — white ───────────────── -->
-  <NearbyAreas
+  <CityCards
     eyebrow="NEARBY CITIES"
     title={`${service.shortName} in Nearby Cities`}
     subtitle={`We also provide ${service.shortName.toLowerCase()} with free delivery in these North County cities.`}
-    areas={nearbyAreas}
+    cities={nearbyAreas.map((a) => ({ name: a.name, description: a.tagline, href: a.href }))}
     bg="white"
+    padding="default"
   />
 
   <!-- 11 · Quote Form — dark ───────────────────── -->

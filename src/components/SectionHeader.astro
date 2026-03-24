@@ -30,9 +30,9 @@ const widthClass = {
 }[width];
 
 const titleSize = {
-  compact: "text-3xl md:text-4xl",
-  default: "text-4xl md:text-5xl",
-  featured: "text-4xl md:text-5xl lg:text-6xl",
+  compact: "text-3xl md:text-4xl lg:text-[2.6rem]",
+  default: "text-4xl md:text-5xl lg:text-[3.2rem]",
+  featured: "text-4xl md:text-5xl lg:text-[3.6rem] xl:text-[4rem]",
 }[spacing];
 ---
 
@@ -57,7 +57,7 @@ const titleSize = {
       "mt-5 text-lg leading-relaxed",
       isCenter ? "mx-auto" : "",
       "max-w-2xl",
-      dark ? "text-neutral-300" : "text-neutral-600",
+      dark ? "text-neutral-300" : "text-neutral-500",
     ]}>
       {subtitle}
     </p>
