@@ -1,0 +1,13 @@
+---
+interface Props {
+  size?: "md" | "lg";
+  class?: string;
+}
+
+const { size = "md", class: className } = Astro.props;
+---
+
+<span class:list={["brand-wordmark", size === "lg" ? "brand-wordmark--lg" : "brand-wordmark--md", className]}>
+  <span class="brand-wordmark__lead">Kelari&nbsp;</span>
+  <span class="brand-wordmark__accent">Party Rentals</span>
+</span>

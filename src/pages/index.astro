@@ -18,6 +18,7 @@ import { cities } from "../data/cities";
 import { services as allServices } from "../data/services";
 import {
   hero,
+  trustBarItems,
   ctaBand,
   howItWorksSteps,
   testimonials,
@@ -108,7 +109,7 @@ const schema = [
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->
-  <TrustBar />
+  <TrustBar items={trustBarItems} />
 
   <!-- 3 · Services — white ─────────────────────── -->
   <Section bg="white" spacing="default" width="wide">

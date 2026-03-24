@@ -1,71 +1,25 @@
 ---
-import { nap } from "../data/site";
+import FeatureStripItem from "./FeatureStripItem.astro";
+import type { TrustBarItem } from "../data/homepage";
+
+interface Props {
+  items?: TrustBarItem[];
+}
+
+const { items = [] } = Astro.props;
 ---
 
-<div style="background: #1a1a1a; border-bottom: 1px solid rgba(255,255,255,0.06);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
-
-      <div class="flex items-start gap-3 lg:px-6 first:pl-0">
-        <div class="shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5" style="background: rgba(232,53,109,0.15);">
-          <svg class="w-4 h-4" style="color: #E8356D;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-white leading-tight">Clean Inventory</p>
-          <p class="text-xs mt-0.5" style="color: rgba(255,255,255,0.45);">Photo-ready every time</p>
-        </div>
-      </div>
-
-      <div class="flex items-start gap-3 lg:px-6">
-        <div class="shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5" style="background: rgba(232,53,109,0.15);">
-          <svg class="w-4 h-4" style="color: #E8356D;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-white leading-tight">On-Time Delivery</p>
-          <p class="text-xs mt-0.5" style="color: rgba(255,255,255,0.45);">Always punctual</p>
-        </div>
-      </div>
-
-      <div class="flex items-start gap-3 lg:px-6">
-        <div class="shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5" style="background: rgba(232,53,109,0.15);">
-          <svg class="w-4 h-4" style="color: #E8356D;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-white leading-tight">Setup & Pickup</p>
-          <p class="text-xs mt-0.5" style="color: rgba(255,255,255,0.45);">We handle it all</p>
-        </div>
-      </div>
-
-      <div class="flex items-start gap-3 lg:px-6">
-        <div class="shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5" style="background: rgba(232,53,109,0.15);">
-          <svg class="w-4 h-4" style="color: #E8356D;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-white leading-tight">Easy Quoting</p>
-          <p class="text-xs mt-0.5" style="color: rgba(255,255,255,0.45);">Fast, no-pressure</p>
-        </div>
-      </div>
-
-      <div class="flex items-start gap-3 lg:px-6">
-        <div class="shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5" style="background: rgba(232,53,109,0.15);">
-          <svg class="w-4 h-4" style="color: #E8356D;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-white leading-tight">North County</p>
-          <p class="text-xs mt-0.5" style="color: rgba(255,255,255,0.45);">Local & reliable</p>
-        </div>
-      </div>
-
+<div class="trust-strip">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-0 lg:divide-x lg:divide-white/10">
+      {items.map((item, index) => (
+        <FeatureStripItem
+          title={item.title}
+          subtitle={item.subtitle}
+          icon={item.icon}
+          class={index === 0 ? "items-center first:pl-0" : "items-center"}
+        />
+      ))}
     </div>
   </div>
 </div>

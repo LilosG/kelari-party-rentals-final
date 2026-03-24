@@ -8,6 +8,12 @@ import type { Testimonial } from "../components/TestimonialCarousel.astro";
 import type { GalleryImage } from "../components/ImageGallery.astro";
 import type { FAQ } from "../components/FAQAccordion.astro";
 
+export interface TrustBarItem {
+  title: string;
+  subtitle: string;
+  icon: "sparkles" | "clock" | "check" | "chat" | "pin";
+}
+
 // ── Hero ──────────────────────────────────────────────────────────────────────
 
 export const hero = {
@@ -18,6 +24,14 @@ export const hero = {
   primaryCta: { label: "Request a Free Quote", href: "/quote/" },
   secondaryCta: { label: "(760) 000-0000", href: "tel:7600000000" },
 };
+
+export const trustBarItems: TrustBarItem[] = [
+  { title: "Clean Inventory", subtitle: "Photo-ready every time", icon: "sparkles" },
+  { title: "On-Time Delivery", subtitle: "Always punctual", icon: "clock" },
+  { title: "Setup & Pickup", subtitle: "We handle it all", icon: "check" },
+  { title: "Easy Quoting", subtitle: "Fast, no-pressure", icon: "chat" },
+  { title: "North County", subtitle: "Local & reliable", icon: "pin" },
+];
 
 // ── CTA Band ──────────────────────────────────────────────────────────────────
 
