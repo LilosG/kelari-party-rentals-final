@@ -44,14 +44,14 @@ function getCityImage(city: CityCard): string {
 
 <Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
-    <div class="mb-10 md:mb-14">
+    <div class="mb-12 md:mb-16">
       <SectionHeader {eyebrow} title={title ?? ""} {subtitle} width="wide" />
     </div>
   )}
 
-  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2 lg:grid-cols-4">
     {cities.map((city) => (
-      <a href={city.href} class="card-surface card-link group text-center">
+      <a href={city.href} class="card-surface card-link group premium-card premium-card-centered text-center">
         <div class="card-image-wrap">
           <img
             src={getCityImage(city)}
@@ -63,9 +63,9 @@ function getCityImage(city: CityCard): string {
           />
         </div>
         <div class="card-body items-center">
-          <h3 class="card-title text-xl group-hover:text-brand-pink transition-colors">{city.name}</h3>
-          <p class="card-copy card-copy-compact text-center text-neutral-500">{city.description}</p>
-          <span class="card-link-text">Party rentals in {city.name} <span aria-hidden="true">&rarr;</span></span>
+          <h3 class="card-title text-[1.35rem] group-hover:text-brand-pink transition-colors">{city.name}</h3>
+          <p class="card-copy text-center text-neutral-500">{city.description}</p>
+          <span class="card-link-text justify-center">Party rentals in {city.name} <span aria-hidden="true">&rarr;</span></span>
         </div>
       </a>
     ))}

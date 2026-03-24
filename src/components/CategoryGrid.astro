@@ -58,14 +58,14 @@ const colClass = {
 
 <Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
-    <div class="mb-10 md:mb-14">
+    <div class="mb-12 md:mb-16">
       <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} width="wide" />
     </div>
   )}
 
-  <div class={`grid gap-6 ${colClass}`}>
+  <div class={`grid gap-6 md:gap-7 ${colClass}`}>
     {categories.map((cat) => (
-      <a href={cat.href} class="card-surface card-link group">
+      <a href={cat.href} class="card-surface card-link group premium-card">
         <div class="card-image-wrap">
           <img
             src={getCategoryImage(cat)}
@@ -78,13 +78,13 @@ const colClass = {
         </div>
         <div class="card-body">
           <h3 class:list={[
-            "card-title text-lg group-hover:text-brand-pink transition-colors",
+            "card-title text-xl group-hover:text-brand-pink transition-colors",
             isDark ? "text-white" : "",
           ]}>
             {cat.name}
           </h3>
           <p class:list={[
-            "card-copy card-copy-compact flex-1",
+            "card-copy flex-1",
             isDark ? "text-neutral-300" : "",
           ]}>
             {cat.description}
