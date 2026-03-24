@@ -43,7 +43,7 @@ const cityCards = cities.map((c) => ({
 }));
 
 const serviceImages: Record<string, string> = {
-  "party-rentals": "/images/hero-party.jpg",
+  "party-rentals": "/images/gallery-canopy.jpg",
   "birthday-party-rentals": "/images/birthday-party.jpg",
   "backyard-party-rentals": "/images/backyard-party.jpg",
   "baby-shower-rentals": "/images/baby-shower.jpg",
@@ -102,7 +102,7 @@ const schema = [
     title={hero.title}
     subtitle={hero.subtitle}
     backgroundImage={hero.backgroundImage}
-    bgImage="/images/hero-party.jpg"
+    bgImage="/images/gallery-canopy.jpg"
     primaryCta={hero.primaryCta}
     secondaryCta={hero.secondaryCta}
   />
@@ -157,13 +157,14 @@ const schema = [
     eyebrow="OUR INVENTORY"
     title="Everything You Need, All in One Place"
     subtitle="From tables and chairs to linens, tableware, and décor accents — one team handles it all."
-    categories={categoryCards}
+    categories={categoryCards.slice(0, 6)}
     columns={3}
     bg="light"
     padding="default"
   />
 
   <!-- 5 · How It Works — white ─────────────────── -->
+  <div class="h-px bg-neutral-100"></div>
   <HowItWorks
     eyebrow="HOW IT WORKS"
     title="How It Works"
