@@ -122,12 +122,12 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    min-height: 3.2rem;
-    padding: 0.95rem 1.5rem;
+    min-height: 3.35rem;
+    padding: 1rem 1.65rem;
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.98rem;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
     border-radius: var(--radius-button);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
@@ -143,14 +143,14 @@ a:hover {
 
   .btn-primary {
     color: #fff;
-    background: linear-gradient(180deg, #ff88af 0%, var(--color-primary) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 16px 34px rgba(255, 111, 156, 0.24);
+    background: linear-gradient(180deg, #ff8eb2 0%, var(--color-primary) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 18px 36px rgba(255, 111, 156, 0.28);
   }
 
   .btn-primary:hover {
-    background: linear-gradient(180deg, #ff93b6 0%, var(--color-primary-dark) 100%);
-    box-shadow: 0 20px 40px rgba(196, 48, 104, 0.28);
+    background: linear-gradient(180deg, #ff9abd 0%, var(--color-primary-dark) 100%);
+    box-shadow: 0 24px 46px rgba(196, 48, 104, 0.32);
     color: #fff;
   }
 
@@ -169,8 +169,8 @@ a:hover {
   .btn-outline-light,
   .btn-secondary-on-dark {
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.28);
     backdrop-filter: blur(14px);
   }
 
@@ -183,9 +183,9 @@ a:hover {
 
   .btn-primary-lg,
   .btn-secondary-lg {
-    min-height: 3.8rem;
-    padding: 1.08rem 1.85rem;
-    font-size: 1.02rem;
+    min-height: 3.95rem;
+    padding: 1.16rem 2rem;
+    font-size: 1.04rem;
   }
 
   .card,
@@ -195,7 +195,7 @@ a:hover {
     flex-direction: column;
     background-color: #fff;
     border: 1px solid rgba(229, 229, 229, 0.9);
-    border-radius: calc(var(--radius-card) + 4px);
+    border-radius: calc(var(--radius-card) + 8px);
     box-shadow: var(--shadow-card);
     overflow: hidden;
     isolation: isolate;
@@ -204,7 +204,7 @@ a:hover {
 
   .card:hover,
   .card-surface:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
     border-color: rgba(255, 111, 156, 0.32);
     box-shadow: var(--shadow-card-hover);
   }
@@ -227,7 +227,7 @@ a:hover {
   .card-image-wrap {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 10;
     background: rgba(38, 38, 38, 0.06);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -250,7 +250,7 @@ a:hover {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 1.7rem;
+    padding: 2rem 1.75rem 1.8rem;
   }
 
   .card-body-compact {
@@ -259,17 +259,17 @@ a:hover {
 
   .card-title {
     font-family: var(--font-display);
-    font-size: 1.32rem;
+    font-size: 1.44rem;
     font-weight: 700;
     line-height: 1.2;
     color: #262626;
   }
 
   .card-copy {
-    margin-top: 0.75rem;
+    margin-top: 0.85rem;
     color: #525252;
-    line-height: 1.72;
-    font-size: 0.98rem;
+    line-height: 1.74;
+    font-size: 1rem;
   }
 
   .card-copy-compact {
@@ -277,7 +277,7 @@ a:hover {
   }
 
   .card-link-text {
-    margin-top: 1.35rem;
+    margin-top: 1.55rem;
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
@@ -360,34 +360,43 @@ a:hover {
   }
 
   .hero-panel {
-    max-width: 44rem;
+    max-width: 47rem;
+    padding: 2rem 2rem 2.1rem;
+    border-radius: 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(160deg, rgba(23,23,23,0.52), rgba(23,23,23,0.22));
+    backdrop-filter: blur(7px);
   }
 
   .cta-band-shell {
     position: relative;
     overflow: hidden;
-    padding: 3rem 1.75rem;
-    border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 28px 60px rgba(0,0,0,0.24);
+    padding: 3.6rem 2rem;
+    border-radius: 2.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: radial-gradient(circle at 14% 8%, rgba(255, 182, 217, 0.2), transparent 48%), linear-gradient(155deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 30px 70px rgba(0,0,0,0.32);
   }
 
   .cta-band-glow {
     position: absolute;
-    inset: auto -8% -35% auto;
-    width: 20rem;
-    height: 20rem;
+    inset: auto -8% -30% auto;
+    width: 22rem;
+    height: 22rem;
     border-radius: 999px;
     background: radial-gradient(circle, rgba(255, 182, 217, 0.28) 0%, rgba(255, 182, 217, 0) 70%);
     pointer-events: none;
   }
+  .cta-band-glow-secondary {
+    inset: -38% auto auto -12%;
+    background: radial-gradient(circle, rgba(255, 111, 156, 0.16) 0%, rgba(255, 111, 156, 0) 74%);
+  }
 
   .cta-band-eyebrow {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: rgba(255, 182, 217, 0.9);
   }
@@ -408,6 +417,13 @@ a:hover {
     border-radius: calc(var(--radius-card) + 2px);
     border: 1px solid rgba(255,255,255,0.08);
     background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  }
+
+  .footer-cta-shell-home {
+    padding: 2.2rem 2rem;
+    border-radius: calc(var(--radius-card) + 8px);
+    background: linear-gradient(165deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 20px 40px rgba(0,0,0,0.22);
   }
 
   .overline {
@@ -435,10 +451,11 @@ a:hover {
 
     .hero-panel {
       max-width: 46rem;
+      padding: 2.25rem 2.5rem;
     }
 
     .cta-band-shell {
-      padding: 4rem 2.5rem;
+      padding: 4.4rem 2.8rem;
     }
   }
 
