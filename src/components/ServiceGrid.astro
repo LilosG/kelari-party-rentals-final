@@ -87,7 +87,7 @@ const colClass = {
 
 <Section {bg} spacing={padding} width="wide">
   {(resolvedTitle || resolvedEyebrow) && (
-    <div class="mb-10 md:mb-14">
+    <div class="mb-12 md:mb-16">
       <SectionHeader
         eyebrow={resolvedEyebrow}
         title={resolvedTitle ?? ""}
@@ -98,9 +98,9 @@ const colClass = {
     </div>
   )}
 
-  <div class={`grid gap-5 md:gap-6 ${colClass}`}>
+  <div class={`grid gap-6 md:gap-7 ${colClass}`}>
     {resolvedServices.map((service) => (
-      <a href={service.href} class="card-surface card-link group">
+      <a href={service.href} class="card-surface card-link group premium-card">
         <div class="card-image-wrap">
           <img
             src={getServiceImage(service.slug)}
@@ -112,10 +112,10 @@ const colClass = {
           />
         </div>
         <div class="card-body">
-          <h3 class="card-title text-lg group-hover:text-brand-pink transition-colors">
+          <h3 class="card-title text-xl group-hover:text-brand-pink transition-colors">
             {service.name}
           </h3>
-          <p class="card-copy card-copy-compact line-clamp-3">
+          <p class="card-copy line-clamp-3">
             {service.description}
           </p>
           <span class="card-link-text">Learn more <span aria-hidden="true">&rarr;</span></span>
