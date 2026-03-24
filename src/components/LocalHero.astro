@@ -107,7 +107,11 @@ const resolvedSecondaryCta = secondaryCta ?? {
           </nav>
         )}
 
-        {eyebrow && (
+        <p class="inline-flex items-center gap-2 text-xs font-semibold mb-6 px-3 py-1.5 rounded-full border" style="color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.20); background: rgba(255,255,255,0.08);">
+          <span class="w-1.5 h-1.5 rounded-full shrink-0" style="background: #E8356D;"></span>
+          North County San Diego
+        </p>
+        {eyebrow && eyebrow !== "North County San Diego" && (
           <p class="font-body uppercase tracking-[0.2em] text-[0.7rem] font-bold text-brand-pink-light mb-5">
             {eyebrow}
           </p>
@@ -125,7 +129,12 @@ const resolvedSecondaryCta = secondaryCta ?? {
         )}
 
         <h1 class="font-display font-bold text-white leading-[1.05] tracking-tight text-[2.4rem] sm:text-[3.0rem] lg:text-[3.8rem] xl:text-[4.4rem] max-w-[18ch]" style="text-shadow: 0 2px 24px rgba(0,0,0,0.5);">
-          {resolvedTitle}
+          {resolvedTitle.includes("Every Celebration") ? (
+            <>
+              {resolvedTitle.split("Every Celebration")[0]}
+              <em class="not-italic block" style="color: #E8356D; font-style: italic;">Every Celebration{resolvedTitle.split("Every Celebration")[1]}</em>
+            </>
+          ) : resolvedTitle}
         </h1>
 
         {resolvedSubtitle && (

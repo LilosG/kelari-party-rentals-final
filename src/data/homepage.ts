@@ -14,7 +14,7 @@ export const hero = {
   title: "Party Rentals That Make Every Celebration Unforgettable",
   subtitle:
     "Tables, chairs, canopies, linens, and décor — delivered and set up across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
-  backgroundImage: "/images/gallery-canopy.jpg",
+  backgroundImage: "/images/hero-balloon-tent.jpg",
   primaryCta: { label: "Request a Free Quote", href: "/quote/" },
   secondaryCta: { label: "(760) 000-0000", href: "tel:7600000000" },
 };
