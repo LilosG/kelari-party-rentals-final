@@ -21,6 +21,7 @@ const {
 } = Astro.props;
 
 const { nap } = site;
+const isHomepage = Astro.url.pathname === "/";
 ---
 
 <!doctype html>
@@ -68,6 +69,6 @@ const { nap } = site;
       <slot />
     </main>
 
-    <Footer />
+    <Footer variant={isHomepage ? "home" : "default"} />
   </body>
 </html>

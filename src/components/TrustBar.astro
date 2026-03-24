@@ -47,12 +47,15 @@ const items = [
 
 <div class:list={[
   "border-b",
-  isDark ? "bg-brand-dark-soft border-white/10" : "bg-white border-neutral-100",
+  isDark ? "bg-[#141418] border-white/8" : "bg-white border-neutral-100",
 ]}>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
+    <div class="flex flex-wrap justify-center gap-2.5 lg:gap-3.5">
       {items.map((item) => (
-        <div class="flex items-center gap-2 text-neutral-600 text-sm font-medium">
+        <div class:list={[
+          "flex items-center gap-2.5 text-[0.8rem] font-medium px-3.5 py-2 rounded-xl border",
+          isDark ? "border-white/10 bg-white/5 text-neutral-200" : "text-neutral-600",
+        ]}>
           <svg
             class="w-4 h-4 shrink-0 text-brand-pink"
             fill="none"
