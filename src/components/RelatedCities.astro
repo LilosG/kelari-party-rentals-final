@@ -1,4 +1,6 @@
 ---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
 import { cities, type City } from "../data/cities";
 
 interface Props {
@@ -20,37 +22,31 @@ const relatedCities: City[] = currentSlug
   : cities;
 
 function getHref(city: City): string {
-  if (serviceSlug) {
-    return `/${city.slug}/${serviceSlug}/`;
-  }
-  return `/${city.slug}/`;
+  return serviceSlug ? `/${city.slug}/${serviceSlug}/` : `/${city.slug}/`;
 }
 ---
 
-<section class="section-padding bg-neutral-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10 md:mb-12">
-      <span class="overline">{overline}</span>
-      <h2 class="section-heading">{heading}</h2>
-    </div>
+<Section bg="light" spacing="compact" width="wide">
+  <div class="mb-8">
+    <SectionHeader eyebrow={overline} title={heading} />
+  </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-      {relatedCities.map((city) => (
-        <a
-          href={getHref(city)}
-          class="bg-white border border-neutral-200 rounded-2xl p-6 text-center hover:border-brand-pink hover:shadow-[0_8px_40px_rgba(255,111,156,0.18)] transition-all duration-300 group"
-        >
-          <h3 class="text-lg font-bold text-neutral-800 group-hover:text-brand-pink transition-colors font-display">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    {relatedCities.map((city) => (
+      <a
+        href={getHref(city)}
+        class="group flex items-center justify-between gap-3 rounded-2xl border border-neutral-100 bg-white px-5 py-4 shadow-sm hover:border-brand-pink hover:shadow-md transition-all duration-200"
+      >
+        <div>
+          <h3 class="font-display font-bold text-base text-neutral-900 group-hover:text-brand-pink transition-colors">
             {city.name}
           </h3>
-          <p class="mt-1.5 text-sm text-neutral-500">
+          <p class="text-sm text-neutral-500 mt-0.5">
             {serviceSlug ? `${city.name} rentals` : `Party rentals in ${city.name}`}
           </p>
-          <span class="inline-block mt-3 text-sm font-semibold text-brand-pink group-hover:text-brand-pink-dark transition-colors">
-            View {city.name} &rarr;
-          </span>
-        </a>
-      ))}
-    </div>
+        </div>
+        <span class="text-brand-pink shrink-0 group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
+      </a>
+    ))}
   </div>
-</section>
+</Section>

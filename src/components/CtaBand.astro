@@ -1,6 +1,5 @@
 ---
 import Section from "./Section.astro";
-import { conversionProofPoints } from "../data/conversion";
 
 export interface Props {
   title: string;
@@ -13,41 +12,33 @@ const { title, subtitle, primaryCta, secondaryCta } = Astro.props;
 ---
 
 <Section bg="dark" spacing="featured" width="wide">
-  <div class="cta-band-shell">
-    <div class="cta-band-glow" aria-hidden="true"></div>
-    <div class="cta-band-glow cta-band-glow-secondary" aria-hidden="true"></div>
-    <div class="relative z-10 grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
-      <div>
-        <p class="cta-band-eyebrow">Ready to plan with confidence?</p>
-        <h2 class="font-display text-balance text-[2.5rem] font-bold leading-[0.98] tracking-[-0.03em] text-white md:text-[3.4rem] lg:text-[4rem]">
-          {title}
-        </h2>
-        {subtitle && (
-          <p class="mt-6 max-w-2xl text-[1.05rem] leading-[1.72] text-neutral-200 md:text-[1.14rem] lg:text-[1.18rem]">
-            {subtitle}
-          </p>
-        )}
-        <div class="mt-10 flex flex-wrap gap-4 lg:mt-11">
-          <a href={primaryCta.href} class="btn-primary btn-primary-lg">
-            {primaryCta.label}
-          </a>
-          {secondaryCta && (
-            <a href={secondaryCta.href} class="btn-secondary-on-dark btn-secondary-lg">
-              {secondaryCta.label}
-            </a>
-          )}
-        </div>
-      </div>
-
-      <div class="grid gap-3 sm:grid-cols-2">
-        {conversionProofPoints.concat(conversionProofPoints).slice(0, 6).map((item, index) => (
-          <div class="cta-proof-card">
-            <p class="cta-proof-icon" aria-hidden="true">{index + 1}</p>
-            <h3 class="cta-proof-title">{item.title}</h3>
-            <p class="cta-proof-copy">{item.description}</p>
-          </div>
-        ))}
-      </div>
+  <div class="text-center max-w-3xl mx-auto">
+    <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink-light mb-5">
+      Ready to plan your event?
+    </p>
+    <h2 class="font-display font-bold text-white leading-tight tracking-tight text-4xl md:text-5xl">
+      {title}
+    </h2>
+    {subtitle && (
+      <p class="mt-6 text-lg leading-relaxed text-neutral-300 max-w-2xl mx-auto">
+        {subtitle}
+      </p>
+    )}
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a
+        href={primaryCta.href}
+        class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-8 py-4 rounded-lg text-base shadow-lg hover:shadow-xl transition-all duration-300"
+      >
+        {primaryCta.label}
+      </a>
+      {secondaryCta && (
+        <a
+          href={secondaryCta.href}
+          class="inline-flex items-center justify-center gap-2 border-2 border-white/60 text-white hover:bg-white hover:text-neutral-900 font-semibold px-8 py-4 rounded-lg text-base transition-all duration-300"
+        >
+          {secondaryCta.label}
+        </a>
+      )}
     </div>
   </div>
 </Section>

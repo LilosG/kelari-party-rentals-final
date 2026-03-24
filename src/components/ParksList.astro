@@ -26,15 +26,10 @@ const {
 const isDark = bg === "dark";
 ---
 
-<Section {bg} {padding}>
+<Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
-    <div class="mb-6">
-      <SectionHeader
-        eyebrow={eyebrow}
-        title={title ?? ""}
-        align="left"
-        dark={isDark}
-      />
+    <div class="mb-7">
+      <SectionHeader eyebrow={eyebrow} title={title ?? ""} align="left" dark={isDark} />
     </div>
   )}
 
@@ -44,10 +39,10 @@ const isDark = bg === "dark";
         <a
           href={park.href}
           class:list={[
-            "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
+            "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border transition-colors",
             isDark
-              ? "bg-white/10 text-neutral-200 border border-white/20 hover:border-brand-pink/50 hover:text-brand-pink"
-              : "bg-neutral-100 text-neutral-700 border border-neutral-200 hover:border-brand-pink hover:text-brand-pink hover:bg-brand-pink-light",
+              ? "bg-white/8 text-neutral-200 border-white/15 hover:border-brand-pink/50 hover:text-brand-pink"
+              : "bg-white text-neutral-700 border-neutral-200 hover:border-brand-pink hover:text-brand-pink hover:bg-brand-pink-light/20",
           ]}
         >
           <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -57,12 +52,12 @@ const isDark = bg === "dark";
         </a>
       ) : (
         <span class:list={[
-          "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium",
+          "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border",
           isDark
-            ? "bg-white/10 text-neutral-200 border border-white/20"
-            : "bg-neutral-100 text-neutral-700 border border-neutral-200",
+            ? "bg-white/8 text-neutral-200 border-white/15"
+            : "bg-white text-neutral-700 border-neutral-200",
         ]}>
-          <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <svg class="w-3.5 h-3.5 shrink-0 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
           </svg>
           {park.name}

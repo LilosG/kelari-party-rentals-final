@@ -23,46 +23,40 @@ const {
 
 const isCenter = align === "center";
 
-const titleClass = {
-  compact: "text-[2.2rem] md:text-[2.75rem]",
-  default: "text-[2.45rem] md:text-[3.3rem] lg:text-[4rem]",
-  featured: "text-[2.8rem] md:text-[3.9rem] lg:text-[4.8rem]",
-}[spacing];
-
-const subtitleClass = {
-  compact: "mt-5 text-[1.02rem] md:text-[1.14rem]",
-  default: "mt-6 text-[1.12rem] md:text-[1.24rem]",
-  featured: "mt-7 text-[1.18rem] md:text-[1.34rem]",
-}[spacing];
-
 const widthClass = {
   narrow: "max-w-2xl",
   default: "max-w-3xl",
   wide: "max-w-4xl",
 }[width];
+
+const titleSize = {
+  compact: "text-3xl md:text-4xl",
+  default: "text-4xl md:text-5xl",
+  featured: "text-4xl md:text-5xl lg:text-6xl",
+}[spacing];
 ---
 
 <div class:list={[isCenter ? "text-center mx-auto" : "text-left", widthClass, className]}>
   {eyebrow && (
     <p class:list={[
-      "font-body uppercase tracking-[0.32em] text-[0.68rem] font-bold mb-5 sm:mb-6",
-      dark ? "text-brand-pink-light" : "text-brand-pink-dark",
+      "font-body uppercase tracking-widest text-xs font-bold mb-4",
+      dark ? "text-brand-pink-light" : "text-brand-pink",
     ]}>
       {eyebrow}
     </p>
   )}
   <h2 class:list={[
-    "font-display font-bold text-balance leading-[1.01] tracking-[-0.03em]",
-    titleClass,
+    "font-display font-bold leading-tight tracking-tight",
+    titleSize,
     dark ? "text-white" : "text-neutral-900",
   ]}>
     {title}
   </h2>
   {subtitle && (
     <p class:list={[
-      "leading-[1.72] max-w-[54rem]",
-      subtitleClass,
+      "mt-5 text-lg leading-relaxed",
       isCenter ? "mx-auto" : "",
+      "max-w-2xl",
       dark ? "text-neutral-300" : "text-neutral-600",
     ]}>
       {subtitle}

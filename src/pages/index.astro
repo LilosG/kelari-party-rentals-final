@@ -2,19 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
+import ServiceGrid from "../components/ServiceGrid.astro";
+import CategoryGrid from "../components/CategoryGrid.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import CtaBand from "../components/CtaBand.astro";
 import ImageGallery from "../components/ImageGallery.astro";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import FAQAccordion from "../components/FAQAccordion.astro";
 import CityCards from "../components/CityCards.astro";
-import Section from "../components/Section.astro";
-import SectionHeader from "../components/SectionHeader.astro";
 
 import { site, nap } from "../data/site";
 import { categories } from "../data/categories";
 import { cities } from "../data/cities";
-import { services as allServices } from "../data/services";
 import {
   hero,
   ctaBand,
@@ -40,25 +39,6 @@ const cityCards = cities.map((c) => ({
   description: c.subheadline,
   href: `/${c.slug}/`,
 }));
-
-const serviceImages: Record<string, string> = {
-  "party-rentals": "/images/hero-party.jpg",
-  "birthday-party-rentals": "/images/birthday-party.jpg",
-  "backyard-party-rentals": "/images/backyard-party.jpg",
-  "baby-shower-rentals": "/images/baby-shower.jpg",
-  "graduation-party-rentals": "/images/graduation-party.jpg",
-  "engagement-party-rentals": "/images/engagement-party.jpg",
-  "park-party-rentals": "/images/park-party.jpg",
-};
-
-const featuredServices = topServiceSlugs
-  .map((slug) => allServices.find((service) => service.slug === slug))
-  .filter((service): service is (typeof allServices)[number] => Boolean(service))
-  .map((service) => ({
-    ...service,
-    href: `/services/${service.slug}/`,
-    image: serviceImages[service.slug] ?? "/images/hero-party.jpg",
-  }));
 
 const schema = [
   {
@@ -107,68 +87,28 @@ const schema = [
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->
-  <TrustBar variant="dark" />
+  <TrustBar />
 
   <!-- 3 · Services — white ─────────────────────── -->
-  <Section bg="white" spacing="featured" width="wide">
-    <div class="mb-14 md:mb-20">
-      <SectionHeader
-        eyebrow="WHAT WE OFFER"
-        title="Rentals for Every Occasion"
-        subtitle="Explore our most requested setups for birthdays, showers, graduations, park gatherings, and backyard celebrations."
-        align="left"
-        width="wide"
-      />
-    </div>
-
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[185px]">
-      {featuredServices.slice(0, 6).map((service, index) => (
-        <a
-          href={service.href}
-          class:list={[
-            "homepage-media-card group",
-            index < 2 ? "lg:row-span-2" : "",
-          ]}
-        >
-          <img
-            src={service.image}
-            alt={service.shortName}
-            width="1200"
-            height="900"
-            class="h-full w-full object-cover"
-            loading="lazy"
-          />
-          <div class="homepage-media-card-overlay">
-            <p class="homepage-media-card-title">{service.shortName}</p>
-            <span class="homepage-media-card-link">Learn more →</span>
-          </div>
-        </a>
-      ))}
-    </div>
-  </Section>
+  <ServiceGrid
+    eyebrow="WHAT WE OFFER"
+    title="Party Rental Services"
+    subtitle="From birthday parties to park gatherings — we have the rentals and the team to make your event beautiful."
+    slugs={topServiceSlugs}
+    columns={3}
+    bg="white"
+  />
 
   <!-- 4 · Inventory — light ────────────────────── -->
-  <Section bg="light" spacing="featured" width="wide">
-    <div class="mb-14 md:mb-20">
-      <SectionHeader
-        eyebrow="OUR INVENTORY"
-        title="Everything You Need, All in One Place"
-        subtitle="From tables and chairs to linens, tableware, and décor accents — one team handles it all."
-      />
-    </div>
-
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {categoryCards.map((cat) => (
-        <a href={cat.href} class="homepage-icon-card group">
-          <div class="homepage-icon-badge" aria-hidden="true">{cat.icon}</div>
-          <div class="min-w-0">
-            <h3 class="homepage-icon-title">{cat.name}</h3>
-            <p class="homepage-icon-copy">{cat.description}</p>
-          </div>
-        </a>
-      ))}
-    </div>
-  </Section>
+  <CategoryGrid
+    eyebrow="OUR INVENTORY"
+    title="Everything You Need, All in One Place"
+    subtitle="From tables and chairs to linens, tableware, and décor accents — one team handles it all."
+    categories={categoryCards}
+    columns={3}
+    bg="light"
+    padding="featured"
+  />
 
   <!-- 5 · How It Works — white ─────────────────── -->
   <HowItWorks
@@ -177,7 +117,6 @@ const schema = [
     subtitle="We handle every step so you can focus on what matters — celebrating with your people."
     steps={howItWorksSteps}
     bg="white"
-    padding="featured"
   />
 
   <!-- 6 · CTA Band — dark ──────────────────────── -->
@@ -196,7 +135,6 @@ const schema = [
     images={galleryImages}
     columns={4}
     bg="white"
-    padding="featured"
   />
 
   <!-- 8 · Testimonials — light ─────────────────── -->
@@ -206,7 +144,6 @@ const schema = [
     subtitle="Hundreds of events served across Carlsbad, Encinitas, Oceanside, and San Marcos."
     {testimonials}
     bg="light"
-    padding="featured"
   />
 
   <!-- 9 · FAQ — white ──────────────────────────── -->
@@ -215,7 +152,6 @@ const schema = [
     title="Frequently Asked Questions"
     faqs={homepageFaqs}
     bg="white"
-    padding="featured"
   />
 
   <!-- 10 · City Cards — light ──────────────────── -->
@@ -225,7 +161,6 @@ const schema = [
     subtitle="We deliver to every neighborhood across our four core cities — with free delivery always included."
     cities={cityCards}
     bg="light"
-    padding="featured"
   />
 
 </BaseLayout>

@@ -30,21 +30,24 @@ const {
 
 <Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
-    <div class="mb-10 md:mb-14">
+    <div class="mb-10 md:mb-12">
       <SectionHeader {eyebrow} title={title ?? ""} {subtitle} width="wide" />
     </div>
   )}
 
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
     {areas.map((area) => (
-      <a href={area.href} class="compact-link-card group">
+      <a
+        href={area.href}
+        class="group flex items-center justify-between gap-3 rounded-2xl border border-neutral-100 bg-white px-5 py-4 shadow-sm hover:border-brand-pink hover:shadow-md transition-all duration-200"
+      >
         <div>
-          <h3 class="font-display text-lg font-bold text-neutral-900 transition-colors group-hover:text-brand-pink">
+          <h3 class="font-display font-bold text-base text-neutral-900 group-hover:text-brand-pink transition-colors">
             {area.name}
           </h3>
-          <p class="mt-1 text-sm leading-relaxed text-neutral-500">{area.tagline}</p>
+          <p class="text-sm text-neutral-500 mt-0.5 leading-snug">{area.tagline}</p>
         </div>
-        <span class="text-brand-pink transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+        <span class="text-brand-pink shrink-0 group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">&rarr;</span>
       </a>
     ))}
   </div>

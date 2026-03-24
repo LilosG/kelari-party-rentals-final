@@ -19,45 +19,39 @@ const isDark = surface === "dark";
 const isCards = layout === "cards";
 ---
 
-<div class={isCards ? "grid gap-4 sm:grid-cols-2" : "space-y-5"}>
+<div class:list={[isCards ? "grid gap-3 sm:grid-cols-2" : "space-y-4"]}>
   {items.map((item) => (
-    <div
-      class:list={[
-        isCards
-          ? isDark
-            ? "rounded-[var(--radius-card)] border border-white/12 bg-white/6 p-5"
-            : "rounded-[var(--radius-card)] border border-neutral-200 bg-neutral-50 p-5"
-          : "flex items-start gap-4",
-      ]}
-    >
+    <div class:list={[
+      "flex items-start gap-3",
+      isCards
+        ? isDark
+          ? "rounded-xl border border-white/10 bg-white/5 p-4"
+          : "rounded-xl border border-neutral-100 bg-neutral-50 p-4"
+        : "",
+    ]}>
       <div class:list={[
-        "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl",
-        isDark ? "bg-brand-pink/18 text-brand-pink-light" : "bg-brand-pink-light text-brand-pink",
+        "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg",
+        isDark ? "bg-brand-pink/20 text-brand-pink-light" : "bg-brand-pink-light text-brand-pink",
       ]}>
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
         </svg>
       </div>
       <div>
-        <p class:list={[
-          "mb-0.5 text-xs font-semibold uppercase tracking-[0.14em]",
-          isDark ? "text-white/45" : "text-neutral-400",
-        ]}>{item.label}</p>
+        <p class:list={["text-xs font-semibold uppercase tracking-wider mb-0.5", isDark ? "text-white/40" : "text-neutral-400"]}>
+          {item.label}
+        </p>
         {item.href ? (
-          <a href={item.href} class:list={[
-            "font-medium transition-colors",
-            isDark ? "text-white hover:text-brand-pink-light" : "text-neutral-800 hover:text-brand-pink",
-          ]}>
+          <a href={item.href} class:list={["text-sm font-medium transition-colors", isDark ? "text-white hover:text-brand-pink-light" : "text-neutral-800 hover:text-brand-pink"]}>
             {item.value}
           </a>
         ) : (
-          <p class:list={[isDark ? "text-white" : "text-neutral-800", "font-medium"]}>{item.value}</p>
+          <p class:list={["text-sm font-medium", isDark ? "text-white" : "text-neutral-800"]}>{item.value}</p>
         )}
         {showDescriptions && item.description && (
-          <p class:list={[
-            "mt-1 text-sm leading-relaxed",
-            isDark ? "text-white/65" : "text-neutral-600",
-          ]}>{item.description}</p>
+          <p class:list={["mt-0.5 text-xs leading-relaxed", isDark ? "text-white/60" : "text-neutral-500"]}>
+            {item.description}
+          </p>
         )}
       </div>
     </div>

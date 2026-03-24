@@ -46,39 +46,22 @@ const items = [
 ---
 
 <div class:list={[
-  "border-b",
-  isDark ? "bg-[#141418] border-white/8" : "bg-white border-neutral-100",
+  "border-b py-3.5",
+  isDark ? "bg-neutral-900 border-white/10" : "bg-white border-neutral-100",
 ]}>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
-    <div class="flex flex-wrap justify-center gap-2.5 lg:gap-3.5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">
       {items.map((item) => (
-        <div class:list={[
-          "flex items-center gap-2.5 text-[0.8rem] font-medium px-3.5 py-2 rounded-xl border",
-          isDark ? "border-white/10 bg-white/5 text-neutral-200" : "text-neutral-600",
-        ]}>
-          <svg
-            class="w-4 h-4 shrink-0 text-brand-pink"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 shrink-0 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.path} />
           </svg>
           {item.href ? (
-            <a
-              href={item.href}
-              class:list={[
-                "transition-colors hover:text-brand-pink",
-                isDark ? "text-neutral-300" : "text-neutral-600",
-              ]}
-            >
+            <a href={item.href} class:list={["text-sm font-medium hover:text-brand-pink transition-colors", isDark ? "text-neutral-300" : "text-neutral-600"]}>
               {item.label}
             </a>
           ) : (
-            <span class:list={[
-              isDark ? "text-neutral-300" : "text-neutral-600",
-            ]}>
+            <span class:list={["text-sm font-medium", isDark ? "text-neutral-300" : "text-neutral-600"]}>
               {item.label}
             </span>
           )}

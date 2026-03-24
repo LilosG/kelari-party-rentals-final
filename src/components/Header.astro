@@ -11,19 +11,17 @@ const navLinks = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-white shadow-sm">
+<header class="sticky top-0 z-50 bg-white border-b border-neutral-100 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 md:h-[72px]">
+    <div class="flex items-center justify-between h-16 md:h-[70px]">
 
-      <!-- Logo -->
       <a href="/" class="shrink-0 hover:opacity-90 transition-opacity">
         <span class="font-display text-xl font-bold text-brand-pink">
           {nap.name}
         </span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-7" aria-label="Main navigation">
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
         {navLinks.map((link) => (
           <a
             href={link.href}
@@ -34,13 +32,12 @@ const navLinks = [
         ))}
         <a
           href="/quote/"
-          class="bg-brand-pink text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-brand-pink-dark transition-all"
+          class="inline-flex items-center justify-center bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-200 shadow-sm hover:shadow-md"
         >
           Get a Quote
         </a>
       </nav>
 
-      <!-- Mobile Menu Button -->
       <button
         type="button"
         id="mobile-menu-btn"
@@ -48,43 +45,27 @@ const navLinks = [
         aria-label="Open menu"
         aria-expanded="false"
       >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            id="menu-icon"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
     </div>
   </div>
 
-  <!-- Mobile Nav Panel -->
-  <div
-    id="mobile-menu"
-    class="hidden lg:hidden border-t border-neutral-100 bg-white"
-  >
-    <nav class="flex flex-col px-4 py-4 gap-1" aria-label="Mobile navigation">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-neutral-100 bg-white">
+    <nav class="flex flex-col px-4 py-3 gap-1" aria-label="Mobile navigation">
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="py-3 px-3 text-base font-medium text-neutral-600 hover:text-brand-pink hover:bg-neutral-50 rounded-lg transition-colors"
+          class="py-2.5 px-3 text-sm font-medium text-neutral-700 hover:text-brand-pink hover:bg-neutral-50 rounded-lg transition-colors"
         >
           {link.label}
         </a>
       ))}
       <a
         href="/quote/"
-        class="bg-brand-pink text-white text-center font-semibold px-5 py-3 rounded-lg mt-2 hover:bg-brand-pink-dark transition-all"
+        class="bg-brand-pink hover:bg-brand-pink-dark text-white text-center font-semibold px-5 py-3 rounded-lg mt-2 transition-colors text-sm"
       >
         Get a Quote
       </a>

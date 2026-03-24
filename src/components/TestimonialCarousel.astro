@@ -31,28 +31,24 @@ const {
 const isDark = bg === "dark";
 ---
 
-<Section {bg} {padding}>
+<Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
-    <div class="mb-10 md:mb-14">
+    <div class="mb-12 md:mb-16">
       <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
     </div>
   )}
 
-  {/* Horizontal scroll on mobile, grid on sm+ */}
   <div class="-mx-4 px-4 sm:mx-0 sm:px-0 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0">
-    <div class="flex gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 min-w-max sm:min-w-0 snap-x snap-mandatory sm:snap-none">
+    <div class="flex gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 min-w-max sm:min-w-0">
       {testimonials.map((t) => (
         <div class:list={[
           "snap-start shrink-0 w-[300px] sm:w-auto rounded-2xl p-8 flex flex-col gap-4 border",
-          isDark
-            ? "bg-white/5 border-white/10 shadow-sm"
-            : "bg-white border-neutral-100 shadow-sm",
+          isDark ? "bg-white/5 border-white/10" : "bg-white border-neutral-100 shadow-sm",
         ]}>
-          {/* Stars */}
           <div class="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
             {Array.from({ length: 5 }, (_, i) => (
               <svg
-                class:list={["w-4 h-4", i < t.rating ? "text-brand-pink" : "text-neutral-300"]}
+                class:list={["w-4 h-4", i < t.rating ? "text-brand-pink" : "text-neutral-200"]}
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
@@ -61,28 +57,18 @@ const isDark = bg === "dark";
               </svg>
             ))}
           </div>
-
-          {/* Quote */}
           <p class:list={[
             "text-base italic leading-relaxed flex-1",
             isDark ? "text-neutral-300" : "text-neutral-700",
           ]}>
             &ldquo;{t.text}&rdquo;
           </p>
-
-          {/* Author */}
-          <div class="pt-2">
-            <p class:list={[
-              "font-semibold",
-              isDark ? "text-white" : "text-neutral-800",
-            ]}>
+          <div class="pt-2 border-t border-neutral-100">
+            <p class:list={["font-semibold text-sm", isDark ? "text-white" : "text-neutral-900"]}>
               {t.name}
             </p>
             {t.location && (
-              <p class:list={[
-                "text-sm mt-0.5",
-                isDark ? "text-neutral-400" : "text-neutral-500",
-              ]}>
+              <p class:list={["text-xs mt-0.5", isDark ? "text-neutral-400" : "text-neutral-500"]}>
                 {t.location}
               </p>
             )}

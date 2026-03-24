@@ -18,37 +18,32 @@ export interface Props {
   padding?: "default" | "compact" | "featured" | "none";
 }
 
-const {
-  steps,
-  eyebrow,
-  title,
-  subtitle,
-  bg = "white",
-  padding = "default",
-} = Astro.props;
-
+const { steps, eyebrow, title, subtitle, bg = "white", padding = "default" } = Astro.props;
 const isDark = bg === "dark";
 ---
 
 <Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
-    <div class="mb-10 md:mb-14">
-      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} width="wide" />
+    <div class="mb-14 md:mb-16">
+      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} dark={isDark} />
     </div>
   )}
 
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
     {steps.map((step, i) => (
-      <div class:list={["card-surface relative", isDark && "card-surface-dark"]}>
-        <div class="card-body items-start text-left">
-          <div class="stat-card-value" aria-hidden="true">
-            {step.icon ? <span class="text-2xl">{step.icon}</span> : <span>{step.number ?? String(i + 1)}</span>}
-          </div>
-          <h3 class:list={["card-title text-lg", isDark && "text-white"]}>{step.title}</h3>
-          <p class:list={["card-copy card-copy-compact", isDark && "text-neutral-300"]}>
-            {step.description}
-          </p>
+      <div class="flex flex-col items-center text-center">
+        <div class="w-16 h-16 rounded-full bg-brand-pink text-white flex items-center justify-center font-display text-xl font-bold shadow-md mb-6 shrink-0">
+          {step.icon
+            ? <span class="text-2xl">{step.icon}</span>
+            : <span>{step.number ?? String(i + 1)}</span>
+          }
         </div>
+        <h3 class:list={["font-display font-bold text-lg", isDark ? "text-white" : "text-neutral-900"]}>
+          {step.title}
+        </h3>
+        <p class:list={["text-sm mt-2 leading-relaxed", isDark ? "text-neutral-300" : "text-neutral-600"]}>
+          {step.description}
+        </p>
       </div>
     ))}
   </div>
