@@ -361,11 +361,91 @@ a:hover {
 
   .hero-panel {
     max-width: 47rem;
-    padding: 2rem 2rem 2.1rem;
-    border-radius: 1.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(160deg, rgba(23,23,23,0.52), rgba(23,23,23,0.22));
-    backdrop-filter: blur(7px);
+    padding: 1rem 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .homepage-media-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.15rem;
+    border: 1px solid rgba(23, 23, 23, 0.08);
+    box-shadow: 0 12px 28px rgba(12, 12, 12, 0.1);
+  }
+
+  .homepage-media-card img {
+    transition: transform 0.5s ease;
+  }
+
+  .homepage-media-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .homepage-media-card-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(8, 8, 8, 0) 0%, rgba(8, 8, 8, 0.84) 84%);
+    color: white;
+  }
+
+  .homepage-media-card-title {
+    font-family: var(--font-display);
+    font-size: 1.16rem;
+    line-height: 1.15;
+  }
+
+  .homepage-media-card-link {
+    margin-top: 0.32rem;
+    display: inline-flex;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .homepage-icon-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.95rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(23, 23, 23, 0.09);
+    background: white;
+    padding: 1rem 1rem 0.95rem;
+    box-shadow: 0 8px 24px rgba(12, 12, 12, 0.05);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .homepage-icon-card:hover {
+    border-color: rgba(255, 111, 156, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .homepage-icon-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.7rem;
+    background: rgba(255, 182, 217, 0.35);
+    color: var(--color-primary-dark);
+    font-size: 1rem;
+  }
+
+  .homepage-icon-title {
+    font-family: var(--font-display);
+    font-size: 1.12rem;
+    line-height: 1.2;
+    color: #171717;
+  }
+
+  .homepage-icon-copy {
+    margin-top: 0.3rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #525252;
   }
 
   .cta-band-shell {
@@ -451,7 +531,7 @@ a:hover {
 
     .hero-panel {
       max-width: 46rem;
-      padding: 2.25rem 2.5rem;
+      padding: 1rem 0;
     }
 
     .cta-band-shell {

@@ -14,127 +14,118 @@ const footerContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Ema
 
 <footer class="bg-brand-dark text-neutral-300">
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-    <div class:list={[
-      "grid gap-12 lg:gap-14",
-      variant === "home" ? "lg:grid-cols-[1.15fr_0.85fr]" : "lg:grid-cols-[1.1fr_0.9fr_1.05fr]",
-    ]}>
-      <div>
-        <a href="/" class="mb-5 inline-block transition-opacity hover:opacity-90">
-          <span class="font-display text-2xl font-bold text-brand-pink">
-            {nap.name}
-          </span>
-        </a>
-        <p class="max-w-md text-sm leading-7 text-neutral-400">
-          Stress-free party rentals with fast communication, free delivery/setup/pickup, and friendly local support.
-        </p>
-
-        <div class="mt-7 footer-contact-shell">
-          <ContactMetadata items={footerContactItems} surface="dark" showDescriptions={false} layout="cards" />
-        </div>
-
-        <p class="mt-5 text-sm text-neutral-400">{nap.address.full}</p>
-
-        <div class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-neutral-500">
-          <a
-            href={site.social.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="transition-colors hover:text-brand-pink"
-            aria-label="Facebook"
-          >
-            Facebook
-          </a>
-          <a
-            href={site.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="transition-colors hover:text-brand-pink"
-            aria-label="Instagram"
-          >
-            Instagram
-          </a>
-          <a
-            href={site.social.google}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="transition-colors hover:text-brand-pink"
-            aria-label="Google"
-          >
-            Google
-          </a>
-        </div>
-      </div>
-
-      <div class:list={[
-        "grid gap-8 sm:grid-cols-2",
-        variant === "home" ? "xl:grid-cols-2" : "lg:grid-cols-1 xl:grid-cols-2",
-      ]}>
-        {footerNavGroups.map((group) => (
+    {variant === "home" ? (
+      <>
+        <div class="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
-            <h3 class="mb-4 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white/90">
-              {group.title}
-            </h3>
-            <ul class="space-y-3 text-sm">
-              {group.links.map((link) => (
-                <li>
-                  <a href={link.href} class="text-neutral-400 transition-colors hover:text-brand-pink">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <a href="/" class="mb-5 inline-block transition-opacity hover:opacity-90">
+              <span class="font-display text-2xl font-bold text-brand-pink">{nap.name}</span>
+            </a>
+            <p class="max-w-md text-sm leading-7 text-neutral-300">
+              Stress-free party rentals with polished setups, clear communication, and full-service delivery, setup, and pickup.
+            </p>
+            <div class="mt-7 space-y-2.5 text-sm">
+              <a href={`tel:${nap.contact.phone.replace(/\D/g, "")}`} class="inline-flex text-neutral-200 transition-colors hover:text-brand-pink">{nap.contact.phone}</a>
+              <a href={`mailto:${nap.contact.email}`} class="inline-flex text-neutral-300 transition-colors hover:text-brand-pink">{nap.contact.email}</a>
+              <p class="text-neutral-400">{nap.contact.hours}</p>
+              <p class="text-neutral-500">{nap.address.full}</p>
+            </div>
           </div>
-        ))}
-      </div>
 
-      {variant !== "home" ? (
+          <div class="footer-cta-shell footer-cta-shell-home">
+            <p class="text-[0.72rem] font-bold uppercase tracking-[0.26em] text-brand-pink-light">Request a quote today</p>
+            <h3 class="mt-4 font-display text-[2rem] font-bold leading-[1.06] text-white">Request Your Free Quote Today</h3>
+            <p class="mt-4 max-w-md text-[1.02rem] leading-7 text-neutral-300">
+              Tell us about your date and guest count. We&apos;ll send a clean, all-in quote with delivery, setup, and pickup included.
+            </p>
+            <form method="POST" action="/api/quote" class="mt-6 space-y-3">
+              <div class="grid gap-3 sm:grid-cols-2">
+                <input type="text" name="name" placeholder="Name" required class="form-input form-input-dark" />
+                <input type="tel" name="phone" placeholder="Phone" required class="form-input form-input-dark" />
+              </div>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <input type="email" name="email" placeholder="Email" required class="form-input form-input-dark" />
+                <input type="date" name="event_date" required class="form-input form-input-dark [color-scheme:dark]" />
+              </div>
+              <button type="submit" class="w-full btn-primary">Send My Quote</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {footerNavGroups.map((group) => (
+            <div>
+              <h3 class="mb-4 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white/90">{group.title}</h3>
+              <ul class="space-y-3 text-sm">
+                {group.links.map((link) => (
+                  <li>
+                    <a href={link.href} class="text-neutral-400 transition-colors hover:text-brand-pink">{link.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <div class="sm:col-span-2 lg:col-span-3 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-neutral-500">
+            <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-brand-pink" aria-label="Facebook">Facebook</a>
+            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-brand-pink" aria-label="Instagram">Instagram</a>
+            <a href={site.social.google} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-brand-pink" aria-label="Google">Google</a>
+          </div>
+        </div>
+      </>
+    ) : (
+      <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr_1.05fr] lg:gap-14">
+        <div>
+          <a href="/" class="mb-5 inline-block transition-opacity hover:opacity-90">
+            <span class="font-display text-2xl font-bold text-brand-pink">
+              {nap.name}
+            </span>
+          </a>
+          <p class="max-w-md text-sm leading-7 text-neutral-400">
+            Stress-free party rentals with fast communication, free delivery/setup/pickup, and friendly local support.
+          </p>
+
+          <div class="mt-7 footer-contact-shell">
+            <ContactMetadata items={footerContactItems} surface="dark" showDescriptions={false} layout="cards" />
+          </div>
+
+          <p class="mt-5 text-sm text-neutral-400">{nap.address.full}</p>
+
+          <div class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-neutral-500">
+            <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-brand-pink" aria-label="Facebook">Facebook</a>
+            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-brand-pink" aria-label="Instagram">Instagram</a>
+            <a href={site.social.google} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-brand-pink" aria-label="Google">Google</a>
+          </div>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+          {footerNavGroups.map((group) => (
+            <div>
+              <h3 class="mb-4 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white/90">{group.title}</h3>
+              <ul class="space-y-3 text-sm">
+                {group.links.map((link) => (
+                  <li>
+                    <a href={link.href} class="text-neutral-400 transition-colors hover:text-brand-pink">{link.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
         <div>
           <div class="footer-cta-shell">
-            <h3 class="font-display text-[1.65rem] font-bold text-white">
-              Get a Free Quote
-            </h3>
+            <h3 class="font-display text-[1.65rem] font-bold text-white">Get a Free Quote</h3>
             <p class="mt-2 max-w-sm text-sm leading-7 text-neutral-400">
               Start with a quick request and we&apos;ll follow up within 2 hours during business hours.
             </p>
             <form method="POST" action="/api/quote" class="mt-7 space-y-3.5">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your name"
-                required
-                autocomplete="name"
-                class="form-input form-input-dark"
-              />
+              <input type="text" name="name" placeholder="Your name" required autocomplete="name" class="form-input form-input-dark" />
               <div class="grid gap-3 sm:grid-cols-2">
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone number"
-                  required
-                  autocomplete="tel"
-                  class="form-input form-input-dark"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  required
-                  autocomplete="email"
-                  class="form-input form-input-dark"
-                />
+                <input type="tel" name="phone" placeholder="Phone number" required autocomplete="tel" class="form-input form-input-dark" />
+                <input type="email" name="email" placeholder="Email address" required autocomplete="email" class="form-input form-input-dark" />
               </div>
-              <input
-                type="date"
-                name="event_date"
-                required
-                class="form-input form-input-dark [color-scheme:dark]"
-              />
-              <button
-                type="submit"
-                class="mt-1 w-full justify-center btn-primary"
-              >
-                Request a Free Quote
-              </button>
+              <input type="date" name="event_date" required class="form-input form-input-dark [color-scheme:dark]" />
+              <button type="submit" class="mt-1 w-full justify-center btn-primary">Request a Free Quote</button>
             </form>
 
             <div class="mt-6">
@@ -142,25 +133,8 @@ const footerContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Ema
             </div>
           </div>
         </div>
-      ) : (
-        <div class="footer-cta-shell footer-cta-shell-home">
-          <p class="text-[0.72rem] font-bold uppercase tracking-[0.26em] text-brand-pink-light">Start your event plan</p>
-          <h3 class="mt-4 font-display text-[2rem] font-bold leading-[1.06] text-white">
-            Let&apos;s Build Your Perfect Party Setup
-          </h3>
-          <p class="mt-4 max-w-md text-[1.02rem] leading-7 text-neutral-300">
-            Tell us your date, guest count, and style. We&apos;ll send a curated quote fast with delivery, setup, and pickup included.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3.5">
-            <a href="/quote/" class="btn-primary">Request Free Quote</a>
-            <a href={`tel:${nap.contact.phone.replace(/\D/g, "")}`} class="btn-secondary-on-dark">Call {nap.contact.phone}</a>
-          </div>
-          <div class="mt-7">
-            <ConversionProofPoints items={conversionProofPoints.slice(0, 2)} surface="dark" compact={true} />
-          </div>
-        </div>
-      )}
-    </div>
+      </div>
+    )}
 
     <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-neutral-500 sm:flex-row">
       <p>&copy; {new Date().getFullYear()} {nap.name}. All rights reserved.</p>
