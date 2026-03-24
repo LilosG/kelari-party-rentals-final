@@ -8,16 +8,30 @@ import type { Testimonial } from "../components/TestimonialCarousel.astro";
 import type { GalleryImage } from "../components/ImageGallery.astro";
 import type { FAQ } from "../components/FAQAccordion.astro";
 
+export interface TrustBarItem {
+  title: string;
+  subtitle: string;
+  icon: "sparkles" | "clock" | "check" | "chat" | "pin";
+}
+
 // ── Hero ──────────────────────────────────────────────────────────────────────
 
 export const hero = {
   title: "Party Rentals That Make Every Celebration Unforgettable",
   subtitle:
     "Tables, chairs, canopies, linens, and décor — delivered and set up across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
-  backgroundImage: "/images/hero-balloon-tent.jpg",
+  backgroundImage: "/images/gallery-canopy.jpg",
   primaryCta: { label: "Request a Free Quote", href: "/quote/" },
   secondaryCta: { label: "(760) 000-0000", href: "tel:7600000000" },
 };
+
+export const trustBarItems: TrustBarItem[] = [
+  { title: "Clean Inventory", subtitle: "Photo-ready every time", icon: "sparkles" },
+  { title: "On-Time Delivery", subtitle: "Always punctual", icon: "clock" },
+  { title: "Setup & Pickup", subtitle: "We handle it all", icon: "check" },
+  { title: "Easy Quoting", subtitle: "Fast, no-pressure", icon: "chat" },
+  { title: "North County", subtitle: "Local & reliable", icon: "pin" },
+];
 
 // ── CTA Band ──────────────────────────────────────────────────────────────────
 
