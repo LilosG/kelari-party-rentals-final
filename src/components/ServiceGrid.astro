@@ -87,7 +87,7 @@ const colClass = {
 
 <Section {bg} spacing={padding} width="wide">
   {(resolvedTitle || resolvedEyebrow) && (
-    <div class="mb-12 md:mb-16">
+    <div class="mb-14 md:mb-20">
       <SectionHeader
         eyebrow={resolvedEyebrow}
         title={resolvedTitle ?? ""}
@@ -98,7 +98,7 @@ const colClass = {
     </div>
   )}
 
-  <div class={`grid gap-6 md:gap-7 ${colClass}`}>
+  <div class={`grid gap-7 md:gap-8 ${colClass}`}>
     {resolvedServices.map((service) => (
       <a href={service.href} class="card-surface card-link group premium-card">
         <div class="card-image-wrap">

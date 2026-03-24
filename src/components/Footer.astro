@@ -4,12 +4,20 @@ import ConversionProofPoints from "./ConversionProofPoints.astro";
 import { site, nap } from "../data/site";
 import { contactMetaItems, conversionProofPoints, footerNavGroups } from "../data/conversion";
 
+export interface Props {
+  variant?: "default" | "home";
+}
+
+const { variant = "default" } = Astro.props;
 const footerContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Email", "Hours"].includes(label));
 ---
 
 <footer class="bg-brand-dark text-neutral-300">
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-    <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr_1.05fr] lg:gap-14">
+    <div class:list={[
+      "grid gap-12 lg:gap-14",
+      variant === "home" ? "lg:grid-cols-[1.15fr_0.85fr]" : "lg:grid-cols-[1.1fr_0.9fr_1.05fr]",
+    ]}>
       <div>
         <a href="/" class="mb-5 inline-block transition-opacity hover:opacity-90">
           <span class="font-display text-2xl font-bold text-brand-pink">
@@ -57,7 +65,10 @@ const footerContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Ema
         </div>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+      <div class:list={[
+        "grid gap-8 sm:grid-cols-2",
+        variant === "home" ? "xl:grid-cols-2" : "lg:grid-cols-1 xl:grid-cols-2",
+      ]}>
         {footerNavGroups.map((group) => (
           <div>
             <h3 class="mb-4 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white/90">
@@ -76,60 +87,79 @@ const footerContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Ema
         ))}
       </div>
 
-      <div>
-        <div class="footer-cta-shell">
-          <h3 class="font-display text-[1.65rem] font-bold text-white">
-            Get a Free Quote
-          </h3>
-          <p class="mt-2 max-w-sm text-sm leading-7 text-neutral-400">
-            Start with a quick request and we&apos;ll follow up within 2 hours during business hours.
-          </p>
-          <form method="POST" action="/api/quote" class="mt-7 space-y-3.5">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your name"
-              required
-              autocomplete="name"
-              class="form-input form-input-dark"
-            />
-            <div class="grid gap-3 sm:grid-cols-2">
+      {variant !== "home" ? (
+        <div>
+          <div class="footer-cta-shell">
+            <h3 class="font-display text-[1.65rem] font-bold text-white">
+              Get a Free Quote
+            </h3>
+            <p class="mt-2 max-w-sm text-sm leading-7 text-neutral-400">
+              Start with a quick request and we&apos;ll follow up within 2 hours during business hours.
+            </p>
+            <form method="POST" action="/api/quote" class="mt-7 space-y-3.5">
               <input
-                type="tel"
-                name="phone"
-                placeholder="Phone number"
+                type="text"
+                name="name"
+                placeholder="Your name"
                 required
-                autocomplete="tel"
+                autocomplete="name"
                 class="form-input form-input-dark"
               />
+              <div class="grid gap-3 sm:grid-cols-2">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone number"
+                  required
+                  autocomplete="tel"
+                  class="form-input form-input-dark"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  required
+                  autocomplete="email"
+                  class="form-input form-input-dark"
+                />
+              </div>
               <input
-                type="email"
-                name="email"
-                placeholder="Email address"
+                type="date"
+                name="event_date"
                 required
-                autocomplete="email"
-                class="form-input form-input-dark"
+                class="form-input form-input-dark [color-scheme:dark]"
               />
-            </div>
-            <input
-              type="date"
-              name="event_date"
-              required
-              class="form-input form-input-dark [color-scheme:dark]"
-            />
-            <button
-              type="submit"
-              class="mt-1 w-full justify-center btn-primary"
-            >
-              Request a Free Quote
-            </button>
-          </form>
+              <button
+                type="submit"
+                class="mt-1 w-full justify-center btn-primary"
+              >
+                Request a Free Quote
+              </button>
+            </form>
 
-          <div class="mt-6">
+            <div class="mt-6">
+              <ConversionProofPoints items={conversionProofPoints.slice(0, 2)} surface="dark" compact={true} />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div class="footer-cta-shell footer-cta-shell-home">
+          <p class="text-[0.72rem] font-bold uppercase tracking-[0.26em] text-brand-pink-light">Start your event plan</p>
+          <h3 class="mt-4 font-display text-[2rem] font-bold leading-[1.06] text-white">
+            Let&apos;s Build Your Perfect Party Setup
+          </h3>
+          <p class="mt-4 max-w-md text-[1.02rem] leading-7 text-neutral-300">
+            Tell us your date, guest count, and style. We&apos;ll send a curated quote fast with delivery, setup, and pickup included.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3.5">
+            <a href="/quote/" class="btn-primary">Request Free Quote</a>
+            <a href={`tel:${nap.contact.phone.replace(/\D/g, "")}`} class="btn-secondary-on-dark">Call {nap.contact.phone}</a>
+          </div>
+          <div class="mt-7">
             <ConversionProofPoints items={conversionProofPoints.slice(0, 2)} surface="dark" compact={true} />
           </div>
         </div>
-      </div>
+      )}
     </div>
 
     <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-neutral-500 sm:flex-row">
