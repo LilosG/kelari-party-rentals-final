@@ -151,7 +151,7 @@ a {
     border-color: rgba(255,255,255,0.14);
     color: #fff;
   }
-  .form-input-dark::placeholder { color: rgba(255,255,255,0.6); }
+  .form-input-dark::placeholder { color: rgba(255,255,255,0.75); }
   .form-input-dark:focus { border-color: var(--color-brand-pink); box-shadow: 0 0 0 3px rgb(from var(--color-brand-pink) r g b / 0.15); }
   .form-select {
     width: 100%;

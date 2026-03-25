@@ -51,8 +51,10 @@ const colClass = {
         <Image
           src={img.src}
           alt={img.alt}
-          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          widths={[400, 800]}
+          sizes="(max-width: 639px) 50vw, (max-width: 767px) 33vw, 25vw"
           loading="lazy"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
     ))}

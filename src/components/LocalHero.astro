@@ -116,9 +116,11 @@ const emphasisTail = hasEmphasisPattern
   <Image
     src={resolvedImage}
     alt=""
-    class="absolute inset-0 h-full w-full object-cover"
+    widths={[640, 1280, 1600]}
+    sizes="100vw"
     fetchpriority="high"
     loading="eager"
+    class="absolute inset-0 h-full w-full object-cover"
   />
   <!-- Warm atmospheric overlay -->
   <div class="hero-overlay absolute inset-0"></div>
@@ -131,10 +133,10 @@ const emphasisTail = hasEmphasisPattern
 
         {resolvedBreadcrumbs.length > 0 && (
           <nav class="mb-6" aria-label="Breadcrumb">
-            <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-white/70">
+            <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-white/90">
               {resolvedBreadcrumbs.map((crumb, i) => (
                 <li class="flex items-center gap-2">
-                  {i > 0 && <span class="text-white/40" aria-hidden="true">/</span>}
+                  {i > 0 && <span class="text-white/60" aria-hidden="true">/</span>}
                   {i === resolvedBreadcrumbs.length - 1 ? (
                     <span class="text-white/90" aria-current="page">{crumb.label}</span>
                   ) : (
