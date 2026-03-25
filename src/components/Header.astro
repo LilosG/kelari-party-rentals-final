@@ -39,34 +39,33 @@ const cityLinks = [
       <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
 
         <!-- Services dropdown -->
-        <div class="relative group">
-          
-            <a
-            href="/services/"
-            class="header-nav-link flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-neutral-50"
-          >
-            Services
-            <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
+        <div class="relative" id="desktop-services-wrapper">
+          <div class="flex items-center">
+            <a href="/services/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
+              Services
+            </a>
+            <button
+              type="button"
+              id="desktop-services-btn"
+              aria-expanded="false"
+              aria-controls="desktop-services-panel"
+              aria-label="Services submenu"
+              class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-50 transition-colors"
+            >
+              <svg class="w-3.5 h-3.5 transition-transform duration-200" id="desktop-services-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div id="desktop-services-panel" hidden class="absolute top-full left-0 mt-1 w-56 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] z-50">
             <div class="p-2">
               {serviceLinks.map((link) => (
-                
-                  <a
-                  href={link.href}
-                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium"
-                >
+                <a href={link.href} class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium">
                   {link.label}
                 </a>
               ))}
               <div class="border-t border-neutral-100 mt-1 pt-1">
-                
-                  <a
-                  href="/services/"
-                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors"
-                >
+                <a href="/services/" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors">
                   View all services →
                 </a>
               </div>
@@ -75,35 +74,34 @@ const cityLinks = [
         </div>
 
         <!-- Rentals dropdown -->
-        <div class="relative group">
-          
-            <a
-            href="/rentals/"
-            class="header-nav-link flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-neutral-50"
-          >
-            Rentals
-            <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <div class="absolute top-full left-0 mt-1 w-52 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
+        <div class="relative" id="desktop-rentals-wrapper">
+          <div class="flex items-center">
+            <a href="/rentals/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
+              Rentals
+            </a>
+            <button
+              type="button"
+              id="desktop-rentals-btn"
+              aria-expanded="false"
+              aria-controls="desktop-rentals-panel"
+              aria-label="Rentals submenu"
+              class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-50 transition-colors"
+            >
+              <svg class="w-3.5 h-3.5 transition-transform duration-200" id="desktop-rentals-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div id="desktop-rentals-panel" hidden class="absolute top-full left-0 mt-1 w-52 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] z-50">
             <div class="p-2">
               {rentalLinks.map((link) => (
-                
-                  <a
-                  href={link.href}
-                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium"
-                >
+                <a href={link.href} class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium">
                   <span aria-hidden="true">{link.icon}</span>
                   {link.label}
                 </a>
               ))}
               <div class="border-t border-neutral-100 mt-1 pt-1">
-                
-                  <a
-                  href="/rentals/"
-                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors"
-                >
+                <a href="/rentals/" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors">
                   Browse all rentals →
                 </a>
               </div>
@@ -112,25 +110,29 @@ const cityLinks = [
         </div>
 
         <!-- Service Areas dropdown -->
-        <div class="relative group">
-          
-            <a
-            href="/service-area/"
-            class="header-nav-link flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-neutral-50"
-          >
-            Service Areas
-            <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
+        <!-- Service Areas dropdown -->
+        <div class="relative" id="desktop-areas-wrapper">
+          <div class="flex items-center">
+            <a href="/service-area/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
+              Service Areas
+            </a>
+            <button
+              type="button"
+              id="desktop-areas-btn"
+              aria-expanded="false"
+              aria-controls="desktop-areas-panel"
+              aria-label="Service Areas submenu"
+              class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-50 transition-colors"
+            >
+              <svg class="w-3.5 h-3.5 transition-transform duration-200" id="desktop-areas-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div id="desktop-areas-panel" hidden class="absolute top-full left-0 mt-1 w-48 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] z-50">
             <div class="p-2">
               {cityLinks.map((link) => (
-                
-                  <a
-                  href={link.href}
-                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium"
-                >
+                <a href={link.href} class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium">
                   <svg class="w-3.5 h-3.5 text-brand-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -138,11 +140,7 @@ const cityLinks = [
                 </a>
               ))}
               <div class="border-t border-neutral-100 mt-1 pt-1">
-                
-                  <a
-                  href="/service-area/"
-                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors"
-                >
+                <a href="/service-area/" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors">
                   Full service area →
                 </a>
               </div>
@@ -332,6 +330,69 @@ const cityLinks = [
   setupSubMenu("mobile-services-btn", "mobile-services-menu", "mobile-services-icon");
   setupSubMenu("mobile-rentals-btn", "mobile-rentals-menu", "mobile-rentals-icon");
   setupSubMenu("mobile-areas-btn", "mobile-areas-menu", "mobile-areas-icon");
+
+  // Desktop dropdown toggles
+  function setupDesktopDropdown(btnId: string, panelId: string, iconId: string) {
+    const dropBtn = document.getElementById(btnId);
+    const dropPanel = document.getElementById(panelId);
+    const dropIcon = document.getElementById(iconId);
+
+    if (!dropBtn || !dropPanel) return;
+
+    dropBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !dropPanel.hasAttribute("hidden");
+      // Close all other desktop dropdowns first
+      ["desktop-services-panel", "desktop-rentals-panel", "desktop-areas-panel"].forEach((id) => {
+        if (id !== panelId) {
+          const otherPanel = document.getElementById(id);
+          const otherBtn = document.getElementById(id.replace("-panel", "-btn"));
+          const otherIcon = document.getElementById(id.replace("-panel", "-icon"));
+          if (otherPanel) otherPanel.setAttribute("hidden", "");
+          if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+          if (otherIcon) otherIcon.style.transform = "rotate(0deg)";
+        }
+      });
+      if (isOpen) {
+        dropPanel.setAttribute("hidden", "");
+        dropBtn.setAttribute("aria-expanded", "false");
+        if (dropIcon) dropIcon.style.transform = "rotate(0deg)";
+      } else {
+        dropPanel.removeAttribute("hidden");
+        dropBtn.setAttribute("aria-expanded", "true");
+        if (dropIcon) dropIcon.style.transform = "rotate(180deg)";
+      }
+    });
+  }
+
+  setupDesktopDropdown("desktop-services-btn", "desktop-services-panel", "desktop-services-icon");
+  setupDesktopDropdown("desktop-rentals-btn", "desktop-rentals-panel", "desktop-rentals-icon");
+  setupDesktopDropdown("desktop-areas-btn", "desktop-areas-panel", "desktop-areas-icon");
+
+  // Close desktop dropdowns on outside click or Escape
+  document.addEventListener("click", () => {
+    ["desktop-services", "desktop-rentals", "desktop-areas"].forEach((prefix) => {
+      const panel = document.getElementById(`${prefix}-panel`);
+      const btn = document.getElementById(`${prefix}-btn`);
+      const icon = document.getElementById(`${prefix}-icon`);
+      if (panel) panel.setAttribute("hidden", "");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+      if (icon) icon.style.transform = "rotate(0deg)";
+    });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      ["desktop-services", "desktop-rentals", "desktop-areas"].forEach((prefix) => {
+        const panel = document.getElementById(`${prefix}-panel`);
+        const btn = document.getElementById(`${prefix}-btn`);
+        const icon = document.getElementById(`${prefix}-icon`);
+        if (panel) panel.setAttribute("hidden", "");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+        if (icon) icon.style.transform = "rotate(0deg)";
+      });
+    }
+  });
 
   // Scroll-aware header shadow
   const header = document.getElementById("site-header");

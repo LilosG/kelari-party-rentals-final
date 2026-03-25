@@ -64,8 +64,10 @@ function getCityImage(city: CityCard): ImageMetadata {
           <Image
             src={getCityImage(city)}
             alt={city.name}
-            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+            widths={[400, 800]}
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
             loading="lazy"
+            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
           />
         </div>
         <div class="p-5 flex flex-col flex-1 items-center">

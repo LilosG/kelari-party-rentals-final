@@ -20,7 +20,7 @@ const occasions = [
 <div class="bg-brand-dark py-5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {heading && (
-      <p class="text-xs text-white/40 text-center mb-3 font-medium uppercase tracking-widest">{heading}</p>
+      <p class="text-xs text-white/65 text-center mb-3 font-medium uppercase tracking-widest">{heading}</p>
     )}
     <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
       {occasions.map((occasion, i) => (
@@ -30,7 +30,7 @@ const occasions = [
           )}
           <a
             href={occasion.href}
-            class="text-sm font-medium text-white/80 hover:text-brand-pink transition-colors whitespace-nowrap"
+            class="text-sm font-medium text-white hover:text-brand-pink transition-colors whitespace-nowrap"
           >
             {occasion.label}
           </a>
