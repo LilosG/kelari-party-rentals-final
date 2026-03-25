@@ -1,4 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import heroParty from '../assets/images/hero-party.jpg';
+import backyardParty from '../assets/images/backyard-party.jpg';
+import babyShower from '../assets/images/baby-shower.jpg';
+import engagementParty from '../assets/images/engagement-party.jpg';
+import galleryTablescape from '../assets/images/gallery-tablescape.jpg';
+import galleryCanopy from '../assets/images/gallery-canopy.jpg';
+import galleryMarquee from '../assets/images/gallery-marquee.jpg';
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 
@@ -33,20 +42,19 @@ const {
 
 const isDark = bg === "dark";
 
-const categoryImages: Record<string, string> = {
-  tables: "/images/gallery-tablescape.jpg",
-  chairs: "/images/backyard-party.jpg",
-  "tents-canopies": "/images/gallery-canopy.jpg",
-  linens: "/images/baby-shower.jpg",
-  tableware: "/images/gallery-tablescape.jpg",
-  decorations: "/images/gallery-marquee.jpg",
-  lighting: "/images/engagement-party.jpg",
+const categoryImages: Record<string, ImageMetadata> = {
+  tables: galleryTablescape,
+  chairs: backyardParty,
+  "tents-canopies": galleryCanopy,
+  linens: babyShower,
+  tableware: galleryTablescape,
+  decorations: galleryMarquee,
+  lighting: engagementParty,
 };
 
-function getCategoryImage(cat: CategoryCard): string {
-  if (cat.image) return cat.image;
+function getCategoryImage(cat: CategoryCard): ImageMetadata {
   const slug = cat.slug ?? cat.href.split("/").filter(Boolean).pop() ?? "";
-  return categoryImages[slug] ?? "/images/hero-party.jpg";
+  return categoryImages[slug] ?? heroParty;
 }
 
 const colClass = {
@@ -70,11 +78,9 @@ const colClass = {
         class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col transition-all duration-300 hover:-translate-y-1.5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
       >
         <div class="relative overflow-hidden aspect-[16/10]">
-          <img
+          <Image
             src={getCategoryImage(cat)}
             alt={cat.name}
-            width="800"
-            height="600"
             class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
             loading="lazy"
           />

@@ -1,4 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import heroParty from '../assets/images/hero-party.jpg';
+import backyardParty from '../assets/images/backyard-party.jpg';
+import parkParty from '../assets/images/park-party.jpg';
+import graduationParty from '../assets/images/graduation-party.jpg';
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 
@@ -28,17 +34,16 @@ const {
   padding = "default",
 } = Astro.props;
 
-const cityImages: Record<string, string> = {
-  carlsbad: "/images/hero-party.jpg",
-  encinitas: "/images/backyard-party.jpg",
-  oceanside: "/images/park-party.jpg",
-  "san-marcos": "/images/graduation-party.jpg",
+const cityImages: Record<string, ImageMetadata> = {
+  carlsbad: heroParty,
+  encinitas: backyardParty,
+  oceanside: parkParty,
+  "san-marcos": graduationParty,
 };
 
-function getCityImage(city: CityCard): string {
-  if (city.image) return city.image;
+function getCityImage(city: CityCard): ImageMetadata {
   const slug = city.slug ?? city.href.split("/").filter(Boolean).pop() ?? "";
-  return cityImages[slug] ?? "/images/hero-party.jpg";
+  return cityImages[slug] ?? heroParty;
 }
 ---
 
@@ -56,11 +61,9 @@ function getCityImage(city: CityCard): string {
         class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col text-center transition-all duration-300 hover:-translate-y-1.5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
       >
         <div class="relative overflow-hidden aspect-[16/10]">
-          <img
+          <Image
             src={getCityImage(city)}
             alt={city.name}
-            width="800"
-            height="600"
             class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
             loading="lazy"
           />

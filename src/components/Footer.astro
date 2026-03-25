@@ -42,12 +42,24 @@ const footerContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Ema
             </p>
             <form method="POST" action="/api/quote" class="mt-6 space-y-3">
               <div class="grid gap-3 sm:grid-cols-2">
-                <input type="text" name="name" placeholder="Name" required class="form-input form-input-dark" />
-                <input type="tel" name="phone" placeholder="Phone" required class="form-input form-input-dark" />
+                <div>
+                  <label for="footer-name" class="sr-only">Your name</label>
+                  <input id="footer-name" type="text" name="name" placeholder="Name" required class="form-input form-input-dark" />
+                </div>
+                <div>
+                  <label for="footer-phone" class="sr-only">Your phone number</label>
+                  <input id="footer-phone" type="tel" name="phone" placeholder="Phone" required class="form-input form-input-dark" />
+                </div>
               </div>
               <div class="grid gap-3 sm:grid-cols-2">
-                <input type="email" name="email" placeholder="Email" required class="form-input form-input-dark" />
-                <input type="date" name="event_date" required class="form-input form-input-dark [color-scheme:dark]" />
+                <div>
+                  <label for="footer-email" class="sr-only">Your email address</label>
+                  <input id="footer-email" type="email" name="email" placeholder="Email" required class="form-input form-input-dark" />
+                </div>
+                <div>
+                  <label for="footer-event-date" class="sr-only">Event date</label>
+                  <input id="footer-event-date" type="date" name="event_date" required class="form-input form-input-dark [color-scheme:dark]" />
+                </div>
               </div>
               <button type="submit" class="w-full inline-flex items-center justify-center bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-6 py-3.5 rounded-lg text-sm transition-colors">
                 Send My Quote

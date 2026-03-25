@@ -1,4 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import heroParty from '../assets/images/hero-party.jpg';
+import galleryCanopy from '../assets/images/gallery-canopy.jpg';
+import birthdayParty from '../assets/images/birthday-party.jpg';
+import backyardParty from '../assets/images/backyard-party.jpg';
+import babyShower from '../assets/images/baby-shower.jpg';
+import graduationParty from '../assets/images/graduation-party.jpg';
+import engagementParty from '../assets/images/engagement-party.jpg';
+import parkParty from '../assets/images/park-party.jpg';
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
@@ -43,14 +54,14 @@ const cityCards = cities.map((c) => ({
   href: `/${c.slug}/`,
 }));
 
-const serviceImages: Record<string, string> = {
-  "party-rentals": "/images/gallery-canopy.jpg",
-  "birthday-party-rentals": "/images/birthday-party.jpg",
-  "backyard-party-rentals": "/images/backyard-party.jpg",
-  "baby-shower-rentals": "/images/baby-shower.jpg",
-  "graduation-party-rentals": "/images/graduation-party.jpg",
-  "engagement-party-rentals": "/images/engagement-party.jpg",
-  "park-party-rentals": "/images/park-party.jpg",
+const serviceImages: Record<string, ImageMetadata> = {
+  "party-rentals": galleryCanopy,
+  "birthday-party-rentals": birthdayParty,
+  "backyard-party-rentals": backyardParty,
+  "baby-shower-rentals": babyShower,
+  "graduation-party-rentals": graduationParty,
+  "engagement-party-rentals": engagementParty,
+  "park-party-rentals": parkParty,
 };
 
 const featuredServices = topServiceSlugs
@@ -59,7 +70,7 @@ const featuredServices = topServiceSlugs
   .map((s) => ({
     ...s,
     href: `/services/${s.slug}/`,
-    image: serviceImages[s.slug] ?? "/images/hero-party.jpg",
+    image: serviceImages[s.slug] ?? heroParty,
   }));
 
 const schema = [
@@ -132,13 +143,12 @@ const schema = [
             index < 2 ? "lg:row-span-2" : "",
           ]}
         >
-          <img
+          <Image
             src={service.image}
             alt={service.shortName}
-            width="800"
-            height="600"
             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading={index < 2 ? "eager" : "lazy"}
+            fetchpriority={index < 2 ? "high" : "auto"}
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4">
