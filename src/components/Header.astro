@@ -1,38 +1,167 @@
 ---
 import { nap } from "../data/site";
+import { services } from "../data/services";
+import { categories } from "../data/categories";
 import BrandWordmark from "./BrandWordmark.astro";
 import Button from "./Button.astro";
 
-const navLinks = [
-  { label: "Services", href: "/services/" },
-  { label: "Rentals", href: "/rentals/" },
-  { label: "Service Areas", href: "/service-area/" },
-  { label: "How It Works", href: "/#how-it-works" },
-  { label: "FAQ", href: "/faq/" },
+const serviceLinks = services
+  .filter((s) => s.slug !== "delivery-setup-pickup")
+  .map((s) => ({ label: s.shortName, href: `/services/${s.slug}/` }));
+
+const rentalLinks = categories.map((c) => ({
+  label: c.name,
+  href: `/rentals/${c.slug}/`,
+  icon: c.icon,
+}));
+
+const cityLinks = [
+  { label: "Carlsbad", href: "/carlsbad/" },
+  { label: "Encinitas", href: "/encinitas/" },
+  { label: "Oceanside", href: "/oceanside/" },
+  { label: "San Marcos", href: "/san-marcos/" },
 ];
 ---
 
-<header class="site-header sticky top-0 z-50 backdrop-blur-sm border-b border-neutral-100">
+<header
+  id="site-header"
+  class="site-header sticky top-0 z-50 backdrop-blur-sm border-b border-neutral-100 transition-shadow duration-300"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-[58px] md:h-[64px]">
 
+      <!-- Wordmark -->
       <a href="/" class="shrink-0 hover:opacity-90 transition-opacity">
         <BrandWordmark size="md" />
       </a>
 
-      <nav class="hidden lg:flex items-center gap-6" aria-label="Main navigation">
-        {navLinks.map((link) => (
-          <a
-            href={link.href}
-            class="header-nav-link"
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+
+        <!-- Services dropdown -->
+        <div class="relative group">
+          
+            <a
+            href="/services/"
+            class="header-nav-link flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-neutral-50"
           >
-            {link.label}
+            Services
+            <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
           </a>
-        ))}
+          <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
+            <div class="p-2">
+              {serviceLinks.map((link) => (
+                
+                  <a
+                  href={link.href}
+                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <div class="border-t border-neutral-100 mt-1 pt-1">
+                
+                  <a
+                  href="/services/"
+                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors"
+                >
+                  View all services →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rentals dropdown -->
+        <div class="relative group">
+          
+            <a
+            href="/rentals/"
+            class="header-nav-link flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-neutral-50"
+          >
+            Rentals
+            <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div class="absolute top-full left-0 mt-1 w-52 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
+            <div class="p-2">
+              {rentalLinks.map((link) => (
+                
+                  <a
+                  href={link.href}
+                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium"
+                >
+                  <span aria-hidden="true">{link.icon}</span>
+                  {link.label}
+                </a>
+              ))}
+              <div class="border-t border-neutral-100 mt-1 pt-1">
+                
+                  <a
+                  href="/rentals/"
+                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors"
+                >
+                  Browse all rentals →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Areas dropdown -->
+        <div class="relative group">
+          
+            <a
+            href="/service-area/"
+            class="header-nav-link flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-neutral-50"
+          >
+            Service Areas
+            <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
+            <div class="p-2">
+              {cityLinks.map((link) => (
+                
+                  <a
+                  href={link.href}
+                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium"
+                >
+                  <svg class="w-3.5 h-3.5 text-brand-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  {link.label}
+                </a>
+              ))}
+              <div class="border-t border-neutral-100 mt-1 pt-1">
+                
+                  <a
+                  href="/service-area/"
+                  class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-brand-pink font-semibold hover:bg-brand-pink-light transition-colors"
+                >
+                  Full service area →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="/#how-it-works" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
+          How It Works
+        </a>
+        <a href="/faq/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
+          FAQ
+        </a>
       </nav>
 
+      <!-- Desktop right -->
       <div class="hidden lg:flex items-center gap-3">
-        <a
+        
+          <a
           href={`tel:${nap.contact.phone.replace(/\D/g, "")}`}
           class="header-contact"
         >
@@ -46,10 +175,11 @@ const navLinks = [
         </Button>
       </div>
 
+      <!-- Mobile menu button -->
       <button
         type="button"
         id="mobile-menu-btn"
-        class="lg:hidden p-2 transition-colors text-[color:var(--text-subtle)] hover:text-neutral-900"
+        class="lg:hidden p-2 transition-colors text-neutral-600 hover:text-neutral-900"
         aria-label="Open menu"
         aria-expanded="false"
       >
@@ -61,30 +191,114 @@ const navLinks = [
     </div>
   </div>
 
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-neutral-100 bg-white">
-    <nav class="flex flex-col px-4 py-3 gap-1" aria-label="Mobile navigation">
-      {navLinks.map((link) => (
-        <a
-          href={link.href}
-          class="header-nav-link py-2.5 px-3 rounded-lg"
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-neutral-100 bg-white max-h-[80vh] overflow-y-auto">
+    <nav class="flex flex-col px-4 py-4 gap-1" aria-label="Mobile navigation">
+
+      <!-- Services group -->
+      <div>
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+          aria-expanded="false"
+          id="mobile-services-btn"
         >
-          {link.label}
-        </a>
-      ))}
-      <a
-        href={`tel:${nap.contact.phone.replace(/\D/g, "")}`}
-        class="header-nav-link py-2.5 px-3 rounded-lg"
-      >
-        {nap.contact.phone}
+          Services
+          <svg class="w-4 h-4 text-neutral-400 transition-transform duration-200" id="mobile-services-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-services-menu" class="hidden pl-3 mt-1 space-y-0.5 border-l-2 border-brand-pink-light ml-3">
+          {serviceLinks.map((link) => (
+            <a href={link.href} class="block px-3 py-2 text-sm text-neutral-600 hover:text-brand-pink transition-colors rounded-lg hover:bg-neutral-50">
+              {link.label}
+            </a>
+          ))}
+          <a href="/services/" class="block px-3 py-2 text-sm font-semibold text-brand-pink hover:bg-brand-pink-light transition-colors rounded-lg">
+            All services →
+          </a>
+        </div>
+      </div>
+
+      <!-- Rentals group -->
+      <div>
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+          aria-expanded="false"
+          id="mobile-rentals-btn"
+        >
+          Rentals
+          <svg class="w-4 h-4 text-neutral-400 transition-transform duration-200" id="mobile-rentals-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-rentals-menu" class="hidden pl-3 mt-1 space-y-0.5 border-l-2 border-brand-pink-light ml-3">
+          {rentalLinks.map((link) => (
+            <a href={link.href} class="flex items-center gap-2 px-3 py-2 text-sm text-neutral-600 hover:text-brand-pink transition-colors rounded-lg hover:bg-neutral-50">
+              <span aria-hidden="true">{link.icon}</span>
+              {link.label}
+            </a>
+          ))}
+          <a href="/rentals/" class="block px-3 py-2 text-sm font-semibold text-brand-pink hover:bg-brand-pink-light transition-colors rounded-lg">
+            Browse all rentals →
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Areas group -->
+      <div>
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+          aria-expanded="false"
+          id="mobile-areas-btn"
+        >
+          Service Areas
+          <svg class="w-4 h-4 text-neutral-400 transition-transform duration-200" id="mobile-areas-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-areas-menu" class="hidden pl-3 mt-1 space-y-0.5 border-l-2 border-brand-pink-light ml-3">
+          {cityLinks.map((link) => (
+            <a href={link.href} class="block px-3 py-2 text-sm text-neutral-600 hover:text-brand-pink transition-colors rounded-lg hover:bg-neutral-50">
+              {link.label}
+            </a>
+          ))}
+          <a href="/service-area/" class="block px-3 py-2 text-sm font-semibold text-brand-pink hover:bg-brand-pink-light transition-colors rounded-lg">
+            Full service area →
+          </a>
+        </div>
+      </div>
+
+      <a href="/#how-it-works" class="px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
+        How It Works
       </a>
-      <Button href="/quote/" variant="brand-soft" size="sm" class="mt-2 w-full">
-        Request a Quote
-      </Button>
+      <a href="/faq/" class="px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
+        FAQ
+      </a>
+
+      <div class="border-t border-neutral-100 mt-2 pt-3 space-y-2">
+        
+          <a
+          href={`tel:${nap.contact.phone.replace(/\D/g, "")}`}
+          class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+        >
+          <svg class="w-4 h-4 text-brand-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          {nap.contact.phone}
+        </a>
+        <Button href="/quote/" variant="brand" size="sm" class="w-full justify-center">
+          Request a Quote
+        </Button>
+      </div>
     </nav>
   </div>
 </header>
 
 <script>
+  // Main mobile menu toggle
   const btn = document.getElementById("mobile-menu-btn");
   const menu = document.getElementById("mobile-menu");
   const icon = document.getElementById("menu-icon");
@@ -95,10 +309,40 @@ const navLinks = [
     if (icon) {
       icon.setAttribute(
         "d",
-        isOpen
-          ? "M6 18L18 6M6 6l12 12"
-          : "M4 6h16M4 12h16M4 18h16",
+        isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
       );
     }
   });
+
+  // Mobile sub-menu toggles
+  function setupSubMenu(btnId: string, menuId: string, iconId: string) {
+    const subBtn = document.getElementById(btnId);
+    const subMenu = document.getElementById(menuId);
+    const subIcon = document.getElementById(iconId);
+
+    subBtn?.addEventListener("click", () => {
+      const isOpen = subMenu?.classList.toggle("hidden") === false;
+      subBtn.setAttribute("aria-expanded", String(isOpen));
+      if (subIcon) {
+        subIcon.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    });
+  }
+
+  setupSubMenu("mobile-services-btn", "mobile-services-menu", "mobile-services-icon");
+  setupSubMenu("mobile-rentals-btn", "mobile-rentals-menu", "mobile-rentals-icon");
+  setupSubMenu("mobile-areas-btn", "mobile-areas-menu", "mobile-areas-icon");
+
+  // Scroll-aware header shadow
+  const header = document.getElementById("site-header");
+  window.addEventListener("scroll", () => {
+    if (header) {
+      if (window.scrollY > 10) {
+        header.classList.add("shadow-md");
+        header.classList.remove("shadow-none");
+      } else {
+        header.classList.remove("shadow-md");
+      }
+    }
+  }, { passive: true });
 </script>
