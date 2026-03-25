@@ -42,9 +42,9 @@ const colClass = {
           "rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1",
           isDark
             ? "bg-white/5 border-white/10"
-            : "bg-white border-neutral-100",
+            : "bg-white border-neutral-100 shadow-[0_2px_12px_rgba(0,0,0,0.05)]",
         ]}
-        style={isDark ? "" : "box-shadow: 0 2px 12px rgba(0,0,0,0.05);"}
+
       >
         <div
           class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5"
@@ -53,7 +53,7 @@ const colClass = {
         >
           {item.icon}
         </div>
-        <h3 class:list={["font-display font-bold text-lg", isDark ? "text-white" : ""]} style={isDark ? "" : "color: #111;"}>
+        <h3 class:list={["font-display font-bold text-lg", isDark ? "text-white" : "text-neutral-900"]}>
           {item.title}
         </h3>
         <p class:list={["text-sm mt-2 leading-relaxed", isDark ? "text-neutral-300" : "text-neutral-600"]}>
