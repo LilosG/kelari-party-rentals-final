@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+
+const title = "Thank You | Kelari Party Rentals";
+const description = "We received your quote request and will get back to you within 2 hours during business hours.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={`${site.domain}/thank-you/`}
+>
+  <section class="py-28 lg:py-40 bg-[--color-soft-bg]">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
+      <div class="mb-8 flex justify-center">
+        <span class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-pink/10">
+          <svg class="w-10 h-10 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </span>
+      </div>
+      <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink mb-4">Request Received</p>
+      <h1 class="font-display font-bold text-4xl md:text-5xl text-brand-dark leading-tight mb-5">
+        We Got Your Request!
+      </h1>
+      <p class="text-lg leading-relaxed text-neutral-600 mb-10">
+        Thanks for reaching out. We'll review your event details and send you a custom quote within 2 hours during business hours (Mon–Sun 9AM–7PM).
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center justify-center bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-8 py-4 rounded-lg text-base transition-colors"
+      >
+        Back to Home
+      </a>
+    </div>
+  </section>
+</BaseLayout>
