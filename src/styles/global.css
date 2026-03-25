@@ -207,47 +207,7 @@ a {
     color: var(--color-brand-pink);
   }
 
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300;
-    border-radius: var(--radius-button);
-  }
 
-  .btn--sm {
-    @apply px-5 py-2.5 text-sm;
-  }
-
-  .btn--md {
-    @apply px-6 py-3 text-[0.95rem];
-  }
-
-  .btn--pill {
-    @apply rounded-full;
-  }
-
-  .btn--brand {
-    color: #fff;
-    background: var(--color-brand-pink);
-    box-shadow: var(--shadow-brand-button);
-  }
-
-  .btn--brand:hover {
-    background: var(--color-brand-pink-dark);
-  }
-
-  .btn--brand-soft {
-    color: #fff;
-    background: var(--color-brand-pink);
-    box-shadow: var(--shadow-brand-button-sm);
-    border: 1px solid rgb(181 38 79 / 0.16);
-  }
-
-  .btn--brand-soft:hover {
-    background: var(--color-brand-pink-dark);
-  }
-
-  .btn--outline-light {
-    @apply border-2 border-white/80 text-white hover:bg-white hover:text-neutral-900;
-  }
 
   .site-header {
     background: var(--surface-header);
@@ -327,16 +287,59 @@ a {
   }
 }
 
-/* btn color: declared outside @layer to guarantee specificity */
-.btn--brand,
+/* ── Button system — outside @layer to guarantee correct selector compilation ── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  border-radius: var(--radius-button);
+}
+
+.btn--sm {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.btn--md {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.btn--pill {
+  border-radius: 9999px;
+}
+
+.btn--brand {
+  color: #ffffff;
+  background: var(--color-brand-pink);
+  box-shadow: var(--shadow-brand-button);
+}
+
+.btn--brand:hover {
+  background: var(--color-brand-pink-dark);
+}
+
 .btn--brand-soft {
-  color: #fff;
+  color: #ffffff;
+  background: var(--color-brand-pink);
+  box-shadow: var(--shadow-brand-button-sm);
+  border: 1px solid rgb(181 38 79 / 0.16);
+}
+
+.btn--brand-soft:hover {
+  background: var(--color-brand-pink-dark);
 }
 
 .btn--outline-light {
-  color: #fff;
+  border: 2px solid rgb(255 255 255 / 0.8);
+  color: #ffffff;
 }
 
 .btn--outline-light:hover {
+  background: #ffffff;
   color: #111111;
 }
