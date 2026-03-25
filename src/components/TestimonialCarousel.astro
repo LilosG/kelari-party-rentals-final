@@ -37,7 +37,7 @@ const spacingClass = {
 }[padding];
 ---
 
-<section class={spacingClass} style="background: #fdf8f9;">
+<section class:list={[spacingClass, "bg-[--color-soft-bg]"]}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {(title || eyebrow) && (
       <div class="mb-12 md:mb-16">
@@ -49,14 +49,13 @@ const spacingClass = {
       <div class="flex gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 min-w-max sm:min-w-0">
         {testimonials.map((t) => (
           <div
-            class="snap-start shrink-0 w-[300px] sm:w-auto rounded-2xl p-8 flex flex-col gap-4 bg-white"
-            style="border-left: 3px solid #E8356D; box-shadow: 0 2px 16px rgba(0,0,0,0.06);"
+            class="snap-start shrink-0 w-[300px] sm:w-auto rounded-2xl p-8 flex flex-col gap-4 bg-white border-l-[3px] border-l-brand-pink shadow-[0_2px_16px_rgba(0,0,0,0.06)]"
           >
             <div class="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
               {Array.from({ length: 5 }, (_, i) => (
                 <svg
                   class="w-4 h-4"
-                  style={i < t.rating ? "color: #E8356D;" : "color: #e5e5e5;"}
+                  class:list={[i < t.rating ? "text-brand-pink" : "text-neutral-200"]}
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"

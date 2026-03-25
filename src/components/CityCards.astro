@@ -53,10 +53,7 @@ function getCityImage(city: CityCard): string {
     {cities.map((city) => (
       <a
         href={city.href}
-        class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col text-center transition-transform duration-300 hover:-translate-y-1.5"
-        style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);"
-        onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)'"
-        onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'"
+        class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col text-center transition-all duration-300 hover:-translate-y-1.5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
       >
         <div class="relative overflow-hidden aspect-[16/10]">
           <img
@@ -69,13 +66,13 @@ function getCityImage(city: CityCard): string {
           />
         </div>
         <div class="p-5 flex flex-col flex-1 items-center">
-          <h3 class="font-display font-bold text-lg group-hover:text-brand-pink transition-colors" style="color: #111;">
+          <h3 class="font-display font-bold text-lg text-neutral-900 group-hover:text-brand-pink transition-colors">
             {city.name}
           </h3>
           <p class="text-sm mt-2 leading-relaxed text-neutral-600">
             {city.description}
           </p>
-          <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200" style="color: #E8356D;">
+          <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200 text-brand-pink">
             Party rentals in {city.name} <span aria-hidden="true">&rarr;</span>
           </span>
         </div>
