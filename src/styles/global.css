@@ -326,3 +326,17 @@ a {
     color: var(--trust-subtext);
   }
 }
+
+/* btn color: declared outside @layer to guarantee specificity */
+.btn--brand,
+.btn--brand-soft {
+  color: #fff;
+}
+
+.btn--outline-light {
+  color: #fff;
+}
+
+.btn--outline-light:hover {
+  color: #111111;
+}
