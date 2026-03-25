@@ -1,12 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 
 export interface GalleryImage {
-  src: string;
+  src: ImageMetadata;
   alt: string;
-  width: number;
-  height: number;
 }
 
 export interface Props {
@@ -48,11 +48,9 @@ const colClass = {
   <div class={`grid gap-4 ${colClass}`}>
     {images.map((img) => (
       <div class="rounded-xl overflow-hidden aspect-[4/3] group">
-        <img
+        <Image
           src={img.src}
           alt={img.alt}
-          width={img.width}
-          height={img.height}
           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />

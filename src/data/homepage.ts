@@ -8,6 +8,17 @@ import type { Testimonial } from "../components/TestimonialCarousel.astro";
 import type { GalleryImage } from "../components/ImageGallery.astro";
 import type { FAQ } from "../components/FAQAccordion.astro";
 
+import heroPartyImg from "../assets/images/hero-party.jpg";
+import birthdayPartyImg from "../assets/images/birthday-party.jpg";
+import backyardPartyImg from "../assets/images/backyard-party.jpg";
+import babyShowerImg from "../assets/images/baby-shower.jpg";
+import graduationPartyImg from "../assets/images/graduation-party.jpg";
+import engagementPartyImg from "../assets/images/engagement-party.jpg";
+import parkPartyImg from "../assets/images/park-party.jpg";
+import galleryTablescapeImg from "../assets/images/gallery-tablescape.jpg";
+import galleryMarqueeImg from "../assets/images/gallery-marquee.jpg";
+import galleryCanopyImg from "../assets/images/gallery-canopy.jpg";
+
 export interface TrustBarItem {
   title: string;
   subtitle: string;
@@ -122,66 +133,16 @@ export const testimonials: Testimonial[] = [
 // ── Gallery ───────────────────────────────────────────────────────────────────
 
 export const galleryImages: GalleryImage[] = [
-  {
-    src: "/images/hero-party.jpg",
-    alt: "Party rental setup with tables and decorations",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/birthday-party.jpg",
-    alt: "Birthday party rental setup",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/backyard-party.jpg",
-    alt: "Backyard party with tables and chairs",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/baby-shower.jpg",
-    alt: "Elegant baby shower table setup with linens",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/graduation-party.jpg",
-    alt: "Graduation celebration party setup",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/engagement-party.jpg",
-    alt: "Engagement party with elegant décor",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/park-party.jpg",
-    alt: "Park party rental setup with canopy",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/gallery-tablescape.jpg",
-    alt: "Tablescape with linens and tableware",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/gallery-marquee.jpg",
-    alt: "Marquee letters and party decorations",
-    width: 1200,
-    height: 900,
-  },
-  {
-    src: "/images/gallery-canopy.jpg",
-    alt: "White canopy tent at outdoor party",
-    width: 1200,
-    height: 900,
-  },
+  { src: heroPartyImg, alt: "Party rental setup with tables and decorations" },
+  { src: birthdayPartyImg, alt: "Birthday party rental setup" },
+  { src: backyardPartyImg, alt: "Backyard party with tables and chairs" },
+  { src: babyShowerImg, alt: "Elegant baby shower table setup with linens" },
+  { src: graduationPartyImg, alt: "Graduation celebration party setup" },
+  { src: engagementPartyImg, alt: "Engagement party with elegant décor" },
+  { src: parkPartyImg, alt: "Park party rental setup with canopy" },
+  { src: galleryTablescapeImg, alt: "Tablescape with linens and tableware" },
+  { src: galleryMarqueeImg, alt: "Marquee letters and party decorations" },
+  { src: galleryCanopyImg, alt: "White canopy tent at outdoor party" },
 ];
 
 // ── FAQ ───────────────────────────────────────────────────────────────────────

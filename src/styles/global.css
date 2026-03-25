@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap");
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
 @import "tailwindcss";
 
 /* ── Tailwind CSS 4 Theme ──────────────────────────────────────────────────── */
@@ -81,7 +84,7 @@
   --hero-chip-text: rgb(255 255 255 / 0.85);
   --hero-glow-pink: rgb(214 77 138 / 0.02);
   --trust-icon-bg: rgb(214 77 138 / 0.15);
-  --trust-subtext: rgb(255 255 255 / 0.45);
+  --trust-subtext: rgb(255 255 255 / 0.75);
 }
 
 /* ── Base Styles ──────────────────────────────────────────────────────────── */
@@ -148,7 +151,7 @@ a {
     border-color: rgba(255,255,255,0.14);
     color: #fff;
   }
-  .form-input-dark::placeholder { color: rgba(255,255,255,0.4); }
+  .form-input-dark::placeholder { color: rgba(255,255,255,0.6); }
   .form-input-dark:focus { border-color: var(--color-brand-pink); box-shadow: 0 0 0 3px rgb(from var(--color-brand-pink) r g b / 0.15); }
   .form-select {
     width: 100%;
