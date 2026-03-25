@@ -13,7 +13,9 @@ import QuoteForm from "../../components/QuoteForm.astro";
 import { site, nap } from "../../data/site";
 import { services, type Service } from "../../data/services";
 import { cities } from "../../data/cities";
-import { howItWorksSteps } from "../../data/homepage";
+import { howItWorksSteps, testimonials, galleryImages } from "../../data/homepage";
+import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
+import ImageGallery from "../../components/ImageGallery.astro";
 
 export function getStaticPaths() {
   return services.map((service) => ({
@@ -150,7 +152,26 @@ const schema = [
     steps={howItWorksSteps}
   />
 
-  <!-- 6 · CTA Band — dark ──────────────────────── -->
+  <!-- 6 · Gallery — white ─────────────────────── -->
+  <ImageGallery
+    eyebrow="RECENT SETUPS"
+    title="Real Setups, Real Results"
+    subtitle="A look at some of the events we've delivered across North County San Diego."
+    images={galleryImages.slice(0, 8)}
+    columns={4}
+    bg="white"
+  />
+
+  <!-- 7 · Testimonials — light ─────────────────── -->
+  <TestimonialCarousel
+    eyebrow="REVIEWS"
+    title="What Families Are Saying"
+    subtitle="Hundreds of events served across Carlsbad, Encinitas, Oceanside, and San Marcos."
+    testimonials={testimonials}
+    bg="light"
+  />
+
+  <!-- 8 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title={`Ready to Book ${service.shortName}?`}
     subtitle="Free delivery, professional setup, and same-day pickup included with every rental. No hidden fees."
@@ -158,7 +179,7 @@ const schema = [
     secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
-  <!-- 7 · City Cards — white ───────────────────── -->
+  <!-- 9 · City Cards — white ───────────────────── -->
   <CityCards
     eyebrow="SERVICE AREAS"
     title={`${service.name} by City`}
@@ -167,7 +188,7 @@ const schema = [
     bg="white"
   />
 
-  <!-- 8 · FAQ — light ──────────────────────────── -->
+  <!-- 10 · FAQ — light ──────────────────────────── -->
   <FAQAccordion
     eyebrow="FAQ"
     title={`${service.name} — Frequently Asked Questions`}
@@ -175,7 +196,7 @@ const schema = [
     bg="light"
   />
 
-  <!-- 9 · Quote Form — dark ────────────────────── -->
+  <!-- 11 · Quote Form — dark ────────────────────── -->
   <QuoteForm
     heading={`Get a ${service.shortName} Quote`}
     subheading={`Tell us about your event and we'll put together a custom ${service.name.toLowerCase()} package with free delivery.`}

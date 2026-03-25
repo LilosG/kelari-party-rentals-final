@@ -9,7 +9,9 @@ import CtaBand from "../../components/CtaBand.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 
 import { site, nap } from "../../data/site";
-import { howItWorksSteps } from "../../data/homepage";
+import { howItWorksSteps, testimonials, galleryImages } from "../../data/homepage";
+import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
+import ImageGallery from "../../components/ImageGallery.astro";
 
 const title = "Party Rental Services | Kelari Party Rentals";
 const description =
@@ -83,6 +85,25 @@ const schema = [
     bg="white"
   />
 
+  <!-- 5b · Gallery — white ────────────────────── -->
+  <ImageGallery
+    eyebrow="RECENT SETUPS"
+    title="Real Setups, Real Celebrations"
+    subtitle="A look at events we've delivered and set up across North County San Diego."
+    images={galleryImages.slice(0, 8)}
+    columns={4}
+    bg="white"
+  />
+
+  <!-- 5c · Testimonials — light ───────────────── -->
+  <TestimonialCarousel
+    eyebrow="REVIEWS"
+    title="Trusted by North County Families"
+    subtitle="Hundreds of events served across Carlsbad, Encinitas, Oceanside, and San Marcos."
+    testimonials={testimonials}
+    bg="light"
+  />
+
   <!-- 6 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title="Not Sure What You Need?"
@@ -92,6 +113,9 @@ const schema = [
   />
 
   <!-- 7 · Quote Form — dark ────────────────────── -->
-  <QuoteForm />
+  <QuoteForm
+    heading="Get a Free Party Rental Quote"
+    subheading="Tell us about your event and we'll recommend the right services and put together a custom package."
+  />
 
 </BaseLayout>

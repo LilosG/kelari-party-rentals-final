@@ -20,6 +20,9 @@ import {
   getServiceBySlug,
   renderCityTemplate,
 } from "../../data/services";
+import { testimonials, galleryImages } from "../../data/homepage";
+import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
+import ImageGallery from "../../components/ImageGallery.astro";
 
 export function getStaticPaths() {
   const paths: {
@@ -211,7 +214,26 @@ const schema = [
     padding="compact"
   />
 
-  <!-- 8 · CTA Band — dark ──────────────────────── -->
+  <!-- 8 · Gallery — white ─────────────────────── -->
+  <ImageGallery
+    eyebrow="RECENT SETUPS"
+    title={`${service.shortName} Setups in ${city.name}`}
+    subtitle={`Real events we've delivered and set up across ${city.name} and North County San Diego.`}
+    images={galleryImages.slice(0, 8)}
+    columns={4}
+    bg="white"
+  />
+
+  <!-- 9 · Testimonials — light ─────────────────── -->
+  <TestimonialCarousel
+    eyebrow="REVIEWS"
+    title={`What ${city.name} Families Say`}
+    subtitle={`Hundreds of events served across ${city.name}, Carlsbad, Encinitas, Oceanside, and San Marcos.`}
+    testimonials={testimonials}
+    bg="light"
+  />
+
+  <!-- 10 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title={`Book ${service.shortName} in ${city.name}`}
     subtitle={`Get a free quote for ${service.name.toLowerCase()} in ${city.name}. Delivery, setup, and pickup are always included.`}
@@ -219,7 +241,7 @@ const schema = [
     secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
-  <!-- 9 · FAQ — light ──────────────────────────── -->
+  <!-- 11 · FAQ — light ──────────────────────────── -->
   <FAQAccordion
     eyebrow="FAQ"
     title={`${service.name} in ${city.name} — FAQs`}
@@ -227,7 +249,7 @@ const schema = [
     bg="light"
   />
 
-  <!-- 10 · Nearby Cities — white ───────────────── -->
+  <!-- 12 · Nearby Cities — white ───────────────── -->
   <CityCards
     eyebrow="NEARBY CITIES"
     title={`${service.shortName} in Nearby Cities`}
@@ -237,7 +259,7 @@ const schema = [
     padding="default"
   />
 
-  <!-- 11 · Quote Form — dark ───────────────────── -->
+  <!-- 13 · Quote Form — dark ───────────────────── -->
   <QuoteForm
     heading={`Get a Free ${service.shortName} Quote in ${city.name}`}
     subheading={`Tell us about your ${city.name} event and we'll put together a custom ${service.name.toLowerCase()} package.`}
