@@ -1,7 +1,7 @@
 ---
 import ContactMetadata from "./ContactMetadata.astro";
 import ConversionProofPoints from "./ConversionProofPoints.astro";
-import { site, nap } from "../data/site";
+import { site, nap, recaptchaSiteKey } from "../data/site";
 import { contactMetaItems, conversionProofPoints, footerNavGroups } from "../data/conversion";
 
 interface Props {
@@ -63,7 +63,10 @@ const footerContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Ema
               </div>
               <input type="hidden" name="accessKey" value="sf_7941a8e0435764d2be4a9381" />
               <input type="hidden" name="redirectTo" value="https://kelaripartyrentals.com/thank-you/" />
-              <input type="text" name="honeypot" style="display:none" />
+              <div style="position:absolute; left:-5000px;" aria-hidden="true">
+                <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="g-recaptcha" data-sitekey={recaptchaSiteKey}></div>
               <button type="submit" class="w-full inline-flex items-center justify-center bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-6 py-3.5 rounded-lg text-sm transition-colors">
                 Send My Quote
               </button>

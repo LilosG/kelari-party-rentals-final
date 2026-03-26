@@ -2,6 +2,7 @@
 import ContactMetadata from "./ContactMetadata.astro";
 import ConversionProofPoints from "./ConversionProofPoints.astro";
 import { contactMetaItems, conversionProofPoints } from "../data/conversion";
+import { recaptchaSiteKey } from "../data/site";
 
 interface Props {
   heading?: string;
@@ -114,7 +115,11 @@ const priorityContactItems = contactMetaItems.filter(({ label }) => ["Phone", "E
             {service && <input type="hidden" name="service" value={service} />}
             <input type="hidden" name="accessKey" value="sf_7941a8e0435764d2be4a9381" />
             <input type="hidden" name="redirectTo" value="https://kelaripartyrentals.com/thank-you/" />
-            <input type="text" name="honeypot" style="display:none" />
+            <div style="position:absolute; left:-5000px;" aria-hidden="true">
+              <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="g-recaptcha" data-sitekey={recaptchaSiteKey}></div>
 
             <button type="submit" class="btn btn--brand btn--md w-full justify-center py-4">
               Request My Free Quote
