@@ -1,0 +1,37 @@
+---
+import { site } from "../../data/site";
+
+export interface Props {
+  name: string;
+  description: string;
+  pageUrl: string;
+  cityName?: string;
+  cityWikiUrl?: string;
+}
+
+const { name, description, pageUrl, cityName, cityWikiUrl } = Astro.props;
+
+const allCitiesAreaServed = [
+  { "@type": "City", name: "Carlsbad", sameAs: "https://en.wikipedia.org/wiki/Carlsbad,_California" },
+  { "@type": "City", name: "Encinitas", sameAs: "https://en.wikipedia.org/wiki/Encinitas,_California" },
+  { "@type": "City", name: "Oceanside", sameAs: "https://en.wikipedia.org/wiki/Oceanside,_California" },
+  { "@type": "City", name: "San Marcos", sameAs: "https://en.wikipedia.org/wiki/San_Marcos,_California" },
+];
+
+const areaServed =
+  cityName && cityWikiUrl
+    ? { "@type": "City", name: cityName, sameAs: cityWikiUrl }
+    : allCitiesAreaServed;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${pageUrl}#service`,
+  name,
+  description,
+  provider: { "@id": `${site.domain}/#business` },
+  areaServed,
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

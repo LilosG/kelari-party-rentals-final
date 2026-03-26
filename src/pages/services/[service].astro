@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import SchemaWebPage from "../../components/schema/SchemaWebPage.astro";
+import SchemaBreadcrumb from "../../components/schema/SchemaBreadcrumb.astro";
+import SchemaFAQ from "../../components/schema/SchemaFAQ.astro";
+import SchemaService from "../../components/schema/SchemaService.astro";
 import LocalHero from "../../components/LocalHero.astro";
 import TrustBar from "../../components/TrustBar.astro";
 import Section from "../../components/Section.astro";
@@ -50,71 +54,26 @@ const cityCards = cities
     href: `/${c.slug}/${service.slug}/`,
   }));
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: service.name,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-      url: site.domain,
-    },
-    areaServed: {
-      "@type": "GeoCircle",
-      name: "North County San Diego",
-    },
-    description: service.meta.description,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: service.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-    })),
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: service.meta.title,
-    url: `${site.domain}/services/${service.slug}/`,
-    description: service.meta.description,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: site.domain,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: `${site.domain}/services/`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: service.name,
-        item: `${site.domain}/services/${service.slug}/`,
-      },
-    ],
-  },
-];
+const pageUrl = `${site.domain}/services/${service.slug}/`;
 ---
 
 <BaseLayout
   title={service.meta.title}
   description={service.meta.description}
-  canonical={`${site.domain}/services/${service.slug}/`}
-  schema={schema}
+  canonical={pageUrl}
 >
+
+  <SchemaWebPage type="ItemPage" name={service.meta.title} url={pageUrl} description={service.meta.description} />
+  <SchemaBreadcrumb
+    pageUrl={pageUrl}
+    items={[
+      { name: "Home", url: site.domain },
+      { name: "Services", url: `${site.domain}/services/` },
+      { name: service.name, url: pageUrl },
+    ]}
+  />
+  <SchemaService name={service.name} description={service.meta.description} pageUrl={pageUrl} />
+  <SchemaFAQ faqs={service.faqs} pageUrl={pageUrl} />
 
   <!-- 1 · Hero ─────────────────────────────────── -->
   <LocalHero

@@ -11,6 +11,8 @@ import engagementParty from '../assets/images/engagement-party.jpg';
 import parkParty from '../assets/images/park-party.jpg';
 
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SchemaWebPage from "../components/schema/SchemaWebPage.astro";
+import SchemaItemList from "../components/schema/SchemaItemList.astro";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import Section from "../components/Section.astro";
@@ -73,41 +75,18 @@ const featuredServices = topServiceSlugs
     image: serviceImages[s.slug] ?? heroParty,
   }));
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": site.schema["@type"],
-    name: nap.name,
-    url: site.domain,
-    logo: site.schema.logo,
-    image: site.schema.image,
-    description: site.description,
-    telephone: nap.contact.phone,
-    email: nap.contact.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: `${nap.address.street} ${nap.address.suite}`,
-      addressLocality: nap.address.city,
-      addressRegion: nap.address.state,
-      postalCode: nap.address.zip,
-      addressCountry: "US",
-    },
-    geo: site.schema.geo,
-    openingHours: "Mo-Su 09:00-19:00",
-    priceRange: site.schema.priceRange,
-    areaServed: site.schema.areaServed,
-    sameAs: site.schema.sameAs,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: nap.name,
-    url: site.domain,
-  },
-];
+const homepageUrl = `${site.domain}/`;
+
+const serviceListItems = featuredServices.map((s) => ({
+  name: s.name,
+  url: `${site.domain}${s.href}`,
+}));
 ---
 
-<BaseLayout {title} {description} {schema}>
+<BaseLayout {title} {description} canonical={homepageUrl}>
+
+  <SchemaWebPage type="WebPage" name={title} url={homepageUrl} description={description} />
+  <SchemaItemList name="Party Rental Services" pageUrl={homepageUrl} items={serviceListItems} />
 
   <!-- 1 · Hero ─────────────────────────────────── -->
   <LocalHero

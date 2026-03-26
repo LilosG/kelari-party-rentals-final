@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SchemaWebPage from "../components/schema/SchemaWebPage.astro";
+import SchemaBreadcrumb from "../components/schema/SchemaBreadcrumb.astro";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import Section from "../components/Section.astro";
@@ -15,31 +17,23 @@ const title = "Contact Us | Kelari Party Rentals";
 const description =
   "Get in touch with Kelari Party Rentals. Call, email, or visit us in Carlsbad. We respond within 2 hours during business hours.";
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: title,
-    url: `${site.domain}/contact/`,
-    description,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
-      { "@type": "ListItem", position: 2, name: "Contact", item: `${site.domain}/contact/` },
-    ],
-  },
-];
+const pageUrl = `${site.domain}/contact/`;
 ---
 
 <BaseLayout
   title={title}
   description={description}
-  canonical={`${site.domain}/contact/`}
-  schema={schema}
+  canonical={pageUrl}
 >
+
+  <SchemaWebPage type="ContactPage" name={title} url={pageUrl} description={description} />
+  <SchemaBreadcrumb
+    pageUrl={pageUrl}
+    items={[
+      { name: "Home", url: site.domain },
+      { name: "Contact", url: pageUrl },
+    ]}
+  />
   <LocalHero
     title="Contact Us"
     subtitle="Questions about rentals? Ready to book? We're here to help."

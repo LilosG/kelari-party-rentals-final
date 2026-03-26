@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SchemaWebPage from "../components/schema/SchemaWebPage.astro";
+import SchemaBreadcrumb from "../components/schema/SchemaBreadcrumb.astro";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import Section from "../components/Section.astro";
@@ -15,23 +17,7 @@ const title = "Get a Free Quote | Kelari Party Rentals";
 const description =
   "Request a free, no-obligation party rental quote. Tables, chairs, tents, linens & décor with free delivery in Carlsbad, Encinitas, Oceanside & San Marcos.";
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: title,
-    url: `${site.domain}/quote/`,
-    description,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
-      { "@type": "ListItem", position: 2, name: "Get a Quote", item: `${site.domain}/quote/` },
-    ],
-  },
-];
+const pageUrl = `${site.domain}/quote/`;
 
 const quoteContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Email", "Hours"].includes(label));
 ---
@@ -39,9 +25,17 @@ const quoteContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Emai
 <BaseLayout
   title={title}
   description={description}
-  canonical={`${site.domain}/quote/`}
-  schema={schema}
+  canonical={pageUrl}
 >
+
+  <SchemaWebPage type="WebPage" name={title} url={pageUrl} description={description} />
+  <SchemaBreadcrumb
+    pageUrl={pageUrl}
+    items={[
+      { name: "Home", url: site.domain },
+      { name: "Get a Quote", url: pageUrl },
+    ]}
+  />
   <LocalHero
     title="Get a Free Quote"
     subtitle="Tell us about your event and we'll put together a custom rental package — no obligation, no pressure."

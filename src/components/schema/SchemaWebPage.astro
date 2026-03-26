@@ -1,0 +1,25 @@
+---
+import { site } from "../../data/site";
+
+export interface Props {
+  /** Schema.org WebPage subtype — "WebPage" | "AboutPage" | "ContactPage" | "ItemPage" */
+  type?: string;
+  name: string;
+  url: string;
+  description: string;
+}
+
+const { type = "WebPage", name, url, description } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": type,
+  "@id": `${url}#webpage`,
+  name,
+  url,
+  description,
+  isPartOf: { "@id": `${site.domain}/#website` },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

@@ -35,15 +35,6 @@ const resolvedEyebrow = eyebrow ?? overline ?? "FAQs";
 const resolvedTitle = title ?? heading ?? "Frequently Asked Questions";
 const isDark = bg === "dark";
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
-  })),
-};
 ---
 
 <Section {bg} spacing={padding} width="default">
@@ -86,5 +77,3 @@ const faqSchema = {
     </div>
   </div>
 </Section>
-
-<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

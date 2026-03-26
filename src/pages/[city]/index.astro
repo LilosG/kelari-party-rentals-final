@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import SchemaWebPage from "../../components/schema/SchemaWebPage.astro";
+import SchemaBreadcrumb from "../../components/schema/SchemaBreadcrumb.astro";
+import SchemaFAQ from "../../components/schema/SchemaFAQ.astro";
+import SchemaService from "../../components/schema/SchemaService.astro";
 import LocalHero from "../../components/LocalHero.astro";
 import TrustBar from "../../components/TrustBar.astro";
 import Section from "../../components/Section.astro";
@@ -47,88 +51,38 @@ const nearbyAreas = cities
     href: `/${c.slug}/`,
   }));
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: nap.name,
-    url: `${site.domain}/${city.slug}/`,
-    telephone: nap.contact.phone,
-    email: nap.contact.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: `${nap.address.street} ${nap.address.suite}`,
-      addressLocality: nap.address.city,
-      addressRegion: nap.address.state,
-      postalCode: nap.address.zip,
-      addressCountry: "US",
-    },
-    geo: site.schema.geo,
-    openingHours: "Mo-Su 09:00-19:00",
-    priceRange: site.schema.priceRange,
-    areaServed: {
-      "@type": "City",
-      name: `${city.name}, ${city.state}`,
-    },
-    sameAs: site.schema.sameAs,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: `Party Rentals in ${city.name}`,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-    },
-    areaServed: {
-      "@type": "City",
-      name: `${city.name}, ${city.state}`,
-    },
-    description: city.meta.description,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: city.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-    })),
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: city.meta.title,
-    url: `${site.domain}/${city.slug}/`,
-    description: city.meta.description,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: site.domain,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: city.name,
-        item: `${site.domain}/${city.slug}/`,
-      },
-    ],
-  },
-];
+const cityWikiUrls: Record<string, string> = {
+  carlsbad: "https://en.wikipedia.org/wiki/Carlsbad,_California",
+  encinitas: "https://en.wikipedia.org/wiki/Encinitas,_California",
+  oceanside: "https://en.wikipedia.org/wiki/Oceanside,_California",
+  "san-marcos": "https://en.wikipedia.org/wiki/San_Marcos,_California",
+};
+
+const pageUrl = `${site.domain}/${city.slug}/`;
 ---
 
 <BaseLayout
   title={city.meta.title}
   description={city.meta.description}
-  canonical={`${site.domain}/${city.slug}/`}
-  schema={schema}
+  canonical={pageUrl}
 >
+
+  <SchemaWebPage type="WebPage" name={city.meta.title} url={pageUrl} description={city.meta.description} />
+  <SchemaBreadcrumb
+    pageUrl={pageUrl}
+    items={[
+      { name: "Home", url: site.domain },
+      { name: city.name, url: pageUrl },
+    ]}
+  />
+  <SchemaService
+    name={`Party Rentals in ${city.name}`}
+    description={city.meta.description}
+    pageUrl={pageUrl}
+    cityName={city.name}
+    cityWikiUrl={cityWikiUrls[city.slug]}
+  />
+  <SchemaFAQ faqs={city.faqs} pageUrl={pageUrl} />
 
   <!-- 1 · Hero ─────────────────────────────────── -->
   <LocalHero

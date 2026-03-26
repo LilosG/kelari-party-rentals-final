@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import SchemaWebPage from "../../components/schema/SchemaWebPage.astro";
+import SchemaBreadcrumb from "../../components/schema/SchemaBreadcrumb.astro";
+import SchemaFAQ from "../../components/schema/SchemaFAQ.astro";
+import SchemaService from "../../components/schema/SchemaService.astro";
 import LocalHero from "../../components/LocalHero.astro";
 import TrustBar from "../../components/TrustBar.astro";
 import Section from "../../components/Section.astro";
@@ -87,70 +91,37 @@ const nearbyAreas = cities
     href: `/${c.slug}/${service.slug}/`,
   }));
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: `${service.name} in ${city.name}`,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-      url: site.domain,
-      telephone: nap.contact.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: `${nap.address.street} ${nap.address.suite}`,
-        addressLocality: nap.address.city,
-        addressRegion: nap.address.state,
-        postalCode: nap.address.zip,
-        addressCountry: "US",
-      },
-    },
-    areaServed: {
-      "@type": "City",
-      name: `${city.name}, ${city.state}`,
-    },
-    description: pageDescription,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: combinedFaqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-    })),
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: pageTitle,
-    url: canonical,
-    description: pageDescription,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: city.name,
-        item: `${site.domain}/${city.slug}/`,
-      },
-      { "@type": "ListItem", position: 3, name: service.name, item: canonical },
-    ],
-  },
-];
+const cityWikiUrls: Record<string, string> = {
+  carlsbad: "https://en.wikipedia.org/wiki/Carlsbad,_California",
+  encinitas: "https://en.wikipedia.org/wiki/Encinitas,_California",
+  oceanside: "https://en.wikipedia.org/wiki/Oceanside,_California",
+  "san-marcos": "https://en.wikipedia.org/wiki/San_Marcos,_California",
+};
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
   canonical={canonical}
-  schema={schema}
 >
+
+  <SchemaWebPage type="ItemPage" name={pageTitle} url={canonical} description={pageDescription} />
+  <SchemaBreadcrumb
+    pageUrl={canonical}
+    items={[
+      { name: "Home", url: site.domain },
+      { name: city.name, url: `${site.domain}/${city.slug}/` },
+      { name: service.name, url: canonical },
+    ]}
+  />
+  <SchemaService
+    name={`${service.name} in ${city.name}`}
+    description={pageDescription}
+    pageUrl={canonical}
+    cityName={city.name}
+    cityWikiUrl={cityWikiUrls[city.slug]}
+  />
+  <SchemaFAQ faqs={combinedFaqs} pageUrl={canonical} />
 
   <!-- 1 · Hero ─────────────────────────────────── -->
   <LocalHero
