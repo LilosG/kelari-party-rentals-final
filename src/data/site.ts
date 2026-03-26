@@ -53,18 +53,29 @@ export interface DesignTokens {
   };
 }
 
+export interface OpeningHoursSpecification {
+  "@type": "OpeningHoursSpecification";
+  dayOfWeek: string[];
+  opens: string;
+  closes: string;
+}
+
+export interface CityObject {
+  "@type": "City";
+  name: string;
+  sameAs: string;
+}
+
 export interface SchemaDefaults {
-  "@type": string[];
+  "@type": string | string[];
   url: string;
-  logo: string;
-  image: string;
+  logo: { "@type": "ImageObject"; url: string };
+  image: { "@type": "ImageObject"; url: string };
   priceRange: string;
   currenciesAccepted: string;
   paymentAccepted: string;
-  areaServed: {
-    "@type": string;
-    name: string;
-  };
+  openingHoursSpecification: OpeningHoursSpecification[];
+  areaServed: CityObject[];
   geo: {
     "@type": string;
     latitude: number;
@@ -145,17 +156,30 @@ export const site: SiteConfig = {
   social,
   tokens,
   schema: {
-    "@type": ["Organization", "LocalBusiness", "PartySupplyRentalService"],
+    "@type": "LocalBusiness",
     url: "https://kelaripartyrentals.com",
-    logo: "https://kelaripartyrentals.com/logo.png",
-    image: "https://kelaripartyrentals.com/og-default.jpg",
+    logo: { "@type": "ImageObject", url: "https://kelaripartyrentals.com/logo.png" },
+    image: { "@type": "ImageObject", url: "https://kelaripartyrentals.com/og-default.jpg" },
     priceRange: "$$",
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card, Venmo, Zelle",
-    areaServed: {
-      "@type": "GeoCircle",
-      name: "North County San Diego",
-    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "09:00",
+        closes: "19:00",
+      },
+    ],
+    areaServed: [
+      { "@type": "City", name: "Carlsbad", sameAs: "https://en.wikipedia.org/wiki/Carlsbad,_California" },
+      { "@type": "City", name: "Encinitas", sameAs: "https://en.wikipedia.org/wiki/Encinitas,_California" },
+      { "@type": "City", name: "Oceanside", sameAs: "https://en.wikipedia.org/wiki/Oceanside,_California" },
+      { "@type": "City", name: "San Marcos", sameAs: "https://en.wikipedia.org/wiki/San_Marcos,_California" },
+      { "@type": "City", name: "Vista", sameAs: "https://en.wikipedia.org/wiki/Vista,_California" },
+      { "@type": "City", name: "Escondido", sameAs: "https://en.wikipedia.org/wiki/Escondido,_California" },
+      { "@type": "City", name: "La Costa", sameAs: "https://en.wikipedia.org/wiki/La_Costa,_California" },
+    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: 33.1581,
