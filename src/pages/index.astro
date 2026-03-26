@@ -184,7 +184,16 @@ const schema = [
     steps={howItWorksSteps}
   />
 
-  <!-- 6 · CTA Band — dark ──────────────────────── -->
+  <!-- 6 · City Cards — light ──────────────────── -->
+  <CityCards
+    eyebrow="SERVICE AREAS"
+    title="Serving North County San Diego"
+    subtitle="We deliver to every neighborhood across our four core cities — with free delivery always included."
+    cities={cityCards}
+    bg="light"
+  />
+
+  <!-- 7 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title={ctaBand.title}
     subtitle={ctaBand.subtitle}
@@ -192,7 +201,7 @@ const schema = [
     secondaryCta={ctaBand.secondaryCta}
   />
 
-  <!-- 7 · Gallery — white ──────────────────────── -->
+  <!-- 8 · Gallery — white ──────────────────────── -->
   <ImageGallery
     eyebrow="RECENT SETUPS"
     title="Real Setups, Real Celebrations"
@@ -202,7 +211,7 @@ const schema = [
     bg="white"
   />
 
-  <!-- 8 · Testimonials — light ─────────────────── -->
+  <!-- 9 · Testimonials — light ─────────────────── -->
   <TestimonialCarousel
     eyebrow="REVIEWS"
     title="Trusted by Families Across North County"
@@ -211,7 +220,7 @@ const schema = [
     bg="light"
   />
 
-  <!-- 9 · FAQ — white ──────────────────────────── -->
+  <!-- 10 · FAQ — white ──────────────────────────── -->
   <FAQAccordion
     eyebrow="FAQ"
     title="Frequently Asked Questions"
@@ -219,13 +228,6 @@ const schema = [
     bg="white"
   />
 
-  <!-- 10 · City Cards — light ──────────────────── -->
-  <CityCards
-    eyebrow="SERVICE AREAS"
-    title="Serving North County San Diego"
-    subtitle="We deliver to every neighborhood across our four core cities — with free delivery always included."
-    cities={cityCards}
-    bg="light"
-  />
+
 
 </BaseLayout>
