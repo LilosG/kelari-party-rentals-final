@@ -4,6 +4,9 @@ import ConversionProofPoints from "./ConversionProofPoints.astro";
 import { contactMetaItems, conversionProofPoints } from "../data/conversion";
 import { recaptchaSiteKey } from "../data/site";
 
+const ACCESS_KEY = "sf_7941a8e0435764d2be4a9381";
+const RENTAL_ITEMS = ["Tables", "Chairs", "Tents & Canopies", "Linens", "Tableware", "Decorations", "Lighting"];
+
 interface Props {
   heading?: string;
   subheading?: string;
@@ -11,6 +14,7 @@ interface Props {
   city?: string;
   service?: string;
   variant?: "light" | "dark";
+  embedded?: boolean;
 }
 
 const {
@@ -20,123 +24,285 @@ const {
   city,
   service,
   variant = "dark",
+  embedded = false,
 } = Astro.props;
 
-const isDark = variant === "dark";
-const priorityContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Email", "Hours"].includes(label));
+const isDark = variant === "dark" || embedded;
+const inputClass = isDark ? "form-input form-input-dark" : "form-input";
+const labelClass = isDark ? "form-label text-neutral-200" : "form-label";
+const selectClass = isDark ? "form-input form-input-dark" : "form-select";
+const textareaClass = isDark ? "form-input form-input-dark" : "form-textarea";
+const checkboxTextClass = isDark ? "text-sm text-neutral-200" : "text-sm text-neutral-700";
+const checkboxBorderClass = isDark ? "border-white/20" : "border-neutral-200";
+const checkboxBgClass = isDark ? "" : "bg-white";
+
+const priorityContactItems = contactMetaItems.filter(({ label }) =>
+  ["Phone", "Email", "Hours"].includes(label)
+);
 ---
 
-<section id="quote-form" class:list={["py-20 lg:py-28 relative overflow-hidden", isDark ? "bg-brand-dark quote-form--dark" : "bg-[--color-soft-bg]"]}>
-  {isDark && (
-    <div class="absolute top-0 right-0 h-[500px] w-[500px] -translate-y-1/2 translate-x-1/3 rounded-full bg-brand-pink/5 blur-[80px] pointer-events-none" aria-hidden="true"></div>
-  )}
+{embedded ? (
+  <!-- ─── EMBEDDED VARIANT (footer / inline card) ──────────────────────────── -->
+  <div class="rounded-2xl border border-white/20 bg-white/[0.08] p-7">
+    <p class="font-body text-xs font-bold uppercase tracking-widest text-brand-pink-light mb-3">{overline}</p>
+    <h3 class="font-display text-2xl font-bold text-white">{heading}</h3>
+    {subheading && (
+      <p class="mt-3 text-sm leading-relaxed text-neutral-200">{subheading}</p>
+    )}
 
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class:list={[isDark ? "grid gap-12 lg:grid-cols-2 lg:gap-20" : "mx-auto max-w-3xl"]}>
+    <form data-quote-form class="mt-6 space-y-4" novalidate>
+      <div style="position:absolute; left:-5000px;" aria-hidden="true">
+        <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
+      </div>
 
-      {isDark && (
-        <div class="flex flex-col justify-center">
-          <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink mb-4">{overline}</p>
-          <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-5">{heading}</h2>
-          <p class="text-lg leading-relaxed text-neutral-300 max-w-sm mb-8">{subheading}</p>
-          <ConversionProofPoints items={conversionProofPoints.slice(0, 2)} surface="dark" compact={true} />
-          <div class="mt-6">
-            <ContactMetadata items={priorityContactItems} surface="dark" showDescriptions={false} />
-          </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label for="qf-emb-name" class={labelClass}>Full Name <span class="text-brand-pink">*</span></label>
+          <input type="text" id="qf-emb-name" name="name" required autocomplete="name" class={inputClass} placeholder="Your name" />
         </div>
-      )}
+        <div>
+          <label for="qf-emb-phone" class={labelClass}>Phone <span class="text-brand-pink">*</span></label>
+          <input type="tel" id="qf-emb-phone" name="phone" required autocomplete="tel" class={inputClass} placeholder="(760) 000-0000" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label for="qf-emb-email" class={labelClass}>Email <span class="text-brand-pink">*</span></label>
+          <input type="email" id="qf-emb-email" name="email" required autocomplete="email" class={inputClass} placeholder="you@email.com" />
+        </div>
+        <div>
+          <label for="qf-emb-date" class={labelClass}>Event Date <span class="text-brand-pink">*</span></label>
+          <input type="date" id="qf-emb-date" name="event_date" required class={inputClass} />
+        </div>
+      </div>
 
       <div>
-        {!isDark && (
-          <div class="mb-10 text-center">
-            <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink mb-3">{overline}</p>
-            <h2 class="font-display font-bold text-4xl text-white leading-tight">{heading}</h2>
-            <p class="mt-3 text-lg text-neutral-200 leading-relaxed">{subheading}</p>
-          </div>
-        )}
-
-        <div class:list={["rounded-2xl p-8", isDark ? "bg-white/[0.06] border border-white/10" : "bg-white border border-neutral-100 shadow-sm"]}>
-          {isDark && (
-            <h3 class="font-display text-xl font-bold text-white mb-6">Request a Quote</h3>
-          )}
-
-          <form method="POST" action="https://api.staticforms.xyz/submit" class="space-y-4">
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label for="quote-name" class:list={["form-label", isDark ? "text-neutral-200" : ""]}>Full Name <span class="text-brand-pink">*</span></label>
-                <input type="text" id="quote-name" name="name" required autocomplete="name" class:list={[isDark ? "form-input form-input-dark" : "form-input"]} placeholder="Your name" />
-              </div>
-              <div>
-                <label for="quote-phone" class:list={["form-label", isDark ? "text-neutral-200" : ""]}>Phone <span class="text-brand-pink">*</span></label>
-                <input type="tel" id="quote-phone" name="phone" required autocomplete="tel" class:list={[isDark ? "form-input form-input-dark" : "form-input"]} placeholder="(760) 000-0000" />
-              </div>
-              <div>
-                <label for="quote-email" class:list={["form-label", isDark ? "text-neutral-200" : ""]}>Email <span class="text-brand-pink">*</span></label>
-                <input type="email" id="quote-email" name="email" required autocomplete="email" class:list={[isDark ? "form-input form-input-dark" : "form-input"]} placeholder="you@email.com" />
-              </div>
-              <div>
-                <label for="quote-date" class:list={["form-label", isDark ? "text-neutral-200" : ""]}>Event Date <span class="text-brand-pink">*</span></label>
-                <input type="date" id="quote-date" name="event_date" required class:list={[isDark ? "form-input form-input-dark" : "form-input"]} />
-              </div>
-            </div>
-
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label for="quote-event-type" class:list={["form-label", isDark ? "text-neutral-200" : ""]}>Event Type</label>
-                <select id="quote-event-type" name="event_type" class:list={[isDark ? "form-input form-input-dark" : "form-select"]}>
-                  <option value="">Select event type</option>
-                  <option value="birthday">Birthday Party</option>
-                  <option value="baby-shower">Baby Shower</option>
-                  <option value="graduation">Graduation Party</option>
-                  <option value="engagement">Engagement Party</option>
-                  <option value="backyard">Backyard Party</option>
-                  <option value="park">Park Party</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="quote-guests" class:list={["form-label", isDark ? "text-neutral-200" : ""]}>Estimated Guests</label>
-                <select id="quote-guests" name="guest_count" class:list={[isDark ? "form-input form-input-dark" : "form-select"]}>
-                  <option value="">Select range</option>
-                  <option value="1-20">1–20 guests</option>
-                  <option value="21-50">21–50 guests</option>
-                  <option value="51-100">51–100 guests</option>
-                  <option value="100+">100+ guests</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label for="quote-message" class:list={["form-label", isDark ? "text-neutral-200" : ""]}>Tell us about your event</label>
-              <textarea id="quote-message" name="message" rows="4" class:list={[isDark ? "form-input form-input-dark" : "form-textarea"]} placeholder="What items are you looking for? Any special requests?"></textarea>
-            </div>
-
-            {city && <input type="hidden" name="city" value={city} />}
-            {service && <input type="hidden" name="service" value={service} />}
-            <input type="hidden" name="accessKey" value="sf_7941a8e0435764d2be4a9381" />
-            <input type="hidden" name="redirectTo" value="https://kelaripartyrentals.com/thank-you/" />
-            <div style="position:absolute; left:-5000px;" aria-hidden="true">
-              <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <div class="g-recaptcha" data-sitekey={recaptchaSiteKey}></div>
-
-            <button type="submit" class="btn btn--brand btn--md w-full justify-center py-4">
-              Request My Free Quote
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
-            <p class:list={["text-center text-xs font-body", isDark ? "text-neutral-400" : "text-neutral-400"]}>We respond within 2 hours during business hours. No spam, ever.</p>
-          </form>
-        </div>
-
-        {!isDark && (
-          <div class="mt-6">
-            <ConversionProofPoints items={conversionProofPoints} compact={false} />
-          </div>
-        )}
+        <label for="qf-emb-guests" class={labelClass}>Estimated Guests <span class="text-brand-pink">*</span></label>
+        <select id="qf-emb-guests" name="guest_count" required class={selectClass}>
+          <option value="">Select a range</option>
+          <option value="Under 25">Under 25</option>
+          <option value="25–50">25–50</option>
+          <option value="50–100">50–100</option>
+          <option value="100+">100+</option>
+        </select>
       </div>
+
+      <div>
+        <p class={`${labelClass} mb-2`}>Rental Items</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {RENTAL_ITEMS.map((item) => (
+            <label class={`flex items-center gap-2.5 rounded-lg border p-3 cursor-pointer transition-colors has-[:checked]:border-brand-pink has-[:checked]:bg-brand-pink/10 ${checkboxBorderClass} ${checkboxBgClass}`}>
+              <input type="checkbox" name="items" value={item} class="accent-brand-pink h-4 w-4 shrink-0" />
+              <span class={checkboxTextClass}>{item}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <label for="qf-emb-message" class={labelClass}>Tell us about your event</label>
+        <textarea id="qf-emb-message" name="message" rows="3" class={textareaClass} placeholder="Any special requests or details?"></textarea>
+      </div>
+
+      {city && <input type="hidden" name="city" value={city} />}
+      {service && <input type="hidden" name="service" value={service} />}
+
+      <div class="g-recaptcha" data-sitekey={recaptchaSiteKey}></div>
+      <p data-quote-error role="alert" class="text-sm text-red-400 min-h-[1.25rem]"></p>
+
+      <button type="submit" class="w-full inline-flex items-center justify-center bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-6 py-3.5 rounded-lg text-sm transition-colors">
+        Request My Free Quote →
+      </button>
+      <p class="text-center text-xs font-body text-neutral-400">We respond within 2 hours during business hours. No spam, ever.</p>
+    </form>
+
+    <div data-quote-success class="hidden text-center py-6">
+      <svg class="mx-auto h-12 w-12 text-brand-pink mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <h3 class="font-display text-xl font-bold text-white mb-2">We'll be in touch soon!</h3>
+      <p class="text-sm text-neutral-300">Your quote request was received. We respond within 2 hours during business hours.</p>
     </div>
   </div>
-</section>
+) : (
+  <!-- ─── STANDALONE VARIANT (full section) ────────────────────────────────── -->
+  <section id="quote-form" class:list={["py-20 lg:py-28 relative overflow-hidden", isDark ? "bg-brand-dark quote-form--dark" : "bg-[--color-soft-bg]"]}>
+    {isDark && (
+      <div class="absolute top-0 right-0 h-[500px] w-[500px] -translate-y-1/2 translate-x-1/3 rounded-full bg-brand-pink/5 blur-[80px] pointer-events-none" aria-hidden="true"></div>
+    )}
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class:list={[isDark ? "grid gap-12 lg:grid-cols-2 lg:gap-20" : "mx-auto max-w-3xl"]}>
+
+        {isDark && (
+          <div class="flex flex-col justify-center">
+            <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink mb-4">{overline}</p>
+            <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-5">{heading}</h2>
+            <p class="text-lg leading-relaxed text-neutral-300 max-w-sm mb-8">{subheading}</p>
+            <ConversionProofPoints items={conversionProofPoints.slice(0, 2)} surface="dark" compact={true} />
+            <div class="mt-6">
+              <ContactMetadata items={priorityContactItems} surface="dark" showDescriptions={false} />
+            </div>
+          </div>
+        )}
+
+        <div>
+          {!isDark && (
+            <div class="mb-10 text-center">
+              <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink mb-3">{overline}</p>
+              <h2 class="font-display font-bold text-4xl text-neutral-900 leading-tight">{heading}</h2>
+              <p class="mt-3 text-lg text-neutral-600 leading-relaxed">{subheading}</p>
+            </div>
+          )}
+
+          <div class:list={["rounded-2xl p-8", isDark ? "bg-white/[0.06] border border-white/10" : "bg-white border border-neutral-100 shadow-sm"]}>
+            {isDark && (
+              <h3 class="font-display text-xl font-bold text-white mb-6">Request a Quote</h3>
+            )}
+
+            <form data-quote-form class="space-y-4" novalidate>
+              <div style="position:absolute; left:-5000px;" aria-hidden="true">
+                <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="qf-name" class={labelClass}>Full Name <span class="text-brand-pink">*</span></label>
+                  <input type="text" id="qf-name" name="name" required autocomplete="name" class={inputClass} placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="qf-phone" class={labelClass}>Phone <span class="text-brand-pink">*</span></label>
+                  <input type="tel" id="qf-phone" name="phone" required autocomplete="tel" class={inputClass} placeholder="(760) 000-0000" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="qf-email" class={labelClass}>Email <span class="text-brand-pink">*</span></label>
+                  <input type="email" id="qf-email" name="email" required autocomplete="email" class={inputClass} placeholder="you@email.com" />
+                </div>
+                <div>
+                  <label for="qf-date" class={labelClass}>Event Date <span class="text-brand-pink">*</span></label>
+                  <input type="date" id="qf-date" name="event_date" required class={inputClass} />
+                </div>
+              </div>
+
+              <div>
+                <label for="qf-guests" class={labelClass}>Estimated Guests <span class="text-brand-pink">*</span></label>
+                <select id="qf-guests" name="guest_count" required class={selectClass}>
+                  <option value="">Select a range</option>
+                  <option value="Under 25">Under 25</option>
+                  <option value="25–50">25–50</option>
+                  <option value="50–100">50–100</option>
+                  <option value="100+">100+</option>
+                </select>
+              </div>
+
+              <div>
+                <p class={`${labelClass} mb-2`}>Rental Items</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {RENTAL_ITEMS.map((item) => (
+                    <label class={`flex items-center gap-2.5 rounded-lg border p-3 cursor-pointer transition-colors has-[:checked]:border-brand-pink has-[:checked]:bg-brand-pink/10 ${checkboxBorderClass} ${checkboxBgClass}`}>
+                      <input type="checkbox" name="items" value={item} class="accent-brand-pink h-4 w-4 shrink-0" />
+                      <span class={checkboxTextClass}>{item}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label for="qf-message" class={labelClass}>Tell us about your event</label>
+                <textarea id="qf-message" name="message" rows="4" class={textareaClass} placeholder="Any special requests or details?"></textarea>
+              </div>
+
+              {city && <input type="hidden" name="city" value={city} />}
+              {service && <input type="hidden" name="service" value={service} />}
+
+              <div class="g-recaptcha" data-sitekey={recaptchaSiteKey}></div>
+              <p data-quote-error role="alert" class="text-sm text-red-400 min-h-[1.25rem]"></p>
+
+              <button type="submit" class="btn btn--brand btn--md w-full justify-center py-4">
+                Request My Free Quote →
+              </button>
+              <p class:list={["text-center text-xs font-body", isDark ? "text-neutral-400" : "text-neutral-500"]}>We respond within 2 hours during business hours. No spam, ever.</p>
+            </form>
+
+            <div data-quote-success class="hidden text-center py-8">
+              <svg class="mx-auto h-12 w-12 text-brand-pink mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3 class:list={["font-display text-2xl font-bold mb-2", isDark ? "text-white" : "text-neutral-900"]}>We'll be in touch soon!</h3>
+              <p class:list={[isDark ? "text-neutral-300" : "text-neutral-600"]}>Your quote request was received. We respond within 2 hours during business hours.</p>
+            </div>
+          </div>
+
+          {!isDark && (
+            <div class="mt-6">
+              <ConversionProofPoints items={conversionProofPoints} compact={false} />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+<script is:inline define:vars={{ ACCESS_KEY }}>
+(function () {
+  var forms = document.querySelectorAll('[data-quote-form]:not([data-initialized])');
+  var form = forms[forms.length - 1];
+  if (!form) return;
+  form.dataset.initialized = 'true';
+
+  var errorEl = form.querySelector('[data-quote-error]');
+  var successEl = form.parentElement.querySelector('[data-quote-success]');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    errorEl.textContent = '';
+
+    var token = grecaptcha.getResponse();
+    if (!token) {
+      errorEl.textContent = 'Please complete the reCAPTCHA';
+      return;
+    }
+
+    var fd = new FormData(form);
+    var body = {
+      accessKey: ACCESS_KEY,
+      name: fd.get('name'),
+      phone: fd.get('phone'),
+      email: fd.get('email'),
+      replyTo: fd.get('email'),
+      event_date: fd.get('event_date'),
+      guest_count: fd.get('guest_count'),
+      items: fd.getAll('items').join(','),
+      message: fd.get('message') || '',
+      honeypot: fd.get('honeypot') || '',
+      subject: 'New Quote Request \u2013 Kelari Party Rentals',
+      'g-recaptcha-response': token,
+    };
+    if (fd.get('city')) body.city = fd.get('city');
+    if (fd.get('service')) body.service = fd.get('service');
+
+    try {
+      var res = await fetch('https://api.staticforms.xyz/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      var json = await res.json();
+      if (json.success) {
+        form.style.display = 'none';
+        successEl.style.display = 'block';
+        grecaptcha.reset();
+      } else {
+        throw new Error(json.message || 'Submission failed');
+      }
+    } catch (err) {
+      errorEl.textContent = 'Something went wrong. Please call us at (760) 000-0000.';
+    }
+  });
+})();
+</script>
