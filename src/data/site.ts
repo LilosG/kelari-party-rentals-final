@@ -179,6 +179,9 @@ export const site: SiteConfig = {
       { "@type": "City", name: "Vista", sameAs: "https://en.wikipedia.org/wiki/Vista,_California" },
       { "@type": "City", name: "Escondido", sameAs: "https://en.wikipedia.org/wiki/Escondido,_California" },
       { "@type": "City", name: "La Costa", sameAs: "https://en.wikipedia.org/wiki/La_Costa,_California" },
+      { "@type": "City", name: "Bressi Ranch", sameAs: "https://en.wikipedia.org/wiki/Carlsbad,_California" },
+      { "@type": "City", name: "Olde Carlsbad", sameAs: "https://en.wikipedia.org/wiki/Carlsbad,_California" },
+      { "@type": "City", name: "Aviara", sameAs: "https://en.wikipedia.org/wiki/Carlsbad,_California" },
     ],
     geo: {
       "@type": "GeoCoordinates",

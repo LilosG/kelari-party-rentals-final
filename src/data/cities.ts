@@ -311,6 +311,276 @@ export const cities: City[] = [
       },
     ],
   },
+  {
+    slug: "bressi-ranch",
+    name: "Bressi Ranch",
+    county: "San Diego",
+    state: "CA",
+    zip: ["92010"],
+    meta: {
+      title: "Party Rentals in Bressi Ranch Carlsbad CA | Kelari Party Rentals",
+      description:
+        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Bressi Ranch, Carlsbad. Your neighborhood party rental team — stress-free.",
+    },
+    headline: "Bressi Ranch Party Rentals",
+    subheadline:
+      "Tables, chairs, tents & décor delivered and set up at your Bressi Ranch venue — stress-free.",
+    intro:
+      "Bressi Ranch's beautiful planned community is one of Carlsbad's most popular spots for backyard celebrations and neighborhood gatherings. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your Bressi Ranch home — we set up and pick up so you can enjoy every moment.",
+    neighborhoods: [
+      "Bressi Ranch Village",
+      "Bressi Ranch West",
+      "Bressi Ranch East",
+      "La Costa Meadows",
+      "Rancho Carlsbad",
+    ],
+    parks: [
+      "Bressi Ranch Community Park",
+      "Alga Norte Community Park",
+      "Poinsettia Park",
+      "Stagecoach Park",
+    ],
+    localProof:
+      "We've served dozens of Bressi Ranch families for birthdays, baby showers, and graduation parties. Our Carlsbad headquarters is just minutes away — same-day delivery is often possible.",
+    deliveryNote:
+      "Free delivery and pickup throughout Bressi Ranch and all surrounding Carlsbad zip codes — 92010.",
+    services: [
+      "party-rentals",
+      "birthday-party-rentals",
+      "backyard-party-rentals",
+      "baby-shower-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "park-party-rentals",
+      "delivery-setup-pickup",
+    ],
+    faqs: [
+      {
+        question: "Do you deliver party rentals to Bressi Ranch?",
+        answer:
+          "Yes! We provide free delivery, setup, and pickup throughout Bressi Ranch. Our Carlsbad headquarters is just minutes away, making us the closest full-service rental provider in the area.",
+      },
+      {
+        question: "Can you set up party rentals at Bressi Ranch Community Park?",
+        answer:
+          "Absolutely. We regularly deliver to Bressi Ranch Community Park and nearby Alga Norte and Poinsettia Park. We handle full setup and teardown so you can focus on your guests.",
+      },
+      {
+        question: "What party rental items are available for Bressi Ranch events?",
+        answer:
+          "We offer tables, chairs, tents, canopies, linens, tableware, and décor. Everything is delivered and set up — browse our inventory or request a custom quote.",
+      },
+      {
+        question: "How far in advance should I book for a Bressi Ranch party?",
+        answer:
+          "We recommend booking 1–2 weeks ahead, especially during peak season. Contact us for last-minute availability — we accommodate requests whenever inventory allows.",
+      },
+    ],
+  },
+  {
+    slug: "la-costa",
+    name: "La Costa",
+    county: "San Diego",
+    state: "CA",
+    zip: ["92009"],
+    meta: {
+      title: "Party Rentals in La Costa Carlsbad CA | Kelari Party Rentals",
+      description:
+        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in La Costa, Carlsbad. Full-service party rentals for La Costa homes and venues.",
+    },
+    headline: "La Costa Party Rentals",
+    subheadline:
+      "Tables, chairs, tents & décor delivered and set up at your La Costa venue — stress-free.",
+    intro:
+      "La Costa is one of North County San Diego's most sought-after communities — and Kelari Party Rentals is proud to serve it. From elegant backyard celebrations to casual family gatherings, we deliver everything you need: tables, chairs, tents, linens, and décor. We set up, you celebrate, we pick up.",
+    neighborhoods: [
+      "La Costa Valley",
+      "La Costa Oaks",
+      "La Costa Greens",
+      "La Costa Ridge",
+      "La Costa Meadows",
+      "Pacific Rim",
+    ],
+    parks: [
+      "La Costa Canyon Park",
+      "Alga Norte Community Park",
+      "Stagecoach Park",
+      "Poinsettia Park",
+      "Calavera Hills Community Park",
+    ],
+    localProof:
+      "La Costa is one of our most-requested delivery areas. From La Costa Valley to La Costa Oaks, we've helped hundreds of families celebrate life's biggest moments with hassle-free rentals.",
+    deliveryNote:
+      "Free delivery and pickup throughout La Costa and all Carlsbad zip codes — 92009.",
+    services: [
+      "party-rentals",
+      "birthday-party-rentals",
+      "backyard-party-rentals",
+      "baby-shower-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "park-party-rentals",
+      "delivery-setup-pickup",
+    ],
+    faqs: [
+      {
+        question: "Do you deliver party rentals to La Costa?",
+        answer:
+          "Yes! We offer free delivery, setup, and pickup throughout La Costa — La Costa Valley, La Costa Oaks, La Costa Greens, La Costa Ridge, and all surrounding neighborhoods.",
+      },
+      {
+        question: "Can you deliver to La Costa parks and community spaces?",
+        answer:
+          "Absolutely. We regularly deliver to La Costa Canyon Park, Alga Norte, Stagecoach Park, and other nearby venues. Full setup and teardown included.",
+      },
+      {
+        question: "How early should I book party rentals in La Costa?",
+        answer:
+          "We recommend 1–2 weeks advance notice, especially during spring and summer. Contact us anytime for last-minute availability.",
+      },
+      {
+        question: "What rental items do you offer for La Costa events?",
+        answer:
+          "Tables, chairs, tents, canopies, linens, tableware, lighting, and décor — all delivered and set up at your La Costa venue. Request a custom quote for your event.",
+      },
+    ],
+  },
+  {
+    slug: "olde-carlsbad",
+    name: "Olde Carlsbad",
+    county: "San Diego",
+    state: "CA",
+    zip: ["92008"],
+    meta: {
+      title: "Party Rentals in Olde Carlsbad CA | Kelari Party Rentals",
+      description:
+        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Olde Carlsbad. Local party rental experts serving the heart of Carlsbad.",
+    },
+    headline: "Olde Carlsbad Party Rentals",
+    subheadline:
+      "Tables, chairs, tents & décor delivered and set up at your Olde Carlsbad venue — stress-free.",
+    intro:
+      "Olde Carlsbad's charming neighborhoods and tree-lined streets are the perfect backdrop for memorable celebrations. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor directly to your Olde Carlsbad home or venue — we handle setup and pickup so you can focus on your guests.",
+    neighborhoods: [
+      "Carlsbad Village",
+      "Harding Street",
+      "Magnolia Avenue",
+      "Jefferson Street",
+      "Pine Avenue",
+      "Elm Avenue",
+    ],
+    parks: [
+      "Holiday Park",
+      "Hosp Grove Park",
+      "Pine Avenue Park",
+      "Carlsbad State Beach",
+      "Garfield Park",
+    ],
+    localProof:
+      "Based right here in Carlsbad, we know Olde Carlsbad's neighborhoods like our own backyard. From Village bungalow parties to Holiday Park celebrations, we've served this community for years.",
+    deliveryNote:
+      "Free delivery and pickup throughout Olde Carlsbad and the Carlsbad Village area — zip code 92008.",
+    services: [
+      "party-rentals",
+      "birthday-party-rentals",
+      "backyard-party-rentals",
+      "baby-shower-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "park-party-rentals",
+      "delivery-setup-pickup",
+    ],
+    faqs: [
+      {
+        question: "Do you deliver party rentals to Olde Carlsbad?",
+        answer:
+          "Yes! We provide free delivery, setup, and pickup throughout Olde Carlsbad and the surrounding Village area. Our headquarters is just minutes away.",
+      },
+      {
+        question: "Can you set up party rentals at Holiday Park or Hosp Grove?",
+        answer:
+          "Absolutely. We regularly deliver to Holiday Park, Hosp Grove, and Pine Avenue Park. We handle all setup and teardown — you just show up and celebrate.",
+      },
+      {
+        question: "What party rental items are available in Olde Carlsbad?",
+        answer:
+          "We offer tables, chairs, tents, canopies, linens, tableware, and décor. Everything is delivered and set up at your Olde Carlsbad location.",
+      },
+      {
+        question: "How do I book party rentals for an Olde Carlsbad event?",
+        answer:
+          "Request a free quote online or call us directly. We recommend booking 1–2 weeks ahead, but we welcome last-minute requests — contact us to check availability.",
+      },
+    ],
+  },
+  {
+    slug: "aviara",
+    name: "Aviara",
+    county: "San Diego",
+    state: "CA",
+    zip: ["92011"],
+    meta: {
+      title: "Party Rentals in Aviara Carlsbad CA | Kelari Party Rentals",
+      description:
+        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Aviara, Carlsbad. Elegant full-service party rentals for Aviara homes and venues.",
+    },
+    headline: "Aviara Party Rentals",
+    subheadline:
+      "Tables, chairs, tents & décor delivered and set up at your Aviara venue — stress-free.",
+    intro:
+      "Aviara is one of Carlsbad's most beautiful master-planned communities, and its stunning homes and manicured surroundings set the stage for truly special celebrations. Kelari Party Rentals provides tables, chairs, tents, linens, and décor with free delivery, professional setup, and same-day pickup.",
+    neighborhoods: [
+      "Aviara Oaks",
+      "Aviara Point",
+      "Aviara at Cabrillo",
+      "Four Seasons Aviara",
+      "Batiquitos Lagoon",
+      "Pacific Coast Estates",
+    ],
+    parks: [
+      "Batiquitos Lagoon Trail",
+      "Poinsettia Park",
+      "Alga Norte Community Park",
+      "Aviara Community Park",
+      "Cannon Road Park",
+    ],
+    localProof:
+      "Aviara's elegant homes and resort setting attract some of our most memorable events. From intimate garden parties to full backyard celebrations, Kelari Party Rentals delivers the quality Aviara residents expect.",
+    deliveryNote:
+      "Free delivery and pickup throughout Aviara and all Carlsbad zip codes — 92011.",
+    services: [
+      "party-rentals",
+      "birthday-party-rentals",
+      "backyard-party-rentals",
+      "baby-shower-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "park-party-rentals",
+      "delivery-setup-pickup",
+    ],
+    faqs: [
+      {
+        question: "Do you deliver party rentals to Aviara?",
+        answer:
+          "Yes! We offer free delivery, setup, and pickup throughout Aviara — Aviara Oaks, Aviara Point, Four Seasons Aviara, and all surrounding neighborhoods.",
+      },
+      {
+        question: "Can you handle upscale party setups in Aviara?",
+        answer:
+          "Absolutely. We provide linens, Chiavari chairs, canopies, and full décor packages suited to Aviara's elegant settings. Every rental includes professional setup and pickup.",
+      },
+      {
+        question: "What parks and venues in Aviara do you deliver to?",
+        answer:
+          "We deliver to Aviara Community Park, Poinsettia Park, Alga Norte, and private homes throughout the Aviara community. We handle full setup and teardown.",
+      },
+      {
+        question: "How far in advance should I book for an Aviara event?",
+        answer:
+          "We recommend booking 1–2 weeks ahead, especially for larger or more elaborate setups. Contact us to check availability and discuss your specific rental needs.",
+      },
+    ],
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
