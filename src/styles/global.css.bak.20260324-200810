@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+/* ── Tailwind CSS 4 Theme ──────────────────────────────────────────────────── */
+
+@theme {
+  /* Brand colors (new token system) */
+  --color-brand-pink: #E8356D;
+  --color-brand-pink-light: #FCE4EC;
+  --color-brand-pink-dark: #B5264F;
+  --color-brand-dark: #222222;
+  --color-brand-dark-soft: #2A2A2A;
+  --color-accent-sage: #A8C5A0;
+
+  /* Legacy color tokens (keep for existing component references) */
+  --color-primary: #E8356D;
+  --color-primary-light: #FCE4EC;
+  --color-primary-dark: #B5264F;
+  --color-dark: #1C1C1E;
+  --color-dark-card: #252528;
+  --color-muted: #6B7280;
+  --color-soft-bg: #FDF8FA;
+  --color-border: #EDE0E8;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --radius-card: 16px;
+  --radius-button: 8px;
+
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 40px rgba(232, 53, 109, 0.18);
+  --shadow-header: 0 1px 4px rgb(0 0 0 / 0.04);
+  --shadow-brand-button: 0 6px 18px rgb(232 53 109 / 0.28);
+  --shadow-brand-button-sm: 0 2px 8px rgb(232 53 109 / 0.18);
+}
+
+/* ── CSS Custom Properties ────────────────────────────────────────────────── */
+
+:root {
+  /* Brand colors (new token system) */
+  --color-brand-pink: #E8356D;
+  --color-brand-pink-light: #FCE4EC;
+  --color-brand-pink-dark: #B5264F;
+  --color-brand-dark: #222222;
+  --color-brand-dark-soft: #2A2A2A;
+  --color-accent-sage: #A8C5A0;
+
+  /* Legacy color tokens (keep for existing component references) */
+  --color-primary: #E8356D;
+  --color-primary-light: #FCE4EC;
+  --color-primary-dark: #B5264F;
+  --color-dark: #1C1C1E;
+  --color-dark-card: #252528;
+  --color-text: #1C1C1E;
+  --color-muted: #6B7280;
+  --color-soft-bg: #FDF8FA;
+  --color-border: #EDE0E8;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --radius-card: 16px;
+  --radius-button: 8px;
+
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 40px rgba(232, 53, 109, 0.18);
+  --shadow-header: 0 1px 4px rgb(0 0 0 / 0.04);
+  --shadow-brand-button: 0 6px 18px rgb(232 53 109 / 0.28);
+  --shadow-brand-button-sm: 0 2px 8px rgb(232 53 109 / 0.18);
+  --surface-header: rgb(255 255 255 / 0.97);
+  --surface-trust-strip: #1a1a1a;
+  --text-strong: #111111;
+  --text-body: #404040;
+  --text-subtle: #374151;
+  --hero-overlay-start: rgb(14 8 20 / 0.42);
+  --hero-overlay-mid: rgb(14 8 20 / 0.24);
+  --hero-overlay-end: rgb(14 8 20 / 0.08);
+  --hero-chip-border: rgb(255 255 255 / 0.2);
+  --hero-chip-bg: rgb(255 255 255 / 0.08);
+  --hero-chip-text: rgb(255 255 255 / 0.85);
+  --hero-glow-pink: rgb(232 53 109 / 0.02);
+  --trust-icon-bg: rgb(232 53 109 / 0.15);
+  --trust-subtext: rgb(255 255 255 / 0.45);
+}
+
+/* ── Base Styles ──────────────────────────────────────────────────────────── */
+
+html {
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background-color: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-strong);
+}
+
+h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text-strong);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ── Form Utilities ───────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #262626;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+  }
+  .form-input:focus {
+    border-color: #E8356D;
+    box-shadow: 0 0 0 3px rgba(232, 53, 109, 0.12);
+  }
+  .form-input-dark {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.14);
+    color: #fff;
+  }
+  .form-input-dark::placeholder { color: rgba(255,255,255,0.4); }
+  .form-input-dark:focus { border-color: #E8356D; box-shadow: 0 0 0 3px rgba(232,53,109,0.15); }
+  .form-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #262626;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .form-select:focus { border-color: #E8356D; }
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #262626;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .form-textarea:focus { border-color: #E8356D; box-shadow: 0 0 0 3px rgba(232,53,109,0.12); }
+  .form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #404040;
+    margin-bottom: 0.35rem;
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+  .brand-wordmark {
+    @apply inline-flex items-baseline font-display font-bold;
+  }
+
+  .brand-wordmark--lg {
+    @apply text-2xl;
+  }
+
+  .brand-wordmark--md {
+    @apply text-xl;
+  }
+
+  .brand-wordmark__lead {
+    color: var(--text-strong);
+  }
+
+  .brand-wordmark__accent {
+    color: var(--color-brand-pink);
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300;
+    border-radius: var(--radius-button);
+  }
+
+  .btn--sm {
+    @apply px-5 py-2.5 text-sm;
+  }
+
+  .btn--md {
+    @apply px-6 py-3 text-[0.95rem];
+  }
+
+  .btn--pill {
+    @apply rounded-full;
+  }
+
+  .btn--brand {
+    color: #fff;
+    background: var(--color-brand-pink);
+    box-shadow: var(--shadow-brand-button);
+  }
+
+  .btn--brand:hover {
+    background: var(--color-brand-pink-dark);
+  }
+
+  .btn--brand-soft {
+    color: #fff;
+    background: var(--color-brand-pink);
+    box-shadow: var(--shadow-brand-button-sm);
+    border: 1px solid rgb(181 38 79 / 0.16);
+  }
+
+  .btn--brand-soft:hover {
+    background: var(--color-brand-pink-dark);
+  }
+
+  .btn--outline-light {
+    @apply border-2 border-white/80 text-white hover:bg-white hover:text-neutral-900;
+  }
+
+  .site-header {
+    background: var(--surface-header);
+    box-shadow: var(--shadow-header);
+  }
+
+  .header-nav-link {
+    color: var(--text-subtle);
+    @apply text-sm font-medium transition-colors hover:text-neutral-900;
+  }
+
+  .header-contact {
+    color: var(--text-subtle);
+    @apply flex items-center gap-2 text-sm font-medium transition-colors hover:text-neutral-900;
+  }
+
+  .hero-shell {
+    min-height: 600px;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      var(--hero-overlay-start) 0%,
+      var(--hero-overlay-mid) 45%,
+      rgb(14 8 20 / 0.14) 75%,
+      var(--hero-overlay-end) 100%
+    );
+  }
+
+  .hero-pink-glow {
+    background: radial-gradient(circle, var(--hero-glow-pink) 0%, transparent 70%);
+    filter: blur(14px);
+  }
+
+  .hero-chip {
+    color: var(--hero-chip-text);
+    border-color: var(--hero-chip-border);
+    background: var(--hero-chip-bg);
+  }
+
+  .hero-title {
+    text-shadow: none;
+  }
+
+  .hero-subtitle {
+    text-shadow: none;
+  }
+
+  .hero-title-intro {
+    @apply font-medium text-white/92 leading-tight;
+  }
+
+  .hero-title-emphasis {
+    @apply mt-1.5 font-semibold tracking-tight leading-tight;
+  }
+
+  .hero-title-emphasis-tail {
+    @apply not-italic text-white;
+  }
+
+  .trust-strip {
+    background: var(--surface-trust-strip);
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  }
+
+  .trust-strip-item__icon-wrap {
+    background: var(--trust-icon-bg);
+  }
+
+  .trust-strip-item__icon {
+    color: var(--color-brand-pink);
+  }
+
+  .trust-strip-item__subtitle {
+    color: var(--trust-subtext);
+  }
+}

@@ -1,0 +1,248 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LocalHero from "../../components/LocalHero.astro";
+import TrustBar from "../../components/TrustBar.astro";
+import Section from "../../components/Section.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import WhatsIncluded from "../../components/WhatsIncluded.astro";
+import NeighborhoodTags from "../../components/NeighborhoodTags.astro";
+import ParksList from "../../components/ParksList.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CityCards from "../../components/CityCards.astro";
+import QuoteForm from "../../components/QuoteForm.astro";
+
+import { site, nap } from "../../data/site";
+import { cities, type City } from "../../data/cities";
+import {
+  services,
+  type Service,
+  getServiceBySlug,
+  renderCityTemplate,
+} from "../../data/services";
+
+export function getStaticPaths() {
+  const paths: {
+    params: { city: string; service: string };
+    props: { city: City; service: Service };
+  }[] = [];
+
+  for (const city of cities) {
+    for (const serviceSlug of city.services) {
+      const service = getServiceBySlug(serviceSlug);
+      if (service) {
+        paths.push({
+          params: { city: city.slug, service: service.slug },
+          props: { city, service },
+        });
+      }
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  city: City;
+  service: Service;
+}
+
+const { city, service } = Astro.props;
+
+const serviceImages: Record<string, string> = {
+  "party-rentals": "/images/hero-party.jpg",
+  "birthday-party-rentals": "/images/birthday-party.jpg",
+  "backyard-party-rentals": "/images/backyard-party.jpg",
+  "baby-shower-rentals": "/images/baby-shower.jpg",
+  "graduation-party-rentals": "/images/graduation-party.jpg",
+  "engagement-party-rentals": "/images/engagement-party.jpg",
+  "park-party-rentals": "/images/park-party.jpg",
+  "delivery-setup-pickup": "/images/backyard-party.jpg",
+};
+const bgImage = serviceImages[service.slug] ?? "/images/hero-party.jpg";
+
+const pageTitle = renderCityTemplate(service.cityMeta.title, city.name);
+const pageDescription = renderCityTemplate(service.cityMeta.description, city.name);
+const headline = renderCityTemplate(service.cityHeadline, city.name);
+const subheadline = renderCityTemplate(service.citySubheadline, city.name);
+const intro = renderCityTemplate(service.cityIntro, city.name);
+const canonical = `${site.domain}/${city.slug}/${service.slug}/`;
+
+const combinedFaqs = [
+  ...service.faqs.map((f) => ({
+    question: renderCityTemplate(f.question, city.name),
+    answer: renderCityTemplate(f.answer, city.name),
+  })),
+  ...city.faqs,
+];
+
+const nearbyAreas = cities
+  .filter((c) => c.slug !== city.slug)
+  .map((c) => ({
+    name: c.name,
+    tagline: `${service.shortName} in ${c.name} — free delivery and setup.`,
+    href: `/${c.slug}/${service.slug}/`,
+  }));
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${service.name} in ${city.name}`,
+    provider: {
+      "@type": "LocalBusiness",
+      name: nap.name,
+      url: site.domain,
+      telephone: nap.contact.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: `${nap.address.street} ${nap.address.suite}`,
+        addressLocality: nap.address.city,
+        addressRegion: nap.address.state,
+        postalCode: nap.address.zip,
+        addressCountry: "US",
+      },
+    },
+    areaServed: {
+      "@type": "City",
+      name: `${city.name}, ${city.state}`,
+    },
+    description: pageDescription,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: combinedFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: pageTitle,
+    url: canonical,
+    description: pageDescription,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: city.name,
+        item: `${site.domain}/${city.slug}/`,
+      },
+      { "@type": "ListItem", position: 3, name: service.name, item: canonical },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonical}
+  schema={schema}
+>
+
+  <!-- 1 · Hero ─────────────────────────────────── -->
+  <LocalHero
+    title={headline}
+    subtitle={subheadline}
+    bgImage={bgImage}
+  />
+
+  <!-- 2 · Trust Bar ────────────────────────────── -->
+  <TrustBar />
+
+  <!-- 3 · Intro — white ────────────────────────── -->
+  <Section bg="white">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
+        {intro}
+      </p>
+    </div>
+  </Section>
+
+  <!-- 4 · What's Included — light ──────────────── -->
+  <WhatsIncluded
+    eyebrow="FULL-SERVICE RENTALS"
+    title={`What's Included with ${service.name} in ${city.name}`}
+    items={service.whatsIncluded}
+    columns={3}
+    bg="light"
+  />
+
+  <!-- 5 · Local Proof — white ──────────────────── -->
+  <Section bg="white">
+    <div class="max-w-3xl mx-auto text-center">
+      <SectionHeader
+        eyebrow="LOCAL EXPERTS"
+        title={`Trusted in ${city.name}`}
+      />
+      <p class="mt-6 text-lg text-neutral-600 leading-relaxed">
+        {city.localProof}
+      </p>
+      <p class="mt-3 text-base text-neutral-500">
+        {city.deliveryNote}
+      </p>
+    </div>
+  </Section>
+
+  <!-- 6 · Neighborhoods — light (compact) ──────── -->
+  <NeighborhoodTags
+    eyebrow="NEIGHBORHOODS"
+    title={`${city.name} Neighborhoods We Serve`}
+    neighborhoods={city.neighborhoods}
+    bg="light"
+    padding="compact"
+  />
+
+  <!-- 7 · Parks — white (compact) ─────────────── -->
+  <ParksList
+    eyebrow="POPULAR VENUES"
+    title={`Popular ${city.name} Parks for ${service.shortName}`}
+    parks={city.parks.map((p) => ({ name: p }))}
+    bg="white"
+    padding="compact"
+  />
+
+  <!-- 8 · CTA Band — dark ──────────────────────── -->
+  <CtaBand
+    title={`Book ${service.shortName} in ${city.name}`}
+    subtitle={`Get a free quote for ${service.name.toLowerCase()} in ${city.name}. Delivery, setup, and pickup are always included.`}
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+  />
+
+  <!-- 9 · FAQ — light ──────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={`${service.name} in ${city.name} — FAQs`}
+    faqs={combinedFaqs}
+    bg="light"
+  />
+
+  <!-- 10 · Nearby Cities — white ───────────────── -->
+  <CityCards
+    eyebrow="NEARBY CITIES"
+    title={`${service.shortName} in Nearby Cities`}
+    subtitle={`We also provide ${service.shortName.toLowerCase()} with free delivery in these North County cities.`}
+    cities={nearbyAreas.map((a) => ({ name: a.name, description: a.tagline, href: a.href }))}
+    bg="white"
+    padding="default"
+  />
+
+  <!-- 11 · Quote Form — dark ───────────────────── -->
+  <QuoteForm
+    heading={`Get a Free ${service.shortName} Quote in ${city.name}`}
+    subheading={`Tell us about your ${city.name} event and we'll put together a custom ${service.name.toLowerCase()} package.`}
+    city={city.slug}
+    service={service.slug}
+  />
+
+</BaseLayout>

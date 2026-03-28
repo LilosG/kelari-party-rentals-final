@@ -1,0 +1,134 @@
+---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
+import { services as allServices } from "../data/services";
+
+export interface ServiceCard {
+  icon: string;
+  name: string;
+  description: string;
+  href: string;
+  slug?: string;
+}
+
+export interface Props {
+  services?: ServiceCard[];
+  columns?: 2 | 3 | 4;
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  bg?: "white" | "light" | "dark" | "pink-light";
+  padding?: "default" | "compact" | "featured" | "none";
+  heading?: string;
+  overline?: string;
+  bgClass?: string;
+  slugs?: string[];
+  citySlug?: string;
+}
+
+const {
+  services,
+  columns = 4,
+  eyebrow,
+  title,
+  subtitle,
+  bg = "white",
+  padding = "default",
+  heading,
+  overline,
+  slugs,
+  citySlug,
+} = Astro.props;
+
+const resolvedEyebrow = eyebrow ?? overline;
+const resolvedTitle = title ?? heading;
+const isDark = bg === "dark";
+
+const serviceImages: Record<string, string> = {
+  "party-rentals": "/images/hero-party.jpg",
+  "birthday-party-rentals": "/images/birthday-party.jpg",
+  "backyard-party-rentals": "/images/backyard-party.jpg",
+  "baby-shower-rentals": "/images/baby-shower.jpg",
+  "graduation-party-rentals": "/images/graduation-party.jpg",
+  "engagement-party-rentals": "/images/engagement-party.jpg",
+  "park-party-rentals": "/images/park-party.jpg",
+  "delivery-setup-pickup": "/images/backyard-party.jpg",
+  "table-and-chair-rentals": "/images/gallery-tablescape.jpg",
+  "tent-and-canopy-rentals": "/images/gallery-canopy.jpg",
+};
+
+function getServiceImage(slug: string): string {
+  return serviceImages[slug] ?? "/images/hero-party.jpg";
+}
+
+let resolvedServices: (ServiceCard & { slug: string })[] = services
+  ? services.map((s) => ({ ...s, slug: s.slug ?? s.href.split("/").filter(Boolean).pop() ?? "" }))
+  : (() => {
+      const pool = slugs
+        ? slugs
+            .map((s) => allServices.find((sv) => sv.slug === s))
+            .filter((s): s is (typeof allServices)[0] => Boolean(s))
+        : allServices;
+      return pool.map((s) => ({
+        icon: s.icon,
+        name: s.shortName,
+        description: s.subheadline,
+        href: citySlug ? `/${citySlug}/${s.slug}/` : `/services/${s.slug}/`,
+        slug: s.slug,
+      }));
+    })();
+
+const colClass = {
+  2: "grid-cols-1 sm:grid-cols-2",
+  3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+}[columns];
+---
+
+<Section {bg} spacing={padding} width="wide">
+  {(resolvedTitle || resolvedEyebrow) && (
+    <div class="mb-12 md:mb-16">
+      <SectionHeader
+        eyebrow={resolvedEyebrow}
+        title={resolvedTitle ?? ""}
+        subtitle={subtitle}
+        dark={isDark}
+        width="wide"
+      />
+    </div>
+  )}
+
+  <div class={`grid gap-6 md:gap-7 ${colClass}`}>
+    {resolvedServices.map((service) => (
+      <a
+        href={service.href}
+        class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col transition-transform duration-300 hover:-translate-y-1.5"
+        style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);"
+        onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)'"
+        onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'"
+      >
+        <div class="relative overflow-hidden aspect-[16/10]">
+          <img
+            src={getServiceImage(service.slug)}
+            alt={service.name}
+            width="800"
+            height="600"
+            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-lg group-hover:text-brand-pink transition-colors" style="color: #111;">
+            {service.name}
+          </h3>
+          <p class="text-sm mt-2 leading-relaxed text-neutral-600 flex-1 line-clamp-2">
+            {service.description}
+          </p>
+          <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200" style="color: #E8356D;">
+            Learn more <span aria-hidden="true">&rarr;</span>
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Section>

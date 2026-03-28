@@ -1,0 +1,85 @@
+---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
+
+export interface CityCard {
+  name: string;
+  description: string;
+  href: string;
+  image?: string;
+  slug?: string;
+}
+
+export interface Props {
+  cities: CityCard[];
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  bg?: "white" | "light" | "dark" | "pink-light";
+  padding?: "default" | "compact" | "featured" | "none";
+}
+
+const {
+  cities,
+  eyebrow,
+  title,
+  subtitle,
+  bg = "light",
+  padding = "default",
+} = Astro.props;
+
+const cityImages: Record<string, string> = {
+  carlsbad: "/images/hero-party.jpg",
+  encinitas: "/images/backyard-party.jpg",
+  oceanside: "/images/park-party.jpg",
+  "san-marcos": "/images/graduation-party.jpg",
+};
+
+function getCityImage(city: CityCard): string {
+  if (city.image) return city.image;
+  const slug = city.slug ?? city.href.split("/").filter(Boolean).pop() ?? "";
+  return cityImages[slug] ?? "/images/hero-party.jpg";
+}
+---
+
+<Section {bg} spacing={padding} width="wide">
+  {(title || eyebrow) && (
+    <div class="mb-12 md:mb-16">
+      <SectionHeader {eyebrow} title={title ?? ""} {subtitle} width="wide" />
+    </div>
+  )}
+
+  <div class="grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2 lg:grid-cols-4">
+    {cities.map((city) => (
+      <a
+        href={city.href}
+        class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col text-center transition-transform duration-300 hover:-translate-y-1.5"
+        style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);"
+        onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)'"
+        onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'"
+      >
+        <div class="relative overflow-hidden aspect-[16/10]">
+          <img
+            src={getCityImage(city)}
+            alt={city.name}
+            width="800"
+            height="600"
+            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-5 flex flex-col flex-1 items-center">
+          <h3 class="font-display font-bold text-lg group-hover:text-brand-pink transition-colors" style="color: #111;">
+            {city.name}
+          </h3>
+          <p class="text-sm mt-2 leading-relaxed text-neutral-600">
+            {city.description}
+          </p>
+          <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200" style="color: #E8356D;">
+            Party rentals in {city.name} <span aria-hidden="true">&rarr;</span>
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Section>
