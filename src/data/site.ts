@@ -107,7 +107,7 @@ export const nap: NAP = {
     full: "5674 El Camino Real Suite M-2, Carlsbad, CA 92008",
   },
   contact: {
-    phone: "(760) 000-0000",
+    phone: "(760) 805-0540",
     email: "hello@kelaripartyrentals.com",
     hours: "Mon–Sun 9AM–7PM",
   },
