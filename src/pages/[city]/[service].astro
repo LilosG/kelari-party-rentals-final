@@ -90,21 +90,37 @@ const nearbyAreas = cities
 const schema = [
   {
     "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: nap.name,
+    url: `${site.domain}/${city.slug}/${service.slug}/`,
+    telephone: nap.contact.phone,
+    email: nap.contact.email,
+    image: site.schema.image,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: `${nap.address.street} ${nap.address.suite}`,
+      addressLocality: nap.address.city,
+      addressRegion: nap.address.state,
+      postalCode: nap.address.zip,
+      addressCountry: "US",
+    },
+    geo: site.schema.geo,
+    openingHoursSpecification: site.schema.openingHoursSpecification,
+    priceRange: site.schema.priceRange,
+    areaServed: {
+      "@type": "City",
+      name: `${city.name}, ${city.state}`,
+    },
+    sameAs: site.schema.sameAs,
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "Service",
     name: `${service.name} in ${city.name}`,
     provider: {
       "@type": "LocalBusiness",
       name: nap.name,
       url: site.domain,
-      telephone: nap.contact.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: `${nap.address.street} ${nap.address.suite}`,
-        addressLocality: nap.address.city,
-        addressRegion: nap.address.state,
-        postalCode: nap.address.zip,
-        addressCountry: "US",
-      },
     },
     areaServed: {
       "@type": "City",
