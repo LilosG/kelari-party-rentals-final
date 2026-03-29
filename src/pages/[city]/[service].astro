@@ -91,11 +91,13 @@ const schema = [
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${site.domain}/#localbusiness`,
     name: nap.name,
-    url: `${site.domain}/${city.slug}/${service.slug}/`,
+    url: site.domain,
     telephone: nap.contact.phone,
     email: nap.contact.email,
     image: site.schema.image,
+    logo: site.schema.logo,
     address: {
       "@type": "PostalAddress",
       streetAddress: `${nap.address.street} ${nap.address.suite}`,
@@ -107,21 +109,14 @@ const schema = [
     geo: site.schema.geo,
     openingHoursSpecification: site.schema.openingHoursSpecification,
     priceRange: site.schema.priceRange,
-    areaServed: {
-      "@type": "City",
-      name: `${city.name}, ${city.state}`,
-    },
+    areaServed: site.schema.areaServed,
     sameAs: site.schema.sameAs,
   },
   {
     "@context": "https://schema.org",
     "@type": "Service",
     name: `${service.name} in ${city.name}`,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-      url: site.domain,
-    },
+    provider: { "@id": `${site.domain}/#localbusiness` },
     areaServed: {
       "@type": "City",
       name: `${city.name}, ${city.state}`,
