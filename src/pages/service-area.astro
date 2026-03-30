@@ -14,7 +14,7 @@ const title = "Service Area | Kelari Party Rentals";
 const description =
   "Kelari Party Rentals delivers tables, chairs, tents & décor across Carlsbad, Encinitas, Oceanside, San Marcos, and surrounding North County San Diego communities.";
 
-const allZips = cities.flatMap((c) => c.zip);
+const allZips = [...new Set(cities.flatMap((c) => c.zip))].sort();
 
 const schema = [
   {

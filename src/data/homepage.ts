@@ -33,7 +33,6 @@ export const hero = {
     "Tables, chairs, canopies, linens, and décor — delivered and set up across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
   backgroundImage: "/images/hero-party.jpg",
   primaryCta: { label: "Request a Free Quote", href: "/quote/" },
-  secondaryCta: { label: "(760) 000-0000", href: "tel:7600000000" },
 };
 
 export const trustBarItems: TrustBarItem[] = [
@@ -51,7 +50,6 @@ export const ctaBand = {
   subtitle:
     "Free delivery, professional setup, and same-day pickup included with every rental. No hidden fees, no stress — just a beautiful event.",
   primaryCta: { label: "Get a Free Quote", href: "/quote/" },
-  secondaryCta: { label: "Call (760) 000-0000", href: "tel:7600000000" },
 };
 
 // ── How It Works ──────────────────────────────────────────────────────────────
