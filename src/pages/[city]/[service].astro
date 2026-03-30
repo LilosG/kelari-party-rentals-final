@@ -76,6 +76,11 @@ const combinedFaqs = service.faqs.map((f) => ({
   answer: renderCityTemplate(f.answer, city.name),
 }));
 
+const schemaFaqs = [
+  ...combinedFaqs,
+  ...city.faqs,
+];
+
 const nearbyAreas = cities
   .filter((c) => c.slug !== city.slug)
   .map((c) => ({
@@ -123,7 +128,7 @@ const schema = [
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: combinedFaqs.map((faq) => ({
+    mainEntity: schemaFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: { "@type": "Answer", text: faq.answer },
