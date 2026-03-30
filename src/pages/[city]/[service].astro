@@ -71,13 +71,11 @@ const subheadline = renderCityTemplate(service.citySubheadline, city.name);
 const intro = renderCityTemplate(service.cityIntro, city.name);
 const canonical = `${site.domain}/${city.slug}/${service.slug}/`;
 
-const combinedFaqs = service.faqs.map((f) => ({
-  question: renderCityTemplate(f.question, city.name),
-  answer: renderCityTemplate(f.answer, city.name),
-}));
-
-const schemaFaqs = [
-  ...combinedFaqs,
+const combinedFaqs = [
+  ...service.faqs.map((f) => ({
+    question: renderCityTemplate(f.question, city.name),
+    answer: renderCityTemplate(f.answer, city.name),
+  })),
   ...city.faqs,
 ];
 
@@ -128,7 +126,7 @@ const schema = [
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: schemaFaqs.map((faq) => ({
+    mainEntity: combinedFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: { "@type": "Answer", text: faq.answer },

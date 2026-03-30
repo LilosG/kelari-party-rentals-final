@@ -105,6 +105,15 @@ const schema = [
     name: nap.name,
     url: site.domain,
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: homepageFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  },
   ...testimonials.map((t) => ({
     "@context": "https://schema.org",
     "@type": "Review",
