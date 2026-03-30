@@ -30,9 +30,6 @@ export interface Props {
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
   padding?: "default" | "compact" | "featured" | "none";
-  heading?: string;
-  overline?: string;
-  bgClass?: string;
   slugs?: string[];
   citySlug?: string;
 }
@@ -45,14 +42,12 @@ const {
   subtitle,
   bg = "white",
   padding = "default",
-  heading,
-  overline,
   slugs,
   citySlug,
 } = Astro.props;
 
-const resolvedEyebrow = eyebrow ?? overline;
-const resolvedTitle = title ?? heading;
+const resolvedEyebrow = eyebrow;
+const resolvedTitle = title;
 const isDark = bg === "dark";
 
 const serviceImages: Record<string, ImageMetadata> = {

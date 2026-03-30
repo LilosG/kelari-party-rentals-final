@@ -35,9 +35,16 @@ const spacingClass = {
   featured: "py-20 lg:py-28",
   none: "py-0",
 }[padding];
+
+const bgClass = {
+  white: "bg-white",
+  light: "bg-[--color-soft-bg]",
+  dark: "bg-brand-dark",
+  "pink-light": "bg-brand-pink-light",
+}[bg];
 ---
 
-<section class:list={[spacingClass, "bg-[--color-soft-bg]"]}>
+<section class:list={[spacingClass, bgClass]}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {(title || eyebrow) && (
       <div class="mb-12 md:mb-16">
@@ -75,6 +82,9 @@ const spacingClass = {
                 <p class="text-xs mt-0.5 text-neutral-500">
                   {t.location}
                 </p>
+              )}
+              {t.date && (
+                <p class="text-xs mt-0.5 text-neutral-400">{t.date}</p>
               )}
             </div>
           </div>

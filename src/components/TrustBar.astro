@@ -14,12 +14,11 @@ const resolvedItems = items ?? defaultItems;
 <div class="trust-strip">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-0 lg:divide-x lg:divide-white/10">
-      {resolvedItems.map((item, index) => (
+      {resolvedItems.map((item) => (
         <FeatureStripItem
           title={item.title}
           subtitle={item.subtitle}
           icon={item.icon}
-          class={index === 0 ? "items-center first:pl-0" : "items-center"}
         />
       ))}
     </div>

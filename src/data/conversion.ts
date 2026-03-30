@@ -8,10 +8,16 @@ export interface ContactMetaItem {
   description?: string;
 }
 
+export interface ConversionProofPointLink {
+  label: string;
+  href: string;
+}
+
 export interface ConversionProofPoint {
   title: string;
   description: string;
   icon: string;
+  links?: ConversionProofPointLink[];
 }
 
 export const contactMetaItems: ContactMetaItem[] = [
@@ -56,8 +62,12 @@ export const conversionProofPoints: ConversionProofPoint[] = [
   },
   {
     title: "Call, email, or message us",
-    description: `${nap.contact.phone} • ${nap.contact.email} • ${nap.contact.hours}`,
+    description: nap.contact.hours,
     icon: "💬",
+    links: [
+      { label: nap.contact.phone, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` },
+      { label: nap.contact.email, href: `mailto:${nap.contact.email}` },
+    ],
   },
 ];
 
@@ -80,6 +90,10 @@ export const footerNavGroups = [
       { label: "Encinitas", href: "/encinitas/" },
       { label: "Oceanside", href: "/oceanside/" },
       { label: "San Marcos", href: "/san-marcos/" },
+      { label: "Bressi Ranch", href: "/bressi-ranch/" },
+      { label: "La Costa", href: "/la-costa/" },
+      { label: "Olde Carlsbad", href: "/olde-carlsbad/" },
+      { label: "Aviara", href: "/aviara/" },
       { label: "Full Service Area", href: "/service-area/" },
     ],
   },

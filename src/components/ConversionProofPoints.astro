@@ -30,6 +30,21 @@ const isDark = surface === "dark";
         <p class:list={["mt-1 text-sm leading-relaxed", isDark ? "text-white/70" : "text-neutral-600"]}>
           {item.description}
         </p>
+        {item.links && item.links.length > 0 && (
+          <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
+            {item.links.map((link) => (
+              <a
+                href={link.href}
+                class:list={[
+                  "text-sm font-medium hover:underline",
+                  isDark ? "text-brand-pink-light" : "text-brand-pink",
+                ]}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   ))}
