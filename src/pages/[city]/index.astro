@@ -14,8 +14,9 @@ import QuoteForm from "../../components/QuoteForm.astro";
 
 import { site, nap } from "../../data/site";
 import { cities, type City } from "../../data/cities";
-import { testimonials, galleryImages } from "../../data/homepage";
+import { testimonials, galleryImages, howItWorksSteps } from "../../data/homepage";
 import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
+import HowItWorks from "../../components/HowItWorks.astro";
 import ImageGallery from "../../components/ImageGallery.astro";
 
 export function getStaticPaths() {
@@ -179,6 +180,15 @@ const schema = [
     subtitle={`Real events we've delivered and set up across ${city.name} and surrounding North County San Diego.`}
     images={galleryImages.slice(0, 8)}
     columns={4}
+    bg="white"
+  />
+
+  <!-- 8b · How It Works — white ───────────────── -->
+  <HowItWorks
+    eyebrow="HOW IT WORKS"
+    title={`How Party Rentals Work in ${city.name}`}
+    subtitle="We handle every step — from delivery and setup to same-day pickup after your event."
+    steps={howItWorksSteps}
     bg="white"
   />
 

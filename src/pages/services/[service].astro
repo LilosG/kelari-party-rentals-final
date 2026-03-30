@@ -140,16 +140,16 @@ const schema = [
   <!-- 5 · How It Works — white ─────────────────── -->
   <HowItWorks
     eyebrow="HOW IT WORKS"
-    title="How It Works"
-    subtitle="We handle every step so you can focus on what matters — celebrating with your people."
+    title={`How ${service.shortName} Works`}
+    subtitle={`From your first quote to post-event pickup — we handle every step so you can focus on celebrating.`}
     steps={howItWorksSteps}
   />
 
   <!-- 6 · Gallery — white ─────────────────────── -->
   <ImageGallery
     eyebrow="RECENT SETUPS"
-    title="Real Setups, Real Results"
-    subtitle="A look at some of the events we've delivered across North County San Diego."
+    title={`Real ${service.shortName} Setups`}
+    subtitle={`A look at events we've delivered and set up across North County San Diego.`}
     images={galleryImages.slice(0, 8)}
     columns={4}
     bg="white"
@@ -158,7 +158,7 @@ const schema = [
   <!-- 7 · Testimonials — light ─────────────────── -->
   <TestimonialCarousel
     eyebrow="REVIEWS"
-    title="What Families Are Saying"
+    title={`What Families Say About Our ${service.shortName}`}
     subtitle="Hundreds of events served across Carlsbad, Encinitas, Oceanside, and San Marcos."
     testimonials={testimonials}
     bg="light"
