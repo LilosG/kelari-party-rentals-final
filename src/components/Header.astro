@@ -2,6 +2,7 @@
 import { nap } from "../data/site";
 import { services } from "../data/services";
 import { categories } from "../data/categories";
+import { cities } from "../data/cities";
 import BrandWordmark from "./BrandWordmark.astro";
 import Button from "./Button.astro";
 
@@ -15,12 +16,10 @@ const rentalLinks = categories.map((c) => ({
   icon: c.icon,
 }));
 
-const cityLinks = [
-  { label: "Carlsbad", href: "/carlsbad/" },
-  { label: "Encinitas", href: "/encinitas/" },
-  { label: "Oceanside", href: "/oceanside/" },
-  { label: "San Marcos", href: "/san-marcos/" },
-];
+const cityLinks = cities.map((c) => ({
+  label: c.name,
+  href: `/${c.slug}/`,
+}));
 ---
 
 <header

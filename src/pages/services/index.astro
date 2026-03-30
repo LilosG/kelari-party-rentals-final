@@ -9,11 +9,18 @@ import CtaBand from "../../components/CtaBand.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 
 import { site, nap } from "../../data/site";
+import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials, galleryImages } from "../../data/homepage";
 import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
 import ImageGallery from "../../components/ImageGallery.astro";
+import CityCards from "../../components/CityCards.astro";
 
 const title = "Party Rental Services | Kelari Party Rentals";
+const cityCards = cities.map((c) => ({
+  name: c.name,
+  description: c.subheadline,
+  href: `/${c.slug}/`,
+}));
 const description =
   "Birthday parties, baby showers, graduations, engagement parties, backyard events & park parties — full-service rentals with free delivery in North County San Diego.";
 
@@ -104,7 +111,16 @@ const schema = [
     bg="light"
   />
 
-  <!-- 6 · CTA Band — dark ──────────────────────── -->
+  <!-- 6 · City Cards — light ──────────────────── -->
+  <CityCards
+    eyebrow="SERVICE AREAS"
+    title="Find Party Rentals in Your City"
+    subtitle="We deliver to every neighborhood across North County San Diego — free delivery always included."
+    cities={cityCards}
+    bg="light"
+  />
+
+  <!-- 7 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title="Not Sure What You Need?"
     subtitle="Tell us about your event and we'll recommend the perfect service and rental package — no obligation."
