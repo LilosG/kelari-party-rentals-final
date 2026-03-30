@@ -43,10 +43,7 @@ const schema = [
     name: category.meta.title,
     url: `${site.domain}/rentals/${category.slug}/`,
     description: category.meta.description,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-    },
+    provider: { "@id": `${site.domain}/#localbusiness` },
   },
   {
     "@context": "https://schema.org",

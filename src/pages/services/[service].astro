@@ -55,15 +55,8 @@ const schema = [
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.name,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-      url: site.domain,
-    },
-    areaServed: {
-      "@type": "GeoCircle",
-      name: "North County San Diego",
-    },
+    provider: { "@id": `${site.domain}/#localbusiness` },
+    areaServed: site.schema.areaServed,
     description: service.meta.description,
   },
   {

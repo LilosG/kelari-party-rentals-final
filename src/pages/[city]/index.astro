@@ -51,36 +51,13 @@ const schema = [
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: nap.name,
-    url: `${site.domain}/${city.slug}/`,
-    telephone: nap.contact.phone,
-    email: nap.contact.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: `${nap.address.street} ${nap.address.suite}`,
-      addressLocality: nap.address.city,
-      addressRegion: nap.address.state,
-      postalCode: nap.address.zip,
-      addressCountry: "US",
-    },
-    geo: site.schema.geo,
-    openingHoursSpecification: site.schema.openingHoursSpecification,
-    priceRange: site.schema.priceRange,
-    areaServed: {
-      "@type": "City",
-      name: `${city.name}, ${city.state}`,
-    },
-    sameAs: site.schema.sameAs,
-    image: site.schema.image,
+    "@id": `${site.domain}/#localbusiness`,
   },
   {
     "@context": "https://schema.org",
     "@type": "Service",
     name: `Party Rentals in ${city.name}`,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-    },
+    provider: { "@id": `${site.domain}/#localbusiness` },
     areaServed: {
       "@type": "City",
       name: `${city.name}, ${city.state}`,

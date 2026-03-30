@@ -15,6 +15,7 @@ import galleryMarquee from '../assets/images/gallery-marquee.jpg';
 import galleryTablescape from '../assets/images/gallery-tablescape.jpg';
 
 import type { ImageMetadata } from 'astro';
+import { nap } from '../data/site';
 
 const heroImageMap: Record<string, ImageMetadata> = {
   '/images/hero-party.jpg': heroParty,
@@ -99,8 +100,8 @@ const resolvedPrimaryCta = primaryCta ?? {
   href: "/quote/",
 };
 const resolvedSecondaryCta = secondaryCta ?? {
-  label: "(760) 000-0000",
-  href: "tel:7600000000",
+  label: nap.contact.phone,
+  href: `tel:${nap.contact.phone.replace(/\D/g, "")}`,
 };
 
 const hasEmphasisPattern = resolvedTitle.includes("Every Celebration");

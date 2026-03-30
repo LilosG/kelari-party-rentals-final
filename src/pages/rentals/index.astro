@@ -28,10 +28,7 @@ const schema = [
     name: title,
     url: `${site.domain}/rentals/`,
     description,
-    provider: {
-      "@type": "LocalBusiness",
-      name: nap.name,
-    },
+    provider: { "@id": `${site.domain}/#localbusiness` },
   },
   {
     "@context": "https://schema.org",
