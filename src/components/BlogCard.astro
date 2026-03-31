@@ -29,10 +29,9 @@ const href = `/blog/${slug}/`;
 ---
 
 <article class:list={[
-  "group flex flex-col bg-white rounded-2xl border border-neutral-100 overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(200,68,122,0.14)]",
+  "group relative flex flex-col bg-white rounded-2xl border border-neutral-100 overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(200,68,122,0.14)]",
   featured && "ring-1 ring-brand-pink/20",
 ]}>
-  <!-- Card body -->
   <div class="flex flex-col flex-1 p-6 lg:p-7">
 
     <!-- Category + date -->
@@ -70,16 +69,13 @@ const href = `/blog/${slug}/`;
 
     <!-- Read more -->
     <div class="mt-auto">
-      
-        href={href}
-        class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-pink hover:text-brand-pink-dark transition-colors"
-        aria-label={`Read: ${title}`}
-      >
+      <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-pink group-hover:text-brand-pink-dark transition-colors pointer-events-none">
         Read article
         <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
-      </a>
+      </span>
     </div>
+
   </div>
 </article>
