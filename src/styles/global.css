@@ -346,3 +346,135 @@ a {
   background: #ffffff;
   color: #111111;
 }
+
+
+/* ── Blog prose styles ─────────────────────────────────────────────────────
+   Scoped entirely to .prose-blog — zero impact on any other page or component.
+   Uses existing brand tokens only.
+────────────────────────────────────────────────────────────────────────────── */
+
+.prose-blog {
+  color: var(--color-text, #404040);
+  font-family: var(--brand-font-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose-blog h2 {
+  font-family: var(--brand-font-display);
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #171717;
+  margin-top: 2.5rem;
+  margin-bottom: 0.875rem;
+}
+
+.prose-blog h3 {
+  font-family: var(--brand-font-display);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #262626;
+  margin-top: 2rem;
+  margin-bottom: 0.625rem;
+}
+
+.prose-blog p {
+  margin-top: 0;
+  margin-bottom: 1.375rem;
+}
+
+.prose-blog ul,
+.prose-blog ol {
+  margin-bottom: 1.375rem;
+  padding-left: 1.5rem;
+}
+
+.prose-blog ul {
+  list-style-type: disc;
+}
+
+.prose-blog ol {
+  list-style-type: decimal;
+}
+
+.prose-blog li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-blog li::marker {
+  color: var(--brand-pink);
+}
+
+.prose-blog a {
+  color: var(--brand-pink);
+  text-decoration: underline;
+  text-decoration-color: rgb(232 53 109 / 0.35);
+  text-underline-offset: 3px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+.prose-blog a:hover {
+  color: var(--brand-pink-dark);
+  text-decoration-color: var(--brand-pink-dark);
+}
+
+.prose-blog strong {
+  font-weight: 600;
+  color: #262626;
+}
+
+.prose-blog blockquote {
+  border-left: 3px solid var(--brand-pink);
+  margin: 1.75rem 0;
+  padding: 0.75rem 1.25rem;
+  background: rgb(232 53 109 / 0.04);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: #525252;
+}
+
+.prose-blog hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 2.5rem 0;
+}
+
+/* Inline CTA box — used inside blog posts */
+.prose-blog .blog-cta-box {
+  background: rgb(232 53 109 / 0.06);
+  border: 1px solid rgb(232 53 109 / 0.18);
+  border-radius: 12px;
+  padding: 1.375rem 1.5rem;
+  margin: 2rem 0;
+  font-style: normal;
+}
+
+.prose-blog .blog-cta-box p {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: #262626;
+}
+
+.prose-blog .blog-cta-box p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-blog .blog-cta-box a {
+  display: inline-block;
+  background: var(--brand-pink);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.prose-blog .blog-cta-box a:hover {
+  background: var(--brand-pink-dark);
+  color: #ffffff;
+}

@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import { site, nap } from "../../data/site";
+
+const allPosts = await getCollection("blog");
+const posts = allPosts.sort(
+  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+const title = "Party Planning Tips & Local Guides | Kelari Party Rentals Blog";
+const description =
+  "Party planning advice, rental guides, and local event tips for North County San Diego. From Carlsbad to Encinitas — we help you celebrate stress-free.";
+const canonical = `${site.domain}/blog/`;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Kelari Party Rentals Blog",
+    description,
+    url: canonical,
+    publisher: { "@id": `${site.domain}/#localbusiness` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
+      { "@type": "ListItem", position: 2, name: "Blog", item: canonical },
+    ],
+  },
+];
+---
+
+<BaseLayout {title} {description} {canonical} schema={schema}>
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <div class="bg-brand-dark pt-16 pb-14 lg:pt-20 lg:pb-18">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold text-brand-pink mb-3">
+          PARTY PLANNING RESOURCES
+        </p>
+        <h1 class="font-display font-semibold text-white leading-[1.05] tracking-[-0.02em] text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] mb-5">
+          Tips, Guides &amp; Local Advice for North County San Diego Events
+        </h1>
+        <p class="text-neutral-300 text-lg leading-relaxed max-w-2xl">
+          From pricing breakdowns to park guides — everything you need to plan a stress-free party in Carlsbad, Encinitas, Oceanside, and San Marcos.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Post Grid ─────────────────────────────────────────────────────── -->
+  <Section bg="white" spacing="default" width="wide">
+    {posts.length === 0 ? (
+      <p class="text-center text-neutral-500 py-12">No posts yet — check back soon.</p>
+    ) : (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {posts.map((post) => (
+          <div class="relative">
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.id}
+              publishDate={post.data.publishDate}
+              category={post.data.category}
+              tags={post.data.tags}
+              featured={post.data.featured}
+            />
+          </div>
+        ))}
+      </div>
+    )}
+  </Section>
+
+  <!-- ── CTA Band ───────────────────────────────────────────────────────── -->
+  <CtaBand
+    title="Ready to Book Your Party Rentals?"
+    subtitle="Free delivery, professional setup, and same-day pickup included with every rental across North County San Diego."
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+  />
+
+</BaseLayout>
