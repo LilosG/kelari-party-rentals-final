@@ -189,8 +189,16 @@ const schema = [
       ))}
       <a
         href="/services/"
-        class="group relative block overflow-hidden rounded-2xl aspect-[4/3] bg-neutral-900"
+        class="group relative block overflow-hidden rounded-2xl aspect-[4/3]"
       >
+        <Image
+          src={galleryMarquee}
+          alt="View all party rental services"
+          widths={[400, 800]}
+          sizes="(max-width: 639px) 50vw, 25vw"
+          loading="lazy"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 p-4">
           <p class="font-display font-bold text-white text-base lg:text-lg leading-tight">View All Services</p>
