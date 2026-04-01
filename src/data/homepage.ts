@@ -186,5 +186,6 @@ export const topServiceSlugs = [
   "backyard-party-rentals",
   "baby-shower-rentals",
   "graduation-party-rentals",
+  "engagement-party-rentals",
   "park-party-rentals",
 ];
