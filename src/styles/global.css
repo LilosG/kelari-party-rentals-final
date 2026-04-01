@@ -228,7 +228,19 @@ a {
   }
 
   .hero-shell {
-    min-height: 600px;
+    min-height: 520px;
+  }
+
+  @media (min-width: 640px) {
+    .hero-shell {
+      min-height: 600px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-shell {
+      min-height: 680px;
+    }
   }
 
   .hero-overlay {
