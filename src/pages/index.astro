@@ -167,13 +167,13 @@ const schema = [
         <a
           href={service.href}
           class:list={[
-            "group relative overflow-hidden rounded-2xl",
+            "group relative overflow-hidden rounded-2xl lg:h-full",
             index < 2 ? "lg:row-span-2" : "",
           ]}
         >
           <div class:list={[
             "relative overflow-hidden w-full",
-            index < 2 ? "aspect-[4/3] lg:aspect-auto lg:absolute lg:inset-0" : "aspect-[4/3]",
+            index < 2 ? "aspect-[4/3] lg:aspect-auto lg:absolute lg:inset-0 lg:h-full" : "aspect-[4/3]",
           ]}>
             <Image
               src={service.image}
