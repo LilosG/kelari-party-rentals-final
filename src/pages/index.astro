@@ -165,7 +165,7 @@ const schema = [
 
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
       {featuredServices.map((service, index) => (
-        
+        <a
           href={service.href}
           class="group relative block overflow-hidden rounded-2xl aspect-[4/3]"
         >
@@ -185,6 +185,9 @@ const schema = [
               Learn more <span aria-hidden="true">&rarr;</span>
             </span>
           </div>
+        </a>
+      ))}
+    </div>
         </a>
       ))}
     </div>
