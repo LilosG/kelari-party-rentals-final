@@ -297,6 +297,12 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
         form.style.display = 'none';
         successEl.style.display = 'block';
         grecaptcha.reset();
+        if (typeof gtag === 'function') {
+          gtag('event', 'form_submit', {
+            event_category: 'lead',
+            event_label: 'quote_form',
+          });
+        }
       } else {
         throw new Error(json.message || 'Submission failed');
       }

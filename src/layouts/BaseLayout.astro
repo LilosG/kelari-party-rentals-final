@@ -66,6 +66,32 @@ const isHomepage = Astro.url.pathname === "/";
 
     <!-- reCAPTCHA v2 -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Google Analytics (GA4) -->
+    {import.meta.env.PUBLIC_GA_MEASUREMENT_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID}`}></script>
+        <script is:inline define:vars={{ gaId: import.meta.env.PUBLIC_GA_MEASUREMENT_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', gaId, { send_page_view: true });
+        </script>
+        <script is:inline>
+          document.addEventListener('click', function(e) {
+            var el = e.target.closest('a[href^="tel:"]');
+            if (!el) return;
+            if (typeof gtag === 'function') {
+              gtag('event', 'click_to_call', {
+                event_category: 'engagement',
+                event_label: el.href.replace('tel:', ''),
+              });
+            }
+          });
+        </script>
+      </>
+    )}
   </head>
 
   <body class="min-h-screen flex flex-col">
