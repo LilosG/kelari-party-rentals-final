@@ -294,14 +294,20 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
       });
       var json = await res.json();
       if (json.success) {
-        form.style.display = 'none';
-        successEl.style.display = 'block';
         grecaptcha.reset();
-        if (typeof gtag === 'function') {
-          gtag('event', 'form_submit', {
+        var showSuccess = function() {
+          form.style.display = 'none';
+          successEl.style.display = 'block';
+        };
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'form_submit', {
             event_category: 'lead',
             event_label: 'quote_form',
+            event_callback: showSuccess,
+            event_timeout: 2000,
           });
+        } else {
+          showSuccess();
         }
       } else {
         throw new Error(json.message || 'Submission failed');

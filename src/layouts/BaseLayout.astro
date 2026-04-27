@@ -69,28 +69,27 @@ const isHomepage = Astro.url.pathname === "/";
 
     <!-- Google Analytics (GA4) -->
     {import.meta.env.PUBLIC_GA_MEASUREMENT_ID && (
-      <>
+      <Fragment>
+        <meta name="ga-id" content={import.meta.env.PUBLIC_GA_MEASUREMENT_ID} />
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID}`}></script>
-        <script is:inline define:vars={{ gaId: import.meta.env.PUBLIC_GA_MEASUREMENT_ID }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', gaId, { send_page_view: true });
-        </script>
         <script is:inline>
+          var _gaId = document.querySelector('meta[name="ga-id"]').content;
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function() { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', _gaId, { send_page_view: true });
           document.addEventListener('click', function(e) {
             var el = e.target.closest('a[href^="tel:"]');
             if (!el) return;
-            if (typeof gtag === 'function') {
-              gtag('event', 'click_to_call', {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'click_to_call', {
                 event_category: 'engagement',
                 event_label: el.href.replace('tel:', ''),
               });
             }
           });
         </script>
-      </>
+      </Fragment>
     )}
   </head>
 
