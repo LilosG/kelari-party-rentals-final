@@ -13,6 +13,7 @@ import parkParty from '../assets/images/park-party.jpg';
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
+import OccasionStrip from "../components/OccasionStrip.astro";
 import Section from "../components/Section.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import CategoryGrid from "../components/CategoryGrid.astro";
@@ -149,6 +150,9 @@ const schema = [
 
   <!-- 2 · Trust Bar ────────────────────────────── -->
   <TrustBar items={trustBarItems} />
+
+  <!-- 2b · Occasion Strip ─────────────────── -->
+  <OccasionStrip heading="We Specialize In" />
 
   <!-- 3 · Services — white ─────────────────────── -->
   <Section bg="white" spacing="default" width="wide">
