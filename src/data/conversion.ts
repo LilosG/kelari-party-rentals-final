@@ -94,6 +94,7 @@ export const footerNavGroups = [
       { label: "La Costa", href: "/la-costa/" },
       { label: "Olde Carlsbad", href: "/olde-carlsbad/" },
       { label: "Aviara", href: "/aviara/" },
+      { label: "Vista", href: "/vista/" },
       { label: "Full Service Area", href: "/service-area/" },
     ],
   },

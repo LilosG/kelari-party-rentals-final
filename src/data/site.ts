@@ -177,7 +177,6 @@ export const site: SiteConfig = {
       { "@type": "City", name: "Oceanside", sameAs: "https://en.wikipedia.org/wiki/Oceanside,_California" },
       { "@type": "City", name: "San Marcos", sameAs: "https://en.wikipedia.org/wiki/San_Marcos,_California" },
       { "@type": "City", name: "Vista", sameAs: "https://en.wikipedia.org/wiki/Vista,_California" },
-      { "@type": "City", name: "Escondido", sameAs: "https://en.wikipedia.org/wiki/Escondido,_California" },
       { "@type": "City", name: "La Costa", sameAs: "https://en.wikipedia.org/wiki/La_Costa,_San_Diego_County,_California" },
       { "@type": "City", name: "Bressi Ranch", sameAs: "https://en.wikipedia.org/wiki/Carlsbad,_California" },
       { "@type": "City", name: "Olde Carlsbad", sameAs: "https://en.wikipedia.org/wiki/Carlsbad,_California" },

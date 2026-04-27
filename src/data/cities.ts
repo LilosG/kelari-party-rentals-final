@@ -581,6 +581,76 @@ export const cities: City[] = [
       },
     ],
   },
+  {
+    slug: "vista",
+    name: "Vista",
+    county: "San Diego",
+    state: "CA",
+    zip: ["92081", "92083", "92084", "92085"],
+    meta: {
+      title: "Party Rentals in Vista CA | Kelari Party Rentals",
+      description:
+        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Vista. Serving Shadowridge, Buena Creek, North Vista & surrounding neighborhoods.",
+    },
+    headline: "Vista Party Rentals",
+    subheadline:
+      "Tables, chairs, tents & décor delivered and set up at your Vista venue — stress-free.",
+    intro:
+      "From backyard celebrations in Shadowridge to park parties at Brengle Terrace, Kelari Party Rentals is Vista's full-service source for tables, chairs, tents, linens, and décor. We deliver, set up, and pick up so you can enjoy every moment with your guests.",
+    neighborhoods: [
+      "Shadowridge",
+      "Buena Creek",
+      "North Vista",
+      "South Vista",
+      "Rancho Minerva",
+      "Emerald Heights",
+      "Vista Village",
+    ],
+    parks: [
+      "Brengle Terrace Park",
+      "Brengle Terrace Amphitheater",
+      "Guajome Regional Park",
+      "Anza-Borrego Vista",
+      "Bobier Drive Park",
+      "Vista Sports Park",
+    ],
+    localProof:
+      "Vista families trust Kelari Party Rentals for birthdays, baby showers, graduation parties, and community celebrations. From Shadowridge to Vista Village, we know the neighborhoods and deliver on time.",
+    deliveryNote:
+      "Free delivery and pickup throughout all Vista zip codes — 92081, 92083, 92084, and 92085.",
+    services: [
+      "party-rentals",
+      "birthday-party-rentals",
+      "backyard-party-rentals",
+      "baby-shower-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "park-party-rentals",
+      "delivery-setup-pickup",
+    ],
+    faqs: [
+      {
+        question: "Do you deliver party rentals to Vista?",
+        answer:
+          "Yes! We offer free delivery, setup, and pickup throughout Vista — Shadowridge, Buena Creek, North Vista, South Vista, Rancho Minerva, and all surrounding neighborhoods.",
+      },
+      {
+        question: "Can I rent tables and chairs for a party at a Vista park?",
+        answer:
+          "Absolutely. We regularly deliver to Brengle Terrace Park, Guajome Regional Park, Vista Sports Park, and other Vista parks. We handle full setup and teardown so you can enjoy the event.",
+      },
+      {
+        question: "How far in advance should I book party rentals in Vista?",
+        answer:
+          "We recommend booking at least 1–2 weeks ahead, especially during peak season (May–October). Last-minute requests are welcome — call us to check availability.",
+      },
+      {
+        question: "What areas of Vista do you serve?",
+        answer:
+          "We serve every neighborhood in Vista — Shadowridge, Buena Creek, North Vista, South Vista, Rancho Minerva, Emerald Heights, and Vista Village.",
+      },
+    ],
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
