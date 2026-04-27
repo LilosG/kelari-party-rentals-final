@@ -17,7 +17,7 @@ const {
   title,
   description,
   canonical = Astro.url.href,
-  ogImage = site.schema.image,
+  ogImage = site.schema.image.url,
   schema,
   robots = "index, follow",
 } = Astro.props;
