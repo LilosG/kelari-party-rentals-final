@@ -649,6 +649,92 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    slug: "quinceanera-rentals",
+    name: "Quinceañera Rentals",
+    shortName: "Quinceañera Rentals",
+    meta: {
+      title: "Quinceañera Rentals in North County San Diego | Kelari Party Rentals",
+      description:
+        "Elegant tables, chairs, linens, tableware & décor for quinceañeras in Carlsbad, Encinitas, Oceanside, San Marcos & Vista. Free delivery and setup.",
+    },
+    cityMeta: {
+      title: "Quinceañera Rentals in {city} CA | Kelari Party Rentals",
+      description:
+        "Elegant quinceañera tables, chairs, linens & décor with free delivery and setup in {city}. Make her special day unforgettable with Kelari.",
+    },
+    headline: "Quinceañera Rentals in North County San Diego",
+    cityHeadline: "Quinceañera Rentals in {city}",
+    subheadline:
+      "Elegant tables, chairs, linens & décor for a beautiful quinceañera celebration.",
+    citySubheadline:
+      "Quinceañera rentals delivered and set up at your {city} venue — elegant, full-service, stress-free.",
+    intro:
+      "A quinceañera deserves a beautiful setting. Kelari Party Rentals provides elegant tables, Chiavari chairs, premium linens, tableware, centerpieces, and décor for quinceañera celebrations across North County San Diego. We deliver, set up, and pick up — so the family can focus on the birthday girl.",
+    cityIntro:
+      "Planning a quinceañera in {city}? Kelari Party Rentals delivers elegant tables, Chiavari chairs, premium linens, and décor right to your venue. We handle full setup and pickup so your family can enjoy every moment of this milestone celebration.",
+    icon: "👑",
+    whatsIncluded: [
+      {
+        icon: "🪑",
+        title: "Chiavari Chairs & Tables",
+        description:
+          "Gold or silver Chiavari chairs and round tables for an elegant quinceañera setting.",
+      },
+      {
+        icon: "🎀",
+        title: "Premium Linens",
+        description:
+          "Floor-length tablecloths, satin runners, and coordinating napkins in your quinceañera colors.",
+      },
+      {
+        icon: "✨",
+        title: "Centerpieces & Décor",
+        description:
+          "Floral centerpieces, vases, candelabras, and accent pieces for a stunning tablescape.",
+      },
+      {
+        icon: "🍽️",
+        title: "Fine Tableware",
+        description:
+          "Charger plates, glassware, and flatware for an elegant place setting at every seat.",
+      },
+      {
+        icon: "⛺",
+        title: "Tent or Canopy",
+        description:
+          "Frame tents and canopies for outdoor quinceañera venues — shade and shelter for all your guests.",
+      },
+      {
+        icon: "🚚",
+        title: "Full-Service Delivery",
+        description:
+          "We deliver, set up every item with care, and return for pickup after the celebration — always included.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What rental items do you provide for a quinceañera?",
+        answer:
+          "We provide tables, Chiavari chairs, premium linens, charger plates, glassware, flatware, centerpieces, canopies or tents, and décor accents. Everything can be customized to your quinceañera color theme and style.",
+      },
+      {
+        question: "Do you deliver quinceañera rentals to backyards and venues in {city}?",
+        answer:
+          "Yes — we deliver to private homes, backyards, parks, community centers, and event venues throughout {city}. Free delivery, professional setup, and same-day pickup are included with every order.",
+      },
+      {
+        question: "How far in advance should I book quinceañera rentals?",
+        answer:
+          "We recommend booking 3–4 weeks in advance for quinceañeras, especially for weekend dates during peak season (May–October). Contact us early to confirm availability and reserve your date.",
+      },
+      {
+        question: "Can you match our quinceañera color theme?",
+        answer:
+          "Yes — we carry linens, napkins, and accent pieces in a wide range of colors. Share your color palette when you request a quote and we will put together a coordinated package.",
+      },
+    ],
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

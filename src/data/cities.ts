@@ -77,6 +77,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -146,6 +147,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -217,6 +219,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -287,6 +290,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -353,6 +357,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -421,6 +426,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -489,6 +495,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -557,6 +564,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -627,6 +635,7 @@ export const cities: City[] = [
       "engagement-party-rentals",
       "park-party-rentals",
       "delivery-setup-pickup",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
