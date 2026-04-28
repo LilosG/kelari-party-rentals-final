@@ -89,15 +89,12 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
       </div>
 
       <div>
-        <p class={`${labelClass} mb-2`}>Rental Items</p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <label for="qf-emb-items" class={labelClass}>Rental Items <span class="text-neutral-400 font-normal text-xs">(hold Ctrl/Cmd for multiple)</span></label>
+        <select id="qf-emb-items" name="items" multiple size="4" class={`${selectClass} w-full`}>
           {RENTAL_ITEMS.map((item) => (
-            <label class={`flex items-center gap-2.5 rounded-lg border p-3 cursor-pointer transition-colors has-[:checked]:border-brand-pink has-[:checked]:bg-brand-pink/10 ${checkboxBorderClass} ${checkboxBgClass}`}>
-              <input type="checkbox" name="items" value={item} class="accent-brand-pink h-4 w-4 shrink-0" />
-              <span class={checkboxTextClass}>{item}</span>
-            </label>
+            <option value={item}>{item}</option>
           ))}
-        </div>
+        </select>
       </div>
 
       <div>
@@ -200,15 +197,12 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
               </div>
 
               <div>
-                <p class={`${labelClass} mb-2`}>Rental Items</p>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <label for="qf-items" class={labelClass}>Rental Items <span class="text-neutral-400 font-normal text-xs">(hold Ctrl/Cmd to select multiple)</span></label>
+                <select id="qf-items" name="items" multiple size="4" class={`${selectClass} w-full`}>
                   {RENTAL_ITEMS.map((item) => (
-                    <label class={`flex items-center gap-2.5 rounded-lg border p-3 cursor-pointer transition-colors has-[:checked]:border-brand-pink has-[:checked]:bg-brand-pink/10 ${checkboxBorderClass} ${checkboxBgClass}`}>
-                      <input type="checkbox" name="items" value={item} class="accent-brand-pink h-4 w-4 shrink-0" />
-                      <span class={checkboxTextClass}>{item}</span>
-                    </label>
+                    <option value={item}>{item}</option>
                   ))}
-                </div>
+                </select>
               </div>
 
               <div>
@@ -277,7 +271,7 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
       replyTo: fd.get('email'),
       event_date: fd.get('event_date'),
       guest_count: fd.get('guest_count'),
-      items: fd.getAll('items').join(','),
+      items: fd.getAll('items').length ? fd.getAll('items').join(', ') : 'Not specified',
       message: fd.get('message') || '',
       honeypot: fd.get('honeypot') || '',
       subject: 'New Quote Request \u2013 Kelari Party Rentals',
