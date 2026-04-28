@@ -8,9 +8,15 @@ import CtaBand from "../../components/CtaBand.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 import CityCards from "../../components/CityCards.astro";
 
+import OccasionStrip from "../../components/OccasionStrip.astro";
+import WhatsIncluded from "../../components/WhatsIncluded.astro";
+import HowItWorks from "../../components/HowItWorks.astro";
+import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
 import { site, nap } from "../../data/site";
 import { categories, type Category } from "../../data/categories";
 import { cities } from "../../data/cities";
+import { howItWorksSteps, testimonials } from "../../data/homepage";
 
 export function getStaticPaths() {
   return categories.map((cat) => ({
@@ -43,6 +49,13 @@ const categoryImages: Record<string, string> = {
 const bgImage = categoryImages[category.slug] ?? "/images/hero-party.jpg";
 
 const otherCategories = categories.filter((c) => c.slug !== category.slug);
+
+const catName = category.name;
+const catNameLower = category.name.toLowerCase();
+const titleIncluded = "What's Included with Every " + catName + " Rental";
+const subtitleIncluded = "Free delivery, professional setup, and same-day pickup included with every " + catNameLower + " order.";
+const titleHowItWorks = "How " + catName + " Rentals Work";
+const titleFaq = catName + " Rentals — Frequently Asked Questions";
 
 const schema = [
   {
@@ -79,6 +92,18 @@ const schema = [
       },
     ],
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: category.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  },
 ];
 ---
 
@@ -99,7 +124,10 @@ const schema = [
   <!-- 2 · Trust Bar ────────────────────────────── -->
   <TrustBar />
 
-  <!-- 3 · Intro — white ────────────────────────── -->
+  <!-- 3 · Occasion Strip ───────────────────────── -->
+  <OccasionStrip heading="We Specialize In" />
+
+  <!-- 4 · Intro — white ────────────────────────── -->
   <Section bg="white">
     <div class="max-w-3xl mx-auto text-center">
       <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
@@ -141,7 +169,35 @@ const schema = [
     </div>
   </Section>
 
-  <!-- 5 · Other Categories — white ────────────── -->
+  <!-- 5 · What's Included — white ─────────────── -->
+  <WhatsIncluded
+    eyebrow="FULL-SERVICE RENTALS"
+    title={titleIncluded}
+    subtitle={subtitleIncluded}
+    items={category.whatsIncluded}
+    columns={3}
+    bg="white"
+  />
+
+  <!-- 6 · How It Works — light ─────────────────── -->
+  <HowItWorks
+    eyebrow="HOW IT WORKS"
+    title={titleHowItWorks}
+    subtitle="From your first quote to post-event pickup we handle every step so you can focus on celebrating."
+    steps={howItWorksSteps}
+    bg="light"
+  />
+
+  <!-- 7 · Testimonials — white ─────────────────── -->
+  <TestimonialCarousel
+    eyebrow="REVIEWS"
+    title="Trusted by Families Across North County"
+    subtitle="Hundreds of events served across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista."
+    testimonials={testimonials}
+    bg="white"
+  />
+
+  <!-- 8 · Other Categories — white ────────────── -->
   <Section bg="white">
     <div class="mb-10 md:mb-12">
       <SectionHeader
@@ -173,7 +229,15 @@ const schema = [
     bg="light"
   />
 
-  <!-- 7 · CTA Band — dark ────────────────── -->
+  <!-- FAQ — light ──────────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={titleFaq}
+    faqs={category.faqs}
+    bg="light"
+  />
+
+  <!-- CTA Band — dark ─────────────────────────── -->
   <CtaBand
     title={`Need ${category.name} for Your Event?`}
     subtitle={`Get a free quote for ${category.name.toLowerCase()} rentals. Free delivery, setup, and pickup included with every order.`}

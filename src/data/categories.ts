@@ -6,6 +6,17 @@ export interface CategoryItem {
   sizes?: string[];
 }
 
+export interface CategoryIncludedItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface CategoryFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Category {
   slug: string;
   name: string;
@@ -18,6 +29,8 @@ export interface Category {
   intro: string;
   icon: string;
   items: CategoryItem[];
+  whatsIncluded: CategoryIncludedItem[];
+  faqs: CategoryFAQ[];
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -27,14 +40,14 @@ export const categories: Category[] = [
     slug: "tables",
     name: "Tables",
     meta: {
-      title: "Table Rentals | Kelari Party Rentals",
+      title: "Table Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Rectangular, round & cocktail table rentals for parties and events. Free delivery and setup in North County San Diego.",
+        "Rectangular, round & cocktail table rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery and setup included.",
     },
     headline: "Table Rentals",
-    subheadline: "Rectangular, round & cocktail tables for every event size.",
+    subheadline: "Rectangular, round & cocktail tables for every event size — delivered clean and set up at your venue.",
     intro:
-      "From intimate dinner parties to large celebrations, we have the right tables for your event. All tables are delivered clean, set up at your venue, and picked up after.",
+      "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, cocktail, and kids' tables for parties of every size across North County San Diego. Every table arrives clean, is set up at your venue by our team, and is picked up after your event — no hauling, no assembly, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
     icon: "🪑",
     items: [
       {
@@ -61,19 +74,73 @@ export const categories: Category[] = [
         description: "Low-height table sized for children ages 2–8.",
       },
     ],
+    whatsIncluded: [
+      {
+        icon: "🚚",
+        title: "Free Delivery",
+        description: "We deliver every table to your venue at no extra charge — homes, parks, community centers, and event spaces.",
+      },
+      {
+        icon: "🔧",
+        title: "Professional Setup",
+        description: "Our team places and arranges every table to your layout spec before your first guest arrives.",
+      },
+      {
+        icon: "✅",
+        title: "Clean & Inspection-Ready",
+        description: "Every table is cleaned and inspected before delivery — no surprises on setup day.",
+      },
+      {
+        icon: "🧹",
+        title: "Same-Day Pickup",
+        description: "We return after your event and collect everything. You don't break down a single table.",
+      },
+      {
+        icon: "📐",
+        title: "Layout Guidance",
+        description: "Not sure how many tables or what configuration fits your space? We'll recommend the right setup based on your guest count and venue.",
+      },
+      {
+        icon: "📋",
+        title: "Mix & Match",
+        description: "Combine rectangular, round, and cocktail tables in one order — we coordinate the full setup.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How many tables do I need for my party?",
+        answer: "For round tables seating 8–10 guests each, divide your guest count by 8 and round up. Always add 1–2 extra tables for food, cake, and gifts on top of your seating count. For 50 guests: 7 round tables for seating plus 2 extra for food and gifts.",
+      },
+      {
+        question: "What is the difference between round and rectangular tables?",
+        answer: "Round tables create better conversation flow — guests face each other and the setup feels more social. Rectangular tables are more space-efficient and work well for buffet lines and park setups. For milestone events like showers and graduation parties, round tables are the more common choice.",
+      },
+      {
+        question: "Do you deliver tables to parks in Carlsbad and Encinitas?",
+        answer: "Yes — we deliver to all public parks throughout North County San Diego including Poinsettia Park, Alga Norte, Stagecoach Park, Encinitas Community Park, and more. We handle full setup and teardown at your reserved park location.",
+      },
+      {
+        question: "Are linens included with table rentals?",
+        answer: "Linens are a separate rental item but can be added to any table order. We carry tablecloths, runners, and napkins in a wide range of colors. Most events benefit significantly from adding linens — a bare table looks like a cafeteria; the same table with a tablecloth looks intentional.",
+      },
+      {
+        question: "How far in advance should I book table rentals?",
+        answer: "We recommend 1–2 weeks for most events and 3–4 weeks for summer weekends (May–September). For graduation season in June, book 4–6 weeks ahead — table inventory commits fast during that window.",
+      },
+    ],
   },
   {
     slug: "chairs",
     name: "Chairs",
     meta: {
-      title: "Chair Rentals | Kelari Party Rentals",
+      title: "Chair Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Folding chairs, Chiavari chairs & kids' chairs for parties and events. Free delivery and setup in North County San Diego.",
+        "Folding chairs, Chiavari chairs & kids' chairs for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery and setup included.",
     },
     headline: "Chair Rentals",
-    subheadline: "Folding, Chiavari & kids' chairs for every style and budget.",
+    subheadline: "Folding, Chiavari & kids' chairs for every style and budget — delivered and set up at your venue.",
     intro:
-      "Comfortable seating for every guest. Choose from classic folding chairs, elegant Chiavari chairs, or kid-sized seating — all delivered and set up at your venue.",
+      "Chair selection does more to set the tone of an event than almost any other rental decision. Standard folding chairs are practical and perfectly appropriate for casual birthdays and park events. Chiavari chairs — gold or silver — elevate the visual presentation of showers, graduation parties, and milestone celebrations significantly. Kelari Party Rentals carries the full range of chair styles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every chair is delivered clean, set up at your venue, and picked up after your event. One chair per guest is the baseline — we'll help you confirm the right count and style for your event type.",
     icon: "💺",
     items: [
       {
@@ -97,19 +164,73 @@ export const categories: Category[] = [
         description: "Small folding chair sized for children ages 2–8.",
       },
     ],
+    whatsIncluded: [
+      {
+        icon: "🚚",
+        title: "Free Delivery",
+        description: "Every chair order includes free delivery to your venue — no per-item delivery fees.",
+      },
+      {
+        icon: "🔧",
+        title: "Full Setup",
+        description: "We place every chair at the tables or in the configuration you specify. You arrive to a ready event.",
+      },
+      {
+        icon: "✅",
+        title: "Clean & Inspected",
+        description: "Every chair is cleaned and checked before delivery. Chiavari cushions are freshly covered.",
+      },
+      {
+        icon: "🧹",
+        title: "Post-Event Pickup",
+        description: "We return after your event and collect every chair. No stacking, no hauling for you.",
+      },
+      {
+        icon: "🪑",
+        title: "Style Options",
+        description: "White folding, black folding, gold Chiavari, silver Chiavari, and kids' chairs — all available in one order.",
+      },
+      {
+        icon: "📋",
+        title: "Quantity Guidance",
+        description: "Not sure how many chairs you need? We'll confirm the right count based on your guest list and layout.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How many chairs do I need for my event?",
+        answer: "Plan for one chair per guest plus a 5–10% buffer for late additions. For 50 guests, order 55 chairs. If your event has a cocktail format where guests mingle rather than sit, you can reduce to 60–70% of your guest count.",
+      },
+      {
+        question: "What is the difference between folding chairs and Chiavari chairs?",
+        answer: "Folding chairs are practical, affordable, and appropriate for casual events — birthdays, park parties, graduation celebrations. Chiavari chairs are an elegant upgrade suited to showers, engagement parties, quinceañeras, and milestone events where presentation matters. The visual difference is significant and worth the upgrade for formal occasions.",
+      },
+      {
+        question: "Do you offer kids' chairs for children's parties?",
+        answer: "Yes — we carry small folding chairs sized for children ages 2–8. For kids' parties, we recommend a mix of adult and kids' chairs depending on your guest breakdown. Kids' tables and chairs can be ordered together as a set.",
+      },
+      {
+        question: "Can I mix chair styles in one order?",
+        answer: "Yes — you can combine Chiavari chairs for the main tables with standard folding chairs for overflow seating, or mix adult and kids' chairs for family events. We coordinate the full setup on delivery day.",
+      },
+      {
+        question: "Do you deliver chairs to parks in North County San Diego?",
+        answer: "Yes — we deliver to all public parks throughout Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We handle full setup at your reserved park location and return for teardown after your event.",
+      },
+    ],
   },
   {
     slug: "tents-canopies",
     name: "Tents & Canopies",
     meta: {
-      title: "Tent & Canopy Rentals | Kelari Party Rentals",
+      title: "Tent & Canopy Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Pop-up canopies and frame tents in multiple sizes. Sun and weather protection for outdoor events. Free setup in North County San Diego.",
+        "Pop-up canopies and frame tents in multiple sizes for outdoor events in Carlsbad, Encinitas, Oceanside & San Marcos. Free setup and pickup included.",
     },
     headline: "Tent & Canopy Rentals",
     subheadline: "Pop-up canopies and frame tents for shade and shelter at any outdoor event.",
     intro:
-      "Keep your guests comfortable rain or shine. Our tents and canopies provide shade and weather protection for backyard parties, park events, and outdoor celebrations of every size.",
+      "In North County San Diego, a tent or canopy isn't optional for daytime outdoor events — it's what makes the difference between a comfortable celebration and guests checking the time. Kelari Party Rentals carries pop-up canopies and professional frame tents in multiple sizes for backyard parties, park events, and outdoor celebrations across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver, set up, properly weight and stake every structure, and return for same-day pickup after your event. Whether you need a compact 10x10 canopy for a food station or a 20x40 frame tent for a 100-guest graduation party, we have the right coverage for your venue and guest count.",
     icon: "⛺",
     items: [
       {
@@ -133,19 +254,73 @@ export const categories: Category[] = [
         sizes: ["20×40"],
       },
     ],
+    whatsIncluded: [
+      {
+        icon: "🚚",
+        title: "Free Delivery",
+        description: "We transport and deliver every tent and canopy to your venue at no extra charge.",
+      },
+      {
+        icon: "🔧",
+        title: "Professional Setup",
+        description: "Our team assembles every structure properly — frame tents staked or weighted based on your surface type.",
+      },
+      {
+        icon: "⚓",
+        title: "Proper Anchoring",
+        description: "Every canopy and tent is weighted or staked to handle coastal Carlsbad breezes. We bring the right anchoring equipment for your yard surface.",
+      },
+      {
+        icon: "✅",
+        title: "Pre-Event Check",
+        description: "We confirm every structure is secure and properly positioned before leaving your venue.",
+      },
+      {
+        icon: "🧹",
+        title: "Same-Day Pickup",
+        description: "We return after your event and handle full breakdown and removal — no disassembly for you.",
+      },
+      {
+        icon: "📐",
+        title: "Size Guidance",
+        description: "Not sure what size tent fits your yard or guest count? We'll recommend the right option based on your space and event details.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What size tent do I need for my backyard party?",
+        answer: "A 10x20 pop-up canopy covers a dining area for 20–30 guests. A 20x20 frame tent comfortably fits 40–50 guests. For 60–100 guests, a 20x40 frame tent is the right call. When in doubt, go slightly larger — a tent with breathing room is significantly more comfortable than a cramped one.",
+      },
+      {
+        question: "What is the difference between a pop-up canopy and a frame tent?",
+        answer: "Pop-up canopies set up quickly, are freestanding, and come in 10x10 and 10x20 sizes. They provide overhead shade and light wind protection but are open on the sides. Frame tents are more substantial aluminum-frame structures — sturdier in wind, more polished in appearance, and available in larger sizes. Frame tents are the right choice for larger events, more formal occasions, and any event where weather protection matters.",
+      },
+      {
+        question: "Can you set up a tent on artificial turf or concrete?",
+        answer: "Yes — we bring weighted bases for artificial turf and concrete surfaces where ground staking isn't possible. Let us know your yard surface when booking and we'll bring the right anchoring equipment.",
+      },
+      {
+        question: "Do I need a tent for an evening party?",
+        answer: "Not necessarily — once the sun sets, shade becomes irrelevant and open-sky evening parties with string lights can be beautiful. Tents are most valuable for daytime events between 10am and 4pm when sun and heat are the main comfort factors.",
+      },
+      {
+        question: "Do you deliver tents to parks in Carlsbad and Encinitas?",
+        answer: "Yes — we regularly deliver and set up canopies and frame tents at public parks throughout North County San Diego. Most parks require a reservation for events with equipment — confirm your reservation window and we'll coordinate delivery to arrive within it.",
+      },
+    ],
   },
   {
     slug: "linens",
     name: "Linens",
     meta: {
-      title: "Linen Rentals | Kelari Party Rentals",
+      title: "Linen Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Tablecloths, runners, napkins & chair sashes in a variety of colors. Free delivery in North County San Diego.",
+        "Tablecloths, runners, napkins & chair sashes in dozens of colors. Free delivery in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Linen Rentals",
-    subheadline: "Tablecloths, runners, napkins & sashes in dozens of colors.",
+    subheadline: "Tablecloths, runners, napkins & sashes in dozens of colors — freshly laundered and pressed.",
     intro:
-      "Linens set the tone for your event. Choose from a wide range of colors and fabrics for tablecloths, runners, napkins, and chair sashes — all freshly laundered and pressed.",
+      "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth and a coordinating runner looks like an intentional celebration. Kelari Party Rentals carries tablecloths, runners, napkins, and chair sashes in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
     icon: "🎀",
     items: [
       {
@@ -171,19 +346,73 @@ export const categories: Category[] = [
         description: "Organza or satin sash to dress up any chair.",
       },
     ],
+    whatsIncluded: [
+      {
+        icon: "✅",
+        title: "Freshly Laundered",
+        description: "Every linen is washed, pressed, and inspected before delivery — no wrinkles, no stains.",
+      },
+      {
+        icon: "🎨",
+        title: "Color Coordination",
+        description: "Share your event palette and we'll match tablecloths, runners, and napkins into a coordinated package.",
+      },
+      {
+        icon: "🚚",
+        title: "Free Delivery",
+        description: "Linens are delivered to your venue at no extra charge as part of your rental order.",
+      },
+      {
+        icon: "🔧",
+        title: "Setup Included",
+        description: "We dress every table with your linens as part of the setup — you don't fold or place a single cloth.",
+      },
+      {
+        icon: "🧹",
+        title: "Post-Event Pickup",
+        description: "We collect all linens after your event. No washing, no returning — we handle everything.",
+      },
+      {
+        icon: "📋",
+        title: "Full Range of Colors",
+        description: "From classic white and ivory to dusty rose, navy, sage, gold, and burgundy — we carry the colors your event needs.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What colors of linens do you carry?",
+        answer: "We carry a wide range of colors including white, ivory, black, navy, royal blue, dusty rose, blush, burgundy, sage green, emerald, gold, silver, lavender, and more. Contact us with your color palette and we'll confirm availability for your event date.",
+      },
+      {
+        question: "What size tablecloth do I need for a round table?",
+        answer: "For a 60-inch round table with a floor-length drop, you need a 120-inch round tablecloth. For a mid-length drop, a 90-inch round works. Floor-length is the standard for formal events — showers, graduation parties, and quinceañeras. Mid-length works for casual setups.",
+      },
+      {
+        question: "Do I need runners in addition to tablecloths?",
+        answer: "Runners are optional but add a significant layer of visual interest. A tablecloth in your base color plus a runner in a contrasting accent color is the most common and effective approach. It creates a layered, intentional look without overcomplicating the setup.",
+      },
+      {
+        question: "Are linens included with table rentals or priced separately?",
+        answer: "Linens are priced separately from tables but can be added to any order. We recommend combining tables, chairs, and linens in a single quote — we'll price the complete package together.",
+      },
+      {
+        question: "How do I choose the right linen colors for my event?",
+        answer: "Pick two colors — a base and an accent. Keep tablecloths in the base color and runners and napkins in the accent. White or ivory base with a colored accent works for almost any event. For quinceañeras and showers, coordinate with your overall color theme. When in doubt, contact us and we'll make recommendations.",
+      },
+    ],
   },
   {
     slug: "tableware",
     name: "Tableware",
     meta: {
-      title: "Tableware Rentals | Kelari Party Rentals",
+      title: "Tableware Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Plates, flatware, glassware & chargers for elegant event dining. Free delivery in North County San Diego.",
+        "Plates, flatware, glassware & chargers for elegant event dining in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery included.",
     },
     headline: "Tableware Rentals",
-    subheadline: "Plates, flatware, glassware & chargers for a polished table setting.",
+    subheadline: "Plates, flatware, glassware & chargers for a polished table setting at any celebration.",
     intro:
-      "Elevate your table setting with our curated tableware collection. From charger plates to glassware, we provide everything you need for a polished dining experience.",
+      "Rented tableware is the detail that separates a polished event from a disposable one. For baby showers, quinceañeras, engagement parties, and milestone birthdays, real plates, glassware, and flatware create a significantly better experience than paper and plastic — and eliminate mid-party trash management. Kelari Party Rentals carries dinner plates, salad plates, charger plates, flatware sets, water goblets, wine glasses, and champagne flutes for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every piece arrives clean and ready to use, is set at each place setting by our team, and is collected after your event — no dishwashing, no returns.",
     icon: "🍽️",
     items: [
       {
@@ -207,19 +436,73 @@ export const categories: Category[] = [
         description: "Water goblets, wine glasses, and champagne flutes.",
       },
     ],
+    whatsIncluded: [
+      {
+        icon: "✅",
+        title: "Clean & Table-Ready",
+        description: "Every piece is washed, inspected, and polished before delivery — ready to use straight from the box.",
+      },
+      {
+        icon: "🔧",
+        title: "Place Setting Setup",
+        description: "We set each place setting at the table as part of our setup service — plates, flatware, and glassware positioned correctly.",
+      },
+      {
+        icon: "🚚",
+        title: "Free Delivery",
+        description: "Tableware is delivered to your venue as part of your rental order at no extra charge.",
+      },
+      {
+        icon: "🧹",
+        title: "Post-Event Collection",
+        description: "We collect all tableware after your event. No dishwashing, no sorting, no returns — we handle everything.",
+      },
+      {
+        icon: "🍽️",
+        title: "Full Place Setting",
+        description: "Dinner plates, salad plates, charger plates, flatware, water goblets, wine glasses, and champagne flutes — all available in one order.",
+      },
+      {
+        icon: "📋",
+        title: "Quantity Guidance",
+        description: "We'll confirm the right quantities based on your guest count and meal format — seated dinner, buffet, or cocktail style.",
+      },
+    ],
+    faqs: [
+      {
+        question: "When should I rent tableware instead of using disposables?",
+        answer: "For baby showers, engagement parties, quinceañeras, and any milestone event where presentation matters — rented tableware is worth it. For casual backyard birthdays and park parties, quality disposables are perfectly acceptable. The decision comes down to the formality of the event and whether you want to manage trash during the celebration.",
+      },
+      {
+        question: "How many plates and glasses do I need per guest?",
+        answer: "Plan for one dinner plate and one salad plate per guest plus 5–10% extra. For glassware, 1–2 water goblets per guest and one wine glass or champagne flute per guest if serving. We'll confirm exact quantities when you request a quote.",
+      },
+      {
+        question: "Do charger plates come in different finishes?",
+        answer: "Yes — we carry gold and silver charger plates. Gold chargers work well with warm palettes (dusty rose, burgundy, champagne). Silver chargers suit cooler palettes (navy, lavender, white, royal blue). For quinceañeras, gold is the most traditional choice.",
+      },
+      {
+        question: "Do I need to wash the tableware before you pick it up?",
+        answer: "No — we collect everything as-is after your event. Scrape excess food into the trash but no washing required. We handle cleaning on our end.",
+      },
+      {
+        question: "Can tableware be combined with linens and chairs in one order?",
+        answer: "Yes — most of our orders combine multiple rental categories. We coordinate tables, chairs, linens, and tableware in a single package with one delivery, one setup, and one pickup. Request a quote with your full list and we'll price everything together.",
+      },
+    ],
   },
   {
     slug: "decorations",
     name: "Decorations",
     meta: {
-      title: "Decoration Rentals | Kelari Party Rentals",
+      title: "Decoration Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Centerpieces, arches, backdrops & décor accents for parties and celebrations. Free delivery in North County San Diego.",
+        "Centerpieces, arches, backdrops & décor accents for parties and celebrations in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery included.",
     },
     headline: "Decoration Rentals",
-    subheadline: "Centerpieces, arches, backdrops & accents to style your celebration.",
+    subheadline: "Centerpieces, arches, backdrops & accents to transform any space into a celebration-ready venue.",
     intro:
-      "The details make the event. Our decoration rentals include centerpieces, arches, backdrops, and accent pieces that transform any space into a celebration-ready venue.",
+      "Decorations define the visual identity of your event and create the moments guests remember and photograph. The right centerpiece, backdrop, or arch takes a setup from functional to memorable. Kelari Party Rentals carries centerpieces, balloon arches, backdrop frames, vase collections, and accent pieces for events of every style across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver and position every decoration as part of the setup, coordinate with your linen and tableware choices to create a cohesive look, and collect everything after your event. You don't source, transport, or arrange a single piece — we handle it all.",
     icon: "✨",
     items: [
       {
@@ -239,19 +522,73 @@ export const categories: Category[] = [
         description: "Glass cylinder and mercury vases in assorted sizes.",
       },
     ],
+    whatsIncluded: [
+      {
+        icon: "✨",
+        title: "Styled Placement",
+        description: "We position every decoration as part of the setup — centerpieces on tables, backdrop frames assembled, arches in place.",
+      },
+      {
+        icon: "🎨",
+        title: "Color Coordination",
+        description: "We coordinate décor with your linen and tableware choices to create a cohesive visual look across the entire setup.",
+      },
+      {
+        icon: "🚚",
+        title: "Free Delivery",
+        description: "All decoration rentals are delivered to your venue as part of your order at no extra charge.",
+      },
+      {
+        icon: "📸",
+        title: "Photo-Ready Results",
+        description: "Every setup is arranged for visual impact — clean lines, balanced composition, and a polished finish.",
+      },
+      {
+        icon: "🧹",
+        title: "Post-Event Collection",
+        description: "We collect all decoration rentals after your event. No disassembly or packing for you.",
+      },
+      {
+        icon: "📋",
+        title: "Custom Packages",
+        description: "Decorations can be combined with tables, linens, and tableware in a single coordinated package.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What decoration rentals are most popular for baby showers?",
+        answer: "Centerpieces and backdrop frames are the most requested decoration rentals for baby showers. A floral or lantern centerpiece on each guest table plus a styled backdrop behind the gift or food table creates the visual focal points guests photograph most. Coordinating the décor with your linen colors ties the whole setup together.",
+      },
+      {
+        question: "Do you offer balloon arches for birthday parties?",
+        answer: "Yes — we carry balloon arches in custom color combinations for birthdays, graduation parties, and quinceañeras. Balloon arches work well as entrance arches, photo backdrop structures, and dessert table accents. Specify your color palette when requesting a quote.",
+      },
+      {
+        question: "What is a backdrop frame and what can I do with it?",
+        answer: "A backdrop frame is an adjustable metal or PVC structure that supports fabric drapes, balloon installations, floral walls, or printed vinyl backdrops. It creates a defined focal point for photos behind the head table, cake table, or main entrance. The frame is the structure — the backdrop material can be customized to your event style.",
+      },
+      {
+        question: "Can decorations be combined with linens and tableware in one order?",
+        answer: "Yes — most of our full-service orders combine tables, chairs, linens, tableware, and decorations in one package. One delivery, one setup, one pickup. Request a quote with your full list and we'll coordinate everything.",
+      },
+      {
+        question: "How far in advance should I book decoration rentals?",
+        answer: "We recommend 2–3 weeks for most decoration orders and 4–6 weeks for peak season events (May–September) or events requiring custom balloon colors. Backdrop frames and centerpiece styles have limited inventory — earlier booking gives you more options.",
+      },
+    ],
   },
   {
     slug: "lighting",
     name: "Lighting",
     meta: {
-      title: "Lighting Rentals | Kelari Party Rentals",
+      title: "Lighting Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "String lights, uplighting & lanterns for atmospheric event lighting. Free delivery and setup in North County San Diego.",
+        "String lights, uplighting & lanterns for atmospheric event lighting in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery and setup included.",
     },
     headline: "Lighting Rentals",
-    subheadline: "String lights, uplighting & lanterns for the perfect ambiance.",
+    subheadline: "String lights, uplighting & lanterns for the perfect ambiance — installed and ready for your event.",
     intro:
-      "Set the mood with the right lighting. Our string lights, uplighting, and lanterns create warm, inviting atmospheres for evening events, tented celebrations, and backyard gatherings.",
+      "Lighting is the most transformative upgrade available for evening events and tented celebrations. Bistro string lights under a frame tent create a warm, inviting atmosphere that photographs beautifully and keeps guests comfortable after dark. LED uplighting adds color and dimension to tent walls, trees, and venue spaces in ways that no other rental item can replicate. Kelari Party Rentals carries bistro string lights, LED uplighting, paper lanterns, and flameless LED candles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We install every lighting element as part of the setup, test everything before leaving your venue, and collect it all after your event.",
     icon: "💡",
     items: [
       {
@@ -270,6 +607,60 @@ export const categories: Category[] = [
       {
         name: "LED Candle",
         description: "Flameless LED candles for safe, atmospheric table lighting.",
+      },
+    ],
+    whatsIncluded: [
+      {
+        icon: "🔧",
+        title: "Professional Installation",
+        description: "We hang string lights, position uplights, and install every lighting element as part of the setup — no DIY rigging.",
+      },
+      {
+        icon: "✅",
+        title: "Pre-Event Test",
+        description: "Every lighting element is tested before we leave your venue — no dark bulbs or failed connections discovered at party time.",
+      },
+      {
+        icon: "🚚",
+        title: "Free Delivery",
+        description: "All lighting rentals are delivered to your venue as part of your order at no extra charge.",
+      },
+      {
+        icon: "💡",
+        title: "Color Matching",
+        description: "LED uplighting can be set to match your event's color palette — pink, gold, blue, purple, or any combination.",
+      },
+      {
+        icon: "🧹",
+        title: "Post-Event Collection",
+        description: "We take down and collect all lighting after your event. No coiling cables or removing hardware for you.",
+      },
+      {
+        icon: "⚡",
+        title: "Power Coordination",
+        description: "We confirm power source requirements when booking and bring the right extension equipment for your venue.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do string lights work under a frame tent?",
+        answer: "Yes — bistro string lights hung under a frame tent canopy are one of the most popular lighting setups we do. The tent structure provides natural attachment points and the warm overhead glow transforms the tent interior completely. This setup is particularly effective for evening graduation parties, quinceañeras, and engagement celebrations.",
+      },
+      {
+        question: "What is LED uplighting and how does it work?",
+        answer: "LED uplights are compact floor-mounted fixtures that project colored light upward onto walls, tent poles, trees, or other vertical surfaces. They're color-changeable and can be set to match your event palette. A set of uplights positioned around a tent perimeter or along venue walls creates dramatic ambient lighting that transforms a standard space.",
+      },
+      {
+        question: "Do I need a power source for string lights and uplighting?",
+        answer: "Yes — string lights and LED uplights require standard 120V power outlets. Confirm the location of your nearest outdoor outlets when booking and we'll bring appropriate extension cabling. For venues without convenient power access, ask about battery-powered options.",
+      },
+      {
+        question: "Can lighting be added to an existing rental order?",
+        answer: "Yes — lighting can be added to any order that includes tables, chairs, tents, or linens. We coordinate the full setup in a single delivery. Request a quote with your complete rental list and we'll price everything together.",
+      },
+      {
+        question: "Is lighting worth it for a daytime party?",
+        answer: "String lights and uplighting add the most value for evening events and covered tent setups. For daytime outdoor events, LED candles on tables add a subtle decorative touch without requiring power. If your event runs into the evening — graduation parties and quinceañeras often do — lighting is one of the best investments you can make.",
       },
     ],
   },
