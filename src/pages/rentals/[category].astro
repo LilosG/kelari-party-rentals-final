@@ -202,8 +202,8 @@ const schema = [
     bg="white"
   />
 
-  <!-- 9 · Other Categories — white ────────────── -->
-  <Section bg="white">
+  <!-- 9 · Other Categories — light ────────────── -->
+  <Section bg="light">
     <div class="mb-10 md:mb-12">
       <SectionHeader
         eyebrow="MORE RENTALS"
@@ -225,14 +225,6 @@ const schema = [
     </div>
   </Section>
 
-  <!-- 10 · FAQ — light ──────────────────────────── -->
-  <FAQAccordion
-    eyebrow="FAQ"
-    title={titleFaq}
-    faqs={category.faqs}
-    bg="light"
-  />
-
   <!-- 11 · City Cards — white ──────────────── -->
   <CityCards
     eyebrow="SERVICE AREAS"
@@ -240,6 +232,14 @@ const schema = [
     subtitle={`Free delivery and setup for ${category.name.toLowerCase()} rentals across North County San Diego.`}
     cities={cityCards}
     bg="white"
+  />
+
+  <!-- 10 · FAQ — light ──────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={titleFaq}
+    faqs={category.faqs}
+    bg="light"
   />
 
   <!-- 12 · CTA Band — dark ─────────────────────── -->

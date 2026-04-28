@@ -173,14 +173,6 @@ const schema = [
     bg="light"
   />
 
-  <!-- 8 · FAQ — light ──────────────────────────── -->
-  <FAQAccordion
-    eyebrow="FAQ"
-    title={`${service.name} — Frequently Asked Questions`}
-    faqs={service.faqs}
-    bg="light"
-  />
-
   <!-- 9 · City Cards — white ───────────────────── -->
   <CityCards
     eyebrow="SERVICE AREAS"
@@ -188,6 +180,14 @@ const schema = [
     subtitle={`Free delivery and setup for ${service.shortName.toLowerCase()} across North County San Diego. Choose your city for local details.`}
     cities={cityCards}
     bg="white"
+  />
+
+  <!-- 8 · FAQ — light ──────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={`${service.name} — Frequently Asked Questions`}
+    faqs={service.faqs}
+    bg="light"
   />
 
   <!-- 10 · CTA Band — dark ──────────────────────── -->

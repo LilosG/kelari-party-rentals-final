@@ -239,7 +239,7 @@ a {
 
   @media (min-width: 1024px) {
     .hero-shell {
-      min-height: 680px;
+      min-height: 560px;
     }
   }
 

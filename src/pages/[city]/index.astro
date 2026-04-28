@@ -187,7 +187,7 @@ const schema = [
     bg="white"
   />
 
-  <!-- 8b · How It Works — white ───────────────── -->
+  <!-- 8b · How It Works — light ──────────────── -->
   <HowItWorks
     eyebrow="HOW IT WORKS"
     title={`How Party Rentals Work in ${city.name}`}
@@ -205,22 +205,22 @@ const schema = [
     bg="light"
   />
 
-  <!-- 10 · FAQ — light ──────────────────────────── -->
-  <FAQAccordion
-    eyebrow="FAQ"
-    title={`${city.name} Party Rental FAQs`}
-    faqs={city.faqs}
-    bg="light"
-  />
-
   <!-- 11 · Nearby Cities — white ───────────────── -->
   <CityCards
     eyebrow="NEARBY CITIES"
     title="We Also Serve"
     subtitle="Free delivery and full-service setup in every North County San Diego city."
     cities={nearbyAreas.map((a) => ({ name: a.name, description: a.tagline, href: a.href }))}
-    bg="white"
+    bg="light"
     padding="default"
+  />
+
+  <!-- 10 · FAQ — white ─────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={`${city.name} Party Rental FAQs`}
+    faqs={city.faqs}
+    bg="light"
   />
 
   <!-- 12 · CTA Band — dark ──────────────────────── -->
