@@ -235,15 +235,7 @@ const schema = [
     bg="light"
   />
 
-  <!-- 10 · FAQ — light ──────────────────────────── -->
-  <FAQAccordion
-    eyebrow="FAQ"
-    title={`${service.name} in ${city.name} — FAQs`}
-    faqs={combinedFaqs}
-    bg="light"
-  />
-
-  <!-- 11 · Nearby Cities — white ───────────────── -->
+  <!-- 10 · Nearby Cities — white ──────────────── -->
   <CityCards
     eyebrow="NEARBY CITIES"
     title={`${service.shortName} in Nearby Cities`}
@@ -251,6 +243,14 @@ const schema = [
     cities={nearbyAreas.map((a) => ({ name: a.name, description: a.tagline, href: a.href }))}
     bg="white"
     padding="default"
+  />
+
+  <!-- 11 · FAQ — light ─────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={`${service.name} in ${city.name} — FAQs`}
+    faqs={combinedFaqs}
+    bg="light"
   />
 
   <!-- 12 · CTA Band — dark ──────────────────────── -->
