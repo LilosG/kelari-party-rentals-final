@@ -23,6 +23,7 @@ export interface Props {
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
   padding?: "default" | "compact" | "featured" | "none";
+  variant?: "cards" | "pills";
 }
 
 const {
@@ -32,6 +33,7 @@ const {
   subtitle,
   bg = "light",
   padding = "default",
+  variant = "cards",
 } = Astro.props;
 
 const cityImages: Record<string, ImageMetadata> = {
@@ -49,39 +51,55 @@ function getCityImage(city: CityCard): ImageMetadata {
 
 <Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
-    <div class="mb-12 md:mb-16">
+    <div class="mb-10 md:mb-12">
       <SectionHeader {eyebrow} title={title ?? ""} {subtitle} width="wide" />
     </div>
   )}
 
-  <div class="grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2 lg:grid-cols-4">
-    {cities.map((city) => (
-      <a
-        href={city.href}
-        class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col text-center transition-all duration-300 hover:-translate-y-1.5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
-      >
-        <div class="relative overflow-hidden aspect-[16/10]">
-          <Image
-            src={getCityImage(city)}
-            alt={city.name}
-            widths={[400, 800]}
-            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
-            loading="lazy"
-            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
-          />
-        </div>
-        <div class="p-5 flex flex-col flex-1 items-center">
-          <h3 class="font-display font-bold text-lg text-neutral-900 group-hover:text-brand-pink transition-colors">
-            {city.name}
-          </h3>
-          <p class="text-sm mt-2 leading-relaxed text-neutral-600">
-            {city.description}
-          </p>
-          <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200 text-brand-pink">
-            Party rentals in {city.name} <span aria-hidden="true">&rarr;</span>
-          </span>
-        </div>
-      </a>
-    ))}
-  </div>
+  {variant === "pills" ? (
+    <div class="flex flex-wrap justify-center gap-3">
+      {cities.map((city) => (
+        <a
+          href={city.href}
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-200 bg-white text-sm font-semibold text-neutral-700 hover:border-brand-pink hover:text-brand-pink hover:bg-pink-50 transition-all duration-200 shadow-sm"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 shrink-0 text-brand-pink" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd" />
+          </svg>
+          {city.name}
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2 lg:grid-cols-4">
+      {cities.map((city) => (
+        <a
+          href={city.href}
+          class="group relative overflow-hidden rounded-2xl bg-white border border-neutral-100 flex flex-col text-center transition-all duration-300 hover:-translate-y-1.5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
+        >
+          <div class="relative overflow-hidden aspect-[16/10]">
+            <Image
+              src={getCityImage(city)}
+              alt={city.name}
+              widths={[400, 800]}
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+            />
+          </div>
+          <div class="p-5 flex flex-col flex-1 items-center">
+            <h3 class="font-display font-bold text-lg text-neutral-900 group-hover:text-brand-pink transition-colors">
+              {city.name}
+            </h3>
+            <p class="text-sm mt-2 leading-relaxed text-neutral-600">
+              {city.description}
+            </p>
+            <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200 text-brand-pink">
+              Party rentals in {city.name} <span aria-hidden="true">&rarr;</span>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
 </Section>
