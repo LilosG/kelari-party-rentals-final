@@ -29,11 +29,11 @@ const isDark = bg === "dark";
 <Section {bg} spacing={padding} width="wide">
   {(title || eyebrow) && (
     <div class="mb-7">
-      <SectionHeader eyebrow={eyebrow} title={title ?? ""} align="left" dark={isDark} />
+      <SectionHeader eyebrow={eyebrow} title={title ?? ""} align="center" dark={isDark} />
     </div>
   )}
 
-  <div class="flex flex-wrap gap-2">
+  <div class="flex flex-wrap justify-center gap-2">
     {parks.map((park) => (
       park.href ? (
         <a
