@@ -115,6 +115,21 @@ export const services: Service[] = [
         answer:
           "Yes — free delivery, setup, and pickup are included with every rental in our service area across North County San Diego.",
       },
+      {
+        question: "How far in advance should I book party rentals?",
+        answer:
+          "We recommend booking at least 1–2 weeks in advance for most events. Weekends in spring and summer fill up fast across North County San Diego, so the earlier the better.",
+      },
+      {
+        question: "What areas do you serve?",
+        answer:
+          "We serve Carlsbad, Encinitas, Oceanside, and San Marcos, plus surrounding neighborhoods throughout North County San Diego.",
+      },
+      {
+        question: "How do I get a quote?",
+        answer:
+          "Fill out our online quote form with your event date, location, and guest count. We'll respond with a custom package and pricing — usually within a few hours.",
+      },
     ],
   },
   {
@@ -190,6 +205,21 @@ export const services: Service[] = [
         question: "Can you deliver birthday party rentals to a park?",
         answer:
           "Absolutely. We deliver to public parks throughout North County San Diego. We arrive early to set up and return after the party for pickup.",
+      },
+      {
+        question: "How many tables and chairs do I need for a birthday party?",
+        answer:
+          "A good rule of thumb is one 60\" round table per 8 guests. For a party of 30, that's about four tables plus extra chairs. We'll recommend the right quantity when you submit your quote.",
+      },
+      {
+        question: "Do you offer kids' birthday party setups?",
+        answer:
+          "Yes — we carry kids' tables, chairs, and themed décor for children's birthday parties. Kids' sets are sized for younger guests and can be paired with balloon arches or character-themed accents.",
+      },
+      {
+        question: "What's the most popular birthday rental setup in North County San Diego?",
+        answer:
+          "Backyard and park parties are the most popular. A typical setup includes a pop-up canopy, two or three banquet tables, folding chairs, and coordinated linens — all delivered and assembled for you.",
       },
     ],
   },
@@ -267,6 +297,21 @@ export const services: Service[] = [
         answer:
           "Yes — we set up pop-up canopies and frame tents in backyards of all sizes. We'll work with your space to find the best layout.",
       },
+      {
+        question: "Do you offer lighting for evening backyard parties?",
+        answer:
+          "Yes — we carry string lights and LED uplighting for evening events. String lights are especially popular for backyard parties in North County San Diego where nights stay warm.",
+      },
+      {
+        question: "Can you work with a small backyard?",
+        answer:
+          "Absolutely. We assess space when we deliver and adjust the layout accordingly. Even a modest backyard can comfortably host 20–30 guests with the right table configuration and a compact canopy.",
+      },
+      {
+        question: "How far in advance should I book a backyard party rental?",
+        answer:
+          "Two weeks minimum is ideal, especially for weekend dates in spring and summer. For larger setups with tents and lighting, 3–4 weeks gives us more flexibility to confirm all equipment.",
+      },
     ],
   },
   {
@@ -342,6 +387,21 @@ export const services: Service[] = [
         question: "Can you set up a baby shower at a restaurant or venue?",
         answer:
           "We deliver to private homes, restaurants, parks, and event venues. Just let us know the location and we'll coordinate delivery and setup.",
+      },
+      {
+        question: "What colors do you carry for baby shower linens?",
+        answer:
+          "We stock soft neutrals, blush, sage, lavender, and classic blue and pink. Share your color palette when you request a quote and we'll put together a coordinated package.",
+      },
+      {
+        question: "How many guests do your baby shower packages accommodate?",
+        answer:
+          "We size packages for showers of any scale — intimate gatherings of 10 to larger celebrations of 60 or more. We'll customize the table count, chairs, and linens to match your guest list.",
+      },
+      {
+        question: "Do you set up baby showers at private homes in North County San Diego?",
+        answer:
+          "Yes — home setups are very common. We deliver to addresses throughout Carlsbad, Encinitas, Oceanside, and San Marcos and arrange everything so the host can focus on guests.",
       },
     ],
   },
@@ -419,6 +479,21 @@ export const services: Service[] = [
         answer:
           "Yes — we carry banners, table runners, and centerpieces that can be customized with school colors. Ask about our graduation party packages.",
       },
+      {
+        question: "Can you accommodate large graduation parties in North County San Diego?",
+        answer:
+          "Yes — we regularly set up for 80 to 150+ guests. Large parties may need multiple tents, extra tables, and additional seating. Request a quote with your expected guest count and we'll build a package.",
+      },
+      {
+        question: "Do you deliver graduation rentals to parks and backyards?",
+        answer:
+          "We deliver to both. Parks are popular for graduation parties in Carlsbad, Encinitas, Oceanside, and San Marcos. Just confirm your park reservation before booking and we'll coordinate delivery around your time slot.",
+      },
+      {
+        question: "What's the best way to plan a graduation party rental?",
+        answer:
+          "Start with your expected guest count and venue type (backyard, park, or venue), then submit a quote request. We'll recommend a complete package and confirm timing so setup is done well before guests arrive.",
+      },
     ],
   },
   {
@@ -494,6 +569,21 @@ export const services: Service[] = [
         question: "Can you accommodate both indoor and outdoor engagement parties?",
         answer:
           "Yes — we provide setups for backyards, patios, restaurants, and indoor venues. Tents and canopies are available for outdoor celebrations.",
+      },
+      {
+        question: "How far in advance should I book engagement party rentals?",
+        answer:
+          "Two to three weeks in advance is recommended. If your party falls on a holiday weekend or during the busy spring season, booking earlier helps secure your preferred date.",
+      },
+      {
+        question: "Do you offer champagne flutes and barware for engagement parties?",
+        answer:
+          "Yes — we carry glassware including champagne flutes, wine glasses, and water glasses. These can be added to any engagement package to complete the tablescape.",
+      },
+      {
+        question: "Can you set up a romantic outdoor engagement party setting in North County San Diego?",
+        answer:
+          "Absolutely. String lights, soft linen colors, and floral centerpieces are our most popular combination for engagement parties in coastal North County San Diego. We can build a complete outdoor setup for your backyard or a park.",
       },
     ],
   },
@@ -571,6 +661,21 @@ export const services: Service[] = [
         answer:
           "Most parks require a reservation or permit for events with equipment. We recommend checking with your city's parks department. We can advise on local requirements.",
       },
+      {
+        question: "What park rental packages do you offer?",
+        answer:
+          "Our park packages include a canopy or tent, folding tables, chairs, and linens. Packages are sized for 20, 40, or 60+ guests. We can add décor, tableware, or extra seating based on your event.",
+      },
+      {
+        question: "What are some popular parks for parties in North County San Diego?",
+        answer:
+          "Popular spots include Calavera Hills Community Park in Carlsbad, Moonlight Beach in Encinitas, Luiseno Park in Oceanside, and Bradley Park in San Marcos. We deliver to all of these and can advise on space and permit needs.",
+      },
+      {
+        question: "Can you set up at a park without a dedicated parking lot nearby?",
+        answer:
+          "Yes — our team is experienced with park logistics. We'll walk the site on arrival and carry equipment to your reserved spot regardless of parking distance.",
+      },
     ],
   },
   {
@@ -646,6 +751,21 @@ export const services: Service[] = [
         question: "When do you deliver and pick up?",
         answer:
           "We typically deliver 1–2 hours before your event start time and pick up within 2 hours after it ends. Exact times are confirmed when you book.",
+      },
+      {
+        question: "Do you deliver to addresses outside your standard service area?",
+        answer:
+          "Our primary service area covers Carlsbad, Encinitas, Oceanside, and San Marcos. For locations just outside this area, contact us — we accommodate many nearby zip codes and will confirm availability.",
+      },
+      {
+        question: "How long does setup take?",
+        answer:
+          "Most setups take 30–60 minutes depending on the package size. Larger events with tents, lighting, and full tableware can take up to 90 minutes. We plan our delivery window to ensure everything is ready before your guests arrive.",
+      },
+      {
+        question: "Is there an extra charge for same-day delivery or early morning setup?",
+        answer:
+          "No — setup timing is coordinated at booking and included in your package price. We confirm an early morning window when needed at no extra cost.",
       },
     ],
   },
@@ -732,6 +852,11 @@ export const services: Service[] = [
         question: "Can you match our quinceañera color theme?",
         answer:
           "Yes — we carry linens, napkins, and accent pieces in a wide range of colors. Share your color palette when you request a quote and we will put together a coordinated package.",
+      },
+      {
+        question: "Do you serve the Hispanic community with quinceañera rentals throughout North County San Diego?",
+        answer:
+          "Yes — quinceañeras are one of our most requested events. We serve families in Carlsbad, Encinitas, Oceanside, San Marcos, and surrounding communities and are experienced with the scale and detail these celebrations require.",
       },
     ],
   },
