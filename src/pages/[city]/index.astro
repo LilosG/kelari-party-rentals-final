@@ -205,15 +205,7 @@ const schema = [
     bg="light"
   />
 
-  <!-- 10 · CTA Band — dark ──────────────────────── -->
-  <CtaBand
-    title={`Plan Your ${city.name} Party`}
-    subtitle={`Get a free quote for tables, chairs, tents & décor delivered to your ${city.name} venue. We handle setup and pickup.`}
-    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
-  />
-
-  <!-- 11 · FAQ — light ──────────────────────────── -->
+  <!-- 10 · FAQ — light ──────────────────────────── -->
   <FAQAccordion
     eyebrow="FAQ"
     title={`${city.name} Party Rental FAQs`}
@@ -221,7 +213,7 @@ const schema = [
     bg="light"
   />
 
-  <!-- 12 · Nearby Cities — white ───────────────── -->
+  <!-- 11 · Nearby Cities — white ───────────────── -->
   <CityCards
     eyebrow="NEARBY CITIES"
     title="We Also Serve"
@@ -229,6 +221,14 @@ const schema = [
     cities={nearbyAreas.map((a) => ({ name: a.name, description: a.tagline, href: a.href }))}
     bg="white"
     padding="default"
+  />
+
+  <!-- 12 · CTA Band — dark ──────────────────────── -->
+  <CtaBand
+    title={`Plan Your ${city.name} Party`}
+    subtitle={`Get a free quote for tables, chairs, tents & décor delivered to your ${city.name} venue. We handle setup and pickup.`}
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 13 · Quote Form — dark ───────────────────── -->

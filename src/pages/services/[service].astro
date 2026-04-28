@@ -173,12 +173,12 @@ const schema = [
     bg="light"
   />
 
-  <!-- 8 · CTA Band — dark ──────────────────────── -->
-  <CtaBand
-    title={`Ready to Book ${service.shortName}?`}
-    subtitle="Free delivery, professional setup, and same-day pickup included with every rental. No hidden fees."
-    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+  <!-- 8 · FAQ — light ──────────────────────────── -->
+  <FAQAccordion
+    eyebrow="FAQ"
+    title={`${service.name} — Frequently Asked Questions`}
+    faqs={service.faqs}
+    bg="light"
   />
 
   <!-- 9 · City Cards — white ───────────────────── -->
@@ -190,12 +190,12 @@ const schema = [
     bg="white"
   />
 
-  <!-- 10 · FAQ — light ──────────────────────────── -->
-  <FAQAccordion
-    eyebrow="FAQ"
-    title={`${service.name} — Frequently Asked Questions`}
-    faqs={service.faqs}
-    bg="light"
+  <!-- 10 · CTA Band — dark ──────────────────────── -->
+  <CtaBand
+    title={`Ready to Book ${service.shortName}?`}
+    subtitle="Free delivery, professional setup, and same-day pickup included with every rental. No hidden fees."
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 11 · Quote Form — dark ────────────────────── -->

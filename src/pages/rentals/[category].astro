@@ -225,30 +225,29 @@ const schema = [
     </div>
   </Section>
 
-  <!-- 10 · CTA Band — dark ─────────────────────── -->
-  <CtaBand
-    title={`Need ${category.name} for Your Event?`}
-    subtitle={`Get a free quote for ${category.name.toLowerCase()} rentals. Free delivery, setup, and pickup included with every order.`}
-    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
-  />
-
-  <!-- 11 · City Cards — light ──────────────── -->
-  <CityCards
-    eyebrow="SERVICE AREAS"
-    title={`${category.name} Rentals by City`}
-    subtitle={`Free delivery and setup for ${category.name.toLowerCase()} rentals across North County San Diego.`}
-    cities={cityCards}
-    bg="light"
-    variant="pills"
-  />
-
-  <!-- 12 · FAQ — light ──────────────────────────── -->
+  <!-- 10 · FAQ — light ──────────────────────────── -->
   <FAQAccordion
     eyebrow="FAQ"
     title={titleFaq}
     faqs={category.faqs}
     bg="light"
+  />
+
+  <!-- 11 · City Cards — white ──────────────── -->
+  <CityCards
+    eyebrow="SERVICE AREAS"
+    title={`${category.name} Rentals by City`}
+    subtitle={`Free delivery and setup for ${category.name.toLowerCase()} rentals across North County San Diego.`}
+    cities={cityCards}
+    bg="white"
+  />
+
+  <!-- 12 · CTA Band — dark ─────────────────────── -->
+  <CtaBand
+    title={`Need ${category.name} for Your Event?`}
+    subtitle={`Get a free quote for ${category.name.toLowerCase()} rentals. Free delivery, setup, and pickup included with every order.`}
+    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 13 · Quote Form — dark ───────────────────── -->
