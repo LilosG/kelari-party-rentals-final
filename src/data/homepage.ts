@@ -37,8 +37,8 @@ export const hero = {
 
 export const trustBarItems: TrustBarItem[] = [
   { title: "Clean Inventory", subtitle: "Photo-ready every time", icon: "sparkles" },
-  { title: "On-Time Delivery", subtitle: "Always punctual", icon: "clock" },
-  { title: "Setup & Pickup", subtitle: "We handle it all", icon: "check" },
+  { title: "Reliable Delivery", subtitle: "On time, every time", icon: "clock" },
+  { title: "Se Habla Español", subtitle: "Bilingual service", icon: "globe" },
   { title: "Easy Quoting", subtitle: "Fast, no-pressure", icon: "chat" },
   { title: "North County", subtitle: "Local & reliable", icon: "pin" },
 ];
@@ -48,7 +48,7 @@ export const trustBarItems: TrustBarItem[] = [
 export const ctaBand = {
   title: "Party Rentals You Can Actually Count On",
   subtitle:
-    "Free delivery, professional setup, and same-day pickup included with every rental. No hidden fees, no stress — just a beautiful event.",
+    "Professional delivery available across North County San Diego. No hidden fees, no stress — just a beautiful event.",
   primaryCta: { label: "Get a Free Quote", href: "/quote/" },
 };
 
@@ -63,9 +63,9 @@ export const howItWorksSteps: Step[] = [
   },
   {
     number: "02",
-    title: "We Deliver & Set Up",
+    title: "We Deliver",
     description:
-      "Our team arrives early, places every item with care, and makes sure everything looks perfect before your first guest walks in.",
+      "Our team arrives at your venue, places every item with care, and makes sure everything looks great before your first guest walks in.",
   },
   {
     number: "03",
@@ -75,9 +75,9 @@ export const howItWorksSteps: Step[] = [
   },
   {
     number: "04",
-    title: "We Pick Up After",
+    title: "We Handle Pickup",
     description:
-      "When the party's over, we return and handle the full breakdown. You don't lift a finger.",
+      "When the party's over, we return and collect everything. Prefer to drop off at our Carlsbad location? Complimentary warehouse pickup is always available.",
   },
 ];
 
@@ -147,14 +147,14 @@ export const galleryImages: GalleryImage[] = [
 
 export const homepageFaqs: FAQ[] = [
   {
-    question: "Do you deliver to Carlsbad, Encinitas, Oceanside, and San Marcos?",
+    question: "Where do you deliver?",
     answer:
-      "Yes — we deliver, set up, and pick up across all four cities and the surrounding North County San Diego communities. Free delivery is included with every rental.",
+      "We deliver across North County San Diego including Carlsbad, Encinitas, Oceanside, San Marcos, Vista, and surrounding communities. Delivery is priced by distance — request a quote with your event address and we'll include the delivery fee upfront.",
   },
   {
-    question: "Is delivery and setup really included at no extra charge?",
+    question: "Do you offer complimentary pickup?",
     answer:
-      "Absolutely. Delivery, professional setup at your venue, and post-event pickup are all included in your rental price. No surprise fees.",
+      "Yes — customers are always welcome to pick up and drop off rentals at our Carlsbad warehouse at no charge. If you'd like us to deliver to your venue, delivery fees are quote-based by distance.",
   },
   {
     question: "Can you deliver to parks and community spaces?",

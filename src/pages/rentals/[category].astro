@@ -33,7 +33,7 @@ const { category } = Astro.props;
 
 const cityCards = cities.map((c) => ({
   name: c.name,
-  description: `${category.name} rentals in ${c.name} — free delivery and setup.`,
+  description: `${category.name} rentals in ${c.name}.`,
   href: `/${c.slug}/`,
 }));
 
@@ -53,7 +53,7 @@ const otherCategories = categories.filter((c) => c.slug !== category.slug);
 const catName = category.name;
 const catNameLower = category.name.toLowerCase();
 const titleIncluded = "What's Included with Every " + catName + " Rental";
-const subtitleIncluded = "Free delivery, professional setup, and same-day pickup included with every " + catNameLower + " order.";
+const subtitleIncluded = "Delivered across North County San Diego — complimentary warehouse pickup always available at our Carlsbad location.";
 const titleHowItWorks = "How " + catName + " Rentals Work";
 const titleFaq = catName + " Rentals — Frequently Asked Questions";
 
@@ -147,7 +147,7 @@ const schema = [
       <SectionHeader
         eyebrow="BROWSE ITEMS"
         title={`Available ${category.name}`}
-        subtitle={`Everything below includes free delivery, professional setup, and same-day pickup in North County San Diego.`}
+        subtitle={`Delivered across North County San Diego — complimentary warehouse pickup always available.`}
       />
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
@@ -229,7 +229,7 @@ const schema = [
   <CityCards
     eyebrow="SERVICE AREAS"
     title={`${category.name} Rentals by City`}
-    subtitle={`Free delivery and setup for ${category.name.toLowerCase()} rentals across North County San Diego.`}
+    subtitle={`${category.name} rentals available across North County San Diego.`}
     cities={cityCards}
     bg="white"
   />
@@ -245,7 +245,7 @@ const schema = [
   <!-- 12 · CTA Band — dark ─────────────────────── -->
   <CtaBand
     title={`Need ${category.name} for Your Event?`}
-    subtitle={`Get a free quote for ${category.name.toLowerCase()} rentals. Free delivery, setup, and pickup included with every order.`}
+    subtitle={`Get a quote for ${category.name.toLowerCase()} rentals. Delivery available across North County SD.`}
     primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
     secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />

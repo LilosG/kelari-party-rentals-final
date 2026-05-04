@@ -152,7 +152,7 @@ export const site: SiteConfig = {
   domain: "https://kelaripartyrentals.com",
   tagline: "Stress-Free Party Rentals in North County San Diego",
   description:
-    "Kelari Party Rentals provides tables, chairs, tents, linens, and décor with free delivery and setup in Carlsbad, Encinitas, Oceanside, and San Marcos. Get a free quote today.",
+    "Kelari Party Rentals provides tables, chairs, tents, linens, and décor with professional delivery across Carlsbad, Encinitas, Oceanside, and San Marcos. Get a free quote today.",
   social,
   tokens,
   schema: {

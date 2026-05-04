@@ -38,7 +38,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in Carlsbad CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Carlsbad. Serving the Village, Bressi Ranch, La Costa & Aviara.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in Carlsbad. Serving the Village, Bressi Ranch, La Costa & Aviara.",
     },
     headline: "Carlsbad Party Rentals",
     subheadline:
@@ -67,7 +67,7 @@ export const cities: City[] = [
     localProof:
       "Based right here on El Camino Real, we've helped hundreds of Carlsbad families celebrate birthdays, baby showers, and graduations with hassle-free rental packages.",
     deliveryNote:
-      "Free delivery and pickup throughout all Carlsbad zip codes — 92008, 92009, 92010, and 92011.",
+      "Delivery available throughout all Carlsbad zip codes — 92008, 92009, 92010, and 92011. Complimentary warehouse pickup available at our Carlsbad location.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -83,7 +83,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Carlsbad?",
         answer:
-          "Yes! We offer free delivery, setup, and pickup throughout Carlsbad including the Village, Bressi Ranch, La Costa, Aviara, and all surrounding neighborhoods.",
+          "Yes — we deliver throughout Carlsbad including the Village, Bressi Ranch, La Costa, Aviara, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is always available at our Carlsbad location.",
       },
       {
         question: "Can I rent tables and chairs for a party at a Carlsbad park?",
@@ -111,7 +111,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in Encinitas CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Encinitas. Serving Leucadia, Cardiff, Olivenhain & New Encinitas.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in Encinitas. Serving Leucadia, Cardiff, Olivenhain & New Encinitas.",
     },
     headline: "Encinitas Party Rentals",
     subheadline:
@@ -137,7 +137,7 @@ export const cities: City[] = [
     localProof:
       "Just a short drive from our Carlsbad headquarters, Encinitas is one of our most-served communities. From Leucadia bungalow parties to Cardiff seaside events, we know the area inside out.",
     deliveryNote:
-      "Free delivery and pickup to all Encinitas neighborhoods — Leucadia, Cardiff, Olivenhain, and beyond.",
+      "Delivery available to all Encinitas neighborhoods — Leucadia, Cardiff, Olivenhain, and beyond.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -153,7 +153,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Encinitas?",
         answer:
-          "Yes! We provide free delivery, setup, and pickup throughout Encinitas — including Leucadia, Cardiff-by-the-Sea, Olivenhain, Old Encinitas, and New Encinitas.",
+          "Yes — we deliver throughout Encinitas including Leucadia, Cardiff-by-the-Sea, Olivenhain, Old Encinitas, and New Encinitas. Delivery is priced by distance and quoted upfront.",
       },
       {
         question: "Can you set up party rentals at Moonlight Beach or Encinitas parks?",
@@ -168,7 +168,7 @@ export const cities: City[] = [
       {
         question: "What party rental items do you offer in Encinitas?",
         answer:
-          "We offer tables, chairs, tents, canopies, linens, tableware, lighting, and décor. Browse our full inventory or request a custom quote for your Encinitas event.",
+          "We offer tables, chairs, tents, canopies, linens, table runners, lighting, and décor. Browse our full inventory or request a custom quote for your Encinitas event.",
       },
     ],
   },
@@ -181,7 +181,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in Oceanside CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Oceanside. Serving Downtown, South O, Fire Mountain & Rancho Del Oro.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in Oceanside. Serving Downtown, South O, Fire Mountain & Rancho Del Oro.",
     },
     headline: "Oceanside Party Rentals",
     subheadline:
@@ -209,7 +209,7 @@ export const cities: City[] = [
     localProof:
       "We've served families across Oceanside for birthdays, graduations, and community events. From South O to San Luis Rey, our team knows Oceanside's neighborhoods and venues.",
     deliveryNote:
-      "Free delivery and pickup across all Oceanside zip codes — 92049, 92054, 92056, 92057, and 92058.",
+      "Delivery available across all Oceanside zip codes — 92049, 92054, 92056, 92057, and 92058.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -225,7 +225,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Oceanside?",
         answer:
-          "Yes! We offer free delivery, setup, and pickup throughout Oceanside — Downtown, South O, Fire Mountain, Rancho Del Oro, Mission Mesa, and all surrounding areas.",
+          "Yes — we deliver throughout Oceanside including Downtown, South O, Fire Mountain, Rancho Del Oro, Mission Mesa, and all surrounding areas. Delivery is priced by distance and quoted upfront.",
       },
       {
         question: "Can I rent party supplies for an event at an Oceanside park?",
@@ -253,7 +253,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in San Marcos CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in San Marcos. Serving Lake San Marcos, Twin Oaks Valley, Rancho Santa Fe Road & more.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in San Marcos. Serving Lake San Marcos, Twin Oaks Valley, Rancho Santa Fe Road & more.",
     },
     headline: "San Marcos Party Rentals",
     subheadline:
@@ -280,7 +280,7 @@ export const cities: City[] = [
     localProof:
       "From community celebrations at Bradley Park to intimate gatherings in Lake San Marcos, we've been the trusted party rental provider for San Marcos families and event planners.",
     deliveryNote:
-      "Free delivery and pickup throughout San Marcos — 92069, 92078, and 92096.",
+      "Delivery available throughout San Marcos — 92069, 92078, and 92096.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -296,7 +296,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to San Marcos?",
         answer:
-          "Yes! We offer free delivery, setup, and pickup throughout San Marcos — Lake San Marcos, Twin Oaks Valley, San Elijo Hills, Discovery Hills, and all surrounding neighborhoods.",
+          "Yes — we deliver throughout San Marcos including Lake San Marcos, Twin Oaks Valley, San Elijo Hills, Discovery Hills, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
       },
       {
         question: "Can you deliver to San Marcos parks?",
@@ -324,7 +324,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in Bressi Ranch Carlsbad CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Bressi Ranch, Carlsbad. Your neighborhood party rental team — stress-free.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in Bressi Ranch, Carlsbad. Your neighborhood party rental team — stress-free.",
     },
     headline: "Bressi Ranch Party Rentals",
     subheadline:
@@ -347,7 +347,7 @@ export const cities: City[] = [
     localProof:
       "We've served dozens of Bressi Ranch families for birthdays, baby showers, and graduation parties. Our Carlsbad headquarters is just minutes away — same-day delivery is often possible.",
     deliveryNote:
-      "Free delivery and pickup throughout Bressi Ranch and all surrounding Carlsbad zip codes — 92010.",
+      "Delivery available throughout Bressi Ranch and all surrounding Carlsbad zip codes — 92010.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -363,7 +363,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Bressi Ranch?",
         answer:
-          "Yes! We provide free delivery, setup, and pickup throughout Bressi Ranch. Our Carlsbad headquarters is just minutes away, making us the closest full-service rental provider in the area.",
+          "Yes — we deliver throughout Bressi Ranch. Our Carlsbad headquarters is just minutes away. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can you set up party rentals at Bressi Ranch Community Park?",
@@ -373,7 +373,7 @@ export const cities: City[] = [
       {
         question: "What party rental items are available for Bressi Ranch events?",
         answer:
-          "We offer tables, chairs, tents, canopies, linens, tableware, and décor. Everything is delivered and set up — browse our inventory or request a custom quote.",
+          "We offer tables, chairs, tents, canopies, linens, table runners, and décor. Browse our inventory or request a custom quote.",
       },
       {
         question: "How far in advance should I book for a Bressi Ranch party?",
@@ -391,7 +391,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in La Costa Carlsbad CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in La Costa, Carlsbad. Full-service party rentals for La Costa homes and venues.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in La Costa, Carlsbad. Full-service party rentals for La Costa homes and venues.",
     },
     headline: "La Costa Party Rentals",
     subheadline:
@@ -416,7 +416,7 @@ export const cities: City[] = [
     localProof:
       "La Costa is one of our most-requested delivery areas. From La Costa Valley to La Costa Oaks, we've helped hundreds of families celebrate life's biggest moments with hassle-free rentals.",
     deliveryNote:
-      "Free delivery and pickup throughout La Costa and all Carlsbad zip codes — 92009.",
+      "Delivery available throughout La Costa and all Carlsbad zip codes — 92009.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -432,7 +432,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to La Costa?",
         answer:
-          "Yes! We offer free delivery, setup, and pickup throughout La Costa — La Costa Valley, La Costa Oaks, La Costa Greens, La Costa Ridge, and all surrounding neighborhoods.",
+          "Yes — we deliver throughout La Costa including La Costa Valley, La Costa Oaks, La Costa Greens, La Costa Ridge, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
       },
       {
         question: "Can you deliver to La Costa parks and community spaces?",
@@ -447,7 +447,7 @@ export const cities: City[] = [
       {
         question: "What rental items do you offer for La Costa events?",
         answer:
-          "Tables, chairs, tents, canopies, linens, tableware, lighting, and décor — all delivered and set up at your La Costa venue. Request a custom quote for your event.",
+          "Tables, chairs, tents, canopies, linens, table runners, lighting, and décor — delivered to your La Costa venue. Request a custom quote for your event.",
       },
     ],
   },
@@ -460,7 +460,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in Olde Carlsbad CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Olde Carlsbad. Local party rental experts serving the heart of Carlsbad.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in Olde Carlsbad. Local party rental experts serving the heart of Carlsbad.",
     },
     headline: "Olde Carlsbad Party Rentals",
     subheadline:
@@ -485,7 +485,7 @@ export const cities: City[] = [
     localProof:
       "Based right here in Carlsbad, we know Olde Carlsbad's neighborhoods like our own backyard. From Village bungalow parties to Holiday Park celebrations, we've served this community for years.",
     deliveryNote:
-      "Free delivery and pickup throughout Olde Carlsbad and the Carlsbad Village area — zip code 92008.",
+      "Delivery available throughout Olde Carlsbad and the Carlsbad Village area — zip code 92008.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -501,7 +501,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Olde Carlsbad?",
         answer:
-          "Yes! We provide free delivery, setup, and pickup throughout Olde Carlsbad and the surrounding Village area. Our headquarters is just minutes away.",
+          "Yes — we deliver throughout Olde Carlsbad and the surrounding Village area. Our headquarters is just minutes away. Delivery is priced by distance and quoted upfront.",
       },
       {
         question: "Can you set up party rentals at Holiday Park or Hosp Grove?",
@@ -511,7 +511,7 @@ export const cities: City[] = [
       {
         question: "What party rental items are available in Olde Carlsbad?",
         answer:
-          "We offer tables, chairs, tents, canopies, linens, tableware, and décor. Everything is delivered and set up at your Olde Carlsbad location.",
+          "We offer tables, chairs, tents, canopies, linens, table runners, and décor — delivered to your Olde Carlsbad location.",
       },
       {
         question: "How do I book party rentals for an Olde Carlsbad event?",
@@ -529,13 +529,13 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in Aviara Carlsbad CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Aviara, Carlsbad. Elegant full-service party rentals for Aviara homes and venues.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in Aviara, Carlsbad. Elegant full-service party rentals for Aviara homes and venues.",
     },
     headline: "Aviara Party Rentals",
     subheadline:
       "Tables, chairs, tents & décor delivered and set up at your Aviara venue — stress-free.",
     intro:
-      "Aviara is one of Carlsbad's most beautiful master-planned communities, and its stunning homes and manicured surroundings set the stage for truly special celebrations. Kelari Party Rentals provides tables, chairs, tents, linens, and décor with free delivery, professional setup, and same-day pickup.",
+      "Aviara is one of Carlsbad's most beautiful master-planned communities, and its stunning homes and manicured surroundings set the stage for truly special celebrations. Kelari Party Rentals provides tables, chairs, tents, linens, and décor with professional delivery available across Carlsbad and surrounding communities.",
     neighborhoods: [
       "Aviara Oaks",
       "Aviara Point",
@@ -554,7 +554,7 @@ export const cities: City[] = [
     localProof:
       "Aviara's elegant homes and resort setting attract some of our most memorable events. From intimate garden parties to full backyard celebrations, Kelari Party Rentals delivers the quality Aviara residents expect.",
     deliveryNote:
-      "Free delivery and pickup throughout Aviara and all Carlsbad zip codes — 92011.",
+      "Delivery available throughout Aviara and all Carlsbad zip codes — 92011.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -570,12 +570,12 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Aviara?",
         answer:
-          "Yes! We offer free delivery, setup, and pickup throughout Aviara — Aviara Oaks, Aviara Point, Four Seasons Aviara, and all surrounding neighborhoods.",
+          "Yes — we deliver throughout Aviara including Aviara Oaks, Aviara Point, Four Seasons Aviara, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
       },
       {
         question: "Can you handle upscale party setups in Aviara?",
         answer:
-          "Absolutely. We provide linens, Chiavari chairs, canopies, and full décor packages suited to Aviara's elegant settings. Every rental includes professional setup and pickup.",
+          "Absolutely. We provide linens, Chiavari chairs, canopies, and full décor packages suited to Aviara's elegant settings.",
       },
       {
         question: "What parks and venues in Aviara do you deliver to?",
@@ -598,7 +598,7 @@ export const cities: City[] = [
     meta: {
       title: "Party Rentals in Vista CA | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor rentals with free delivery and setup in Vista. Serving Shadowridge, Buena Creek, North Vista & surrounding neighborhoods.",
+        "Tables, chairs, tents, linens & décor rentals with professional delivery in Vista. Serving Shadowridge, Buena Creek, North Vista & surrounding neighborhoods.",
     },
     headline: "Vista Party Rentals",
     subheadline:
@@ -625,7 +625,7 @@ export const cities: City[] = [
     localProof:
       "Vista families trust Kelari Party Rentals for birthdays, baby showers, graduation parties, and community celebrations. From Shadowridge to Vista Village, we know the neighborhoods and deliver on time.",
     deliveryNote:
-      "Free delivery and pickup throughout all Vista zip codes — 92081, 92083, 92084, and 92085.",
+      "Delivery available throughout all Vista zip codes — 92081, 92083, 92084, and 92085.",
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -641,7 +641,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Vista?",
         answer:
-          "Yes! We offer free delivery, setup, and pickup throughout Vista — Shadowridge, Buena Creek, North Vista, South Vista, Rancho Minerva, and all surrounding neighborhoods.",
+          "Yes — we deliver throughout Vista including Shadowridge, Buena Creek, North Vista, South Vista, Rancho Minerva, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
       },
       {
         question: "Can I rent tables and chairs for a party at a Vista park?",

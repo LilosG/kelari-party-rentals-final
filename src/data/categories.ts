@@ -42,7 +42,7 @@ export const categories: Category[] = [
     meta: {
       title: "Table Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Rectangular, round & cocktail table rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery and setup included.",
+        "Rectangular, round & cocktail table rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Table Rentals",
     subheadline: "Rectangular, round & cocktail tables for every event size — delivered clean and set up at your venue.",
@@ -69,16 +69,13 @@ export const categories: Category[] = [
         name: "Cocktail Table",
         description: "High-top bar-height table for standing receptions and mixers.",
       },
-      {
-        name: "Kids' Table",
-        description: "Low-height table sized for children ages 2–8.",
-      },
+
     ],
     whatsIncluded: [
       {
         icon: "🚚",
-        title: "Free Delivery",
-        description: "We deliver every table to your venue at no extra charge — homes, parks, community centers, and event spaces.",
+        title: "Delivery Available",
+        description: "We deliver tables to your venue across North County San Diego — homes, parks, community centers, and event spaces.",
       },
       {
         icon: "🔧",
@@ -121,7 +118,7 @@ export const categories: Category[] = [
       },
       {
         question: "Are linens included with table rentals?",
-        answer: "Linens are a separate rental item but can be added to any table order. We carry tablecloths, runners, and napkins in a wide range of colors. Most events benefit significantly from adding linens — a bare table looks like a cafeteria; the same table with a tablecloth looks intentional.",
+        answer: "Linens are a separate rental item but can be added to any table order. We carry tablecloths and runners in a wide range of colors. Most events benefit significantly from adding linens — a bare table looks like a cafeteria; the same table with a tablecloth looks intentional.",
       },
       {
         question: "How far in advance should I book table rentals?",
@@ -135,7 +132,7 @@ export const categories: Category[] = [
     meta: {
       title: "Chair Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Folding chairs, Chiavari chairs & kids' chairs for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery and setup included.",
+        "Folding chairs & Chiavari chairs for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Chair Rentals",
     subheadline: "Folding, Chiavari & kids' chairs for every style and budget — delivered and set up at your venue.",
@@ -159,16 +156,13 @@ export const categories: Category[] = [
         name: "Silver Chiavari Chair",
         description: "Sophisticated silver Chiavari chair with cushion.",
       },
-      {
-        name: "Kids' Chair",
-        description: "Small folding chair sized for children ages 2–8.",
-      },
+
     ],
     whatsIncluded: [
       {
         icon: "🚚",
-        title: "Free Delivery",
-        description: "Every chair order includes free delivery to your venue — no per-item delivery fees.",
+        title: "Delivery Available",
+        description: "Chair orders are delivered to your venue across North County San Diego — homes, parks, community centers, and event spaces.",
       },
       {
         icon: "🔧",
@@ -206,12 +200,12 @@ export const categories: Category[] = [
         answer: "Folding chairs are practical, affordable, and appropriate for casual events — birthdays, park parties, graduation celebrations. Chiavari chairs are an elegant upgrade suited to showers, engagement parties, quinceañeras, and milestone events where presentation matters. The visual difference is significant and worth the upgrade for formal occasions.",
       },
       {
-        question: "Do you offer kids' chairs for children's parties?",
-        answer: "Yes — we carry small folding chairs sized for children ages 2–8. For kids' parties, we recommend a mix of adult and kids' chairs depending on your guest breakdown. Kids' tables and chairs can be ordered together as a set.",
+        question: "What chair style works best for formal events?",
+        answer: "Chiavari chairs are the top choice for showers, quinceañeras, engagement parties, and milestone events where presentation matters. The visual upgrade over a standard folding chair is significant and worth it for formal occasions.",
       },
       {
         question: "Can I mix chair styles in one order?",
-        answer: "Yes — you can combine Chiavari chairs for the main tables with standard folding chairs for overflow seating, or mix adult and kids' chairs for family events. We coordinate the full setup on delivery day.",
+        answer: "Yes — you can combine Chiavari chairs for the main tables with standard folding chairs for overflow seating. We coordinate the full setup on delivery day.",
       },
       {
         question: "Do you deliver chairs to parks in North County San Diego?",
@@ -225,7 +219,7 @@ export const categories: Category[] = [
     meta: {
       title: "Tent & Canopy Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Pop-up canopies and frame tents in multiple sizes for outdoor events in Carlsbad, Encinitas, Oceanside & San Marcos. Free setup and pickup included.",
+        "Pop-up canopies and frame tents in multiple sizes for outdoor events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Tent & Canopy Rentals",
     subheadline: "Pop-up canopies and frame tents for shade and shelter at any outdoor event.",
@@ -257,8 +251,8 @@ export const categories: Category[] = [
     whatsIncluded: [
       {
         icon: "🚚",
-        title: "Free Delivery",
-        description: "We transport and deliver every tent and canopy to your venue at no extra charge.",
+        title: "Delivery Available",
+        description: "We transport and deliver every tent and canopy to your venue across North County San Diego.",
       },
       {
         icon: "🔧",
@@ -315,12 +309,12 @@ export const categories: Category[] = [
     meta: {
       title: "Linen Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Tablecloths, runners, napkins & chair sashes in dozens of colors. Free delivery in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Tablecloths, runners & chair sashes in dozens of colors. Delivered across Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Linen Rentals",
-    subheadline: "Tablecloths, runners, napkins & sashes in dozens of colors — freshly laundered and pressed.",
+    subheadline: "Tablecloths, runners & sashes in dozens of colors — freshly laundered and pressed.",
     intro:
-      "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth and a coordinating runner looks like an intentional celebration. Kelari Party Rentals carries tablecloths, runners, napkins, and chair sashes in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
+      "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth and a coordinating runner looks like an intentional celebration. Kelari Party Rentals carries tablecloths, runners, and chair sashes in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
     icon: "🎀",
     items: [
       {
@@ -337,10 +331,7 @@ export const categories: Category[] = [
         name: "Table Runner",
         description: "Satin or burlap runner to accent any table.",
       },
-      {
-        name: "Cloth Napkin",
-        description: "Polyester napkins available in coordinating colors.",
-      },
+
       {
         name: "Chair Sash",
         description: "Organza or satin sash to dress up any chair.",
@@ -355,12 +346,12 @@ export const categories: Category[] = [
       {
         icon: "🎨",
         title: "Color Coordination",
-        description: "Share your event palette and we'll match tablecloths, runners, and napkins into a coordinated package.",
+        description: "Share your event palette and we'll match tablecloths and runners into a coordinated package.",
       },
       {
         icon: "🚚",
-        title: "Free Delivery",
-        description: "Linens are delivered to your venue at no extra charge as part of your rental order.",
+        title: "Delivery Available",
+        description: "Linens are delivered to your venue across North County San Diego as part of your rental order.",
       },
       {
         icon: "🔧",
@@ -397,101 +388,47 @@ export const categories: Category[] = [
       },
       {
         question: "How do I choose the right linen colors for my event?",
-        answer: "Pick two colors — a base and an accent. Keep tablecloths in the base color and runners and napkins in the accent. White or ivory base with a colored accent works for almost any event. For quinceañeras and showers, coordinate with your overall color theme. When in doubt, contact us and we'll make recommendations.",
+        answer: "Pick two colors — a base and an accent. Keep tablecloths in the base color and runners in the accent. White or ivory base with a colored accent works for almost any event. For quinceañeras and showers, coordinate with your overall color theme. When in doubt, contact us and we'll make recommendations.",
       },
     ],
   },
   {
-    slug: "tableware",
-    name: "Tableware",
+    slug: "table-runners",
+    name: "Table Runners",
     meta: {
-      title: "Tableware Rentals in North County San Diego | Kelari Party Rentals",
+      title: "Table Runner Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Plates, flatware, glassware & chargers for elegant event dining in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery included.",
+        "Satin & fabric table runners in multiple colors for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
-    headline: "Tableware Rentals",
-    subheadline: "Plates, flatware, glassware & chargers for a polished table setting at any celebration.",
+    headline: "Table Runner Rentals",
+    subheadline: "Satin & fabric runners in multiple colors — the perfect finishing touch for any table.",
     intro:
-      "Rented tableware is the detail that separates a polished event from a disposable one. For baby showers, quinceañeras, engagement parties, and milestone birthdays, real plates, glassware, and flatware create a significantly better experience than paper and plastic — and eliminate mid-party trash management. Kelari Party Rentals carries dinner plates, salad plates, charger plates, flatware sets, water goblets, wine glasses, and champagne flutes for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every piece arrives clean and ready to use, is set at each place setting by our team, and is collected after your event — no dishwashing, no returns.",
-    icon: "🍽️",
+      "A table runner is the easiest way to add color, texture, and visual interest to your event setup. Layered over a solid tablecloth, the right runner ties your entire color palette together and elevates any table from functional to styled. Kelari Party Rentals carries satin and fabric runners in a range of colors to coordinate with your tablecloths, chairs, and décor. Every runner arrives freshly laundered and pressed. Share your event palette when you request a quote and we'll recommend the right color combination for your setup.",
+    icon: "🎀",
     items: [
-      {
-        name: "Dinner Plate",
-        description: "Classic white porcelain dinner plate.",
-      },
-      {
-        name: "Salad Plate",
-        description: "White porcelain salad/dessert plate.",
-      },
-      {
-        name: "Charger Plate",
-        description: "Gold or silver charger plate for formal place settings.",
-      },
-      {
-        name: "Flatware Set",
-        description: "Fork, knife, and spoon — stainless steel.",
-      },
-      {
-        name: "Glassware",
-        description: "Water goblets, wine glasses, and champagne flutes.",
-      },
+      { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths." },
+      { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations." },
+      { name: "Table Runner – Baby Blue", description: "10ft runner in baby blue. Great for baby showers and outdoor events." },
+      { name: "Table Runner – Tan", description: "10ft runner in tan. Versatile neutral that pairs with almost any tablecloth." },
+      { name: "Table Runner – Green", description: "10ft runner in green. Fresh accent for garden parties and outdoor celebrations." },
     ],
     whatsIncluded: [
-      {
-        icon: "✅",
-        title: "Clean & Table-Ready",
-        description: "Every piece is washed, inspected, and polished before delivery — ready to use straight from the box.",
-      },
-      {
-        icon: "🔧",
-        title: "Place Setting Setup",
-        description: "We set each place setting at the table as part of our setup service — plates, flatware, and glassware positioned correctly.",
-      },
-      {
-        icon: "🚚",
-        title: "Free Delivery",
-        description: "Tableware is delivered to your venue as part of your rental order at no extra charge.",
-      },
-      {
-        icon: "🧹",
-        title: "Post-Event Collection",
-        description: "We collect all tableware after your event. No dishwashing, no sorting, no returns — we handle everything.",
-      },
-      {
-        icon: "🍽️",
-        title: "Full Place Setting",
-        description: "Dinner plates, salad plates, charger plates, flatware, water goblets, wine glasses, and champagne flutes — all available in one order.",
-      },
-      {
-        icon: "📋",
-        title: "Quantity Guidance",
-        description: "We'll confirm the right quantities based on your guest count and meal format — seated dinner, buffet, or cocktail style.",
-      },
+      { icon: "✅", title: "Freshly Laundered", description: "Every runner is washed, pressed, and inspected before delivery — no wrinkles, no stains." },
+      { icon: "🎨", title: "Color Coordination", description: "Share your event palette and we'll recommend the right runner color to complement your tablecloths and décor." },
+      { icon: "🚚", title: "Delivery Available", description: "Runners are delivered to your venue across North County San Diego as part of your rental order." },
+      { icon: "🔧", title: "Placed at Setup", description: "We lay every runner on your tables as part of the setup — you don't fold or place a single piece." },
+      { icon: "🧹", title: "Post-Event Collection", description: "We collect all runners after your event. No washing, no returning — we handle everything." },
+      { icon: "📋", title: "Multiple Colors Available", description: "Off white, pink, baby blue, tan, and green — coordinate with any event theme or color palette." },
     ],
     faqs: [
-      {
-        question: "When should I rent tableware instead of using disposables?",
-        answer: "For baby showers, engagement parties, quinceañeras, and any milestone event where presentation matters — rented tableware is worth it. For casual backyard birthdays and park parties, quality disposables are perfectly acceptable. The decision comes down to the formality of the event and whether you want to manage trash during the celebration.",
-      },
-      {
-        question: "How many plates and glasses do I need per guest?",
-        answer: "Plan for one dinner plate and one salad plate per guest plus 5–10% extra. For glassware, 1–2 water goblets per guest and one wine glass or champagne flute per guest if serving. We'll confirm exact quantities when you request a quote.",
-      },
-      {
-        question: "Do charger plates come in different finishes?",
-        answer: "Yes — we carry gold and silver charger plates. Gold chargers work well with warm palettes (dusty rose, burgundy, champagne). Silver chargers suit cooler palettes (navy, lavender, white, royal blue). For quinceañeras, gold is the most traditional choice.",
-      },
-      {
-        question: "Do I need to wash the tableware before you pick it up?",
-        answer: "No — we collect everything as-is after your event. Scrape excess food into the trash but no washing required. We handle cleaning on our end.",
-      },
-      {
-        question: "Can tableware be combined with linens and chairs in one order?",
-        answer: "Yes — most of our orders combine multiple rental categories. We coordinate tables, chairs, linens, and tableware in a single package with one delivery, one setup, and one pickup. Request a quote with your full list and we'll price everything together.",
-      },
+      { question: "Do I need a runner if I already have a tablecloth?", answer: "Runners are optional but add a significant layer of visual interest. A tablecloth in your base color plus a runner in a contrasting accent is the most common and effective approach — it creates a layered, intentional look that photographs beautifully." },
+      { question: "What colors of table runners do you carry?", answer: "We currently carry off white, pink, baby blue, tan, and green. Contact us with your event palette and we'll confirm which color best coordinates with your tablecloths and décor." },
+      { question: "Can I combine runners with tablecloths in one order?", answer: "Yes — most linen orders combine tablecloths and runners together. We price the complete linen package and deliver everything in one order." },
+      { question: "How long are the table runners?", answer: "Our runners are 10 feet long and work well across 6ft and 8ft rectangular tables, with a natural drape on each end." },
+      { question: "How far in advance should I book table runners?", answer: "We recommend booking 1–2 weeks in advance for most events and 2–3 weeks during peak season (May–September) to ensure your preferred color is available." },
     ],
   },
-  {
+    {
     slug: "decorations",
     name: "Decorations",
     meta: {
@@ -535,8 +472,8 @@ export const categories: Category[] = [
       },
       {
         icon: "🚚",
-        title: "Free Delivery",
-        description: "All decoration rentals are delivered to your venue as part of your order at no extra charge.",
+        title: "Delivery Available",
+        description: "All decoration rentals are delivered to your venue across North County San Diego as part of your order.",
       },
       {
         icon: "📸",
@@ -569,7 +506,7 @@ export const categories: Category[] = [
       },
       {
         question: "Can decorations be combined with linens and tableware in one order?",
-        answer: "Yes — most of our full-service orders combine tables, chairs, linens, tableware, and decorations in one package. One delivery, one setup, one pickup. Request a quote with your full list and we'll coordinate everything.",
+        answer: "Yes — most of our full-service orders combine tables, chairs, linens, and decorations in one package. One delivery, one pickup. Request a quote with your full list and we'll coordinate everything.",
       },
       {
         question: "How far in advance should I book decoration rentals?",
@@ -583,7 +520,7 @@ export const categories: Category[] = [
     meta: {
       title: "Lighting Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "String lights, uplighting & lanterns for atmospheric event lighting in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery and setup included.",
+        "String lights, uplighting & lanterns for atmospheric event lighting in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Lighting Rentals",
     subheadline: "String lights, uplighting & lanterns for the perfect ambiance — installed and ready for your event.",
@@ -622,8 +559,8 @@ export const categories: Category[] = [
       },
       {
         icon: "🚚",
-        title: "Free Delivery",
-        description: "All lighting rentals are delivered to your venue as part of your order at no extra charge.",
+        title: "Delivery Available",
+        description: "All lighting rentals are delivered to your venue across North County San Diego as part of your order.",
       },
       {
         icon: "💡",

@@ -88,7 +88,7 @@ const nearbyAreas = cities
   .filter((c) => c.slug !== city.slug)
   .map((c) => ({
     name: c.name,
-    tagline: `${service.shortName} in ${c.name} — free delivery and setup.`,
+    tagline: `${service.shortName} in ${c.name}.`,
     href: `/${c.slug}/${service.slug}/`,
   }));
 
@@ -239,7 +239,7 @@ const schema = [
   <CityCards
     eyebrow="NEARBY CITIES"
     title={`${service.shortName} in Nearby Cities`}
-    subtitle={`We also provide ${service.shortName.toLowerCase()} with free delivery in these North County cities.`}
+    subtitle={`We also provide ${service.shortName.toLowerCase()} in these North County cities.`}
     cities={nearbyAreas.map((a) => ({ name: a.name, description: a.tagline, href: a.href }))}
     bg="white"
     padding="default"

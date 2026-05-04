@@ -56,8 +56,8 @@ export const conversionProofPoints: ConversionProofPoint[] = [
     icon: "⚡",
   },
   {
-    title: "Free delivery, setup & pickup",
-    description: "Every quote includes the logistics you need upfront, without surprise add-ons.",
+    title: "Delivery across North County SD",
+    description: "Professional delivery available to your venue — every quote includes logistics upfront, no surprise add-ons.",
     icon: "🚚",
   },
   {

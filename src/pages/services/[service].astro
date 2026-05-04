@@ -47,7 +47,7 @@ const cityCards = cities
   .filter((c) => c.services.includes(service.slug))
   .map((c) => ({
     name: c.name,
-    description: `${service.shortName} with free delivery and setup in ${c.name}.`,
+    description: `${service.shortName} in ${c.name}.`,
     href: `/${c.slug}/${service.slug}/`,
   }));
 
@@ -177,7 +177,7 @@ const schema = [
   <CityCards
     eyebrow="SERVICE AREAS"
     title={`${service.name} by City`}
-    subtitle={`Free delivery and setup for ${service.shortName.toLowerCase()} across North County San Diego. Choose your city for local details.`}
+    subtitle={`${service.shortName} available across North County San Diego. Choose your city for local details.`}
     cities={cityCards}
     bg="white"
   />
@@ -193,7 +193,7 @@ const schema = [
   <!-- 10 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title={`Ready to Book ${service.shortName}?`}
-    subtitle="Free delivery, professional setup, and same-day pickup included with every rental. No hidden fees."
+    subtitle="Professional delivery available across North County San Diego. Complimentary warehouse pickup always available."
     primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
     secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
@@ -201,7 +201,7 @@ const schema = [
   <!-- 11 · Quote Form — dark ────────────────────── -->
   <QuoteForm
     heading={`Get a ${service.shortName} Quote`}
-    subheading={`Tell us about your event and we'll put together a custom ${service.name.toLowerCase()} package with free delivery.`}
+    subheading={`Tell us about your event and we'll put together a custom ${service.name.toLowerCase()} package.`}
     service={service.slug}
   />
 
