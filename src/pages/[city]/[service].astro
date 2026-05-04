@@ -257,7 +257,8 @@ const schema = [
   <CtaBand
     title={`Book ${service.shortName} in ${city.name}`}
     subtitle={`Get a free quote for ${service.name.toLowerCase()} in ${city.name}. Delivery, setup, and pickup are always included.`}
-    primaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
+    primaryCta={{ label: "Book Now", href: "https://rentals.kelaripartyrentals.com" }}
+    secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
     secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 

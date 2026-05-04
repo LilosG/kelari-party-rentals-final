@@ -152,7 +152,7 @@ const schema = [
     subtitle={hero.subtitle}
     backgroundImage={hero.backgroundImage}
     primaryCta={hero.primaryCta}
-    secondaryCta={{ label: nap.contact.phone, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+    secondaryCta={hero.secondaryCta}
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->
@@ -253,7 +253,7 @@ const schema = [
     title={ctaBand.title}
     subtitle={ctaBand.subtitle}
     primaryCta={ctaBand.primaryCta}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+    secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
   />
 
   <!-- 8 · Gallery — white ──────────────────────── -->

@@ -32,7 +32,8 @@ export const hero = {
   subtitle:
     "Tables, chairs, canopies, linens, and décor — delivered and set up across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
   backgroundImage: "/images/hero-party.jpg",
-  primaryCta: { label: "Request a Free Quote", href: "/quote/" },
+  primaryCta: { label: "Book Now", href: "https://rentals.kelaripartyrentals.com" },
+  secondaryCta: { label: "Get a Free Quote", href: "/quote/" },
 };
 
 export const trustBarItems: TrustBarItem[] = [
@@ -49,7 +50,8 @@ export const ctaBand = {
   title: "Party Rentals You Can Actually Count On",
   subtitle:
     "Professional delivery available across North County San Diego. No hidden fees, no stress — just a beautiful event.",
-  primaryCta: { label: "Get a Free Quote", href: "/quote/" },
+  primaryCta: { label: "Book Now", href: "https://rentals.kelaripartyrentals.com" },
+  secondaryCta: { label: "Get a Free Quote", href: "/quote/" },
 };
 
 // ── How It Works ──────────────────────────────────────────────────────────────

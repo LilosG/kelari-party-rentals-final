@@ -96,8 +96,8 @@ const resolvedBreadcrumbs: { label: string; href: string }[] =
   })();
 
 const resolvedPrimaryCta = primaryCta ?? {
-  label: "Get a Free Quote",
-  href: "/quote/",
+  label: "Book Now",
+  href: "https://rentals.kelaripartyrentals.com",
 };
 const resolvedSecondaryCta = secondaryCta ?? {
   label: nap.contact.phone,
@@ -191,9 +191,14 @@ const emphasisTail = hasEmphasisPattern
         )}
 
         <div class="mt-8 flex flex-wrap gap-3">
-          <Button href={resolvedPrimaryCta.href} variant="brand" size="md">
+          
+            href={resolvedPrimaryCta.href}
+            target={resolvedPrimaryCta.href.startsWith("http") ? "_blank" : undefined}
+            rel={resolvedPrimaryCta.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-6 py-3 text-sm transition-colors shadow-[0_4px_20px_rgba(200,68,122,0.35)]"
+          >
             {resolvedPrimaryCta.label}
-          </Button>
+          </a>
           <Button href={resolvedSecondaryCta.href} variant="outline-light" size="md">
             {resolvedSecondaryCta.label}
           </Button>

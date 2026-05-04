@@ -147,6 +147,8 @@ export const tokens: DesignTokens = {
 
 export const recaptchaSiteKey = "6LcvXZksAAAAAN0CwNr2NFgKft5Q7rEnIZSdcfMN";
 
+export const booqableStore = "https://rentals.kelaripartyrentals.com";
+
 export const site: SiteConfig = {
   nap,
   domain: "https://kelaripartyrentals.com",

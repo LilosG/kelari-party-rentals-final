@@ -29,9 +29,14 @@ const isPhone = secondaryCta?.href?.startsWith("tel:");
         spacing="default"
       />
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <Button href={primaryCta.href} variant="brand" size="md">
+        
+          href={primaryCta.href}
+          target={primaryCta.href.startsWith("http") ? "_blank" : undefined}
+          rel={primaryCta.href.startsWith("http") ? "noopener noreferrer" : undefined}
+          class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-6 py-3 text-sm transition-colors shadow-[0_4px_20px_rgba(200,68,122,0.35)]"
+        >
           {primaryCta.label}
-        </Button>
+        </a>
         {secondaryCta && (
           <Button href={secondaryCta.href} variant="outline-light" size="md">
             {isPhone && (
