@@ -6,6 +6,8 @@ interface Props {
   size?: "sm" | "md";
   pill?: boolean;
   class?: string;
+  target?: string;
+  rel?: string;
 }
 
 const {
@@ -15,6 +17,8 @@ const {
   size = "md",
   pill = false,
   class: className,
+  target,
+  rel,
 } = Astro.props;
 
 const classes = [
@@ -27,7 +31,7 @@ const classes = [
 ---
 
 {href ? (
-  <a href={href} class:list={classes}>
+  <a href={href} class:list={classes} target={target} rel={rel}>
     <slot />
   </a>
 ) : (
