@@ -11,7 +11,7 @@ import CityCards from "../../components/CityCards.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 
-import { site, nap } from "../../data/site";
+import { site, nap, booqableStore } from "../../data/site";
 import { services, type Service } from "../../data/services";
 import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials, galleryImages } from "../../data/homepage";
@@ -194,9 +194,9 @@ const schema = [
   <CtaBand
     title={`Ready to Book ${service.shortName}?`}
     subtitle="Professional delivery available across North County San Diego. Complimentary warehouse pickup always available."
-    primaryCta={{ label: "Book Now", href: "https://rentals.kelaripartyrentals.com" }}
+    primaryCta={{ label: "Book Now", href: booqableStore }}
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+    tertiaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 11 · Quote Form — dark ────────────────────── -->

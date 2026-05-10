@@ -15,7 +15,7 @@ import galleryMarquee from '../assets/images/gallery-marquee.jpg';
 import galleryTablescape from '../assets/images/gallery-tablescape.jpg';
 
 import type { ImageMetadata } from 'astro';
-import { nap } from '../data/site';
+import { nap, booqableStore } from '../data/site';
 
 const heroImageMap: Record<string, ImageMetadata> = {
   '/images/hero-party.jpg': heroParty,
@@ -97,7 +97,7 @@ const resolvedBreadcrumbs: { label: string; href: string }[] =
 
 const resolvedPrimaryCta = primaryCta ?? {
   label: "Book Now",
-  href: "https://rentals.kelaripartyrentals.com",
+  href: booqableStore,
 };
 const resolvedSecondaryCta = secondaryCta ?? {
   label: nap.contact.phone,

@@ -58,7 +58,7 @@ const isHomepage = Astro.url.pathname === "/";
     {schema && (
       <script
         type="application/ld+json"
-        set:html={JSON.stringify(Array.isArray(schema) ? schema : schema)}
+        set:html={JSON.stringify(Array.isArray(schema) ? schema : [schema])}
       />
     )}
 

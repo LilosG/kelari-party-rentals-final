@@ -116,7 +116,7 @@ export const nap: NAP = {
 export const social: SocialLinks = {
   facebook: "https://facebook.com/kelaripartyrentals",
   instagram: "https://instagram.com/kelaripartyrentals",
-  google: "https://g.page/kelaripartyrentals",
+  google: "https://maps.app.goo.gl/TpywTMtDzaqxq9FA7",
 };
 
 export const tokens: DesignTokens = {
@@ -148,6 +148,8 @@ export const tokens: DesignTokens = {
 export const recaptchaSiteKey = "6LcvXZksAAAAAN0CwNr2NFgKft5Q7rEnIZSdcfMN";
 
 export const booqableStore = "https://rentals.kelaripartyrentals.com";
+
+export const gbpUrl = "https://maps.app.goo.gl/TpywTMtDzaqxq9FA7";
 
 export const site: SiteConfig = {
   nap,

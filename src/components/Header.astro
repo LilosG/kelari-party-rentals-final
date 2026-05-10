@@ -1,5 +1,5 @@
 ---
-import { nap } from "../data/site";
+import { nap, booqableStore } from "../data/site";
 import { services } from "../data/services";
 import { categories } from "../data/categories";
 import { cities } from "../data/cities";
@@ -173,7 +173,7 @@ const cityLinks = cities.map((c) => ({
         <Button href="/quote/" variant="brand-soft" size="sm">
           Get a Quote
         </Button>
-        <Button href="https://rentals.kelaripartyrentals.com" target="_blank" rel="noopener noreferrer" variant="brand" size="sm">
+        <Button href={booqableStore} target="_blank" rel="noopener noreferrer" variant="brand" size="sm">
           Book Now
         </Button>
       </div>
@@ -295,7 +295,7 @@ const cityLinks = cities.map((c) => ({
           </svg>
           {nap.contact.phone}
         </a>
-        <Button href="https://rentals.kelaripartyrentals.com" target="_blank" rel="noopener noreferrer" variant="brand" size="sm" class="w-full justify-center">
+        <Button href={booqableStore} target="_blank" rel="noopener noreferrer" variant="brand" size="sm" class="w-full justify-center">
           Book Now
         </Button>
         <Button href="/quote/" variant="brand-soft" size="sm" class="w-full justify-center">

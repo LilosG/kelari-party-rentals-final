@@ -51,7 +51,7 @@ export const services: Service[] = [
         "Tables, chairs, tents, linens & décor for any celebration. Serving Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     cityMeta: {
-      title: "Party Rentals in {city} CA | Kelari Party Rentals",
+      title: "{city} Party Rentals – Packages & Pricing | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor delivered to {city}. Book your stress-free party rental package today.",
     },
@@ -541,12 +541,6 @@ export const services: Service[] = [
           "Centerpieces, vases, backdrop frames, and accent pieces for a stunning setting.",
       },
       {
-        icon: "✨",
-        title: "Décor & Accents",
-        description:
-          "Centerpieces, vases, and accent pieces for a stunning, cohesive tablescape.",
-      },
-      {
         icon: "💡",
         title: "Ambient Lighting",
         description:
@@ -839,9 +833,9 @@ export const services: Service[] = [
           "We provide tables, Chiavari chairs, premium linens, table runners, centerpieces, canopies or tents, and décor accents. Everything can be customized to your quinceañera color theme and style.",
       },
       {
-        question: "Do you deliver quinceañera rentals to backyards and venues in {city}?",
+        question: "Do you deliver quinceañera rentals to backyards and venues in North County San Diego?",
         answer:
-          "Yes — we deliver to private homes, backyards, parks, community centers, and event venues throughout {city}. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is also always available.",
+          "Yes — we deliver to private homes, backyards, parks, community centers, and event venues throughout our North County San Diego service area — Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is also always available.",
       },
       {
         question: "How far in advance should I book quinceañera rentals?",

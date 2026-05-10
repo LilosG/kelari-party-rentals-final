@@ -36,7 +36,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92008", "92009", "92010", "92011"],
     meta: {
-      title: "Party Rentals in Carlsbad CA | Kelari Party Rentals",
+      title: "Party Rental Services in Carlsbad, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in Carlsbad. Serving the Village, Bressi Ranch, La Costa & Aviara.",
     },
@@ -109,7 +109,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92023", "92024"],
     meta: {
-      title: "Party Rentals in Encinitas CA | Kelari Party Rentals",
+      title: "Party Rental Services in Encinitas, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in Encinitas. Serving Leucadia, Cardiff, Olivenhain & New Encinitas.",
     },
@@ -179,7 +179,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92049", "92054", "92056", "92057", "92058"],
     meta: {
-      title: "Party Rentals in Oceanside CA | Kelari Party Rentals",
+      title: "Party Rental Services in Oceanside, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in Oceanside. Serving Downtown, South O, Fire Mountain & Rancho Del Oro.",
     },
@@ -251,7 +251,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92069", "92078", "92096"],
     meta: {
-      title: "Party Rentals in San Marcos CA | Kelari Party Rentals",
+      title: "Party Rental Services in San Marcos, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in San Marcos. Serving Lake San Marcos, Twin Oaks Valley, Rancho Santa Fe Road & more.",
     },
@@ -322,7 +322,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92010"],
     meta: {
-      title: "Party Rentals in Bressi Ranch Carlsbad CA | Kelari Party Rentals",
+      title: "Party Rental Services in Bressi Ranch, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in Bressi Ranch, Carlsbad. Your neighborhood party rental team — stress-free.",
     },
@@ -389,7 +389,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92009"],
     meta: {
-      title: "Party Rentals in La Costa Carlsbad CA | Kelari Party Rentals",
+      title: "Party Rental Services in La Costa, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in La Costa, Carlsbad. Full-service party rentals for La Costa homes and venues.",
     },
@@ -458,7 +458,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92008"],
     meta: {
-      title: "Party Rentals in Olde Carlsbad CA | Kelari Party Rentals",
+      title: "Party Rental Services in Olde Carlsbad, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in Olde Carlsbad. Local party rental experts serving the heart of Carlsbad.",
     },
@@ -527,7 +527,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92011"],
     meta: {
-      title: "Party Rentals in Aviara Carlsbad CA | Kelari Party Rentals",
+      title: "Party Rental Services in Aviara, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in Aviara, Carlsbad. Elegant full-service party rentals for Aviara homes and venues.",
     },
@@ -596,7 +596,7 @@ export const cities: City[] = [
     state: "CA",
     zip: ["92081", "92083", "92084", "92085"],
     meta: {
-      title: "Party Rentals in Vista CA | Kelari Party Rentals",
+      title: "Party Rental Services in Vista, CA | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor rentals with professional delivery in Vista. Serving Shadowridge, Buena Creek, North Vista & surrounding neighborhoods.",
     },

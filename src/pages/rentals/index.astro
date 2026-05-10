@@ -7,7 +7,7 @@ import CategoryGrid from "../../components/CategoryGrid.astro";
 import CtaBand from "../../components/CtaBand.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 
-import { site, nap } from "../../data/site";
+import { site, nap, booqableStore } from "../../data/site";
 import { categories } from "../../data/categories";
 
 const title = "Party Rental Inventory | Kelari Party Rentals";
@@ -86,9 +86,9 @@ const schema = [
   <CtaBand
     title="Need Help Choosing?"
     subtitle="Not sure what you need? Tell us about your event and we'll recommend the perfect rental package — no obligation."
-    primaryCta={{ label: "Book Now", href: "https://rentals.kelaripartyrentals.com" }}
+    primaryCta={{ label: "Book Now", href: booqableStore }}
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+    tertiaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 6 · Quote Form — dark ────────────────────── -->

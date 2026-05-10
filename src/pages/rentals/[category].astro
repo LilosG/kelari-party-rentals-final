@@ -13,7 +13,7 @@ import WhatsIncluded from "../../components/WhatsIncluded.astro";
 import HowItWorks from "../../components/HowItWorks.astro";
 import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
-import { site, nap } from "../../data/site";
+import { site, nap, booqableStore } from "../../data/site";
 import { categories, type Category } from "../../data/categories";
 import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials } from "../../data/homepage";
@@ -246,9 +246,9 @@ const schema = [
   <CtaBand
     title={`Need ${category.name} for Your Event?`}
     subtitle={`Get a quote for ${category.name.toLowerCase()} rentals. Delivery available across North County SD.`}
-    primaryCta={{ label: "Book Now", href: "https://rentals.kelaripartyrentals.com" }}
+    primaryCta={{ label: "Book Now", href: booqableStore }}
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+    tertiaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 13 · Quote Form — dark ───────────────────── -->

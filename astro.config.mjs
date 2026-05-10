@@ -9,9 +9,6 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://kelaripartyrentals.com',
-  build: {
-    inlineStylesheets: 'always'
-  },
 
   image: {
     service: { entrypoint: 'astro/assets/services/sharp' }
@@ -21,5 +18,8 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap(), mdx()]
+  integrations: [
+    sitemap({ filter: (page) => !page.includes('/thank-you/') }),
+    mdx(),
+  ],
 });

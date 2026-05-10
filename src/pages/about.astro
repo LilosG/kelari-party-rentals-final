@@ -7,7 +7,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 import CtaBand from "../components/CtaBand.astro";
 import QuoteForm from "../components/QuoteForm.astro";
 
-import { site, nap } from "../data/site";
+import { site, nap, booqableStore } from "../data/site";
 
 const title = "About Us | Kelari Party Rentals";
 const description =
@@ -138,9 +138,9 @@ const stats = [
   <CtaBand
     title="Ready to Plan Your Event?"
     subtitle="Get a free, no-obligation quote. We'll help you choose the right rentals for your celebration."
-    primaryCta={{ label: "Book Now", href: "https://rentals.kelaripartyrentals.com" }}
+    primaryCta={{ label: "Book Now", href: booqableStore }}
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+    tertiaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 7 · Quote Form — dark ────────────────────── -->

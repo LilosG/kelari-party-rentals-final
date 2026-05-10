@@ -7,6 +7,7 @@ import type { Step } from "../components/HowItWorks.astro";
 import type { Testimonial } from "../components/TestimonialCarousel.astro";
 import type { GalleryImage } from "../components/ImageGallery.astro";
 import type { FAQ } from "../components/FAQAccordion.astro";
+import { booqableStore } from "./site";
 
 import heroPartyImg from "../assets/images/hero-party.jpg";
 import birthdayPartyImg from "../assets/images/birthday-party.jpg";
@@ -32,7 +33,7 @@ export const hero = {
   subtitle:
     "Tables, chairs, canopies, linens, and décor — delivered and set up across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
   backgroundImage: "/images/hero-party.jpg",
-  primaryCta: { label: "Book Now", href: "https://rentals.kelaripartyrentals.com" },
+  primaryCta: { label: "Book Now", href: booqableStore },
   secondaryCta: { label: "Get a Free Quote", href: "/quote/" },
 };
 
@@ -50,7 +51,7 @@ export const ctaBand = {
   title: "Party Rentals You Can Actually Count On",
   subtitle:
     "Professional delivery available across North County San Diego. No hidden fees, no stress — just a beautiful event.",
-  primaryCta: { label: "Book Now", href: "https://rentals.kelaripartyrentals.com" },
+  primaryCta: { label: "Book Now", href: booqableStore },
   secondaryCta: { label: "Get a Free Quote", href: "/quote/" },
 };
 

@@ -8,7 +8,7 @@ import HowItWorks from "../../components/HowItWorks.astro";
 import CtaBand from "../../components/CtaBand.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 
-import { site, nap } from "../../data/site";
+import { site, nap, booqableStore } from "../../data/site";
 import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials, galleryImages } from "../../data/homepage";
 import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
@@ -124,9 +124,9 @@ const schema = [
   <CtaBand
     title="Not Sure What You Need?"
     subtitle="Tell us about your event and we'll recommend the perfect service and rental package — no obligation."
-    primaryCta={{ label: "Book Now", href: "https://rentals.kelaripartyrentals.com" }}
+    primaryCta={{ label: "Book Now", href: booqableStore }}
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
-    secondaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
+    tertiaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
   <!-- 7 · Quote Form — dark ────────────────────── -->
