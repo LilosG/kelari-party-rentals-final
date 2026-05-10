@@ -22,8 +22,6 @@ export interface NAP {
 }
 
 export interface SocialLinks {
-  facebook: string;
-  instagram: string;
   google: string;
 }
 
@@ -114,8 +112,6 @@ export const nap: NAP = {
 };
 
 export const social: SocialLinks = {
-  facebook: "https://facebook.com/kelaripartyrentals",
-  instagram: "https://instagram.com/kelaripartyrentals",
   google: "https://maps.app.goo.gl/TpywTMtDzaqxq9FA7",
 };
 
@@ -192,8 +188,6 @@ export const site: SiteConfig = {
       longitude: -117.3506,
     },
     sameAs: [
-      social.facebook,
-      social.instagram,
       social.google,
     ],
   },

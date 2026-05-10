@@ -11,6 +11,8 @@ import ConversionProofPoints from "../components/ConversionProofPoints.astro";
 import { site, nap } from "../data/site";
 import { contactMetaItems, conversionProofPoints } from "../data/conversion";
 
+const mapsEmbedSrc = `https://maps.google.com/maps?q=${encodeURIComponent(`${nap.name}, ${nap.address.city}, ${nap.address.state}`)}&output=embed&z=15`;
+
 const title = "Contact Kelari Party Rentals | Party Rentals in Carlsbad CA";
 const description =
   "Get in touch with Kelari Party Rentals. Call, email, or visit us in Carlsbad. We respond within 2 hours during business hours.";
@@ -76,14 +78,6 @@ const schema = [
         <div class="mt-8 border-t border-neutral-200 pt-6">
           <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">Follow Us</p>
           <div class="flex gap-4">
-            <a href={site.social.facebook} target="_blank" rel="noopener noreferrer"
-               class="text-sm font-medium text-neutral-600 transition-colors hover:text-brand-pink">
-              Facebook
-            </a>
-            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer"
-               class="text-sm font-medium text-neutral-600 transition-colors hover:text-brand-pink">
-              Instagram
-            </a>
             <a href={site.social.google} target="_blank" rel="noopener noreferrer"
                class="text-sm font-medium text-neutral-600 transition-colors hover:text-brand-pink">
               Google
@@ -105,7 +99,7 @@ const schema = [
 
         <div class="mt-8 aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200 shadow-sm">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.5!2d-117.3506!3d33.1581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDA5JzI5LjIiTiAxMTfCsDIxJzAyLjIiVw!5e0!3m2!1sen!2sus!4v1"
+            src={mapsEmbedSrc}
             width="100%"
             height="100%"
             style="border:0;"
