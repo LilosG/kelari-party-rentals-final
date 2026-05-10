@@ -12,6 +12,7 @@ import CtaBand from "../../components/CtaBand.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import CityCards from "../../components/CityCards.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
 
 import { site, nap, booqableStore } from "../../data/site";
 import { cities, type City } from "../../data/cities";
@@ -115,6 +116,11 @@ const schema = [
     title={city.headline}
     subtitle={city.subheadline}
     bgImage={bgImage}
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Service Area", href: "/service-area/" },
+      { label: city.name, href: `/${city.slug}/` },
+    ]}
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->
@@ -221,6 +227,13 @@ const schema = [
     title={`${city.name} Party Rental FAQs`}
     faqs={city.faqs}
     bg="light"
+  />
+
+  <!-- 11 · Related Blog Posts — white ──────────── -->
+  <RelatedPosts
+    tags={[city.slug]}
+    heading={`Party Planning Tips for ${city.name}`}
+    bg="white"
   />
 
   <!-- 12 · CTA Band — dark ──────────────────────── -->

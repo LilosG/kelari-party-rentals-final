@@ -31,6 +31,7 @@ export interface Category {
   items: CategoryItem[];
   whatsIncluded: CategoryIncludedItem[];
   faqs: CategoryFAQ[];
+  relatedServices: string[];
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -102,6 +103,13 @@ export const categories: Category[] = [
         title: "Mix & Match",
         description: "Combine rectangular, round, and cocktail tables in one order — we coordinate the full setup.",
       },
+    ],
+    relatedServices: [
+      "birthday-party-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "quinceanera-rentals",
+      "baby-shower-rentals",
     ],
     faqs: [
       {
@@ -189,6 +197,12 @@ export const categories: Category[] = [
         title: "Quantity Guidance",
         description: "Not sure how many chairs you need? We'll confirm the right count based on your guest list and layout.",
       },
+    ],
+    relatedServices: [
+      "birthday-party-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -280,6 +294,12 @@ export const categories: Category[] = [
         description: "Not sure what size tent fits your yard or guest count? We'll recommend the right option based on your space and event details.",
       },
     ],
+    relatedServices: [
+      "birthday-party-rentals",
+      "backyard-party-rentals",
+      "park-party-rentals",
+      "graduation-party-rentals",
+    ],
     faqs: [
       {
         question: "What size tent do I need for my backyard party?",
@@ -369,6 +389,11 @@ export const categories: Category[] = [
         description: "From classic white and ivory to dusty rose, navy, sage, gold, and burgundy — we carry the colors your event needs.",
       },
     ],
+    relatedServices: [
+      "engagement-party-rentals",
+      "quinceanera-rentals",
+      "baby-shower-rentals",
+    ],
     faqs: [
       {
         question: "What colors of linens do you carry?",
@@ -419,6 +444,11 @@ export const categories: Category[] = [
       { icon: "🔧", title: "Placed at Setup", description: "We lay every runner on your tables as part of the setup — you don't fold or place a single piece." },
       { icon: "🧹", title: "Post-Event Collection", description: "We collect all runners after your event. No washing, no returning — we handle everything." },
       { icon: "📋", title: "Multiple Colors Available", description: "Off white, pink, baby blue, tan, and green — coordinate with any event theme or color palette." },
+    ],
+    relatedServices: [
+      "engagement-party-rentals",
+      "quinceanera-rentals",
+      "baby-shower-rentals",
     ],
     faqs: [
       { question: "Do I need a runner if I already have a tablecloth?", answer: "Runners are optional but add a significant layer of visual interest. A tablecloth in your base color plus a runner in a contrasting accent is the most common and effective approach — it creates a layered, intentional look that photographs beautifully." },
@@ -490,6 +520,12 @@ export const categories: Category[] = [
         title: "Custom Packages",
         description: "Decorations can be combined with tables, linens, and tableware in a single coordinated package.",
       },
+    ],
+    relatedServices: [
+      "birthday-party-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
@@ -577,6 +613,11 @@ export const categories: Category[] = [
         title: "Power Coordination",
         description: "We confirm power source requirements when booking and bring the right extension equipment for your venue.",
       },
+    ],
+    relatedServices: [
+      "engagement-party-rentals",
+      "quinceanera-rentals",
+      "graduation-party-rentals",
     ],
     faqs: [
       {

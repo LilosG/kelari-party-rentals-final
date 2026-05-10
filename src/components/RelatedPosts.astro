@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
+import BlogCard from "./BlogCard.astro";
+
+export interface Props {
+  tags: string[];
+  limit?: number;
+  heading?: string;
+  bg?: "white" | "light" | "dark" | "pink-light";
+}
+
+const { tags, limit = 3, heading = "From Our Blog", bg = "light" } = Astro.props;
+
+const allPosts = await getCollection("blog");
+const sorted = [...allPosts].sort(
+  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+function normalize(s: string) {
+  return s.toLowerCase().replace(/-/g, " ");
+}
+
+const matched = tags.length > 0
+  ? sorted.filter((post) =>
+      (post.data.tags ?? []).some((postTag) =>
+        tags.some((searchTag) => {
+          const n1 = normalize(postTag);
+          const n2 = normalize(searchTag);
+          return n1 === n2 || n1.includes(n2) || n2.includes(n1);
+        })
+      )
+    )
+  : [];
+
+const matchedIds = new Set(matched.map((p) => p.id));
+const remaining = sorted.filter((p) => !matchedIds.has(p.id));
+const posts = [...matched, ...remaining].slice(0, limit);
+---
+
+{posts.length > 0 && (
+  <Section {bg} spacing="default" width="wide">
+    <div class="mb-10 md:mb-12">
+      <SectionHeader
+        eyebrow="PARTY PLANNING RESOURCES"
+        title={heading}
+      />
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {posts.map((post) => (
+        <BlogCard
+          title={post.data.title}
+          description={post.data.description}
+          slug={post.id}
+          publishDate={post.data.publishDate}
+          category={post.data.category}
+          tags={post.data.tags}
+          featured={post.data.featured}
+        />
+      ))}
+    </div>
+  </Section>
+)}

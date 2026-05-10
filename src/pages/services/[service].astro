@@ -10,6 +10,7 @@ import CtaBand from "../../components/CtaBand.astro";
 import CityCards from "../../components/CityCards.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
 
 import { site, nap, booqableStore } from "../../data/site";
 import { services, type Service } from "../../data/services";
@@ -115,6 +116,11 @@ const schema = [
     title={service.headline}
     subtitle={service.subheadline}
     bgImage={bgImage}
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Services", href: "/services/" },
+      { label: service.name, href: `/services/${service.slug}/` },
+    ]}
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->
@@ -188,6 +194,13 @@ const schema = [
     title={`${service.name} — Frequently Asked Questions`}
     faqs={service.faqs}
     bg="light"
+  />
+
+  <!-- 9 · Related Blog Posts — white ───────────── -->
+  <RelatedPosts
+    tags={[service.slug]}
+    heading="Party Planning Resources"
+    bg="white"
   />
 
   <!-- 10 · CTA Band — dark ──────────────────────── -->

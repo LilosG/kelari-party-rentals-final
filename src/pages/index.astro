@@ -23,6 +23,7 @@ import ImageGallery from "../components/ImageGallery.astro";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import FAQAccordion from "../components/FAQAccordion.astro";
 import CityCards from "../components/CityCards.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
 
 import { site, nap } from "../data/site";
 import { categories } from "../data/categories";
@@ -258,6 +259,12 @@ const schema = [
     bg="white"
   />
 
-
+  <!-- 11 · From Our Blog — light ──────────────── -->
+  <RelatedPosts
+    tags={[]}
+    limit={3}
+    heading="From Our Blog"
+    bg="light"
+  />
 
 </BaseLayout>

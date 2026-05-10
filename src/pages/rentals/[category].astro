@@ -15,6 +15,7 @@ import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import { site, nap, booqableStore } from "../../data/site";
 import { categories, type Category } from "../../data/categories";
+import { services as allServices } from "../../data/services";
 import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials } from "../../data/homepage";
 
@@ -49,6 +50,10 @@ const categoryImages: Record<string, string> = {
 const bgImage = categoryImages[category.slug] ?? "/images/hero-party.jpg";
 
 const otherCategories = categories.filter((c) => c.slug !== category.slug);
+
+const relatedServiceData = category.relatedServices
+  .map((slug) => allServices.find((s) => s.slug === slug))
+  .filter((s): s is (typeof allServices)[number] => Boolean(s));
 
 const catName = category.name;
 const catNameLower = category.name.toLowerCase();
@@ -241,6 +246,38 @@ const schema = [
     faqs={category.faqs}
     bg="light"
   />
+
+  <!-- 11 · Related Services — white ───────────── -->
+  {relatedServiceData.length > 0 && (
+    <Section bg="white">
+      <div class="mb-10 md:mb-12">
+        <SectionHeader
+          eyebrow="POPULAR OCCASIONS"
+          title={`${category.name} for Every Event Type`}
+          subtitle={`See how we use ${category.name.toLowerCase()} across our most popular party rental services.`}
+        />
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        {relatedServiceData.map((service) => (
+          <a
+            href={`/services/${service.slug}/`}
+            class="group flex flex-col bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_8px_40px_rgba(200,68,122,0.12)] hover:border-brand-pink/30 transition-all duration-300"
+          >
+            <span class="text-2xl mb-3" aria-hidden="true">{service.icon}</span>
+            <h3 class="font-display font-bold text-neutral-900 text-lg mb-2 group-hover:text-brand-pink transition-colors">
+              {service.name}
+            </h3>
+            <p class="text-sm text-neutral-600 leading-relaxed flex-1">
+              {service.subheadline}
+            </p>
+            <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 text-brand-pink group-hover:gap-2 transition-all duration-200">
+              View packages <span aria-hidden="true">&rarr;</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </Section>
+  )}
 
   <!-- 12 · CTA Band — dark ─────────────────────── -->
   <CtaBand
