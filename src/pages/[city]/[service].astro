@@ -52,6 +52,8 @@ interface Props {
 
 const { city, service } = Astro.props;
 
+const cityContent = city.cityServiceContent?.[service.slug];
+
 const serviceImages: Record<string, string> = {
   "party-rentals": "/images/hero-party.jpg",
   "birthday-party-rentals": "/images/birthday-party.jpg",
@@ -172,11 +174,23 @@ const schema = [
       </p>
       <div class="border-t border-neutral-200 pt-6">
         <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
-          {intro}
+          {cityContent?.intro ?? intro}
         </p>
       </div>
     </div>
   </Section>
+
+  <!-- 3b · Local Venue Callout — white (conditional) ── -->
+  {cityContent?.localVenue && (
+    <Section bg="white" spacing="compact">
+      <div class="max-w-3xl mx-auto">
+        <div class="border-l-4 border-brand-pink bg-neutral-50 pl-5 py-4 rounded-r">
+          <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-2 text-brand-pink">LOCAL VENUE</p>
+          <p class="text-base text-neutral-700 italic leading-relaxed">{cityContent.localVenue}</p>
+        </div>
+      </div>
+    </Section>
+  )}
 
   <!-- 4 · What's Included — light ──────────────── -->
   <WhatsIncluded
@@ -198,7 +212,7 @@ const schema = [
         {city.localProof}
       </p>
       <p class="mt-3 text-base text-neutral-500">
-        {city.deliveryNote}
+        {cityContent?.deliveryNote ?? city.deliveryNote}
       </p>
     </div>
   </Section>
@@ -257,6 +271,16 @@ const schema = [
     faqs={combinedFaqs}
     bg="light"
   />
+
+  <!-- 11b · City-service FAQs — white (conditional) ── -->
+  {cityContent?.faqs && cityContent.faqs.length > 0 && (
+    <FAQAccordion
+      eyebrow="LOCAL FAQs"
+      title={`Questions About ${service.name} in ${city.name}`}
+      faqs={cityContent.faqs}
+      bg="white"
+    />
+  )}
 
   <!-- 12 · CTA Band — dark ──────────────────────── -->
   <CtaBand
