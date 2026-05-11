@@ -160,13 +160,13 @@ const schema = [
       {category.items.map((item) => (
         <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm p-6 flex flex-col">
           {item.image ? (
-            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-4">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white">
               <Image
                 src={item.image}
                 alt={item.name}
                 width={400}
                 height={300}
-                class="w-full h-full object-cover"
+                class="w-full h-full object-contain"
               />
             </div>
           ) : (
