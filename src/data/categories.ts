@@ -1,9 +1,15 @@
+import type { ImageMetadata } from 'astro';
+import tableRound60 from '../assets/images/table-round-60.png';
+import tableRectangular from '../assets/images/table-rectangular.png';
+import tableCocktail from '../assets/images/table-cocktail.png';
+
 // ── Types ────────────────────────────────────────────────────────────────────
 
 export interface CategoryItem {
   name: string;
   description: string;
   sizes?: string[];
+  image?: ImageMetadata;
 }
 
 export interface CategoryIncludedItem {
@@ -52,25 +58,29 @@ export const categories: Category[] = [
     icon: "🪑",
     items: [
       {
+        name: '60" Round Folding Table',
+        description: "Seats 8–10 guests. Perfect for formal dining, centerpieces, and banquet-style layouts.",
+        sizes: ['60"'],
+        image: tableRound60,
+      },
+      {
         name: "6-Foot Rectangular Table",
-        description: "Seats 6–8 guests. Great for dining and buffet setups.",
+        description: "Seats 6–8 guests. Great for dining, buffet setups, and gift tables.",
         sizes: ["6 ft"],
+        image: tableRectangular,
       },
       {
         name: "8-Foot Rectangular Table",
-        description: "Seats 8–10 guests. Ideal for larger dining setups and banquets.",
+        description: "Seats 8–10 guests. Ideal for larger dining setups, buffets, and banquets.",
         sizes: ["8 ft"],
-      },
-      {
-        name: '60" Round Table',
-        description: "Seats 8–10 guests. Perfect for formal dining and centerpieces.",
-        sizes: ['60"'],
+        image: tableRectangular,
       },
       {
         name: "Cocktail Table",
-        description: "High-top bar-height table for standing receptions and mixers.",
+        description: "High-top bar-height table for standing receptions, cocktail hours, and lounge setups.",
+        sizes: ['30" Round'],
+        image: tableCocktail,
       },
-
     ],
     whatsIncluded: [
       {

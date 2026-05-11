@@ -13,6 +13,7 @@ import WhatsIncluded from "../../components/WhatsIncluded.astro";
 import HowItWorks from "../../components/HowItWorks.astro";
 import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
+import { Image } from 'astro:assets';
 import { site, nap, booqableStore } from "../../data/site";
 import { categories, type Category } from "../../data/categories";
 import { services as allServices } from "../../data/services";
@@ -158,9 +159,21 @@ const schema = [
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
       {category.items.map((item) => (
         <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm p-6 flex flex-col">
-          <div class="aspect-[4/3] rounded-xl bg-brand-pink-light mb-4 flex items-center justify-center">
-            <span class="text-5xl" aria-hidden="true">{category.icon}</span>
-          </div>
+          {item.image ? (
+            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-4">
+              <Image
+                src={item.image}
+                alt={item.name}
+                width={400}
+                height={300}
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ) : (
+            <div class="aspect-[4/3] rounded-xl bg-brand-pink-light mb-4 flex items-center justify-center">
+              <span class="text-5xl" aria-hidden="true">{category.icon}</span>
+            </div>
+          )}
           <h3 class="font-display text-lg font-bold text-neutral-800">{item.name}</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed flex-1">
             {item.description}
