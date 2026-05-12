@@ -71,6 +71,12 @@ export const conversionProofPoints: ConversionProofPoint[] = [
   },
 ];
 
+export const resourcesNav = [
+  { label: "Blog", href: "/blog/" },
+  { label: "FAQ", href: "/faq/" },
+  { label: "How It Works", href: "/#how-it-works" },
+];
+
 export const footerNavGroups = [
   {
     title: "Services",

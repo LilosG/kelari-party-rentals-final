@@ -1,5 +1,6 @@
 ---
 import { nap, booqableStore } from "../data/site";
+import { resourcesNav } from "../data/conversion";
 import { services } from "../data/services";
 import { categories } from "../data/categories";
 import { cities } from "../data/cities";
@@ -147,14 +148,42 @@ const cityLinks = cities.map((c) => ({
           </div>
         </div>
 
-        <a href="/#how-it-works" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
-          How It Works
+        <a href="/about/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
+          About
         </a>
-        <a href="/faq/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
-          FAQ
-        </a>
-        <a href="/blog/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
-          Blog
+
+        <!-- Resources dropdown -->
+        <div class="relative" id="desktop-resources-wrapper">
+          <div class="flex items-center">
+            <span class="header-nav-link px-3 py-2 rounded-lg">
+              Resources
+            </span>
+            <button
+              type="button"
+              id="desktop-resources-btn"
+              aria-expanded="false"
+              aria-controls="desktop-resources-panel"
+              aria-label="Resources submenu"
+              class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-50 transition-colors"
+            >
+              <svg class="w-3.5 h-3.5 transition-transform duration-200" id="desktop-resources-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div id="desktop-resources-panel" hidden class="absolute top-full left-0 mt-1 w-44 bg-white rounded-2xl border border-neutral-100 shadow-[0_8px_40px_rgba(0,0,0,0.12)] z-50">
+            <div class="p-2">
+              {resourcesNav.map((link) => (
+                <a href={link.href} class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-neutral-700 hover:bg-brand-pink-light hover:text-brand-pink transition-colors font-medium">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <a href="/contact/" class="header-nav-link px-3 py-2 rounded-lg hover:bg-neutral-50">
+          Contact
         </a>
       </nav>
 
@@ -274,14 +303,34 @@ const cityLinks = cities.map((c) => ({
         </div>
       </div>
 
-      <a href="/#how-it-works" class="px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
-        How It Works
+      <a href="/about/" class="px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
+        About
       </a>
-      <a href="/faq/" class="px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
-        FAQ
-      </a>
-      <a href="/blog/" class="px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
-        Blog
+
+      <!-- Resources group -->
+      <div>
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+          aria-expanded="false"
+          id="mobile-resources-btn"
+        >
+          Resources
+          <svg class="w-4 h-4 text-neutral-400 transition-transform duration-200" id="mobile-resources-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-resources-menu" class="hidden pl-3 mt-1 space-y-0.5 border-l-2 border-brand-pink-light ml-3">
+          {resourcesNav.map((link) => (
+            <a href={link.href} class="block px-3 py-2 text-sm text-neutral-600 hover:text-brand-pink transition-colors rounded-lg hover:bg-neutral-50">
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <a href="/contact/" class="px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
+        Contact
       </a>
 
       <div class="border-t border-neutral-100 mt-2 pt-3 space-y-2">
@@ -341,6 +390,7 @@ const cityLinks = cities.map((c) => ({
   setupSubMenu("mobile-services-btn", "mobile-services-menu", "mobile-services-icon");
   setupSubMenu("mobile-rentals-btn", "mobile-rentals-menu", "mobile-rentals-icon");
   setupSubMenu("mobile-areas-btn", "mobile-areas-menu", "mobile-areas-icon");
+  setupSubMenu("mobile-resources-btn", "mobile-resources-menu", "mobile-resources-icon");
 
   // Desktop dropdown toggles
   function setupDesktopDropdown(btnId: string, panelId: string, iconId: string) {
@@ -354,7 +404,7 @@ const cityLinks = cities.map((c) => ({
       e.stopPropagation();
       const isOpen = !dropPanel.hasAttribute("hidden");
       // Close all other desktop dropdowns first
-      ["desktop-services-panel", "desktop-rentals-panel", "desktop-areas-panel"].forEach((id) => {
+      ["desktop-services-panel", "desktop-rentals-panel", "desktop-areas-panel", "desktop-resources-panel"].forEach((id) => {
         if (id !== panelId) {
           const otherPanel = document.getElementById(id);
           const otherBtn = document.getElementById(id.replace("-panel", "-btn"));
@@ -379,10 +429,11 @@ const cityLinks = cities.map((c) => ({
   setupDesktopDropdown("desktop-services-btn", "desktop-services-panel", "desktop-services-icon");
   setupDesktopDropdown("desktop-rentals-btn", "desktop-rentals-panel", "desktop-rentals-icon");
   setupDesktopDropdown("desktop-areas-btn", "desktop-areas-panel", "desktop-areas-icon");
+  setupDesktopDropdown("desktop-resources-btn", "desktop-resources-panel", "desktop-resources-icon");
 
   // Close desktop dropdowns on outside click or Escape
   document.addEventListener("click", () => {
-    ["desktop-services", "desktop-rentals", "desktop-areas"].forEach((prefix) => {
+    ["desktop-services", "desktop-rentals", "desktop-areas", "desktop-resources"].forEach((prefix) => {
       const panel = document.getElementById(`${prefix}-panel`);
       const btn = document.getElementById(`${prefix}-btn`);
       const icon = document.getElementById(`${prefix}-icon`);
@@ -394,7 +445,7 @@ const cityLinks = cities.map((c) => ({
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      ["desktop-services", "desktop-rentals", "desktop-areas"].forEach((prefix) => {
+      ["desktop-services", "desktop-rentals", "desktop-areas", "desktop-resources"].forEach((prefix) => {
         const panel = document.getElementById(`${prefix}-panel`);
         const btn = document.getElementById(`${prefix}-btn`);
         const icon = document.getElementById(`${prefix}-icon`);
