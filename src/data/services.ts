@@ -214,7 +214,7 @@ export const services: Service[] = [
       {
         question: "Do you offer kids' birthday party setups?",
         answer:
-          "Yes — we carry kids' tables, chairs, and themed décor for children's birthday parties. Kids' sets are sized for younger guests and can be paired with balloon arches or character-themed accents.",
+          "Yes — we provide full party rental setups for kids' birthday parties, including themed décor that pairs beautifully with balloon arches or character-themed accents.",
       },
       {
         question: "What's the most popular birthday rental setup in North County San Diego?",
@@ -428,7 +428,7 @@ export const services: Service[] = [
     intro:
       "They worked hard — now it's time to celebrate. Kelari Party Rentals provides tables, chairs, tents, banners, linens, and décor for graduation parties of every size. We deliver, set up, and pick up so you can focus on the graduate.",
     cityIntro:
-      "Hosting a graduation party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your home, backyard, or local park. We handle setup and teardown so you can celebrate the big milestone.",
+      "Hosting a graduation party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your home, backyard, or local park. We handle delivery and pickup so you can celebrate the big milestone.",
     icon: "🎓",
     whatsIncluded: [
       {
@@ -519,7 +519,7 @@ export const services: Service[] = [
     intro:
       "Mark the start of their journey together with a beautifully styled engagement party. Kelari Party Rentals offers premium tables, chairs, linens, glassware, and décor — delivered, set up, and picked up.",
     cityIntro:
-      "Hosting an engagement party in {city}? Kelari Party Rentals delivers elegant tables, chairs, linens, and décor to create a memorable celebration. We take care of setup and teardown.",
+      "Hosting an engagement party in {city}? Kelari Party Rentals delivers elegant tables, chairs, linens, and décor to create a memorable celebration. We take care of delivery and pickup after your event.",
     icon: "💍",
     whatsIncluded: [
       {
@@ -693,9 +693,9 @@ export const services: Service[] = [
     citySubheadline:
       "Delivery available for party rentals in {city} — complimentary warehouse pickup always available.",
     intro:
-      "At Kelari Party Rentals, getting your rentals to your event is simple. Professional delivery is available to venues across North County San Diego, priced by distance and quoted upfront. Prefer to handle transport yourself? Complimentary pickup and dropoff is always available at our Carlsbad warehouse — no fee, no hassle. Ask us about professional setup and breakdown for your event.",
+      "At Kelari Party Rentals, getting your rentals to your event is simple. Professional delivery is available to venues across North County San Diego, priced by distance and quoted upfront. Prefer to handle transport yourself? Complimentary pickup and dropoff is always available at our Carlsbad warehouse — no fee, no hassle. Ask us about our full-service delivery and arrangement option for your event.",
     cityIntro:
-      "Kelari Party Rentals makes delivery simple for {city} events. Professional delivery is available to your venue, priced by distance and quoted upfront. Complimentary pickup at our Carlsbad warehouse is always available. Ask us about professional setup and breakdown for your event.",
+      "Kelari Party Rentals makes delivery simple for {city} events. Professional delivery is available to your venue, priced by distance and quoted upfront. Complimentary pickup at our Carlsbad warehouse is always available. Ask us about our full-service delivery and arrangement option for your event.",
     icon: "🚚",
     whatsIncluded: [
       {
@@ -754,12 +754,12 @@ export const services: Service[] = [
       {
         question: "How long does setup take?",
         answer:
-          "Most deliveries take 30–60 minutes depending on the package size. Larger events with tents and lighting may take longer. We plan the delivery window to ensure everything is in place before your guests arrive. Ask us about professional setup and breakdown if you'd like our team to handle arrangement at your venue.",
+          "Most deliveries take 30–60 minutes depending on the package size. Larger events with tents and lighting may take longer. We plan the delivery window to ensure everything is in place before your guests arrive. Ask us about our full-service delivery option if you'd like our team to handle arrangement at your venue.",
       },
       {
-        question: "Do you offer professional setup and breakdown?",
+        question: "Do you offer delivery with professional arrangement?",
         answer:
-          "Ask us about professional setup and breakdown for your event — we're happy to discuss what's available for your date and venue.",
+          "Ask us about our full-service delivery option for your event — we're happy to discuss what's available for your date and venue.",
       },
     ],
   },

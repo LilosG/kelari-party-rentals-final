@@ -87,7 +87,7 @@ export const categories: Category[] = [
     headline: "Table Rentals",
     subheadline: "Rectangular, round & cocktail tables for every event size — delivered clean and set up at your venue.",
     intro:
-      "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, cocktail, and kids' tables for parties of every size across North County San Diego. Every table arrives clean, is set up at your venue by our team, and is picked up after your event — no hauling, no assembly, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
+      "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, and cocktail tables for parties of every size across North County San Diego. Every table arrives clean, is set up at your venue by our team, and is picked up after your event — no hauling, no assembly, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
     icon: "🪑",
     items: [
       {
@@ -165,7 +165,7 @@ export const categories: Category[] = [
       },
       {
         question: "Do you deliver tables to parks in Carlsbad and Encinitas?",
-        answer: "Yes — we deliver to all public parks throughout North County San Diego including Poinsettia Park, Alga Norte, Stagecoach Park, Encinitas Community Park, and more. We handle full setup and teardown at your reserved park location.",
+        answer: "Yes — we deliver to all public parks throughout North County San Diego including Poinsettia Park, Alga Norte, Stagecoach Park, Encinitas Community Park, and more. We deliver to your reserved park location and pick up after your event.",
       },
       {
         question: "Are linens included with table rentals?",
@@ -186,7 +186,7 @@ export const categories: Category[] = [
         "Folding chairs & Chiavari chairs for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Chair Rentals",
-    subheadline: "Folding, Chiavari & kids' chairs for every style and budget — delivered and set up at your venue.",
+    subheadline: "Folding & Chiavari chairs for every style and budget — delivered and set up at your venue.",
     intro:
       "Chair selection does more to set the tone of an event than almost any other rental decision. Standard folding chairs are practical and perfectly appropriate for casual birthdays and park events. Chiavari chairs — gold or silver — elevate the visual presentation of showers, graduation parties, and milestone celebrations significantly. Kelari Party Rentals carries the full range of chair styles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every chair is delivered clean, set up at your venue, and picked up after your event. One chair per guest is the baseline — we'll help you confirm the right count and style for your event type.",
     icon: "💺",
@@ -239,7 +239,7 @@ export const categories: Category[] = [
       {
         icon: "🪑",
         title: "Style Options",
-        description: "White folding, black folding, gold Chiavari, silver Chiavari, and kids' chairs — all available in one order.",
+        description: "White folding, black folding, gold Chiavari, and silver Chiavari chairs — all available in one order.",
       },
       {
         icon: "📋",
@@ -272,7 +272,7 @@ export const categories: Category[] = [
       },
       {
         question: "Do you deliver chairs to parks in North County San Diego?",
-        answer: "Yes — we deliver to all public parks throughout Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We handle full setup at your reserved park location and return for teardown after your event.",
+        answer: "Yes — we deliver to all public parks throughout Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver to your reserved park location and pick up after your event.",
       },
     ],
   },
