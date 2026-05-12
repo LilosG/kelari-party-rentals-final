@@ -1,7 +1,40 @@
 import type { ImageMetadata } from 'astro';
-import tableRound60 from '../assets/images/table-round-60.png';
-import tableRectangular from '../assets/images/table-rectangular.png';
+// tables
 import tableCocktail from '../assets/images/table-cocktail.png';
+import tableRectangularFolding from '../assets/images/table-rectangular-folding.png';
+import tableRoundFolding from '../assets/images/table-round-folding.png';
+// chairs
+import chairChiavariWooden from '../assets/images/chair-chiavari-wooden.png';
+import chairWhiteFolding from '../assets/images/chair-white-folding.png';
+import chairBrownIvoryCushion from '../assets/images/chair-brown-ivory-cushion.png';
+// linens - rectangular tablecloths
+import tableclothRectWhiteLong from '../assets/images/tablecloth-rect-white-long.png';
+import tableclothRectBlack from '../assets/images/tablecloth-rect-black.png';
+import tableclothRectBlackLong from '../assets/images/tablecloth-rect-black-long.png';
+import tableclothRectIvory from '../assets/images/tablecloth-rect-ivory.png';
+import tableclothRectIvoryLong from '../assets/images/tablecloth-rect-ivory-long.png';
+// linens - round tablecloths
+import tableclothRoundWhite from '../assets/images/tablecloth-round-white.png';
+import tableclothRoundWhiteLarge from '../assets/images/tablecloth-round-white-large.png';
+import tableclothRoundBlack from '../assets/images/tablecloth-round-black.png';
+import tableclothRoundBlackLarge from '../assets/images/tablecloth-round-black-large.png';
+import tableclothRoundIvory from '../assets/images/tablecloth-round-ivory.png';
+import tableclothRoundIvoryLarge from '../assets/images/tablecloth-round-ivory-large.png';
+// linens - spandex tablecloths
+import tableclothSpandexWhite from '../assets/images/tablecloth-spandex-white.png';
+import tableclothSpandexBlack from '../assets/images/tablecloth-spandex-black.png';
+import tableclothSpandexWhiteLong from '../assets/images/tablecloth-spandex-white-long.png';
+import tableclothSpandexWhiteRound from '../assets/images/tablecloth-spandex-white-round.png';
+// linens - cocktail covers
+import tableclothCocktailWhiteSpandex from '../assets/images/tablecloth-cocktail-white-spandex.png';
+import tableclothCocktailBlackSpandex from '../assets/images/tablecloth-cocktail-black-spandex.png';
+import tableclothCocktailIvorySpandex from '../assets/images/tablecloth-cocktail-ivory-spandex.png';
+// runners
+import runnerWhite from '../assets/images/runner-white.png';
+import runnerBabyBlue from '../assets/images/runner-baby-blue.png';
+import runnerGreen from '../assets/images/runner-green.png';
+import runnerPink from '../assets/images/runner-pink.png';
+import runnerIvory from '../assets/images/runner-ivory.png';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -61,19 +94,19 @@ export const categories: Category[] = [
         name: '60" Round Folding Table',
         description: "Seats 8–10 guests. Perfect for formal dining, centerpieces, and banquet-style layouts.",
         sizes: ['60"'],
-        image: tableRound60,
+        image: tableRoundFolding,
       },
       {
         name: "6-Foot Rectangular Table",
         description: "Seats 6–8 guests. Great for dining, buffet setups, and gift tables.",
         sizes: ["6 ft"],
-        image: tableRectangular,
+        image: tableRectangularFolding,
       },
       {
         name: "8-Foot Rectangular Table",
         description: "Seats 8–10 guests. Ideal for larger dining setups, buffets, and banquets.",
         sizes: ["8 ft"],
-        image: tableRectangular,
+        image: tableRectangularFolding,
       },
       {
         name: "Cocktail Table",
@@ -161,20 +194,26 @@ export const categories: Category[] = [
       {
         name: "White Folding Chair",
         description: "Classic white resin folding chair. Clean, sturdy, and versatile.",
+        image: chairWhiteFolding,
       },
       {
         name: "Black Folding Chair",
         description: "Sleek black resin folding chair for modern event setups.",
       },
       {
+        name: "Brown Folding Chair with Ivory Cushion",
+        description: "Wood-finish folding chair with a padded ivory cushion seat for added comfort and warmth.",
+        image: chairBrownIvoryCushion,
+      },
+      {
         name: "Gold Chiavari Chair",
         description: "Elegant gold Chiavari chair with cushion. Perfect for formal events.",
+        image: chairChiavariWooden,
       },
       {
         name: "Silver Chiavari Chair",
         description: "Sophisticated silver Chiavari chair with cushion.",
       },
-
     ],
     whatsIncluded: [
       {
@@ -349,19 +388,110 @@ export const categories: Category[] = [
     items: [
       {
         name: "Rectangular Tablecloth",
-        description: "Floor-length polyester tablecloth for 6-ft and 8-ft tables.",
+        description: "Floor-length white polyester tablecloth for 6-ft and 8-ft tables.",
         sizes: ["90×132", "90×156"],
+        image: tableclothRectWhiteLong,
+      },
+      {
+        name: "Black Rectangular Tablecloth",
+        description: "Floor-length black polyester tablecloth for 6-ft and 8-ft tables.",
+        sizes: ["90×132", "90×156"],
+        image: tableclothRectBlack,
+      },
+      {
+        name: "Black Rectangular Tablecloth (Long)",
+        description: "Extended floor-length black tablecloth for 8-ft tables with a full trailing drop.",
+        sizes: ["90×156"],
+        image: tableclothRectBlackLong,
+      },
+      {
+        name: "Ivory Rectangular Tablecloth",
+        description: "Floor-length ivory polyester tablecloth for 6-ft and 8-ft tables.",
+        sizes: ["90×132", "90×156"],
+        image: tableclothRectIvory,
+      },
+      {
+        name: "Ivory Rectangular Tablecloth (Long)",
+        description: "Extended floor-length ivory tablecloth for 8-ft tables with a full trailing drop.",
+        sizes: ["90×156"],
+        image: tableclothRectIvoryLong,
       },
       {
         name: "Round Tablecloth",
-        description: 'Floor-length polyester tablecloth for 60" round tables.',
+        description: 'Floor-length white polyester tablecloth for 60" round tables.',
         sizes: ['120"'],
+        image: tableclothRoundWhite,
+      },
+      {
+        name: "White Round Tablecloth (Large)",
+        description: 'Extra-full floor-length white tablecloth for 60" round tables with generous drop.',
+        sizes: ['132"'],
+        image: tableclothRoundWhiteLarge,
+      },
+      {
+        name: "Black Round Tablecloth",
+        description: 'Floor-length black polyester tablecloth for 60" round tables.',
+        sizes: ['120"'],
+        image: tableclothRoundBlack,
+      },
+      {
+        name: "Black Round Tablecloth (Large)",
+        description: 'Extra-full floor-length black tablecloth for 60" round tables with generous drop.',
+        sizes: ['132"'],
+        image: tableclothRoundBlackLarge,
+      },
+      {
+        name: "Ivory Round Tablecloth",
+        description: 'Floor-length ivory polyester tablecloth for 60" round tables.',
+        sizes: ['120"'],
+        image: tableclothRoundIvory,
+      },
+      {
+        name: "Ivory Round Tablecloth (Large)",
+        description: 'Extra-full floor-length ivory tablecloth for 60" round tables with generous drop.',
+        sizes: ['132"'],
+        image: tableclothRoundIvoryLarge,
+      },
+      {
+        name: "White Spandex Tablecloth",
+        description: "Stretch-fit white spandex cover for a sleek, modern fitted look.",
+        image: tableclothSpandexWhite,
+      },
+      {
+        name: "Black Spandex Tablecloth",
+        description: "Stretch-fit black spandex cover for a clean, tailored look.",
+        image: tableclothSpandexBlack,
+      },
+      {
+        name: "White Rectangular Spandex Tablecloth",
+        description: "Stretch-fit white spandex cover for rectangular tables — wrinkle-free fitted finish.",
+        image: tableclothSpandexWhiteLong,
+      },
+      {
+        name: "White Round Spandex Tablecloth",
+        description: "Stretch-fit white spandex cover for round tables — full-length form-fitting look.",
+        image: tableclothSpandexWhiteRound,
+      },
+      {
+        name: "White Cocktail Table Cover",
+        description: "Spandex stretch cover for cocktail-height tables. Clean white finish for upscale setups.",
+        image: tableclothCocktailWhiteSpandex,
+      },
+      {
+        name: "Black Cocktail Table Cover",
+        description: "Spandex stretch cover for cocktail-height tables. Sleek black finish for modern events.",
+        image: tableclothCocktailBlackSpandex,
+      },
+      {
+        name: "Ivory Cocktail Table Cover",
+        description: "Spandex stretch cover for cocktail-height tables. Warm ivory finish for elegant setups.",
+        image: tableclothCocktailIvorySpandex,
       },
       {
         name: "Table Runner",
         description: "Satin or burlap runner to accent any table.",
+        image: runnerWhite,
       },
-
       {
         name: "Chair Sash",
         description: "Organza or satin sash to dress up any chair.",
@@ -441,11 +571,12 @@ export const categories: Category[] = [
       "A table runner is the easiest way to add color, texture, and visual interest to your event setup. Layered over a solid tablecloth, the right runner ties your entire color palette together and elevates any table from functional to styled. Kelari Party Rentals carries satin and fabric runners in a range of colors to coordinate with your tablecloths, chairs, and décor. Every runner arrives freshly laundered and pressed. Share your event palette when you request a quote and we'll recommend the right color combination for your setup.",
     icon: "🎀",
     items: [
-      { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths." },
-      { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations." },
-      { name: "Table Runner – Baby Blue", description: "10ft runner in baby blue. Great for baby showers and outdoor events." },
+      { name: "Table Runner – White", description: "10ft satin runner in white. A clean neutral that coordinates with any tablecloth.", image: runnerWhite },
+      { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths.", image: runnerIvory },
+      { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations.", image: runnerPink },
+      { name: "Table Runner – Baby Blue", description: "10ft runner in baby blue. Great for baby showers and outdoor events.", image: runnerBabyBlue },
       { name: "Table Runner – Tan", description: "10ft runner in tan. Versatile neutral that pairs with almost any tablecloth." },
-      { name: "Table Runner – Green", description: "10ft runner in green. Fresh accent for garden parties and outdoor celebrations." },
+      { name: "Table Runner – Green", description: "10ft runner in green. Fresh accent for garden parties and outdoor celebrations.", image: runnerGreen },
     ],
     whatsIncluded: [
       { icon: "✅", title: "Freshly Laundered", description: "Every runner is washed, pressed, and inspected before delivery — no wrinkles, no stains." },
