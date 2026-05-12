@@ -23,6 +23,7 @@ import ImageGallery from "../components/ImageGallery.astro";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import FAQAccordion from "../components/FAQAccordion.astro";
 import CityCards from "../components/CityCards.astro";
+import MapEmbed from "../components/MapEmbed.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
 
 import { site, nap } from "../data/site";
@@ -224,7 +225,21 @@ const schema = [
     bg="light"
   />
 
-  <!-- 7 · CTA Band — dark ──────────────────────── -->
+  <!-- 7 · Location Map — white ─────────────────── -->
+  <Section bg="white">
+    <div class="mb-10 md:mb-14">
+      <SectionHeader
+        eyebrow="FIND US"
+        title="Find Us in Carlsbad"
+        subtitle={nap.address.full}
+      />
+    </div>
+    <div class="max-w-2xl mx-auto">
+      <MapEmbed />
+    </div>
+  </Section>
+
+  <!-- 8 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title={ctaBand.title}
     subtitle={ctaBand.subtitle}
@@ -232,7 +247,7 @@ const schema = [
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
   />
 
-  <!-- 8 · Gallery — white ──────────────────────── -->
+  <!-- 9 · Gallery — white ──────────────────────── -->
   <ImageGallery
     eyebrow="RECENT SETUPS"
     title="Real Setups, Real Celebrations"
@@ -242,7 +257,7 @@ const schema = [
     bg="white"
   />
 
-  <!-- 9 · Testimonials — light ─────────────────── -->
+  <!-- 10 · Testimonials — light ─────────────────── -->
   <TestimonialCarousel
     eyebrow="REVIEWS"
     title="Trusted by Families Across North County"
@@ -251,7 +266,7 @@ const schema = [
     bg="light"
   />
 
-  <!-- 10 · FAQ — white ──────────────────────────── -->
+  <!-- 11 · FAQ — white ──────────────────────────── -->
   <FAQAccordion
     eyebrow="FAQ"
     title="Frequently Asked Questions"
@@ -259,7 +274,7 @@ const schema = [
     bg="white"
   />
 
-  <!-- 11 · From Our Blog — light ──────────────── -->
+  <!-- 12 · From Our Blog — light ──────────────── -->
   <RelatedPosts
     tags={[]}
     limit={3}

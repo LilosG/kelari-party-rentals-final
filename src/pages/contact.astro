@@ -7,11 +7,10 @@ import SectionHeader from "../components/SectionHeader.astro";
 import QuoteForm from "../components/QuoteForm.astro";
 import ContactMetadata from "../components/ContactMetadata.astro";
 import ConversionProofPoints from "../components/ConversionProofPoints.astro";
+import MapEmbed from "../components/MapEmbed.astro";
 
-import { site, nap } from "../data/site";
+import { site } from "../data/site";
 import { contactMetaItems, conversionProofPoints } from "../data/conversion";
-
-const mapsEmbedSrc = `https://maps.google.com/maps?q=${encodeURIComponent(`${nap.name}, ${nap.address.city}, ${nap.address.state}`)}&output=embed&z=15`;
 
 const title = "Contact Kelari Party Rentals | Party Rentals in Carlsbad CA";
 const description =
@@ -97,21 +96,7 @@ const schema = [
         </div>
         <ContactMetadata items={contactMetaItems.filter(({ label }) => label !== "Address")} layout="cards" />
 
-        <div class="mt-8 aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200 shadow-sm">
-          <iframe
-            src={mapsEmbedSrc}
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title={`Map showing ${nap.name} location in ${nap.address.city}`}
-          ></iframe>
-        </div>
-        <p class="mt-3 text-center text-sm text-neutral-500">
-          {nap.address.full}
-        </p>
+        <MapEmbed class="mt-8" />
       </div>
     </div>
   </Section>

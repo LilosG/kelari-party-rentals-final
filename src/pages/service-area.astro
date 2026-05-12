@@ -6,6 +6,7 @@ import Section from "../components/Section.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import CtaBand from "../components/CtaBand.astro";
 import QuoteForm from "../components/QuoteForm.astro";
+import MapEmbed from "../components/MapEmbed.astro";
 
 import { site, nap, booqableStore } from "../data/site";
 import { cities } from "../data/cities";
@@ -166,7 +167,21 @@ const deliverySteps = [
     </div>
   </Section>
 
-  <!-- 7 · CTA Band — dark ──────────────────────── -->
+  <!-- 7 · Location Map — white ─────────────────── -->
+  <Section bg="white">
+    <div class="mb-10 md:mb-14">
+      <SectionHeader
+        eyebrow="OUR LOCATION"
+        title="Our Carlsbad Location"
+        subtitle={nap.address.full}
+      />
+    </div>
+    <div class="max-w-2xl mx-auto">
+      <MapEmbed />
+    </div>
+  </Section>
+
+  <!-- 8 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title="In Our Service Area?"
     subtitle="Get a quote for your next event. Delivery available across North County SD — complimentary warehouse pickup always available."
@@ -175,7 +190,7 @@ const deliverySteps = [
     tertiaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}
   />
 
-  <!-- 8 · Quote Form — dark ────────────────────── -->
+  <!-- 9 · Quote Form — dark ────────────────────── -->
   <QuoteForm
     heading="Request a Quote"
     subheading="Tell us where your event is and we'll confirm delivery availability and put together a custom package."
