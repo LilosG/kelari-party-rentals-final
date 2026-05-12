@@ -162,7 +162,7 @@ export const services: Service[] = [
         icon: "🪑",
         title: "Tables & Chairs",
         description:
-          "Seating for every guest — round tables, folding chairs, Chiavari chairs, and kids' sets.",
+          "Seating for every guest — round tables, folding chairs, and Chiavari chairs.",
       },
       {
         icon: "🎂",

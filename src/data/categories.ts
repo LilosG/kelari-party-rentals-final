@@ -35,6 +35,8 @@ import runnerBabyBlue from '../assets/images/runner-baby-blue.png';
 import runnerGreen from '../assets/images/runner-green.png';
 import runnerPink from '../assets/images/runner-pink.png';
 import runnerIvory from '../assets/images/runner-ivory.png';
+// inspiration
+import eventSetupTablescape from '../assets/images/event-setup-tablescape.png';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -134,7 +136,7 @@ export const categories: Category[] = [
       {
         icon: "🧹",
         title: "Same-Day Pickup",
-        description: "We return after your event and collect everything. You don't break down a single table.",
+        description: "We return after your event and collect everything. You don't move a single table.",
       },
       {
         icon: "📐",
@@ -335,7 +337,7 @@ export const categories: Category[] = [
       {
         icon: "🧹",
         title: "Same-Day Pickup",
-        description: "We return after your event and handle full breakdown and removal — no disassembly for you.",
+        description: "We return after your event and handle full collection and removal — no disassembly for you.",
       },
       {
         icon: "📐",
@@ -378,14 +380,15 @@ export const categories: Category[] = [
     meta: {
       title: "Linen Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Tablecloths, runners & chair sashes in dozens of colors. Delivered across Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Tablecloths in dozens of colors for party and event rentals. Delivered across Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Linen Rentals",
-    subheadline: "Tablecloths, runners & sashes in dozens of colors — freshly laundered and pressed.",
+    subheadline: "Tablecloths in dozens of colors — freshly laundered and pressed.",
     intro:
-      "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth and a coordinating runner looks like an intentional celebration. Kelari Party Rentals carries tablecloths, runners, and chair sashes in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
+      "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth looks like an intentional celebration. Kelari Party Rentals carries tablecloths in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Table runners are available separately — browse our full runner selection on the table runners page. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
     icon: "🎀",
     items: [
+      // GROUP 1 — Rectangle Tablecloths
       {
         name: "Rectangular Tablecloth",
         description: "Floor-length white polyester tablecloth for 6-ft and 8-ft tables.",
@@ -416,6 +419,7 @@ export const categories: Category[] = [
         sizes: ["90×156"],
         image: tableclothRectIvoryLong,
       },
+      // GROUP 2 — Round Tablecloths
       {
         name: "Round Tablecloth",
         description: 'Floor-length white polyester tablecloth for 60" round tables.',
@@ -452,15 +456,11 @@ export const categories: Category[] = [
         sizes: ['132"'],
         image: tableclothRoundIvoryLarge,
       },
+      // GROUP 3 — Spandex Covers
       {
         name: "White Spandex Tablecloth",
         description: "Stretch-fit white spandex cover for a sleek, modern fitted look.",
         image: tableclothSpandexWhite,
-      },
-      {
-        name: "Black Spandex Tablecloth",
-        description: "Stretch-fit black spandex cover for a clean, tailored look.",
-        image: tableclothSpandexBlack,
       },
       {
         name: "White Rectangular Spandex Tablecloth",
@@ -472,6 +472,12 @@ export const categories: Category[] = [
         description: "Stretch-fit white spandex cover for round tables — full-length form-fitting look.",
         image: tableclothSpandexWhiteRound,
       },
+      {
+        name: "Black Spandex Tablecloth",
+        description: "Stretch-fit black spandex cover for a clean, tailored look.",
+        image: tableclothSpandexBlack,
+      },
+      // GROUP 4 — Cocktail Covers
       {
         name: "White Cocktail Table Cover",
         description: "Spandex stretch cover for cocktail-height tables. Clean white finish for upscale setups.",
@@ -486,15 +492,6 @@ export const categories: Category[] = [
         name: "Ivory Cocktail Table Cover",
         description: "Spandex stretch cover for cocktail-height tables. Warm ivory finish for elegant setups.",
         image: tableclothCocktailIvorySpandex,
-      },
-      {
-        name: "Table Runner",
-        description: "Satin or burlap runner to accent any table.",
-        image: runnerWhite,
-      },
-      {
-        name: "Chair Sash",
-        description: "Organza or satin sash to dress up any chair.",
       },
     ],
     whatsIncluded: [
@@ -545,7 +542,7 @@ export const categories: Category[] = [
       },
       {
         question: "Do I need runners in addition to tablecloths?",
-        answer: "Runners are optional but add a significant layer of visual interest. A tablecloth in your base color plus a runner in a contrasting accent color is the most common and effective approach. It creates a layered, intentional look without overcomplicating the setup.",
+        answer: "Runners are optional but add a significant layer of visual interest. A tablecloth in your base color plus a runner in a contrasting accent color is the most common and effective approach. It creates a layered, intentional look without overcomplicating the setup. Table runners are available as a separate rental — see our table runners page for available colors and options.",
       },
       {
         question: "Are linens included with table rentals or priced separately?",
@@ -571,12 +568,12 @@ export const categories: Category[] = [
       "A table runner is the easiest way to add color, texture, and visual interest to your event setup. Layered over a solid tablecloth, the right runner ties your entire color palette together and elevates any table from functional to styled. Kelari Party Rentals carries satin and fabric runners in a range of colors to coordinate with your tablecloths, chairs, and décor. Every runner arrives freshly laundered and pressed. Share your event palette when you request a quote and we'll recommend the right color combination for your setup.",
     icon: "🎀",
     items: [
-      { name: "Table Runner – White", description: "10ft satin runner in white. A clean neutral that coordinates with any tablecloth.", image: runnerWhite },
-      { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths.", image: runnerIvory },
+      { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths.", image: runnerWhite },
       { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations.", image: runnerPink },
       { name: "Table Runner – Baby Blue", description: "10ft runner in baby blue. Great for baby showers and outdoor events.", image: runnerBabyBlue },
-      { name: "Table Runner – Tan", description: "10ft runner in tan. Versatile neutral that pairs with almost any tablecloth." },
+      { name: "Table Runner – Tan", description: "10ft runner in tan. Versatile neutral that pairs with almost any tablecloth.", image: runnerIvory },
       { name: "Table Runner – Green", description: "10ft runner in green. Fresh accent for garden parties and outdoor celebrations.", image: runnerGreen },
+      { name: "See It All Come Together", description: "See how our runners, linens, and chairs create a complete tablescape for any event.", image: eventSetupTablescape },
     ],
     whatsIncluded: [
       { icon: "✅", title: "Freshly Laundered", description: "Every runner is washed, pressed, and inspected before delivery — no wrinkles, no stains." },
