@@ -125,9 +125,9 @@ export const categories: Category[] = [
         description: "We deliver tables to your venue across North County San Diego — homes, parks, community centers, and event spaces.",
       },
       {
-        icon: "🔧",
-        title: "Professional Setup",
-        description: "Our team places and arranges every table to your layout spec before your first guest arrives.",
+        icon: "✅",
+        title: "Clean & Event-Ready",
+        description: "Every table is cleaned, inspected, and delivered ready to use — spotless every time.",
       },
       {
         icon: "✅",
@@ -147,7 +147,7 @@ export const categories: Category[] = [
       {
         icon: "📋",
         title: "Mix & Match",
-        description: "Combine rectangular, round, and cocktail tables in one order — we coordinate the full setup.",
+        description: "Combine rectangular, round, and cocktail tables in one order — we coordinate the delivery.",
       },
     ],
     relatedServices: [
@@ -225,9 +225,9 @@ export const categories: Category[] = [
         description: "Chair orders are delivered to your venue across North County San Diego — homes, parks, community centers, and event spaces.",
       },
       {
-        icon: "🔧",
-        title: "Full Setup",
-        description: "We place every chair at the tables or in the configuration you specify. You arrive to a ready event.",
+        icon: "✅",
+        title: "Clean & Event-Ready",
+        description: "Every chair is cleaned and inspected before delivery — spotless and ready for your guests.",
       },
       {
         icon: "✅",
@@ -271,7 +271,7 @@ export const categories: Category[] = [
       },
       {
         question: "Can I mix chair styles in one order?",
-        answer: "Yes — you can combine Chiavari chairs for the main tables with standard folding chairs for overflow seating. We coordinate the full setup on delivery day.",
+        answer: "Yes — you can combine Chiavari chairs for the main tables with standard folding chairs for overflow seating. We coordinate the full order in a single delivery.",
       },
       {
         question: "Do you deliver chairs to parks in North County San Diego?",
@@ -322,8 +322,8 @@ export const categories: Category[] = [
       },
       {
         icon: "🔧",
-        title: "Professional Setup",
-        description: "Our team assembles every structure properly — frame tents staked or weighted based on your surface type.",
+        title: "Assembled & Anchored",
+        description: "Every tent and canopy is fully assembled and properly anchored — weighted or staked based on your surface type.",
       },
       {
         icon: "⚓",
@@ -775,7 +775,7 @@ export const categories: Category[] = [
       },
       {
         question: "Can lighting be added to an existing rental order?",
-        answer: "Yes — lighting can be added to any order that includes tables, chairs, tents, or linens. We coordinate the full setup in a single delivery. Request a quote with your complete rental list and we'll price everything together.",
+        answer: "Yes — lighting can be added to any order that includes tables, chairs, tents, or linens. Everything is delivered together in a single order. Request a quote with your complete rental list and we'll price everything together.",
       },
       {
         question: "Is lighting worth it for a daytime party?",

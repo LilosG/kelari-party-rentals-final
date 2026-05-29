@@ -157,7 +157,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Carlsbad backyards were made for entertaining. Bressi Ranch's planned community homes, La Costa's generous lot sizes, and Aviara's resort-style properties all offer the space to host a truly impressive outdoor party with the right rental equipment. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to your Carlsbad home and handles full setup and pickup, so you never have to move a heavy table. One Bressi Ranch couple recently hosted a 60-person retirement party in their backyard; we set up a 20×30 frame tent, eight round tables, and café string lights the evening before and had everything ready by morning.",
+          "Carlsbad backyards were made for entertaining. Bressi Ranch's planned community homes, La Costa's generous lot sizes, and Aviara's resort-style properties all offer the space to host a truly impressive outdoor party with the right rental equipment. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to your Carlsbad home and handles delivery and pickup, so you never have to move a heavy table. One Bressi Ranch couple recently hosted a 60-person retirement party in their backyard; we set up a 20×30 frame tent, eight round tables, and café string lights the evening before and had everything ready by morning.",
         localVenue:
           "Bressi Ranch and La Costa neighborhoods are Carlsbad's most popular areas for backyard party rentals, with lot sizes well-suited for tent setups.",
         deliveryNote:
@@ -660,7 +660,7 @@ export const cities: City[] = [
       "birthday-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Birthday parties are a big deal in Oceanside — the city's diverse, close-knit community turns birthdays into neighborhood events, from first-birthday bashes to milestone adult celebrations. Kids' parties at Buddy Todd Park and Mance Buchanon Park are a local staple, while Fire Mountain backyards often host larger adult gatherings. Kelari Party Rentals delivers birthday party tables, chairs, tents, and décor throughout Oceanside with full setup included. One Fire Mountain family celebrated their daughter's 10th birthday at Buddy Todd Park with a canopy, four tables, chairs, and a balloon arch — the birthday girl said it was the best day ever.",
+          "Birthday parties are a big deal in Oceanside — the city's diverse, close-knit community turns birthdays into neighborhood events, from first-birthday bashes to milestone adult celebrations. Kids' parties at Buddy Todd Park and Mance Buchanon Park are a local staple, while Fire Mountain backyards often host larger adult gatherings. Kelari Party Rentals delivers birthday party tables, chairs, tents, and décor throughout Oceanside with delivery and pickup included. One Fire Mountain family celebrated their daughter's 10th birthday at Buddy Todd Park with a canopy, four tables, chairs, and a balloon arch — the birthday girl said it was the best day ever.",
         localVenue:
           "Buddy Todd Park and Luiseno Park are Oceanside's most popular venues for kids' birthday parties, with open lawn areas and easy parking for delivery.",
         deliveryNote:
@@ -774,7 +774,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to Guajome Regional Park in Oceanside?",
             answer:
-              "Yes — Guajome Regional Park is one of our most popular park delivery locations in Oceanside. We coordinate with your reservation window and deliver full setup — tables, chairs, tents, and décor.",
+              "Yes — Guajome Regional Park is one of our most popular park delivery locations in Oceanside. We coordinate with your reservation window and deliver delivery — tables, chairs, tents, and décor.",
           },
           {
             question: "Which Oceanside parks do you regularly deliver party rentals to?",
@@ -943,7 +943,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "San Marcos backyards are built for entertaining. San Elijo Hills homes sit on well-sized lots with room for tent setups, and Twin Oaks Valley properties often have expansive yards perfect for large family gatherings. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to San Marcos homes and handles full setup and pickup. One San Elijo Hills family hosted a 55-person birthday bash in their backyard; we delivered a 20×20 frame tent, six round tables, 55 folding chairs, and string lights — and were done setting up before lunch.",
+          "San Marcos backyards are built for entertaining. San Elijo Hills homes sit on well-sized lots with room for tent setups, and Twin Oaks Valley properties often have expansive yards perfect for large family gatherings. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to San Marcos homes and handles delivery and pickup. One San Elijo Hills family hosted a 55-person birthday bash in their backyard; we delivered a 20×20 frame tent, six round tables, 55 folding chairs, and string lights — and were done setting up before lunch.",
         localVenue:
           "San Elijo Hills and Twin Oaks Valley neighborhoods have generously sized backyards that accommodate full tent setups and large guest counts.",
         deliveryNote:
@@ -1688,7 +1688,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver party rentals to the Carlsbad Village area in Olde Carlsbad?",
             answer:
-              "Yes — the Village area is one of our most-requested Olde Carlsbad delivery destinations. We deliver tables, chairs, tents, and décor and handle full setup and pickup.",
+              "Yes — the Village area is one of our most-requested Olde Carlsbad delivery destinations. We deliver tables, chairs, tents, and décor and handle delivery and pickup.",
           },
           {
             question: "Can you fit a party tent in a compact Olde Carlsbad backyard?",
@@ -2210,7 +2210,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to Shadowridge in Vista?",
             answer:
-              "Yes — Shadowridge is one of our most-requested Vista delivery neighborhoods. We deliver tables, chairs, tents, and décor and handle full setup and pickup.",
+              "Yes — Shadowridge is one of our most-requested Vista delivery neighborhoods. We deliver tables, chairs, tents, and décor and handle delivery and pickup.",
           },
           {
             question: "What's a typical party rental package for a large Vista family gathering?",
@@ -2257,7 +2257,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver backyard party rentals to Rancho Buena Vista in Vista?",
             answer:
-              "Yes — Rancho Buena Vista is a frequent delivery destination. We handle full setup and pickup and are experienced with Vista's varied lot sizes.",
+              "Yes — Rancho Buena Vista is a frequent delivery destination. We handle delivery and pickup and are experienced with Vista's varied lot sizes.",
           },
         ],
       },

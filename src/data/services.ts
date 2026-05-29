@@ -600,7 +600,7 @@ export const services: Service[] = [
     subheadline:
       "Tables, chairs, tents & décor delivered right to your park — we handle the heavy lifting.",
     citySubheadline:
-      "Party rentals delivered to {city} parks — tables, chairs, tents & décor with full setup.",
+      "Party rentals delivered to {city} parks — tables, chairs, tents & décor with delivery.",
     intro:
       "Park parties are a North County San Diego tradition. Kelari Party Rentals delivers tables, chairs, tents, and décor directly to your reserved park spot. We arrive early to set up and return after the event for pickup — all you do is show up and celebrate.",
     cityIntro:
