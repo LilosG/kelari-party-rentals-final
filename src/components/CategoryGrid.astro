@@ -88,13 +88,7 @@ const colClass = {
             loading="lazy"
             class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
           />
-          {cat.comingSoon && (
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="inline-flex items-center gap-1.5 bg-white/90 text-[#72243E] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full border border-[#F4C0D1] shadow-sm backdrop-blur-sm">
-                ✦ Coming Soon
-              </span>
-            </div>
-          )}
+
         </div>
         <div class="p-5 flex flex-col flex-1">
           <h3 class:list={[
@@ -115,7 +109,7 @@ const colClass = {
             {cat.description}
           </p>
           <span class="inline-flex items-center gap-1 text-sm font-semibold mt-4 group-hover:gap-2 transition-all duration-200 text-brand-pink">
-            Browse {cat.name} <span aria-hidden="true">&rarr;</span>
+            {cat.comingSoon ? "Learn more" : `Browse ${cat.name}`} <span aria-hidden="true">&rarr;</span>
           </span>
         </div>
       </a>
