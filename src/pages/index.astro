@@ -49,6 +49,8 @@ const categoryCards = categories.map((c) => ({
   description: c.subheadline,
   href: `/rentals/${c.slug}/`,
   icon: c.icon,
+  slug: c.slug,
+  comingSoon: c.comingSoon ?? false,
 }));
 
 const cityCards = cities.map((c) => ({

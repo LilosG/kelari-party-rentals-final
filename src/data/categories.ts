@@ -61,6 +61,7 @@ export interface CategoryFAQ {
 export interface Category {
   slug: string;
   name: string;
+  comingSoon?: boolean;
   meta: {
     title: string;
     description: string;
@@ -599,10 +600,11 @@ export const categories: Category[] = [
     {
     slug: "decorations",
     name: "Decorations",
+    comingSoon: true,
     meta: {
       title: "Decoration Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Centerpieces, arches, backdrops & décor accents for parties and celebrations in Carlsbad, Encinitas, Oceanside & San Marcos. Free delivery included.",
+        "Decoration rentals arriving soon to North County San Diego — centerpieces, arches, backdrops & accents for parties in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Decoration Rentals",
     subheadline: "Centerpieces, arches, backdrops & accents to transform any space into a celebration-ready venue.",
@@ -691,10 +693,11 @@ export const categories: Category[] = [
   {
     slug: "lighting",
     name: "Lighting",
+    comingSoon: true,
     meta: {
       title: "Lighting Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "String lights, uplighting & lanterns for atmospheric event lighting in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Lighting rentals arriving soon to North County San Diego — string lights, uplighting & lanterns for events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Lighting Rentals",
     subheadline: "String lights, uplighting & lanterns for the perfect ambiance — installed and ready for your event.",

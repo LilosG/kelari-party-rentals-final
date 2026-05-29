@@ -127,7 +127,25 @@ const schema = [
     bgImage={bgImage}
   />
 
-  <!-- 2 · Trust Bar ────────────────────────────── -->
+  <!-- 2 · Coming Soon notice bar ─────────────────── -->
+  {category.comingSoon && (
+    <div class="bg-[#FBEAF0] border-b border-[#F4C0D1]">
+      <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center gap-2 text-sm text-[#72243E]">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" class="flex-shrink-0">
+          <circle cx="7.5" cy="7.5" r="6.5" stroke="#D4537E" stroke-width="1.2"/>
+          <path d="M7.5 4.5v3.75L9.5 9.75" stroke="#D4537E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>
+          {category.name} inventory arriving soon —{" "}
+          <a href="/contact/" class="font-semibold underline underline-offset-2 hover:text-[#4B1528] transition-colors">
+            contact us to reserve yours
+          </a>.
+        </span>
+      </div>
+    </div>
+  )}
+
+  <!-- 3 · Trust Bar ────────────────────────────── -->
   <TrustBar />
 
   <!-- 3 · Occasion Strip ───────────────────────── -->

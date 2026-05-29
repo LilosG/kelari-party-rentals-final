@@ -19,6 +19,8 @@ const categoryCards = categories.map((cat) => ({
   description: cat.subheadline,
   href: `/rentals/${cat.slug}/`,
   icon: cat.icon,
+  slug: cat.slug,
+  comingSoon: cat.comingSoon ?? false,
 }));
 
 const schema = [
