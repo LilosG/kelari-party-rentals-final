@@ -256,12 +256,6 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
     e.preventDefault();
     errorEl.textContent = '';
 
-    var token = grecaptcha.getResponse();
-    if (!token) {
-      errorEl.textContent = 'Please complete the reCAPTCHA';
-      return;
-    }
-
     var fd = new FormData(form);
     var body = {
       access_key: ACCESS_KEY,
@@ -276,7 +270,6 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
       message: fd.get('message') || '',
       honeypot: fd.get('honeypot') || '',
       subject: 'New Quote Request \u2013 Kelari Party Rentals',
-      'g-recaptcha-response': token,
     };
     if (fd.get('city')) body.city = fd.get('city');
     if (fd.get('service')) body.service = fd.get('service');
