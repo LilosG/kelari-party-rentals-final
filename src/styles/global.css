@@ -228,18 +228,18 @@ a {
   }
 
   .hero-shell {
-    min-height: 520px;
+    min-height: 560px;
   }
 
   @media (min-width: 640px) {
     .hero-shell {
-      min-height: 600px;
+      min-height: 620px;
     }
   }
 
   @media (min-width: 1024px) {
     .hero-shell {
-      min-height: 560px;
+      min-height: 680px;
     }
   }
 
