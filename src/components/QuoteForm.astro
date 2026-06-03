@@ -4,7 +4,7 @@ import ConversionProofPoints from "./ConversionProofPoints.astro";
 import { contactMetaItems, conversionProofPoints } from "../data/conversion";
 import { recaptchaSiteKey } from "../data/site";
 
-const ACCESS_KEY = "sf_7941a8e0435764d2be4a9381";
+const ACCESS_KEY = "5ab53834-d854-45c6-a84d-1e981ea8cf51";
 const RENTAL_ITEMS = ["Tables", "Chairs", "Tents & Canopies", "Linens", "Tableware", "Decorations", "Lighting"];
 
 interface Props {
@@ -264,7 +264,8 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
 
     var fd = new FormData(form);
     var body = {
-      accessKey: ACCESS_KEY,
+      access_key: ACCESS_KEY,
+      to: 'hello@kelaripartyrentals.com',
       name: fd.get('name'),
       phone: fd.get('phone'),
       email: fd.get('email'),
@@ -281,7 +282,7 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
     if (fd.get('service')) body.service = fd.get('service');
 
     try {
-      var res = await fetch('https://api.staticforms.xyz/submit', {
+      var res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
