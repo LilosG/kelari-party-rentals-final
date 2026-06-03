@@ -2,6 +2,7 @@ import type { ImageMetadata } from 'astro';
 // tables
 import tableCocktail from '../assets/images/table-cocktail.png';
 import tableCocktailHightop from '../assets/images/table-cocktail-hightop.jpg';
+import comingSoonImage from '../assets/images/coming-soon-decorations.png';
 import tableRectangularFolding from '../assets/images/table-rectangular-folding.png';
 import tableRoundFolding from '../assets/images/table-round-folding.png';
 // chairs
@@ -298,21 +299,25 @@ export const categories: Category[] = [
         name: "10×10 Pop-Up Canopy",
         description: "Compact canopy for small gatherings and food stations.",
         sizes: ["10×10"],
+        image: comingSoonImage,
       },
       {
         name: "10×20 Pop-Up Canopy",
         description: "Extended canopy for buffet lines and mid-size groups.",
         sizes: ["10×20"],
+        image: comingSoonImage,
       },
       {
         name: "20×20 Frame Tent",
         description: "Professional frame tent for parties up to 40 guests.",
         sizes: ["20×20"],
+        image: comingSoonImage,
       },
       {
         name: "20×40 Frame Tent",
         description: "Large frame tent for events up to 80 guests.",
         sizes: ["20×40"],
+        image: comingSoonImage,
       },
     ],
     whatsIncluded: [
