@@ -1,6 +1,7 @@
 import type { ImageMetadata } from 'astro';
 // tables
 import tableCocktail from '../assets/images/table-cocktail.png';
+import tableCocktailHightop from '../assets/images/table-cocktail-hightop.jpg';
 import tableRectangularFolding from '../assets/images/table-rectangular-folding.png';
 import tableRoundFolding from '../assets/images/table-round-folding.png';
 // chairs
@@ -115,7 +116,7 @@ export const categories: Category[] = [
         name: "Cocktail Table",
         description: "High-top bar-height table for standing receptions, cocktail hours, and lounge setups.",
         sizes: ['30" Round'],
-        image: tableCocktail,
+        image: tableCocktailHightop,
       },
     ],
     whatsIncluded: [
