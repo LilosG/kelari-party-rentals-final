@@ -1,4 +1,11 @@
 ---
+// src/components/BlogCard.astro
+// Kelari Party Rentals — Blog Card
+// ==================================
+// Adds image support. When an image is provided it renders above the
+// card content; when absent the card remains text-only (no broken
+// placeholder, no repeated fallback image).
+
 export interface Props {
   title: string;
   description: string;
@@ -7,6 +14,8 @@ export interface Props {
   category: string;
   tags?: string[];
   featured?: boolean;
+  image?: string;
+  imageAlt?: string;
 }
 
 const {
@@ -17,21 +26,39 @@ const {
   category,
   tags = [],
   featured = false,
+  image,
+  imageAlt,
 } = Astro.props;
 
-const displayDate = new Date(publishDate).toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+const displayDate = new Date(publishDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
 });
 
 const href = `/blog/${slug}/`;
 ---
 
-<article class:list={[
-  "group relative flex flex-col bg-white rounded-2xl border border-neutral-100 overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(200,68,122,0.14)]",
-  featured && "ring-1 ring-brand-pink/20",
-]}>
+<article
+  class:list={[
+    'group relative flex flex-col bg-white rounded-2xl border border-neutral-100 overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(200,68,122,0.14)]',
+    featured && 'ring-1 ring-brand-pink/20',
+  ]}
+>
+  {image && (
+    <div class="aspect-video overflow-hidden">
+      <img
+        src={image}
+        alt={imageAlt ?? title}
+        class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+        loading="lazy"
+        decoding="async"
+        width="1200"
+        height="675"
+      />
+    </div>
+  )}
+
   <div class="flex flex-col flex-1 p-6 lg:p-7">
 
     <!-- Category + date -->
