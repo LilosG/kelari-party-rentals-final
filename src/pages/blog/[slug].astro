@@ -1,11 +1,4 @@
 ---
-// src/pages/blog/[slug].astro
-// Kelari Party Rentals — Blog Post Route
-// ========================================
-// Passes relatedServices, serviceAreas, image, imageAlt, and faqs
-// from frontmatter through to BlogLayout so the sidebar, money pages,
-// FAQ section, and Related Articles render correctly.
-
 import { getCollection, render } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 
@@ -21,27 +14,17 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 
 const {
-  title,
-  description,
-  publishDate,
-  updatedDate,
-  author,
-  category,
-  tags,
-  ogImage,
-  image,
-  imageAlt,
-  faqs,
-  relatedServices,
-  serviceAreas,
+  title, description, publishDate, updatedDate, author,
+  category, tags, ogImage, image, imageAlt, faqs,
+  relatedServices, serviceAreas,
 } = post.data;
 ---
 
 <BlogLayout
   {title}
   {description}
-  publishDate={publishDate.toISOString()}
-  updatedDate={updatedDate?.toISOString()}
+  publishDate={publishDate}
+  updatedDate={updatedDate}
   {author}
   {category}
   {tags}
