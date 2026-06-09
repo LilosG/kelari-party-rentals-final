@@ -39,6 +39,9 @@ import runnerPink from '../assets/images/runner-pink.png';
 import runnerIvory from '../assets/images/runner-ivory.png';
 // inspiration
 import eventSetupTablescape from '../assets/images/event-setup-tablescape.png';
+import galleryMarquee from '../assets/images/gallery-marquee.jpg';
+import marqueeLettersHero from '../assets/images/marquee-letters-hero.jpg';
+import marqueeLettersEvent from '../assets/images/marquee-letters-event.jpg';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -697,95 +700,105 @@ export const categories: Category[] = [
     ],
   },
   {
-    slug: "lighting",
-    name: "Lighting",
-    comingSoon: true,
+    slug: "marquee-letters",
+    name: "Marquee Letters",
     meta: {
-      title: "Lighting Rentals in North County San Diego | Kelari Party Rentals",
+      title: "Marquee Letter Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Lighting rentals arriving soon to North County San Diego — string lights, uplighting & lanterns for events in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Light-up marquee letter and number rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos. LOVE, BABY, GRAD, CHEERS & custom numbers 0–9.",
     },
-    headline: "Lighting Rentals",
-    subheadline: "String lights, uplighting & lanterns for the perfect ambiance — installed and ready for your event.",
+    headline: "Marquee Letter Rentals",
+    subheadline: "Light-up marquee letters and numbers that make every celebration photo-ready — delivered and positioned at your venue.",
     intro:
-      "Lighting is the most transformative upgrade available for evening events and tented celebrations. Bistro string lights under a frame tent create a warm, inviting atmosphere that photographs beautifully and keeps guests comfortable after dark. LED uplighting adds color and dimension to tent walls, trees, and venue spaces in ways that no other rental item can replicate. Kelari Party Rentals carries bistro string lights, LED uplighting, paper lanterns, and flameless LED candles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We install every lighting element as part of the setup, test everything before leaving your venue, and collect it all after your event.",
-    icon: "💡",
+      "Marquee letters are one of the most photographed elements at any celebration. A glowing LOVE, BABY, GRAD, or CHEERS sign instantly creates the focal point guests gravitate toward all night. Kelari Party Rentals carries warm Edison-bulb marquee letters and numbers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every letter arrives fully functional, is positioned at your venue by our team, and is collected after your event. Whether you're spelling out a name, a word, or a milestone year, marquee letters elevate any setup from a party to a moment.",
+    icon: "🔤",
     items: [
       {
-        name: "Bistro String Lights",
-        description: "Warm-white Edison bulb string lights. Available in 25-ft and 50-ft strands.",
-        sizes: ["25 ft", "50 ft"],
+        name: "LOVE",
+        description: "Four-letter marquee sign with warm Edison bulbs. Perfect for engagement parties, anniversaries, and weddings.",
+        image: marqueeLettersHero,
       },
       {
-        name: "LED Uplighting",
-        description: "Color-changing LED uplights to accent tents, walls, and trees.",
+        name: "CHEERS",
+        description: "Six-letter marquee sign for celebrations, toasts, and milestone events.",
+        image: marqueeLettersEvent,
       },
       {
-        name: "Paper Lantern",
-        description: "White or colored paper lanterns for overhead décor.",
+        name: "BABY",
+        description: "Four-letter marquee sign for baby showers and gender reveals.",
+        image: galleryMarquee,
       },
       {
-        name: "LED Candle",
-        description: "Flameless LED candles for safe, atmospheric table lighting.",
+        name: "GRAD",
+        description: "Four-letter marquee sign for graduation parties and senior celebrations.",
+      },
+      {
+        name: "Mr & Mrs",
+        description: "Classic Mr & Mrs marquee sign for weddings and bridal events.",
+      },
+      {
+        name: "Numbers 0–9",
+        description: "Individual number marquee signs for milestone birthdays, anniversaries, and graduation years. Mix and match any combination.",
       },
     ],
     whatsIncluded: [
       {
-        icon: "🔧",
-        title: "Professional Installation",
-        description: "We hang string lights, position uplights, and install every lighting element as part of the setup — no DIY rigging.",
+        icon: "🔤",
+        title: "Positioned at Your Venue",
+        description: "We deliver and position every marquee letter exactly where you want it — no assembly or hauling for you.",
       },
       {
         icon: "✅",
-        title: "Pre-Event Test",
-        description: "Every lighting element is tested before we leave your venue — no dark bulbs or failed connections discovered at party time.",
+        title: "Tested Before We Leave",
+        description: "Every letter and number is tested on-site before we leave your venue — no dark bulbs or failed connections at party time.",
       },
       {
         icon: "🚚",
         title: "Delivery Available",
-        description: "All lighting rentals are delivered to your venue across North County San Diego as part of your order.",
+        description: "All marquee letter rentals are delivered to your venue across North County San Diego as part of your order.",
       },
       {
-        icon: "💡",
-        title: "Color Matching",
-        description: "LED uplighting can be set to match your event's color palette — pink, gold, blue, purple, or any combination.",
+        icon: "📸",
+        title: "Photo-Ready Setup",
+        description: "We position letters for maximum visual impact — backdrop-facing, properly spaced, and styled to photograph beautifully.",
       },
       {
         icon: "🧹",
         title: "Post-Event Collection",
-        description: "We take down and collect all lighting after your event. No coiling cables or removing hardware for you.",
+        description: "We collect all marquee letters after your event. No packing, no loading — we handle everything.",
       },
       {
-        icon: "⚡",
-        title: "Power Coordination",
-        description: "We confirm power source requirements when booking and bring the right extension equipment for your venue.",
+        icon: "📋",
+        title: "Mix & Match",
+        description: "Combine words and numbers in a single order — GRAD + 2025, BABY + a number, or any custom combination for your event.",
       },
     ],
     relatedServices: [
       "engagement-party-rentals",
-      "quinceanera-rentals",
+      "baby-shower-rentals",
       "graduation-party-rentals",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
-        question: "Do string lights work under a frame tent?",
-        answer: "Yes — bistro string lights hung under a frame tent canopy are one of the most popular lighting setups we do. The tent structure provides natural attachment points and the warm overhead glow transforms the tent interior completely. This setup is particularly effective for evening graduation parties, quinceañeras, and engagement celebrations.",
+        question: "What marquee letter words do you carry?",
+        answer: "We carry LOVE, CHEERS, BABY, GRAD, PROM, and Mr & Mrs as complete word sets, plus individual numbers 0–9 for milestone years and ages. Contact us to confirm availability for your event date.",
       },
       {
-        question: "What is LED uplighting and how does it work?",
-        answer: "LED uplights are compact floor-mounted fixtures that project colored light upward onto walls, tent poles, trees, or other vertical surfaces. They're color-changeable and can be set to match your event palette. A set of uplights positioned around a tent perimeter or along venue walls creates dramatic ambient lighting that transforms a standard space.",
+        question: "How tall are the marquee letters?",
+        answer: "Our marquee letters are approximately 2–3 feet tall — large enough to be visible and impactful across the venue while still being proportional in photos and backdrops.",
       },
       {
-        question: "Do I need a power source for string lights and uplighting?",
-        answer: "Yes — string lights and LED uplights require standard 120V power outlets. Confirm the location of your nearest outdoor outlets when booking and we'll bring appropriate extension cabling. For venues without convenient power access, ask about battery-powered options.",
+        question: "Do marquee letters need a power source?",
+        answer: "Yes — our marquee letters use standard 120V power. Confirm the location of your nearest indoor or outdoor outlet when booking and we'll bring appropriate extension cabling to reach it.",
       },
       {
-        question: "Can lighting be added to an existing rental order?",
-        answer: "Yes — lighting can be added to any order that includes tables, chairs, tents, or linens. Everything is delivered together in a single order. Request a quote with your complete rental list and we'll price everything together.",
+        question: "Where should I position marquee letters at my event?",
+        answer: "The most popular placements are behind the head table, next to the cake or dessert table, in front of a backdrop, or at the venue entrance. We'll recommend the best position based on your layout when we deliver.",
       },
       {
-        question: "Is lighting worth it for a daytime party?",
-        answer: "String lights and uplighting add the most value for evening events and covered tent setups. For daytime outdoor events, LED candles on tables add a subtle decorative touch without requiring power. If your event runs into the evening — graduation parties and quinceañeras often do — lighting is one of the best investments you can make.",
+        question: "Can marquee letters be added to an existing rental order?",
+        answer: "Yes — marquee letters can be added to any order that includes tables, chairs, tents, or linens. Everything is delivered together in a single order. Request a quote with your complete rental list and we'll price everything together.",
       },
     ],
   },
