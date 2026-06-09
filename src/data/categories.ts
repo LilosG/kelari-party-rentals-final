@@ -42,6 +42,9 @@ import eventSetupTablescape from '../assets/images/event-setup-tablescape.png';
 import galleryMarquee from '../assets/images/gallery-marquee.jpg';
 import marqueeLettersHero from '../assets/images/marquee-letters-hero.jpg';
 import marqueeLettersEvent from '../assets/images/marquee-letters-event.jpg';
+import marqueeLettersGrad from '../assets/images/marquee-letters-grad.jpg';
+import marqueeLettersMrMrs from '../assets/images/marquee-letters-mr-mrs.jpg';
+import marqueeLettersNumbers from '../assets/images/marquee-letters-numbers.jpg';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -731,14 +734,17 @@ export const categories: Category[] = [
       {
         name: "GRAD",
         description: "Four-letter marquee sign for graduation parties and senior celebrations.",
+        image: marqueeLettersGrad,
       },
       {
         name: "Mr & Mrs",
         description: "Classic Mr & Mrs marquee sign for weddings and bridal events.",
+        image: marqueeLettersMrMrs,
       },
       {
         name: "Numbers 0–9",
         description: "Individual number marquee signs for milestone birthdays, anniversaries, and graduation years. Mix and match any combination.",
+        image: marqueeLettersNumbers,
       },
     ],
     whatsIncluded: [
