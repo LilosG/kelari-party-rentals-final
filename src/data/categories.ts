@@ -9,6 +9,8 @@ import tableRoundFolding from '../assets/images/table-round-folding.png';
 import chairChiavariWooden from '../assets/images/chair-chiavari-wooden.png';
 import chairWhiteFolding from '../assets/images/chair-white-folding.png';
 import chairBrownIvoryCushion from '../assets/images/chair-brown-ivory-cushion.png';
+import chairWhiteResinFolding from '../assets/images/chair-white-resin-folding.jpg';
+import chairChiavariNoCushion from '../assets/images/chair-chiavari-no-cushion.jpg';
 // linens - rectangular tablecloths
 import tableclothRectWhiteLong from '../assets/images/tablecloth-rect-white-long.png';
 import tableclothRectBlack from '../assets/images/tablecloth-rect-black.png';
@@ -203,27 +205,24 @@ export const categories: Category[] = [
     icon: "💺",
     items: [
       {
-        name: "White Folding Chair",
-        description: "Classic white resin folding chair. Clean, sturdy, and versatile.",
-        image: chairWhiteFolding,
+        name: "White Resin Folding Chair",
+        description: "Standard white plastic resin folding chair. The most popular chair rental for backyard parties, park events, and casual celebrations.",
+        image: chairWhiteResinFolding,
       },
       {
-        name: "Black Folding Chair",
-        description: "Sleek black resin folding chair for modern event setups.",
+        name: "Chiavari Chair – Light Fruitwood",
+        description: "Elegant light fruitwood Chiavari chair without cushion. Clean natural wood finish for a polished, formal look.",
+        image: chairChiavariNoCushion,
       },
       {
-        name: "Brown Folding Chair with Ivory Cushion",
-        description: "Wood-finish folding chair with a padded ivory cushion seat for added comfort and warmth.",
-        image: chairBrownIvoryCushion,
-      },
-      {
-        name: "Gold Chiavari Chair",
-        description: "Elegant gold Chiavari chair with cushion. Perfect for formal events.",
+        name: "Chiavari Chair with Ivory Cushion",
+        description: "Light fruitwood Chiavari chair with a 2-inch ivory cushion add-on. Elevated comfort and style for showers, quinceañeras, and milestone events.",
         image: chairChiavariWooden,
       },
       {
-        name: "Silver Chiavari Chair",
-        description: "Sophisticated silver Chiavari chair with cushion.",
+        name: "Chiavari Cushion – 2-inch Ivory",
+        description: "Add-on ivory cushion for Chiavari chairs. Adds comfort and a polished finish to any formal event setup.",
+        image: chairBrownIvoryCushion,
       },
     ],
     whatsIncluded: [
