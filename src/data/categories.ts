@@ -47,6 +47,10 @@ import marqueeLettersEvent from '../assets/images/marquee-letters-event.jpg';
 import marqueeLettersGrad from '../assets/images/marquee-letters-grad.jpg';
 import marqueeLettersMrMrs from '../assets/images/marquee-letters-mr-mrs.jpg';
 import marqueeLettersNumbers from '../assets/images/marquee-letters-numbers.jpg';
+import tentWhite10x10Open from '../assets/images/tent-white-10x10-open.png';
+import tentWhite10x10Walls from '../assets/images/tent-white-10x10-walls.png';
+import tentWhite10x20Open from '../assets/images/tent-white-10x20-open.png';
+import tentWhite10x20Walls from '../assets/images/tent-white-10x20-walls.png';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -83,6 +87,7 @@ export interface Category {
   items: CategoryItem[];
   whatsIncluded: CategoryIncludedItem[];
   faqs: CategoryFAQ[];
+  gridCols?: 2 | 3 | 4;
   relatedServices: string[];
 }
 
@@ -289,6 +294,7 @@ export const categories: Category[] = [
   {
     slug: "tents-canopies",
     name: "Tents & Canopies",
+    gridCols: 4,
     meta: {
       title: "Tent & Canopy Rentals in North County San Diego | Kelari Party Rentals",
       description:
@@ -302,27 +308,27 @@ export const categories: Category[] = [
     items: [
       {
         name: "10×10 Pop-Up Canopy",
-        description: "Compact canopy for small gatherings and food stations.",
+        description: "Compact open canopy for food stations, dessert tables, and small gathering areas. Fits 1-2 tables.",
         sizes: ["10×10"],
-        image: comingSoonImage,
+        image: tentWhite10x10Open,
+      },
+      {
+        name: "10×10 Pop-Up Canopy with Walls",
+        description: "10×10 canopy with sidewalls for added wind protection and a more enclosed setup.",
+        sizes: ["10×10"],
+        image: tentWhite10x10Walls,
       },
       {
         name: "10×20 Pop-Up Canopy",
-        description: "Extended canopy for buffet lines and mid-size groups.",
+        description: "Extended open canopy for buffet lines, dining areas, and mid-size groups. Fits 3-4 tables.",
         sizes: ["10×20"],
-        image: comingSoonImage,
+        image: tentWhite10x20Open,
       },
       {
-        name: "20×20 Frame Tent",
-        description: "Professional frame tent for parties up to 40 guests.",
-        sizes: ["20×20"],
-        image: comingSoonImage,
-      },
-      {
-        name: "20×40 Frame Tent",
-        description: "Large frame tent for events up to 80 guests.",
-        sizes: ["20×40"],
-        image: comingSoonImage,
+        name: "10×20 Pop-Up Canopy with Walls",
+        description: "10×20 canopy with sidewalls for a more enclosed event space with wind and sun protection on all sides.",
+        sizes: ["10×20"],
+        image: tentWhite10x20Walls,
       },
     ],
     whatsIncluded: [

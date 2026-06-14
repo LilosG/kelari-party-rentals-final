@@ -63,6 +63,13 @@ const subtitleIncluded = "Delivered across North County San Diego — compliment
 const titleHowItWorks = "How " + catName + " Rentals Work";
 const titleFaq = catName + " Rentals — Frequently Asked Questions";
 
+const itemGridClass: Record<2 | 3 | 4, string> = {
+  2: "grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6",
+  3: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6",
+  4: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6",
+};
+const itemGrid = itemGridClass[category.gridCols ?? 3];
+
 const schema = [
   {
     "@context": "https://schema.org",
@@ -174,7 +181,7 @@ const schema = [
         subtitle={`Delivered across North County San Diego — complimentary warehouse pickup always available.`}
       />
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+    <div class={itemGrid}>
       {category.items.map((item) => (
         <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm p-6 flex flex-col">
           {item.image ? (
