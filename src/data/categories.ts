@@ -58,6 +58,7 @@ export interface CategoryItem {
   name: string;
   description: string;
   sizes?: string[];
+  colors?: string[];
   image?: ImageMetadata;
 }
 
@@ -310,24 +311,28 @@ export const categories: Category[] = [
         name: "10×10 Pop-Up Canopy",
         description: "Compact open canopy for food stations, dessert tables, and small gathering areas. Fits 1-2 tables.",
         sizes: ["10×10"],
+        colors: ["White", "Black"],
         image: tentWhite10x10Open,
       },
       {
         name: "10×10 Pop-Up Canopy with Walls",
         description: "10×10 canopy with sidewalls for added wind protection and a more enclosed setup.",
         sizes: ["10×10"],
+        colors: ["White", "Black"],
         image: tentWhite10x10Walls,
       },
       {
         name: "10×20 Pop-Up Canopy",
         description: "Extended open canopy for buffet lines, dining areas, and mid-size groups. Fits 3-4 tables.",
         sizes: ["10×20"],
+        colors: ["White", "Black"],
         image: tentWhite10x20Open,
       },
       {
         name: "10×20 Pop-Up Canopy with Walls",
         description: "10×20 canopy with sidewalls for a more enclosed event space with wind and sun protection on all sides.",
         sizes: ["10×20"],
+        colors: ["White", "Black"],
         image: tentWhite10x20Walls,
       },
     ],

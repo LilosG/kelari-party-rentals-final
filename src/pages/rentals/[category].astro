@@ -203,11 +203,16 @@ const schema = [
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed flex-1">
             {item.description}
           </p>
-          {item.sizes && item.sizes.length > 0 && (
+          {(item.sizes && item.sizes.length > 0 || item.colors && item.colors.length > 0) && (
             <div class="mt-3 flex flex-wrap gap-1.5">
-              {item.sizes.map((size) => (
+              {item.sizes && item.sizes.map((size) => (
                 <span class="text-xs px-2.5 py-1 bg-brand-pink-light text-brand-pink rounded-full font-medium border border-brand-pink/20">
                   {size}
+                </span>
+              ))}
+              {item.colors && item.colors.map((color) => (
+                <span class="text-xs px-2.5 py-1 bg-neutral-100 text-neutral-600 rounded-full font-medium border border-neutral-200">
+                  {color}
                 </span>
               ))}
             </div>
