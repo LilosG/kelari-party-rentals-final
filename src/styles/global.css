@@ -229,17 +229,20 @@ a {
 
   .hero-shell {
     min-height: 560px;
+    height: 560px;
   }
 
   @media (min-width: 640px) {
     .hero-shell {
       min-height: 620px;
+      height: 620px;
     }
   }
 
   @media (min-width: 1024px) {
     .hero-shell {
       min-height: 680px;
+      height: 680px;
     }
   }
 
