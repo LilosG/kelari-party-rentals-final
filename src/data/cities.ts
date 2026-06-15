@@ -1,3 +1,6 @@
+import type { HeroImageConfig } from './heroImages';
+import { heroImages } from './heroImages';
+
 // ── Types ────────────────────────────────────────────────────────────────────
 
 export interface CityFAQ {
@@ -29,7 +32,7 @@ export interface City {
   parks: string[];
   localProof: string;
   deliveryNote: string;
-  heroImage?: { src: string; objectPosition?: string };
+  heroImage?: HeroImageConfig;
   services: string[];
   faqs: CityFAQ[];
   cityServiceContent?: {
@@ -79,7 +82,7 @@ export const cities: City[] = [
       "Based right here on El Camino Real, we've helped hundreds of Carlsbad families celebrate birthdays, baby showers, and graduations with hassle-free rental packages.",
     deliveryNote:
       "Delivery available throughout all Carlsbad zip codes — 92008, 92009, 92010, and 92011. Complimentary warehouse pickup available at our Carlsbad location.",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -341,7 +344,7 @@ export const cities: City[] = [
       "Just a short drive from our Carlsbad headquarters, Encinitas is one of our most-served communities. From Leucadia bungalow parties to Cardiff seaside events, we know the area inside out.",
     deliveryNote:
       "Delivery available to all Encinitas neighborhoods — Leucadia, Cardiff, Olivenhain, and beyond.",
-    heroImage: { src: "/images/backyard-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.backyardPartyHero,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -605,7 +608,7 @@ export const cities: City[] = [
       "We've served families across Oceanside for birthdays, graduations, and community events. From South O to San Luis Rey, our team knows Oceanside's neighborhoods and venues.",
     deliveryNote:
       "Delivery available across all Oceanside zip codes — 92049, 92054, 92056, 92057, and 92058.",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -868,7 +871,7 @@ export const cities: City[] = [
       "From community celebrations at Bradley Park to intimate gatherings in Lake San Marcos, we've been the trusted party rental provider for San Marcos families and event planners.",
     deliveryNote:
       "Delivery available throughout San Marcos — 92069, 92078, and 92096.",
-    heroImage: { src: "/images/graduation-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.graduationParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -1127,7 +1130,7 @@ export const cities: City[] = [
       "We've served dozens of Bressi Ranch families for birthdays, baby showers, and graduation parties. Our Carlsbad headquarters is just minutes away — same-day delivery is often possible.",
     deliveryNote:
       "Delivery available throughout Bressi Ranch and all surrounding Carlsbad zip codes — 92010.",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -1388,7 +1391,7 @@ export const cities: City[] = [
       "La Costa is one of our most-requested delivery areas. From La Costa Valley to La Costa Oaks, we've helped hundreds of families celebrate life's biggest moments with hassle-free rentals.",
     deliveryNote:
       "Delivery available throughout La Costa and all Carlsbad zip codes — 92009.",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -1649,7 +1652,7 @@ export const cities: City[] = [
       "Based right here in Carlsbad, we know Olde Carlsbad's neighborhoods like our own backyard. From Village bungalow parties to Holiday Park celebrations, we've served this community for years.",
     deliveryNote:
       "Delivery available throughout Olde Carlsbad and the Carlsbad Village area — zip code 92008.",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -1910,7 +1913,7 @@ export const cities: City[] = [
       "Aviara's elegant homes and resort setting attract some of our most memorable events. From intimate garden parties to full backyard celebrations, Kelari Party Rentals delivers the quality Aviara residents expect.",
     deliveryNote:
       "Delivery available throughout Aviara and all Carlsbad zip codes — 92011.",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
@@ -2173,7 +2176,7 @@ export const cities: City[] = [
       "Vista families trust Kelari Party Rentals for birthdays, baby showers, graduation parties, and community celebrations. From Shadowridge to Vista Village, we know the neighborhoods and deliver on time.",
     deliveryNote:
       "Delivery available throughout all Vista zip codes — 92081, 92083, 92084, and 92085.",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     services: [
       "party-rentals",
       "birthday-party-rentals",
