@@ -10,11 +10,6 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://kelaripartyrentals.com',
 
-  image: {
-    service: { entrypoint: 'astro/assets/services/sharp' },
-    responsiveStyles: true,
-  },
-
   vite: {
     plugins: [tailwindcss()]
   },

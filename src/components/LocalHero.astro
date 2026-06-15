@@ -1,37 +1,7 @@
 ---
-import { Image } from 'astro:assets';
 import Button from "./Button.astro";
 
-import heroParty from '../assets/images/hero-party.jpg';
-import heroBalloon from '../assets/images/hero-balloon-tent.jpg';
-import parkParty from '../assets/images/park-party.jpg';
-import backyardParty from '../assets/images/backyard-party.jpg';
-import birthdayParty from '../assets/images/birthday-party.jpg';
-import engagementParty from '../assets/images/engagement-party.jpg';
-import graduationParty from '../assets/images/graduation-party.jpg';
-import babyShower from '../assets/images/baby-shower.jpg';
-import galleryCanopy from '../assets/images/gallery-canopy.jpg';
-import galleryMarquee from '../assets/images/gallery-marquee.jpg';
-import galleryTablescape from '../assets/images/gallery-tablescape.jpg';
-import tentWhite10x20Open from '../assets/images/tent-white-10x20-open.png';
-
-import type { ImageMetadata } from 'astro';
 import { nap, booqableStore } from '../data/site';
-
-const heroImageMap: Record<string, ImageMetadata> = {
-  '/images/hero-party.jpg': heroParty,
-  '/images/hero-balloon-tent.jpg': heroBalloon,
-  '/images/park-party.jpg': parkParty,
-  '/images/backyard-party.jpg': backyardParty,
-  '/images/birthday-party.jpg': birthdayParty,
-  '/images/engagement-party.jpg': engagementParty,
-  '/images/graduation-party.jpg': graduationParty,
-  '/images/baby-shower.jpg': babyShower,
-  '/images/gallery-canopy.jpg': galleryCanopy,
-  '/images/gallery-marquee.jpg': galleryMarquee,
-  '/images/gallery-tablescape.jpg': galleryTablescape,
-  '/images/tent-white-10x20-open.png': tentWhite10x20Open,
-};
 
 export interface Props {
   title?: string;
@@ -75,7 +45,6 @@ const {
 const resolvedTitle = title ?? headline ?? "";
 const resolvedSubtitle = subtitle ?? subheadline ?? "";
 const resolvedImagePath = backgroundImage ?? bgImage ?? "/images/hero-party.jpg";
-const resolvedImage = heroImageMap[resolvedImagePath] ?? heroParty;
 
 const resolvedBreadcrumbs: { label: string; href: string }[] =
   breadcrumbsProp ??
@@ -118,14 +87,13 @@ const emphasisTail = hasEmphasisPattern
 ---
 
 <section class="hero-shell relative isolate overflow-hidden flex items-center">
-  <Image
-    src={resolvedImage}
+  <img
+    src={resolvedImagePath}
     alt=""
-    layout="full-width"
-    fit="cover"
-    position={objectPosition}
-    priority
-    class="absolute inset-0 h-full w-full"
+    class="absolute inset-0 h-full w-full object-cover"
+    style={{ objectPosition }}
+    loading="eager"
+    decoding="async"
   />
   <!-- Warm atmospheric overlay -->
   <div class="hero-overlay absolute inset-0"></div>
