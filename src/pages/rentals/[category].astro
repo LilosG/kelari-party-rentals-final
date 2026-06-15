@@ -39,8 +39,7 @@ const cityCards = cities.map((c) => ({
   href: `/${c.slug}/`,
 }));
 
-const bgImage = category.heroImage?.src ?? "/images/hero-party.jpg";
-const heroObjectPosition = category.heroImage?.objectPosition ?? "center";
+const heroImage = category.heroImage;
 
 const otherCategories = categories.filter((c) => c.slug !== category.slug);
 
@@ -123,8 +122,8 @@ const schema = [
   <LocalHero
     title={category.headline}
     subtitle={category.subheadline}
-    bgImage={bgImage}
-    objectPosition={heroObjectPosition}
+    image={heroImage?.image}
+    focalPoint={heroImage?.focalPoint}
   />
 
   <!-- 2 · Coming Soon notice bar ─────────────────── -->

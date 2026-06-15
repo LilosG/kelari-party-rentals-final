@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { heroImages } from "../data/heroImages";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import Section from "../components/Section.astro";
@@ -77,7 +78,8 @@ const stats = [
   <LocalHero
     title="About Kelari Party Rentals"
     subtitle="Locally owned in Carlsbad. Dedicated to making every celebration stress-free."
-    bgImage="/images/backyard-party.jpg"
+    image={heroImages.backyardPartyHero.image}
+    focalPoint={heroImages.backyardPartyHero.focalPoint}
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->
