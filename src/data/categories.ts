@@ -1,4 +1,6 @@
 import type { ImageMetadata } from 'astro';
+import type { HeroImageConfig } from './heroImages';
+import { heroImages } from './heroImages';
 // tables
 import tableCocktail from '../assets/images/table-cocktail.png';
 import tableCocktailHightop from '../assets/images/table-cocktail-hightop.jpg';
@@ -85,7 +87,7 @@ export interface Category {
   subheadline: string;
   intro: string;
   icon: string;
-  heroImage?: { src: string; objectPosition?: string };
+  heroImage?: HeroImageConfig;
   items: CategoryItem[];
   whatsIncluded: CategoryIncludedItem[];
   faqs: CategoryFAQ[];
@@ -109,7 +111,7 @@ export const categories: Category[] = [
     intro:
       "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, and cocktail tables for parties of every size across North County San Diego. Every table arrives clean, is set up at your venue by our team, and is picked up after your event — no hauling, no assembly, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
     icon: "🪑",
-    heroImage: { src: "/images/gallery-tablescape.jpg", objectPosition: "center" },
+    heroImage: heroImages.galleryTablescape,
     items: [
       {
         name: '60" Round Folding Table',
@@ -211,7 +213,7 @@ export const categories: Category[] = [
     intro:
       "Chair selection does more to set the tone of an event than almost any other rental decision. Standard folding chairs are practical and perfectly appropriate for casual birthdays and park events. Chiavari chairs — gold or silver — elevate the visual presentation of showers, graduation parties, and milestone celebrations significantly. Kelari Party Rentals carries the full range of chair styles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every chair is delivered clean, set up at your venue, and picked up after your event. One chair per guest is the baseline — we'll help you confirm the right count and style for your event type.",
     icon: "💺",
-    heroImage: { src: "/images/backyard-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.backyardPartyHero,
     items: [
       {
         name: "White Resin Folding Chair",
@@ -309,7 +311,7 @@ export const categories: Category[] = [
     intro:
       "In North County San Diego, a tent or canopy isn't optional for daytime outdoor events — it's what makes the difference between a comfortable celebration and guests checking the time. Kelari Party Rentals carries pop-up canopies and professional frame tents in multiple sizes for backyard parties, park events, and outdoor celebrations across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver, set up, properly weight and stake every structure, and return for same-day pickup after your event. Whether you need a compact 10x10 canopy for a food station or a 20x40 frame tent for a 100-guest graduation party, we have the right coverage for your venue and guest count.",
     icon: "⛺",
-    heroImage: { src: "/images/tent-white-10x20-open.png", objectPosition: "bottom" },
+    heroImage: heroImages.tentWhite10x20Open,
     items: [
       {
         name: "10×10 Pop-Up Canopy",
@@ -414,7 +416,7 @@ export const categories: Category[] = [
     intro:
       "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth looks like an intentional celebration. Kelari Party Rentals carries tablecloths in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Table runners are available separately — browse our full runner selection on the table runners page. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
     icon: "🎀",
-    heroImage: { src: "/images/baby-shower.jpg", objectPosition: "center" },
+    heroImage: heroImages.babyShower,
     items: [
       // GROUP 1 — Rectangle Tablecloths
       {
@@ -595,7 +597,7 @@ export const categories: Category[] = [
     intro:
       "A table runner is the easiest way to add color, texture, and visual interest to your event setup. Layered over a solid tablecloth, the right runner ties your entire color palette together and elevates any table from functional to styled. Kelari Party Rentals carries satin and fabric runners in a range of colors to coordinate with your tablecloths, chairs, and décor. Every runner arrives freshly laundered and pressed. Share your event palette when you request a quote and we'll recommend the right color combination for your setup.",
     icon: "🎀",
-    heroImage: { src: "/images/hero-party.jpg", objectPosition: "center" },
+    heroImage: heroImages.heroParty,
     items: [
       { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths.", image: runnerWhite },
       { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations.", image: runnerPink },
@@ -639,7 +641,7 @@ export const categories: Category[] = [
     intro:
       "Decorations define the visual identity of your event and create the moments guests remember and photograph. The right centerpiece, backdrop, or arch takes a setup from functional to memorable. Kelari Party Rentals carries centerpieces, balloon arches, backdrop frames, vase collections, and accent pieces for events of every style across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver and position every decoration as part of the setup, coordinate with your linen and tableware choices to create a cohesive look, and collect everything after your event. You don't source, transport, or arrange a single piece — we handle it all.",
     icon: "✨",
-    heroImage: { src: "/images/gallery-marquee.jpg", objectPosition: "center" },
+    heroImage: heroImages.galleryMarquee,
     items: [
       {
         name: "Centerpiece",
@@ -732,7 +734,7 @@ export const categories: Category[] = [
     intro:
       "Marquee letters are one of the most photographed elements at any celebration. A glowing LOVE, BABY, GRAD, or CHEERS sign instantly creates the focal point guests gravitate toward all night. Kelari Party Rentals carries warm Edison-bulb marquee letters and numbers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every letter arrives fully functional, is positioned at your venue by our team, and is collected after your event. Whether you're spelling out a name, a word, or a milestone year, marquee letters elevate any setup from a party to a moment.",
     icon: "🔤",
-    heroImage: { src: "/images/gallery-marquee.jpg", objectPosition: "center" },
+    heroImage: heroImages.galleryMarquee,
     items: [
       {
         name: "LOVE",
