@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { heroImages } from "../data/heroImages";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import Section from "../components/Section.astro";
@@ -46,8 +45,7 @@ const quoteContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Emai
   <LocalHero
     title="Get a Free Quote"
     subtitle="Tell us about your event and we'll put together a custom rental package — no obligation, no pressure."
-    image={heroImages.babyShower.image}
-    focalPoint={heroImages.babyShower.focalPoint}
+    bgImage="/images/baby-shower.jpg"
   />
 
   <TrustBar />

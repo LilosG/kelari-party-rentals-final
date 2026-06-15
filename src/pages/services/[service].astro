@@ -32,7 +32,8 @@ interface Props {
 
 const { service } = Astro.props;
 
-const heroImage = service.heroImage;
+const bgImage = service.heroImage?.src ?? "/images/hero-party.jpg";
+const heroObjectPosition = service.heroImage?.objectPosition ?? "center";
 
 const cityCards = cities
   .filter((c) => c.services.includes(service.slug))
@@ -105,8 +106,8 @@ const schema = [
   <LocalHero
     title={service.headline}
     subtitle={service.subheadline}
-    image={heroImage?.image}
-    focalPoint={heroImage?.focalPoint}
+    bgImage={bgImage}
+    objectPosition={heroObjectPosition}
     breadcrumbs={[
       { label: "Home", href: "/" },
       { label: "Services", href: "/services/" },

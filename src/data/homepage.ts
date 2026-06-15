@@ -8,7 +8,6 @@ import type { Testimonial } from "../components/TestimonialCarousel.astro";
 import type { GalleryImage } from "../components/ImageGallery.astro";
 import type { FAQ } from "../components/FAQAccordion.astro";
 import { booqableStore } from "./site";
-import { heroImages } from "./heroImages";
 
 import heroPartyImg from "../assets/images/hero-party.jpg";
 import birthdayPartyImg from "../assets/images/birthday-party.jpg";
@@ -33,7 +32,7 @@ export const hero = {
   title: "Party Rentals That Make Every Celebration Unforgettable",
   subtitle:
     "Tables, chairs, canopies, linens, and décor — delivered and set up across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
-  heroImage: heroImages.heroParty,
+  backgroundImage: "/images/hero-party.jpg",
   primaryCta: { label: "Book Now", href: booqableStore },
   secondaryCta: { label: "Get a Free Quote", href: "/quote/" },
 };
