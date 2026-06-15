@@ -11,7 +11,8 @@ export default defineConfig({
   site: 'https://kelaripartyrentals.com',
 
   image: {
-    service: { entrypoint: 'astro/assets/services/sharp' }
+    service: { entrypoint: 'astro/assets/services/sharp' },
+    responsiveStyles: true,
   },
 
   vite: {

@@ -42,6 +42,7 @@ export interface Props {
   secondaryCta?: { label: string; href: string };
   eyebrow?: string;
   trustItems?: string[];
+  objectPosition?: string;
   /** @deprecated Use title instead */
   headline?: string;
   /** @deprecated Use subtitle instead */
@@ -63,6 +64,7 @@ const {
   secondaryCta,
   eyebrow,
   trustItems = [],
+  objectPosition = "center",
   headline,
   subheadline,
   bgImage,
@@ -119,11 +121,11 @@ const emphasisTail = hasEmphasisPattern
   <Image
     src={resolvedImage}
     alt=""
-    widths={[640, 1280, 1600]}
-    sizes="100vw"
-    fetchpriority="high"
-    loading="eager"
-    class="absolute inset-0 h-full w-full object-cover object-center"
+    layout="full-width"
+    fit="cover"
+    position={objectPosition}
+    priority
+    class="absolute inset-0 h-full w-full"
   />
   <!-- Warm atmospheric overlay -->
   <div class="hero-overlay absolute inset-0"></div>

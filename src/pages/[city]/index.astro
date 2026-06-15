@@ -34,13 +34,8 @@ interface Props {
 
 const { city } = Astro.props;
 
-const cityImages: Record<string, string> = {
-  carlsbad: "/images/hero-party.jpg",
-  encinitas: "/images/backyard-party.jpg",
-  oceanside: "/images/park-party.jpg",
-  "san-marcos": "/images/graduation-party.jpg",
-};
-const bgImage = cityImages[city.slug] ?? "/images/hero-party.jpg";
+const bgImage = city.heroImage?.src ?? "/images/hero-party.jpg";
+const heroObjectPosition = city.heroImage?.objectPosition ?? "center";
 
 const nearbyAreas = cities
   .filter((c) => c.slug !== city.slug)

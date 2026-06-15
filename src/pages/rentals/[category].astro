@@ -39,16 +39,8 @@ const cityCards = cities.map((c) => ({
   href: `/${c.slug}/`,
 }));
 
-const categoryImages: Record<string, string> = {
-  tables: "/images/gallery-tablescape.jpg",
-  chairs: "/images/backyard-party.jpg",
-  "tents-canopies": "/images/tent-white-10x20-open.png",
-  linens: "/images/baby-shower.jpg",
-  tableware: "/images/gallery-tablescape.jpg",
-  decorations: "/images/gallery-marquee.jpg",
-  lighting: "/images/engagement-party.jpg",
-};
-const bgImage = categoryImages[category.slug] ?? "/images/hero-party.jpg";
+const bgImage = category.heroImage?.src ?? "/images/hero-party.jpg";
+const heroObjectPosition = category.heroImage?.objectPosition ?? "center";
 
 const otherCategories = categories.filter((c) => c.slug !== category.slug);
 
@@ -132,6 +124,7 @@ const schema = [
     title={category.headline}
     subtitle={category.subheadline}
     bgImage={bgImage}
+    objectPosition={heroObjectPosition}
   />
 
   <!-- 2 · Coming Soon notice bar ─────────────────── -->
