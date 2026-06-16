@@ -2,14 +2,6 @@
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import heroParty from '../assets/images/hero-party.jpg';
-import birthdayParty from '../assets/images/birthday-party.jpg';
-import backyardParty from '../assets/images/backyard-party.jpg';
-import babyShower from '../assets/images/baby-shower.jpg';
-import graduationParty from '../assets/images/graduation-party.jpg';
-import engagementParty from '../assets/images/engagement-party.jpg';
-import parkParty from '../assets/images/park-party.jpg';
-import galleryTablescape from '../assets/images/gallery-tablescape.jpg';
-import galleryCanopy from '../assets/images/gallery-canopy.jpg';
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 import { services as allServices } from "../data/services";
@@ -50,21 +42,8 @@ const resolvedEyebrow = eyebrow;
 const resolvedTitle = title;
 const isDark = bg === "dark";
 
-const serviceImages: Record<string, ImageMetadata> = {
-  "party-rentals": heroParty,
-  "birthday-party-rentals": birthdayParty,
-  "backyard-party-rentals": backyardParty,
-  "baby-shower-rentals": babyShower,
-  "graduation-party-rentals": graduationParty,
-  "engagement-party-rentals": engagementParty,
-  "park-party-rentals": parkParty,
-  "delivery-setup-pickup": backyardParty,
-  "table-and-chair-rentals": galleryTablescape,
-  "tent-and-canopy-rentals": galleryCanopy,
-};
-
 function getServiceImage(slug: string): ImageMetadata {
-  return serviceImages[slug] ?? heroParty;
+  return allServices.find((service) => service.slug === slug)?.heroImage?.image ?? heroParty;
 }
 
 let resolvedServices: (ServiceCard & { slug: string })[] = services
