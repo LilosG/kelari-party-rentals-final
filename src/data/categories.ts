@@ -1,4 +1,6 @@
 import type { ImageMetadata } from 'astro';
+import type { HeroImageConfig } from './heroImages';
+import { heroImages } from './heroImages';
 // tables
 import tableCocktail from '../assets/images/table-cocktail.png';
 import tableCocktailHightop from '../assets/images/table-cocktail-hightop.jpg';
@@ -9,6 +11,8 @@ import tableRoundFolding from '../assets/images/table-round-folding.png';
 import chairChiavariWooden from '../assets/images/chair-chiavari-wooden.png';
 import chairWhiteFolding from '../assets/images/chair-white-folding.png';
 import chairBrownIvoryCushion from '../assets/images/chair-brown-ivory-cushion.png';
+import chairWhiteResinFolding from '../assets/images/chair-white-resin-folding.jpg';
+import chairChiavariNoCushion from '../assets/images/chair-chiavari-no-cushion.jpg';
 // linens - rectangular tablecloths
 import tableclothRectWhiteLong from '../assets/images/tablecloth-rect-white-long.png';
 import tableclothRectBlack from '../assets/images/tablecloth-rect-black.png';
@@ -39,6 +43,16 @@ import runnerPink from '../assets/images/runner-pink.png';
 import runnerIvory from '../assets/images/runner-ivory.png';
 // inspiration
 import eventSetupTablescape from '../assets/images/event-setup-tablescape.png';
+import galleryMarquee from '../assets/images/gallery-marquee.jpg';
+import marqueeLettersHero from '../assets/images/marquee-letters-hero.jpg';
+import marqueeLettersEvent from '../assets/images/marquee-letters-event.jpg';
+import marqueeLettersGrad from '../assets/images/marquee-letters-grad.jpg';
+import marqueeLettersMrMrs from '../assets/images/marquee-letters-mr-mrs.jpg';
+import marqueeLettersNumbers from '../assets/images/marquee-letters-numbers.jpg';
+import tentWhite10x10Open from '../assets/images/tent-white-10x10-open.png';
+import tentWhite10x10Walls from '../assets/images/tent-white-10x10-walls.png';
+import tentWhite10x20Open from '../assets/images/tent-white-10x20-open.png';
+import tentWhite10x20Walls from '../assets/images/tent-white-10x20-walls.png';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -46,6 +60,7 @@ export interface CategoryItem {
   name: string;
   description: string;
   sizes?: string[];
+  colors?: string[];
   image?: ImageMetadata;
 }
 
@@ -72,9 +87,11 @@ export interface Category {
   subheadline: string;
   intro: string;
   icon: string;
+  heroImage?: HeroImageConfig;
   items: CategoryItem[];
   whatsIncluded: CategoryIncludedItem[];
   faqs: CategoryFAQ[];
+  gridCols?: 2 | 3 | 4;
   relatedServices: string[];
 }
 
@@ -94,6 +111,7 @@ export const categories: Category[] = [
     intro:
       "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, and cocktail tables for parties of every size across North County San Diego. Every table arrives clean, ready for you to place at your venue, and is picked up after your event — no hauling, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
     icon: "🪑",
+    heroImage: heroImages.galleryTablescape,
     items: [
       {
         name: '60" Round Folding Table',
@@ -195,29 +213,27 @@ export const categories: Category[] = [
     intro:
       "Chair selection does more to set the tone of an event than almost any other rental decision. Standard folding chairs are practical and perfectly appropriate for casual birthdays and park events. Chiavari chairs — gold or silver — elevate the visual presentation of showers, graduation parties, and milestone celebrations significantly. Kelari Party Rentals carries the full range of chair styles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every chair is delivered clean and picked up after your event. One chair per guest is the baseline — we'll help you confirm the right count and style for your event type.",
     icon: "💺",
+    heroImage: heroImages.backyardPartyHero,
     items: [
       {
-        name: "White Folding Chair",
-        description: "Classic white resin folding chair. Clean, sturdy, and versatile.",
-        image: chairWhiteFolding,
+        name: "White Resin Folding Chair",
+        description: "Standard white plastic resin folding chair. The most popular chair rental for backyard parties, park events, and casual celebrations.",
+        image: chairWhiteResinFolding,
       },
       {
-        name: "Black Folding Chair",
-        description: "Sleek black resin folding chair for modern event setups.",
+        name: "Chiavari Chair – Light Fruitwood",
+        description: "Elegant light fruitwood Chiavari chair without cushion. Clean natural wood finish for a polished, formal look.",
+        image: chairChiavariNoCushion,
       },
       {
-        name: "Brown Folding Chair with Ivory Cushion",
-        description: "Wood-finish folding chair with a padded ivory cushion seat for added comfort and warmth.",
-        image: chairBrownIvoryCushion,
-      },
-      {
-        name: "Gold Chiavari Chair",
-        description: "Elegant gold Chiavari chair with cushion. Perfect for formal events.",
+        name: "Chiavari Chair with Ivory Cushion",
+        description: "Light fruitwood Chiavari chair with a 2-inch ivory cushion add-on. Elevated comfort and style for showers, quinceañeras, and milestone events.",
         image: chairChiavariWooden,
       },
       {
-        name: "Silver Chiavari Chair",
-        description: "Sophisticated silver Chiavari chair with cushion.",
+        name: "Chiavari Cushion – 2-inch Ivory",
+        description: "Add-on ivory cushion for Chiavari chairs. Adds comfort and a polished finish to any formal event setup.",
+        image: chairBrownIvoryCushion,
       },
     ],
     whatsIncluded: [
@@ -284,6 +300,7 @@ export const categories: Category[] = [
   {
     slug: "tents-canopies",
     name: "Tents & Canopies",
+    gridCols: 4,
     meta: {
       title: "Tent & Canopy Rentals in North County San Diego | Kelari Party Rentals",
       description:
@@ -294,30 +311,35 @@ export const categories: Category[] = [
     intro:
       "In North County San Diego, a tent or canopy isn't optional for daytime outdoor events — it's what makes the difference between a comfortable celebration and guests checking the time. Kelari Party Rentals carries pop-up canopies and professional frame tents in multiple sizes for backyard parties, park events, and outdoor celebrations across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver every structure and walk you through setup, weighting, and staking on-site, then return for same-day pickup after your event. Whether you need a compact 10x10 canopy for a food station or a 20x40 frame tent for a 100-guest graduation party, we have the right coverage for your venue and guest count.",
     icon: "⛺",
+    heroImage: heroImages.tentWhite10x20Open,
     items: [
       {
         name: "10×10 Pop-Up Canopy",
-        description: "Compact canopy for small gatherings and food stations.",
+        description: "Compact open canopy for food stations, dessert tables, and small gathering areas. Fits 1-2 tables.",
         sizes: ["10×10"],
-        image: comingSoonImage,
+        colors: ["White", "Black"],
+        image: tentWhite10x10Open,
+      },
+      {
+        name: "10×10 Pop-Up Canopy with Walls",
+        description: "10×10 canopy with sidewalls for added wind protection and a more enclosed setup.",
+        sizes: ["10×10"],
+        colors: ["White", "Black"],
+        image: tentWhite10x10Walls,
       },
       {
         name: "10×20 Pop-Up Canopy",
-        description: "Extended canopy for buffet lines and mid-size groups.",
+        description: "Extended open canopy for buffet lines, dining areas, and mid-size groups. Fits 3-4 tables.",
         sizes: ["10×20"],
-        image: comingSoonImage,
+        colors: ["White", "Black"],
+        image: tentWhite10x20Open,
       },
       {
-        name: "20×20 Frame Tent",
-        description: "Professional frame tent for parties up to 40 guests.",
-        sizes: ["20×20"],
-        image: comingSoonImage,
-      },
-      {
-        name: "20×40 Frame Tent",
-        description: "Large frame tent for events up to 80 guests.",
-        sizes: ["20×40"],
-        image: comingSoonImage,
+        name: "10×20 Pop-Up Canopy with Walls",
+        description: "10×20 canopy with sidewalls for a more enclosed event space with wind and sun protection on all sides.",
+        sizes: ["10×20"],
+        colors: ["White", "Black"],
+        image: tentWhite10x20Walls,
       },
     ],
     whatsIncluded: [
@@ -394,6 +416,7 @@ export const categories: Category[] = [
     intro:
       "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth looks like an intentional celebration. Kelari Party Rentals carries tablecloths in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Table runners are available separately — browse our full runner selection on the table runners page. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
     icon: "🎀",
+    heroImage: heroImages.babyShower,
     items: [
       // GROUP 1 — Rectangle Tablecloths
       {
@@ -574,6 +597,7 @@ export const categories: Category[] = [
     intro:
       "A table runner is the easiest way to add color, texture, and visual interest to your event setup. Layered over a solid tablecloth, the right runner ties your entire color palette together and elevates any table from functional to styled. Kelari Party Rentals carries satin and fabric runners in a range of colors to coordinate with your tablecloths, chairs, and décor. Every runner arrives freshly laundered and pressed. Share your event palette when you request a quote and we'll recommend the right color combination for your setup.",
     icon: "🎀",
+    heroImage: heroImages.heroParty,
     items: [
       { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths.", image: runnerWhite },
       { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations.", image: runnerPink },
@@ -617,6 +641,7 @@ export const categories: Category[] = [
     intro:
       "Decorations define the visual identity of your event and create the moments guests remember and photograph. The right centerpiece, backdrop, or arch takes a setup from functional to memorable. Kelari Party Rentals carries centerpieces, balloon arches, backdrop frames, vase collections, and accent pieces for events of every style across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver every decoration ready to position, coordinate with your linen and tableware choices to create a cohesive look, and collect everything after your event. You don't source, transport, or arrange a single piece — we handle it all.",
     icon: "✨",
+    heroImage: heroImages.galleryMarquee,
     items: [
       {
         name: "Centerpiece",
@@ -697,95 +722,109 @@ export const categories: Category[] = [
     ],
   },
   {
-    slug: "lighting",
-    name: "Lighting",
-    comingSoon: true,
+    slug: "marquee-letters",
+    name: "Marquee Letters",
     meta: {
-      title: "Lighting Rentals in North County San Diego | Kelari Party Rentals",
+      title: "Marquee Letter Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Lighting rentals arriving soon to North County San Diego — string lights, uplighting & lanterns for events in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Light-up marquee letter and number rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos. LOVE, BABY, GRAD, CHEERS & custom numbers 0–9.",
     },
-    headline: "Lighting Rentals",
-    subheadline: "String lights, uplighting & lanterns for the perfect ambiance — installed and ready for your event.",
+    headline: "Marquee Letter Rentals",
+    subheadline: "Light-up marquee letters and numbers that make every celebration photo-ready — delivered to your venue.",
     intro:
-      "Lighting is the most transformative upgrade available for evening events and tented celebrations. Bistro string lights under a frame tent create a warm, inviting atmosphere that photographs beautifully and keeps guests comfortable after dark. LED uplighting adds color and dimension to tent walls, trees, and venue spaces in ways that no other rental item can replicate. Kelari Party Rentals carries bistro string lights, LED uplighting, paper lanterns, and flameless LED candles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every fixture is tested before it leaves our warehouse, then delivered ready to install — we walk you through setup on-site, and collect it all after your event.",
-    icon: "💡",
+      "Marquee letters are one of the most photographed elements at any celebration. A glowing LOVE, BABY, GRAD, or CHEERS sign instantly creates the focal point guests gravitate toward all night. Kelari Party Rentals carries warm Edison-bulb marquee letters and numbers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every letter arrives fully functional and ready to place, and is collected after your event. Whether you're spelling out a name, a word, or a milestone year, marquee letters elevate any setup from a party to a moment.",
+    icon: "🔤",
+    heroImage: heroImages.galleryMarquee,
     items: [
       {
-        name: "Bistro String Lights",
-        description: "Warm-white Edison bulb string lights. Available in 25-ft and 50-ft strands.",
-        sizes: ["25 ft", "50 ft"],
+        name: "LOVE",
+        description: "Four-letter marquee sign with warm Edison bulbs. Perfect for engagement parties, anniversaries, and weddings.",
+        image: marqueeLettersHero,
       },
       {
-        name: "LED Uplighting",
-        description: "Color-changing LED uplights to accent tents, walls, and trees.",
+        name: "CHEERS",
+        description: "Six-letter marquee sign for celebrations, toasts, and milestone events.",
+        image: marqueeLettersEvent,
       },
       {
-        name: "Paper Lantern",
-        description: "White or colored paper lanterns for overhead décor.",
+        name: "BABY",
+        description: "Four-letter marquee sign for baby showers and gender reveals.",
+        image: galleryMarquee,
       },
       {
-        name: "LED Candle",
-        description: "Flameless LED candles for safe, atmospheric table lighting.",
+        name: "GRAD",
+        description: "Four-letter marquee sign for graduation parties and senior celebrations.",
+        image: marqueeLettersGrad,
+      },
+      {
+        name: "Mr & Mrs",
+        description: "Classic Mr & Mrs marquee sign for weddings and bridal events.",
+        image: marqueeLettersMrMrs,
+      },
+      {
+        name: "Numbers 0–9",
+        description: "Individual number marquee signs for milestone birthdays, anniversaries, and graduation years. Mix and match any combination.",
+        image: marqueeLettersNumbers,
       },
     ],
     whatsIncluded: [
       {
-        icon: "🔧",
-        title: "Professional Installation",
-        description: "Every lighting element is delivered ready to hang and position — we walk you through the setup so there's no guesswork.",
+        icon: "🔤",
+        title: "Ready to Place",
+        description: "Every marquee letter arrives fully charged and ready to position exactly where you want it — no assembly hassle.",
       },
       {
         icon: "✅",
-        title: "Pre-Event Test",
-        description: "Every lighting element is tested before we leave your venue — no dark bulbs or failed connections discovered at party time.",
+        title: "Tested Before Delivery",
+        description: "Every letter and number is tested before it leaves our warehouse — no dark bulbs or failed connections at party time.",
       },
       {
         icon: "🚚",
         title: "Delivery Available",
-        description: "All lighting rentals are delivered to your venue across North County San Diego as part of your order.",
+        description: "All marquee letter rentals are delivered to your venue across North County San Diego as part of your order.",
       },
       {
-        icon: "💡",
-        title: "Color Matching",
-        description: "LED uplighting can be set to match your event's color palette — pink, gold, blue, purple, or any combination.",
+        icon: "📸",
+        title: "Photo-Ready Design",
+        description: "Every letter is built for maximum visual impact — backdrop-facing, properly spaced, and styled to photograph beautifully.",
       },
       {
         icon: "🧹",
         title: "Post-Event Collection",
-        description: "We take down and collect all lighting after your event. No coiling cables or removing hardware for you.",
+        description: "We collect all marquee letters after your event. No packing, no loading — we handle everything.",
       },
       {
-        icon: "⚡",
-        title: "Power Coordination",
-        description: "We confirm power source requirements when booking and bring the right extension equipment for your venue.",
+        icon: "📋",
+        title: "Mix & Match",
+        description: "Combine words and numbers in a single order — GRAD + 2025, BABY + a number, or any custom combination for your event.",
       },
     ],
     relatedServices: [
       "engagement-party-rentals",
-      "quinceanera-rentals",
+      "baby-shower-rentals",
       "graduation-party-rentals",
+      "quinceanera-rentals",
     ],
     faqs: [
       {
-        question: "Do string lights work under a frame tent?",
-        answer: "Yes — bistro string lights hung under a frame tent canopy are one of the most popular lighting setups customers choose. The tent structure provides natural attachment points and the warm overhead glow transforms the tent interior completely. This setup is particularly effective for evening graduation parties, quinceañeras, and engagement celebrations.",
+        question: "What marquee letter words do you carry?",
+        answer: "We carry LOVE, CHEERS, BABY, GRAD, PROM, and Mr & Mrs as complete word sets, plus individual numbers 0–9 for milestone years and ages. Contact us to confirm availability for your event date.",
       },
       {
-        question: "What is LED uplighting and how does it work?",
-        answer: "LED uplights are compact floor-mounted fixtures that project colored light upward onto walls, tent poles, trees, or other vertical surfaces. They're color-changeable and can be set to match your event palette. A set of uplights positioned around a tent perimeter or along venue walls creates dramatic ambient lighting that transforms a standard space.",
+        question: "How tall are the marquee letters?",
+        answer: "Our marquee letters are approximately 2–3 feet tall — large enough to be visible and impactful across the venue while still being proportional in photos and backdrops.",
       },
       {
-        question: "Do I need a power source for string lights and uplighting?",
-        answer: "Yes — string lights and LED uplights require standard 120V power outlets. Confirm the location of your nearest outdoor outlets when booking and we'll bring appropriate extension cabling. For venues without convenient power access, ask about battery-powered options.",
+        question: "Do marquee letters need a power source?",
+        answer: "Yes — our marquee letters use standard 120V power. Confirm the location of your nearest indoor or outdoor outlet when booking and we'll bring appropriate extension cabling to reach it.",
       },
       {
-        question: "Can lighting be added to an existing rental order?",
-        answer: "Yes — lighting can be added to any order that includes tables, chairs, tents, or linens. Everything is delivered together in a single order. Request a quote with your complete rental list and we'll price everything together.",
+        question: "Where should I position marquee letters at my event?",
+        answer: "The most popular placements are behind the head table, next to the cake or dessert table, in front of a backdrop, or at the venue entrance. We'll recommend the best position based on your layout when we deliver.",
       },
       {
-        question: "Is lighting worth it for a daytime party?",
-        answer: "String lights and uplighting add the most value for evening events and covered tent setups. For daytime outdoor events, LED candles on tables add a subtle decorative touch without requiring power. If your event runs into the evening — graduation parties and quinceañeras often do — lighting is one of the best investments you can make.",
+        question: "Can marquee letters be added to an existing rental order?",
+        answer: "Yes — marquee letters can be added to any order that includes tables, chairs, tents, or linens. Everything is delivered together in a single order. Request a quote with your complete rental list and we'll price everything together.",
       },
     ],
   },

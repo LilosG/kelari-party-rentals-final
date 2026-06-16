@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { heroImages } from "../data/heroImages";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import Section from "../components/Section.astro";
@@ -18,7 +19,7 @@ const generalFaqs = [
   {
     question: "What items do you rent?",
     answer:
-      "We rent tables (rectangular, round, cocktail), chairs (folding, Chiavari), tents and canopies, linens (tablecloths, runners, sashes), table runners, decorations (centerpieces, arches, backdrops), and lighting (string lights, uplighting, lanterns).",
+      "We rent tables (rectangular, round, cocktail), chairs (folding, Chiavari), tents and canopies, linens (tablecloths, runners, sashes), table runners, decorations (centerpieces, arches, backdrops), and marquee letters (LOVE, BABY, GRAD, CHEERS, Mr & Mrs, and numbers 0–9).",
   },
   {
     question: "What areas do you serve?",
@@ -133,7 +134,8 @@ const schema = [
   <LocalHero
     title="Frequently Asked Questions"
     subtitle="Everything you need to know about renting with Kelari Party Rentals."
-    bgImage="/images/graduation-party.jpg"
+    image={heroImages.graduationParty.image}
+    focalPoint={heroImages.graduationParty.focalPoint}
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->

@@ -34,13 +34,7 @@ interface Props {
 
 const { city } = Astro.props;
 
-const cityImages: Record<string, string> = {
-  carlsbad: "/images/hero-party.jpg",
-  encinitas: "/images/backyard-party.jpg",
-  oceanside: "/images/park-party.jpg",
-  "san-marcos": "/images/graduation-party.jpg",
-};
-const bgImage = cityImages[city.slug] ?? "/images/hero-party.jpg";
+const heroImage = city.heroImage;
 
 const nearbyAreas = cities
   .filter((c) => c.slug !== city.slug)
@@ -115,7 +109,8 @@ const schema = [
   <LocalHero
     title={city.headline}
     subtitle={city.subheadline}
-    bgImage={bgImage}
+    image={heroImage?.image}
+    focalPoint={heroImage?.focalPoint}
     breadcrumbs={[
       { label: "Home", href: "/" },
       { label: "Service Area", href: "/service-area/" },

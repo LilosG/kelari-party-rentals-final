@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { heroImages } from "../../data/heroImages";
 import LocalHero from "../../components/LocalHero.astro";
 import TrustBar from "../../components/TrustBar.astro";
 import Section from "../../components/Section.astro";
@@ -59,7 +60,8 @@ const schema = [
   <LocalHero
     title="Party Rental Services"
     subtitle="Full-service party rentals for every occasion — birthdays, baby showers, graduations, engagements, and more."
-    bgImage="/images/hero-party.jpg"
+    image={heroImages.heroParty.image}
+    focalPoint={heroImages.heroParty.focalPoint}
   />
 
   <!-- 2 · Trust Bar ────────────────────────────── -->

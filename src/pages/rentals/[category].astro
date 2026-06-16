@@ -39,16 +39,7 @@ const cityCards = cities.map((c) => ({
   href: `/${c.slug}/`,
 }));
 
-const categoryImages: Record<string, string> = {
-  tables: "/images/gallery-tablescape.jpg",
-  chairs: "/images/backyard-party.jpg",
-  "tents-canopies": "/images/gallery-canopy.jpg",
-  linens: "/images/baby-shower.jpg",
-  tableware: "/images/gallery-tablescape.jpg",
-  decorations: "/images/gallery-marquee.jpg",
-  lighting: "/images/engagement-party.jpg",
-};
-const bgImage = categoryImages[category.slug] ?? "/images/hero-party.jpg";
+const heroImage = category.heroImage;
 
 const otherCategories = categories.filter((c) => c.slug !== category.slug);
 
@@ -62,6 +53,13 @@ const titleIncluded = "What's Included with Every " + catName + " Rental";
 const subtitleIncluded = "Delivered across North County San Diego — complimentary warehouse pickup always available at our Carlsbad location.";
 const titleHowItWorks = "How " + catName + " Rentals Work";
 const titleFaq = catName + " Rentals — Frequently Asked Questions";
+
+const itemGridClass: Record<2 | 3 | 4, string> = {
+  2: "grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6",
+  3: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6",
+  4: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6",
+};
+const itemGrid = itemGridClass[category.gridCols ?? 3];
 
 const schema = [
   {
@@ -124,7 +122,8 @@ const schema = [
   <LocalHero
     title={category.headline}
     subtitle={category.subheadline}
-    bgImage={bgImage}
+    image={heroImage?.image}
+    focalPoint={heroImage?.focalPoint}
   />
 
   <!-- 2 · Coming Soon notice bar ─────────────────── -->
@@ -174,7 +173,7 @@ const schema = [
         subtitle={`Delivered across North County San Diego — complimentary warehouse pickup always available.`}
       />
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+    <div class={itemGrid}>
       {category.items.map((item) => (
         <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm p-6 flex flex-col">
           {item.image ? (
@@ -196,11 +195,16 @@ const schema = [
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed flex-1">
             {item.description}
           </p>
-          {item.sizes && item.sizes.length > 0 && (
+          {(item.sizes && item.sizes.length > 0 || item.colors && item.colors.length > 0) && (
             <div class="mt-3 flex flex-wrap gap-1.5">
-              {item.sizes.map((size) => (
+              {item.sizes && item.sizes.map((size) => (
                 <span class="text-xs px-2.5 py-1 bg-brand-pink-light text-brand-pink rounded-full font-medium border border-brand-pink/20">
                   {size}
+                </span>
+              ))}
+              {item.colors && item.colors.map((color) => (
+                <span class="text-xs px-2.5 py-1 bg-neutral-100 text-neutral-600 rounded-full font-medium border border-neutral-200">
+                  {color}
                 </span>
               ))}
             </div>
