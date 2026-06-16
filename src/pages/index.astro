@@ -44,14 +44,16 @@ import {
 const title = `Party Rentals in Carlsbad & North County San Diego | ${nap.name}`;
 const description = site.description;
 
-const categoryCards = categories.map((c) => ({
-  name: c.name,
-  description: c.subheadline,
-  href: `/rentals/${c.slug}/`,
-  icon: c.icon,
-  slug: c.slug,
-  comingSoon: c.comingSoon ?? false,
-}));
+const categoryCards = categories
+  .filter((c) => !c.hidden)
+  .map((c) => ({
+    name: c.name,
+    description: c.subheadline,
+    href: `/rentals/${c.slug}/`,
+    icon: c.icon,
+    slug: c.slug,
+    comingSoon: c.comingSoon ?? false,
+  }));
 
 const cityCards = cities.map((c) => ({
   name: c.name,

@@ -11,11 +11,13 @@ const serviceLinks = services
   .filter((s) => s.slug !== "delivery-setup-pickup")
   .map((s) => ({ label: s.shortName, href: `/services/${s.slug}/` }));
 
-const rentalLinks = categories.map((c) => ({
-  label: c.name,
-  href: `/rentals/${c.slug}/`,
-  icon: c.icon,
-}));
+const rentalLinks = categories
+  .filter((c) => !c.hidden)
+  .map((c) => ({
+    label: c.name,
+    href: `/rentals/${c.slug}/`,
+    icon: c.icon,
+  }));
 
 const cityLinks = cities.map((c) => ({
   label: c.name,

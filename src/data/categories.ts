@@ -79,6 +79,7 @@ export interface Category {
   slug: string;
   name: string;
   comingSoon?: boolean;
+  hidden?: boolean;
   meta: {
     title: string;
     description: string;
@@ -631,6 +632,7 @@ export const categories: Category[] = [
     slug: "decorations",
     name: "Decorations",
     comingSoon: true,
+    hidden: true,
     meta: {
       title: "Decoration Rentals in North County San Diego | Kelari Party Rentals",
       description:
@@ -825,6 +827,98 @@ export const categories: Category[] = [
       {
         question: "Can marquee letters be added to an existing rental order?",
         answer: "Yes — marquee letters can be added to any order that includes tables, chairs, tents, or linens. Everything is delivered together in a single order. Request a quote with your complete rental list and we'll price everything together.",
+      },
+    ],
+  },
+  {
+    slug: "add-ons",
+    name: "Add-Ons",
+    meta: {
+      title: "Party Add-On Rentals in North County San Diego | Kelari Party Rentals",
+      description:
+        "Balloon arch stands, balloon column kits, wooden backdrops & wooden table covers for parties in Carlsbad, Encinitas, Oceanside & San Marcos.",
+    },
+    headline: "Party Add-Ons",
+    subheadline: "Balloon arch stands, column kits, wooden backdrops & table covers to round out your setup.",
+    intro:
+      "Add-ons are the finishing pieces that take a standard table-and-chair setup to the next level. Kelari Party Rentals carries balloon arch stands, reusable balloon column kits, wooden backdrop and photo wall frames, and wooden-style table covers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every add-on arrives clean and ready for you to set up at your venue, and is picked up after your event. Pair them with your tables, chairs, and linens for a complete, coordinated look.",
+    icon: "🎈",
+    heroImage: heroImages.decorationsNew,
+    items: [
+      {
+        name: "Over-the-Table Balloon Arch Stand",
+        description: "Adjustable rod stand with clamps, 31\"–110\" length, 31\"–64\" height. Mounts directly over a table for balloon arch displays.",
+      },
+      {
+        name: "Balloon Arch Stand (7.5ft Round Backdrop Frame)",
+        description: "Adjustable half-circle arch with a large round backdrop frame — ideal for photo walls and entrances.",
+      },
+      {
+        name: "Balloon Column Kit (2-Set, 3-in-1)",
+        description: "Reusable metal column kit with base, set of 2, for birthdays, weddings, graduations, and showers.",
+      },
+      {
+        name: "Wooden Backdrop / Photo Wall",
+        description: "Wooden balloon arch and photo wall backdrop for event styling.",
+      },
+      {
+        name: "Wooden Table Covers",
+        description: "Wood-style table covers used in place of traditional linens for a rustic or natural look.",
+      },
+    ],
+    whatsIncluded: [
+      {
+        icon: "🪢",
+        title: "Self-Assembly, Made Easy",
+        description: "Every add-on arrives clean and ready — stands, frames, and covers are simple to set up yourself at your venue.",
+      },
+      {
+        icon: "🎨",
+        title: "Coordinated Styling",
+        description: "Add-ons pair with your tables, chairs, and linens to create a cohesive look across your full setup.",
+      },
+      {
+        icon: "🚚",
+        title: "Delivery & Pickup",
+        description: "All add-on rentals are delivered to your venue and picked up after your event — no hauling for you.",
+      },
+      {
+        icon: "♻️",
+        title: "Reusable, Durable Pieces",
+        description: "Balloon stands and column kits are built for repeat use across multiple events, holding their shape setup after setup.",
+      },
+      {
+        icon: "📋",
+        title: "Custom Packages",
+        description: "Add-ons can be combined with tables, chairs, linens, and decorations in a single coordinated order.",
+      },
+    ],
+    relatedServices: [
+      "birthday-party-rentals",
+      "graduation-party-rentals",
+      "engagement-party-rentals",
+      "quinceanera-rentals",
+    ],
+    faqs: [
+      {
+        question: "Do I need to assemble the balloon arch stands myself?",
+        answer: "Yes — all add-on stands, frames, and covers are delivered clean and ready for you to set up at your venue. The rod stands and column kits use clamps and bases designed for quick assembly without tools.",
+      },
+      {
+        question: "What sizes do the balloon arch stands come in?",
+        answer: "The over-the-table rod stand adjusts from 31\" to 110\" in length and 31\" to 64\" in height. The round backdrop frame stand extends to 7.5ft for a large half-circle arch.",
+      },
+      {
+        question: "Can I use the wooden table covers instead of a linen tablecloth?",
+        answer: "Yes — the wooden-style table covers work as a standalone alternative to linens for a more rustic or natural aesthetic, or you can mix and match across tables at the same event.",
+      },
+      {
+        question: "Are the balloon column kits reusable across multiple events?",
+        answer: "Yes — the metal column kits with base are built for repeat use and come as a 2-set, 3-in-1 configuration suitable for birthdays, weddings, graduations, and showers.",
+      },
+      {
+        question: "How far in advance should I book add-on rentals?",
+        answer: "We recommend booking 1–2 weeks in advance for most events and 2–3 weeks during peak season (May–September) to ensure availability.",
       },
     ],
   },

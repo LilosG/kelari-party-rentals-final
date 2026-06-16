@@ -41,7 +41,7 @@ const cityCards = cities.map((c) => ({
 
 const heroImage = category.heroImage;
 
-const otherCategories = categories.filter((c) => c.slug !== category.slug);
+const otherCategories = categories.filter((c) => c.slug !== category.slug && !c.hidden);
 
 const relatedServiceData = category.relatedServices
   .map((slug) => allServices.find((s) => s.slug === slug))
