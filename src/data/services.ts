@@ -70,7 +70,7 @@ export const services: Service[] = [
     cityIntro:
       "Planning a party in {city}? Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your door. We handle the logistics so you can enjoy every minute of your celebration.",
     icon: "🎉",
-    heroImage: heroImages.heroParty,
+    heroImage: heroImages.partyRentalsNew,
     whatsIncluded: [
       {
         icon: "🪑",
@@ -162,7 +162,7 @@ export const services: Service[] = [
     cityIntro:
       "Throwing a birthday party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and themed décor right to your venue. From kids' parties at the park to backyard adult celebrations, we handle it all.",
     icon: "🎂",
-    heroImage: heroImages.birthdayParty,
+    heroImage: heroImages.birthdayNew,
     whatsIncluded: [
       {
         icon: "🪑",
@@ -254,7 +254,7 @@ export const services: Service[] = [
     cityIntro:
       "Hosting a backyard party in {city}? We deliver tables, chairs, tents, lighting, and décor right to your home. Kelari Party Rentals handles everything so your backyard becomes the perfect venue.",
     icon: "🏡",
-    heroImage: heroImages.backyardPartyHero,
+    heroImage: heroImages.backyardNew,
     whatsIncluded: [
       {
         icon: "🪑",
@@ -346,7 +346,7 @@ export const services: Service[] = [
     cityIntro:
       "Planning a baby shower in {city}? Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor delivered right to your venue. We handle delivery and pickup so you can celebrate.",
     icon: "👶",
-    heroImage: heroImages.babyShower,
+    heroImage: heroImages.babyShowerNew,
     whatsIncluded: [
       {
         icon: "🎀",
@@ -438,7 +438,7 @@ export const services: Service[] = [
     cityIntro:
       "Hosting a graduation party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your home, backyard, or local park. We handle delivery and pickup so you can celebrate the big milestone.",
     icon: "🎓",
-    heroImage: heroImages.graduationParty,
+    heroImage: heroImages.graduationNew,
     whatsIncluded: [
       {
         icon: "🎓",
@@ -530,7 +530,7 @@ export const services: Service[] = [
     cityIntro:
       "Hosting an engagement party in {city}? Kelari Party Rentals delivers elegant tables, chairs, linens, and décor to create a memorable celebration. We take care of delivery and pickup after your event.",
     icon: "💍",
-    heroImage: heroImages.engagementParty,
+    heroImage: heroImages.engagementNew,
     whatsIncluded: [
       {
         icon: "🪑",
@@ -616,7 +616,7 @@ export const services: Service[] = [
     cityIntro:
       "Throwing a park party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your favorite {city} park. We deliver before your guests arrive and pick up after they leave.",
     icon: "🌳",
-    heroImage: heroImages.parkParty,
+    heroImage: heroImages.parkPartyNew,
     whatsIncluded: [
       {
         icon: "🪑",
@@ -800,7 +800,7 @@ export const services: Service[] = [
     cityIntro:
       "Planning a quinceañera in {city}? Kelari Party Rentals delivers elegant tables, Chiavari chairs, premium linens, and décor right to your venue. Professional delivery is available so your family can enjoy every moment of this milestone celebration.",
     icon: "👑",
-    heroImage: heroImages.heroParty,
+    heroImage: heroImages.quinceaneraNew,
     whatsIncluded: [
       {
         icon: "🪑",

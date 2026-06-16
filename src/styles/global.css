@@ -228,21 +228,21 @@ a {
   }
 
   .hero-shell {
-    min-height: 560px;
-    height: 560px;
+    aspect-ratio: 21 / 10;
+    min-height: 380px;
   }
 
   @media (min-width: 640px) {
     .hero-shell {
-      min-height: 620px;
-      height: 620px;
+      aspect-ratio: 21 / 9;
+      min-height: 420px;
     }
   }
 
   @media (min-width: 1024px) {
     .hero-shell {
-      min-height: 680px;
-      height: 680px;
+      aspect-ratio: 21 / 8.5;
+      min-height: 480px;
     }
   }
 
