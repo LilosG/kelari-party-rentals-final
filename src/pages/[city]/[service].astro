@@ -239,7 +239,7 @@ const schema = [
   <ImageGallery
     eyebrow="RECENT SETUPS"
     title={`${service.shortName} Setups in ${city.name}`}
-    subtitle={`Real events we've delivered and set up across ${city.name} and North County San Diego.`}
+    subtitle={`Real events we've delivered across ${city.name} and North County San Diego.`}
     images={galleryImages.slice(0, 8)}
     columns={4}
     bg="white"
@@ -285,7 +285,7 @@ const schema = [
   <!-- 12 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title={`Book ${service.shortName} in ${city.name}`}
-    subtitle={`Get a free quote for ${service.name.toLowerCase()} in ${city.name}. Delivery, setup, and pickup are always included.`}
+    subtitle={`Get a free quote for ${service.name.toLowerCase()} in ${city.name}. Delivery and pickup are always included.`}
     primaryCta={{ label: "Book Now", href: booqableStore }}
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
     tertiaryCta={{ label: `Call ${nap.contact.phone}`, href: `tel:${nap.contact.phone.replace(/\D/g, "")}` }}

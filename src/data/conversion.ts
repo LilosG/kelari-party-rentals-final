@@ -86,7 +86,7 @@ export const footerNavGroups = [
       { label: "Baby Showers", href: "/services/baby-shower-rentals/" },
       { label: "Graduation Parties", href: "/services/graduation-party-rentals/" },
       { label: "Park Parties", href: "/services/park-party-rentals/" },
-      { label: "Delivery & Setup", href: "/services/delivery-setup-pickup/" },
+      { label: "Delivery & Pickup", href: "/services/delivery-setup-pickup/" },
       { label: "Browse Rentals", href: "/rentals/" },
     ],
   },

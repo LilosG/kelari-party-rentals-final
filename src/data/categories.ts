@@ -92,7 +92,7 @@ export const categories: Category[] = [
     headline: "Table Rentals",
     subheadline: "Rectangular, round & cocktail tables for every event size — delivered clean and set up at your venue.",
     intro:
-      "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, and cocktail tables for parties of every size across North County San Diego. Every table arrives clean, is set up at your venue by our team, and is picked up after your event — no hauling, no assembly, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
+      "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, and cocktail tables for parties of every size across North County San Diego. Every table arrives clean, ready for you to place at your venue, and is picked up after your event — no hauling, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
     icon: "🪑",
     items: [
       {
@@ -134,7 +134,7 @@ export const categories: Category[] = [
       {
         icon: "✅",
         title: "Clean & Inspection-Ready",
-        description: "Every table is cleaned and inspected before delivery — no surprises on setup day.",
+        description: "Every table is cleaned and inspected before delivery — no surprises on delivery day.",
       },
       {
         icon: "🧹",
@@ -191,9 +191,9 @@ export const categories: Category[] = [
         "Folding chairs & Chiavari chairs for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Chair Rentals",
-    subheadline: "Folding & Chiavari chairs for every style and budget — delivered and set up at your venue.",
+    subheadline: "Folding & Chiavari chairs for every style and budget — delivered to your venue.",
     intro:
-      "Chair selection does more to set the tone of an event than almost any other rental decision. Standard folding chairs are practical and perfectly appropriate for casual birthdays and park events. Chiavari chairs — gold or silver — elevate the visual presentation of showers, graduation parties, and milestone celebrations significantly. Kelari Party Rentals carries the full range of chair styles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every chair is delivered clean, set up at your venue, and picked up after your event. One chair per guest is the baseline — we'll help you confirm the right count and style for your event type.",
+      "Chair selection does more to set the tone of an event than almost any other rental decision. Standard folding chairs are practical and perfectly appropriate for casual birthdays and park events. Chiavari chairs — gold or silver — elevate the visual presentation of showers, graduation parties, and milestone celebrations significantly. Kelari Party Rentals carries the full range of chair styles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every chair is delivered clean and picked up after your event. One chair per guest is the baseline — we'll help you confirm the right count and style for your event type.",
     icon: "💺",
     items: [
       {
@@ -292,7 +292,7 @@ export const categories: Category[] = [
     headline: "Tent & Canopy Rentals",
     subheadline: "Pop-up canopies and frame tents for shade and shelter at any outdoor event.",
     intro:
-      "In North County San Diego, a tent or canopy isn't optional for daytime outdoor events — it's what makes the difference between a comfortable celebration and guests checking the time. Kelari Party Rentals carries pop-up canopies and professional frame tents in multiple sizes for backyard parties, park events, and outdoor celebrations across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver, set up, properly weight and stake every structure, and return for same-day pickup after your event. Whether you need a compact 10x10 canopy for a food station or a 20x40 frame tent for a 100-guest graduation party, we have the right coverage for your venue and guest count.",
+      "In North County San Diego, a tent or canopy isn't optional for daytime outdoor events — it's what makes the difference between a comfortable celebration and guests checking the time. Kelari Party Rentals carries pop-up canopies and professional frame tents in multiple sizes for backyard parties, park events, and outdoor celebrations across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver every structure and walk you through setup, weighting, and staking on-site, then return for same-day pickup after your event. Whether you need a compact 10x10 canopy for a food station or a 20x40 frame tent for a 100-guest graduation party, we have the right coverage for your venue and guest count.",
     icon: "⛺",
     items: [
       {
@@ -329,7 +329,7 @@ export const categories: Category[] = [
       {
         icon: "🔧",
         title: "Assembled & Anchored",
-        description: "Every tent and canopy is fully assembled and properly anchored — weighted or staked based on your surface type.",
+        description: "Every tent and canopy is delivered ready to assemble — we walk you through weighting or staking based on your surface type.",
       },
       {
         icon: "⚓",
@@ -368,7 +368,7 @@ export const categories: Category[] = [
         answer: "Pop-up canopies set up quickly, are freestanding, and come in 10x10 and 10x20 sizes. They provide overhead shade and light wind protection but are open on the sides. Frame tents are more substantial aluminum-frame structures — sturdier in wind, more polished in appearance, and available in larger sizes. Frame tents are the right choice for larger events, more formal occasions, and any event where weather protection matters.",
       },
       {
-        question: "Can you set up a tent on artificial turf or concrete?",
+        question: "Can a tent be set up on artificial turf or concrete?",
         answer: "Yes — we bring weighted bases for artificial turf and concrete surfaces where ground staking isn't possible. Let us know your yard surface when booking and we'll bring the right anchoring equipment.",
       },
       {
@@ -377,7 +377,7 @@ export const categories: Category[] = [
       },
       {
         question: "Do you deliver tents to parks in Carlsbad and Encinitas?",
-        answer: "Yes — we regularly deliver and set up canopies and frame tents at public parks throughout North County San Diego. Most parks require a reservation for events with equipment — confirm your reservation window and we'll coordinate delivery to arrive within it.",
+        answer: "Yes — we regularly deliver canopies and frame tents to public parks throughout North County San Diego. Most parks require a reservation for events with equipment — confirm your reservation window and we'll coordinate delivery to arrive within it.",
       },
     ],
   },
@@ -519,8 +519,8 @@ export const categories: Category[] = [
       },
       {
         icon: "🔧",
-        title: "Setup Included",
-        description: "We dress every table with your linens as part of the setup — you don't fold or place a single cloth.",
+        title: "Freshly Pressed & Ready",
+        description: "Every linen arrives clean and pressed — ready to place the moment you're set up.",
       },
       {
         icon: "🧹",
@@ -586,7 +586,7 @@ export const categories: Category[] = [
       { icon: "✅", title: "Freshly Laundered", description: "Every runner is washed, pressed, and inspected before delivery — no wrinkles, no stains." },
       { icon: "🎨", title: "Color Coordination", description: "Share your event palette and we'll recommend the right runner color to complement your tablecloths and décor." },
       { icon: "🚚", title: "Delivery Available", description: "Runners are delivered to your venue across North County San Diego as part of your rental order." },
-      { icon: "🔧", title: "Placed at Setup", description: "We lay every runner on your tables as part of the setup — you don't fold or place a single piece." },
+      { icon: "🔧", title: "Freshly Pressed & Ready", description: "Every runner arrives clean and pressed — ready to lay the moment you're set up." },
       { icon: "🧹", title: "Post-Event Collection", description: "We collect all runners after your event. No washing, no returning — we handle everything." },
       { icon: "📋", title: "Multiple Colors Available", description: "Off white, pink, baby blue, tan, and green — coordinate with any event theme or color palette." },
     ],
@@ -615,7 +615,7 @@ export const categories: Category[] = [
     headline: "Decoration Rentals",
     subheadline: "Centerpieces, arches, backdrops & accents to transform any space into a celebration-ready venue.",
     intro:
-      "Decorations define the visual identity of your event and create the moments guests remember and photograph. The right centerpiece, backdrop, or arch takes a setup from functional to memorable. Kelari Party Rentals carries centerpieces, balloon arches, backdrop frames, vase collections, and accent pieces for events of every style across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver and position every decoration as part of the setup, coordinate with your linen and tableware choices to create a cohesive look, and collect everything after your event. You don't source, transport, or arrange a single piece — we handle it all.",
+      "Decorations define the visual identity of your event and create the moments guests remember and photograph. The right centerpiece, backdrop, or arch takes a setup from functional to memorable. Kelari Party Rentals carries centerpieces, balloon arches, backdrop frames, vase collections, and accent pieces for events of every style across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver every decoration ready to position, coordinate with your linen and tableware choices to create a cohesive look, and collect everything after your event. You don't source, transport, or arrange a single piece — we handle it all.",
     icon: "✨",
     items: [
       {
@@ -639,7 +639,7 @@ export const categories: Category[] = [
       {
         icon: "✨",
         title: "Styled Placement",
-        description: "We position every decoration as part of the setup — centerpieces on tables, backdrop frames assembled, arches in place.",
+        description: "Every decoration arrives ready to position — centerpieces, backdrop frames, and arches, all delivered and ready for you to place.",
       },
       {
         icon: "🎨",
@@ -654,7 +654,7 @@ export const categories: Category[] = [
       {
         icon: "📸",
         title: "Photo-Ready Results",
-        description: "Every setup is arranged for visual impact — clean lines, balanced composition, and a polished finish.",
+        description: "Every piece is delivered ready to create visual impact — clean lines, balanced composition, a polished finish you control.",
       },
       {
         icon: "🧹",
@@ -708,7 +708,7 @@ export const categories: Category[] = [
     headline: "Lighting Rentals",
     subheadline: "String lights, uplighting & lanterns for the perfect ambiance — installed and ready for your event.",
     intro:
-      "Lighting is the most transformative upgrade available for evening events and tented celebrations. Bistro string lights under a frame tent create a warm, inviting atmosphere that photographs beautifully and keeps guests comfortable after dark. LED uplighting adds color and dimension to tent walls, trees, and venue spaces in ways that no other rental item can replicate. Kelari Party Rentals carries bistro string lights, LED uplighting, paper lanterns, and flameless LED candles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We install every lighting element as part of the setup, test everything before leaving your venue, and collect it all after your event.",
+      "Lighting is the most transformative upgrade available for evening events and tented celebrations. Bistro string lights under a frame tent create a warm, inviting atmosphere that photographs beautifully and keeps guests comfortable after dark. LED uplighting adds color and dimension to tent walls, trees, and venue spaces in ways that no other rental item can replicate. Kelari Party Rentals carries bistro string lights, LED uplighting, paper lanterns, and flameless LED candles for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every fixture is tested before it leaves our warehouse, then delivered ready to install — we walk you through setup on-site, and collect it all after your event.",
     icon: "💡",
     items: [
       {
@@ -733,7 +733,7 @@ export const categories: Category[] = [
       {
         icon: "🔧",
         title: "Professional Installation",
-        description: "We hang string lights, position uplights, and install every lighting element as part of the setup — no DIY rigging.",
+        description: "Every lighting element is delivered ready to hang and position — we walk you through the setup so there's no guesswork.",
       },
       {
         icon: "✅",
@@ -769,7 +769,7 @@ export const categories: Category[] = [
     faqs: [
       {
         question: "Do string lights work under a frame tent?",
-        answer: "Yes — bistro string lights hung under a frame tent canopy are one of the most popular lighting setups we do. The tent structure provides natural attachment points and the warm overhead glow transforms the tent interior completely. This setup is particularly effective for evening graduation parties, quinceañeras, and engagement celebrations.",
+        answer: "Yes — bistro string lights hung under a frame tent canopy are one of the most popular lighting setups customers choose. The tent structure provides natural attachment points and the warm overhead glow transforms the tent interior completely. This setup is particularly effective for evening graduation parties, quinceañeras, and engagement celebrations.",
       },
       {
         question: "What is LED uplighting and how does it work?",

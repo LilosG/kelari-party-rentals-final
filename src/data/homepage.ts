@@ -31,7 +31,7 @@ export interface TrustBarItem {
 export const hero = {
   title: "Party Rentals That Make Every Celebration Unforgettable",
   subtitle:
-    "Tables, chairs, canopies, linens, and décor — delivered and set up across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
+    "Tables, chairs, canopies, linens, and décor — delivered across Carlsbad, Encinitas, Oceanside & San Marcos. You celebrate. We handle the rest.",
   backgroundImage: "/images/hero-party.jpg",
   primaryCta: { label: "Book Now", href: booqableStore },
   secondaryCta: { label: "Get a Free Quote", href: "/quote/" },
@@ -68,7 +68,7 @@ export const howItWorksSteps: Step[] = [
     number: "02",
     title: "We Deliver",
     description:
-      "Our team arrives at your venue, places every item with care, and makes sure everything looks great before your first guest walks in.",
+      "Our team arrives at your venue and brings everything you ordered, ready to go. We walk you through setup so everything's clear before your first guest walks in.",
   },
   {
     number: "03",
@@ -91,7 +91,7 @@ export const testimonials: Testimonial[] = [
     name: "David & Maria R.",
     location: "Carlsbad",
     rating: 5,
-    text: "Kelari made everything so easy. The tables and chairs were spotless, the canopy looked amazing, and they set everything up before our guests arrived. Can't recommend them enough!",
+    text: "Kelari made everything so easy. The tables and chairs were spotless, the canopy looked amazing, and everything was dropped off right on time before our guests arrived. Can't recommend them enough!",
     date: "Oct 2024",
   },
   {
@@ -105,7 +105,7 @@ export const testimonials: Testimonial[] = [
     name: "Sarah M.",
     location: "Oceanside",
     rating: 5,
-    text: "Used Kelari for my daughter's graduation party at Guajome Park. They delivered on time, set everything up perfectly, and the whole setup looked stunning. Worth every penny.",
+    text: "Used Kelari for my daughter's graduation party at Guajome Park. They delivered right on time and everything was exactly what we ordered. The whole setup looked stunning. Worth every penny.",
     date: "Jun 2024",
   },
   {

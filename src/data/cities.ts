@@ -52,9 +52,9 @@ export const cities: City[] = [
     },
     headline: "Carlsbad Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your Carlsbad venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your Carlsbad venue — stress-free.",
     intro:
-      "From beachside celebrations at Carlsbad State Beach to backyard gatherings in La Costa, Kelari Party Rentals is Carlsbad's go-to source for tables, chairs, tents, linens, and event décor. We deliver, set up, and pick up so you can focus on your guests.",
+      "From beachside celebrations at Carlsbad State Beach to backyard gatherings in La Costa, Kelari Party Rentals is Carlsbad's go-to source for tables, chairs, tents, linens, and event décor. We deliver and pick up so you can focus on your guests.",
     neighborhoods: [
       "Carlsbad Village",
       "Bressi Ranch",
@@ -115,7 +115,7 @@ export const cities: City[] = [
       "party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Carlsbad's year-round sunshine and spacious neighborhoods make it one of North County's most active party destinations. Whether you're hosting a garden party on an Aviara estate, a backyard gathering in Bressi Ranch, or a community celebration at Calavera Hills Community Park, Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your venue. We scale every package to your guest count and handle setup and pickup so you can focus entirely on your guests. One La Costa family recently hosted a 65-person milestone birthday in their backyard; we delivered round tables, a 20×20 frame tent, and coordinating linens and had everything set up two hours before guests arrived.",
+          "Carlsbad's year-round sunshine and spacious neighborhoods make it one of North County's most active party destinations. Whether you're hosting a garden party on an Aviara estate, a backyard gathering in Bressi Ranch, or a community celebration at Calavera Hills Community Park, Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your venue. We scale every package to your guest count and handle delivery and pickup so you can focus entirely on your guests. One La Costa family recently hosted a 65-person milestone birthday in their backyard; we delivered round tables, a 20×20 frame tent, and coordinating linens and had everything delivered two hours before guests arrived.",
         localVenue:
           "Calavera Hills Community Park and private estates in Aviara are among Carlsbad's most popular settings for full party rental setups.",
         deliveryNote:
@@ -145,7 +145,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver a birthday party setup to Poinsettia Park in Carlsbad?",
             answer:
-              "Yes — Poinsettia Park is one of our most-requested Carlsbad delivery spots. We coordinate with your park reservation and have everything set up before your guests arrive.",
+              "Yes — Poinsettia Park is one of our most-requested Carlsbad delivery spots. We coordinate with your park reservation and have everything delivered and ready before your guests arrive.",
           },
           {
             question: "Do you have kids' birthday party packages for Carlsbad events near Legoland?",
@@ -157,7 +157,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Carlsbad backyards were made for entertaining. Bressi Ranch's planned community homes, La Costa's generous lot sizes, and Aviara's resort-style properties all offer the space to host a truly impressive outdoor party with the right rental equipment. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to your Carlsbad home and handles delivery and pickup, so you never have to move a heavy table. One Bressi Ranch couple recently hosted a 60-person retirement party in their backyard; we set up a 20×30 frame tent, eight round tables, and café string lights the evening before and had everything ready by morning.",
+          "Carlsbad backyards were made for entertaining. Bressi Ranch's planned community homes, La Costa's generous lot sizes, and Aviara's resort-style properties all offer the space to host a truly impressive outdoor party with the right rental equipment. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to your Carlsbad home and handles delivery and pickup, so you never have to move a heavy table. One Bressi Ranch couple recently hosted a 60-person retirement party in their backyard; we deliver a 20×30 frame tent, eight round tables, and café string lights the evening before and had everything ready by morning.",
         localVenue:
           "Bressi Ranch and La Costa neighborhoods are Carlsbad's most popular areas for backyard party rentals, with lot sizes well-suited for tent setups.",
         deliveryNote:
@@ -178,7 +178,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Baby showers in Carlsbad tend toward the elegant side, whether hosted on an Aviara patio with lagoon views or in a La Costa backyard garden. Kelari Party Rentals provides beautifully coordinated tables, chairs, linens, centerpieces, and décor to make every shower feel effortless. We deliver, arrange everything, and return for pickup — so the host can be fully present for the mom-to-be. One Aviara family recently hosted a garden-style shower for 40 guests on their patio; we delivered soft sage linens, floral centerpieces, and Chiavari chairs that perfectly complemented the garden setting.",
+          "Baby showers in Carlsbad tend toward the elegant side, whether hosted on an Aviara patio with lagoon views or in a La Costa backyard garden. Kelari Party Rentals provides beautifully coordinated tables, chairs, linens, centerpieces, and décor to make every shower feel effortless. We deliver everything ready to set up and return for pickup — so the host can be fully present for the mom-to-be. One Aviara family recently hosted a garden-style shower for 40 guests on their patio; we delivered soft sage linens, floral centerpieces, and Chiavari chairs that perfectly complemented the garden setting.",
         localVenue:
           "Private patios in Aviara and backyard gardens in La Costa provide naturally elegant backdrops for Carlsbad baby showers.",
         deliveryNote:
@@ -187,7 +187,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to an Aviara home in Carlsbad?",
             answer:
-              "Absolutely. Aviara is one of our most-requested Carlsbad delivery areas for baby showers. We deliver tables, chairs, and styled linens and arrange everything before guests arrive.",
+              "Absolutely. Aviara is one of our most-requested Carlsbad delivery areas for baby showers. We deliver tables, chairs, and styled linens, ready to set up before guests arrive.",
           },
           {
             question: "What linen colors work best for Carlsbad garden baby showers?",
@@ -234,14 +234,14 @@ export const cities: City[] = [
           {
             question: "Do you deliver engagement party rentals to Aviara homes in Carlsbad?",
             answer:
-              "Yes — Aviara is a frequent delivery destination for elegant engagement parties. We handle every detail of the setup so the hosts can greet their guests instead of moving furniture.",
+              "Yes — Aviara is a frequent delivery destination for elegant engagement parties. We deliver everything ready to go and walk you through setup so the hosts can get back to their guests quickly.",
           },
         ],
       },
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Carlsbad's well-maintained parks are community treasures and among the most popular venues for birthday parties, family reunions, and neighborhood celebrations. Calavera Hills Community Park, Poinsettia Park, and Holiday Park all offer open lawns with pavilion areas ideal for tent setups. Kelari Party Rentals delivers tables, chairs, canopies, and décor directly to your reserved Carlsbad park spot, arriving early to have everything in place before your first guest. A family who reserved the upper lawn at Calavera Hills Community Park for a 60-person reunion recently relied on us for two canopies, six banquet tables, and 60 folding chairs — all set up an hour before guests arrived.",
+          "Carlsbad's well-maintained parks are community treasures and among the most popular venues for birthday parties, family reunions, and neighborhood celebrations. Calavera Hills Community Park, Poinsettia Park, and Holiday Park all offer open lawns with pavilion areas ideal for tent setups. Kelari Party Rentals delivers tables, chairs, canopies, and décor directly to your reserved Carlsbad park spot, arriving early to have everything delivered and in place before your first guest. A family who reserved the upper lawn at Calavera Hills Community Park for a 60-person reunion recently relied on us for two canopies, six banquet tables, and 60 folding chairs — all set up an hour before guests arrived.",
         localVenue:
           "Calavera Hills Community Park and Poinsettia Park are Carlsbad's most popular park party venues, both offering large open lawns and pavilion facilities.",
         deliveryNote:
@@ -316,9 +316,9 @@ export const cities: City[] = [
     },
     headline: "Encinitas Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your Encinitas venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your Encinitas venue — stress-free.",
     intro:
-      "Whether you're hosting a laid-back gathering in Leucadia or an elegant celebration in Olivenhain, Kelari Party Rentals brings everything you need to your door. Tables, chairs, tents, linens, and décor — delivered, set up, and picked up.",
+      "Whether you're hosting a laid-back gathering in Leucadia or an elegant celebration in Olivenhain, Kelari Party Rentals brings everything you need to your door. Tables, chairs, tents, linens, and décor — delivered and picked up.",
     neighborhoods: [
       "Leucadia",
       "Cardiff-by-the-Sea",
@@ -357,9 +357,9 @@ export const cities: City[] = [
           "Yes — we deliver throughout Encinitas including Leucadia, Cardiff-by-the-Sea, Olivenhain, Old Encinitas, and New Encinitas. Delivery is priced by distance and quoted upfront.",
       },
       {
-        question: "Can you set up party rentals at Moonlight Beach or Encinitas parks?",
+        question: "Can rentals be delivered to Moonlight Beach or Encinitas parks?",
         answer:
-          "We regularly set up at Encinitas Community Park, Cottonwood Creek Park, and other local venues. For beach events at Moonlight, we can deliver to the nearest access point.",
+          "We regularly deliver to Encinitas Community Park, Cottonwood Creek Park, and other local venues. For beach events at Moonlight, we can deliver to the nearest access point.",
       },
       {
         question: "How far in advance should I book rentals in Encinitas?",
@@ -418,7 +418,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Encinitas backyards range from cozy Leucadia cottage gardens to expansive Olivenhain properties with room for a full tent setup. Kelari Party Rentals brings the right equipment for both. Whether you need a compact 10×10 shade canopy and a couple of tables for an intimate gathering, or a 30×30 frame tent with café lights for a Saturday night celebration, we deliver, set up, and pick up so you never have to borrow a folding table from a neighbor. One Olivenhain couple hosted their annual garden party for 80 guests with a frame tent, eight round tables, Chiavari chairs, and soft white linens — guests kept asking who they'd hired as the event planner.",
+          "Encinitas backyards range from cozy Leucadia cottage gardens to expansive Olivenhain properties with room for a full tent setup. Kelari Party Rentals brings the right equipment for both. Whether you need a compact 10×10 shade canopy and a couple of tables for an intimate gathering, or a 30×30 frame tent with café lights for a Saturday night celebration, we deliver and pick up so you never have to borrow a folding table from a neighbor. One Olivenhain couple hosted their annual garden party for 80 guests with a frame tent, eight round tables, Chiavari chairs, and soft white linens — guests kept asking who they'd hired as the event planner.",
         localVenue:
           "Olivenhain is Encinitas's top neighborhood for large backyard party rentals, with spacious lots that can accommodate full frame tent setups.",
         deliveryNote:
@@ -439,7 +439,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Encinitas has a strong wellness and community culture, and baby showers here tend to be heartfelt, beautifully styled, and grounded in that coastal-bohemian spirit. Whether the shower is hosted in a New Encinitas home or at Encinitas Community Park, Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor to set the right tone. We handle delivery and setup so the host can be fully present. One New Encinitas host threw a garden-style baby shower for 35 guests in her backyard; we delivered sage-and-blush linens, floral centerpieces, and draped Chiavari chairs that had every guest asking who did the styling.",
+          "Encinitas has a strong wellness and community culture, and baby showers here tend to be heartfelt, beautifully styled, and grounded in that coastal-bohemian spirit. Whether the shower is hosted in a New Encinitas home or at Encinitas Community Park, Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor to set the right tone. We handle delivery and pickup, and walk you through setup, so the host can be fully present. One New Encinitas host threw a garden-style baby shower for 35 guests in her backyard; we delivered sage-and-blush linens, floral centerpieces, and draped Chiavari chairs that had every guest asking who did the styling.",
         localVenue:
           "Backyard gardens in New Encinitas and Olivenhain are popular baby shower venues, with Encinitas Community Park as a parkside alternative for larger gatherings.",
         deliveryNote:
@@ -448,7 +448,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a home in New Encinitas?",
             answer:
-              "Yes — New Encinitas is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and arrange everything so the host doesn't have to lift a finger.",
+              "Yes — New Encinitas is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup so the host has everything she needs.",
           },
           {
             question: "What décor styles work well for Encinitas baby showers?",
@@ -460,7 +460,7 @@ export const cities: City[] = [
       "graduation-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Graduation parties in Encinitas celebrate grads from La Costa Canyon High, San Dieguito Academy, and other North County schools. These events often fill Olivenhain backyards or spill into Encinitas Community Park, where families gather to honor their graduate with a full outdoor party setup. Kelari Party Rentals helps Encinitas families celebrate with tables, chairs, tents, and coordinated school-colored linens for any party size. One Leucadia family celebrated their San Dieguito Academy grad with a 55-person backyard party; we set up a 20×20 canopy, five round tables, and navy-and-gold linens the morning of the event.",
+          "Graduation parties in Encinitas celebrate grads from La Costa Canyon High, San Dieguito Academy, and other North County schools. These events often fill Olivenhain backyards or spill into Encinitas Community Park, where families gather to honor their graduate with a full outdoor party setup. Kelari Party Rentals helps Encinitas families celebrate with tables, chairs, tents, and coordinated school-colored linens for any party size. One Leucadia family celebrated their San Dieguito Academy grad with a 55-person backyard party; we deliver a 20×20 canopy, five round tables, and navy-and-gold linens the morning of the event.",
         localVenue:
           "Encinitas Community Park and Olivenhain backyards are the most popular venues for graduation parties in Encinitas, comfortably hosting 30–80+ guests.",
         deliveryNote:
@@ -481,7 +481,7 @@ export const cities: City[] = [
       "engagement-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Encinitas's romantic coastal character makes it one of the most atmospheric settings in North County for an engagement party. Cottage gardens in Leucadia and sprawling estates in Olivenhain offer dramatically different backdrops, but both benefit from the right rental setup — elegant tables, warm lighting, and lush linens. Kelari Party Rentals delivers everything needed to create a memorable setting right to your Encinitas venue. One Cardiff couple celebrated their engagement with 45 guests in a Leucadia backyard garden; we set up round tables with ivory linens, votives, and string lights under a canopy of eucalyptus trees — pure Encinitas magic.",
+          "Encinitas's romantic coastal character makes it one of the most atmospheric settings in North County for an engagement party. Cottage gardens in Leucadia and sprawling estates in Olivenhain offer dramatically different backdrops, but both benefit from the right rental setup — elegant tables, warm lighting, and lush linens. Kelari Party Rentals delivers everything needed to create a memorable setting right to your Encinitas venue. One Cardiff couple celebrated their engagement with 45 guests in a Leucadia backyard garden; we delivered round tables with ivory linens, votives, and string lights under a canopy of eucalyptus trees — pure Encinitas magic.",
         localVenue:
           "Leucadia bungalow gardens and Olivenhain estates are Encinitas's most atmospheric settings for intimate engagement party celebrations.",
         deliveryNote:
@@ -502,7 +502,7 @@ export const cities: City[] = [
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Encinitas parks offer some of North County's most beautiful outdoor event settings. Encinitas Community Park provides a wide open lawn ideal for tent setups, while Cottonwood Creek Park offers a more intimate feel near the beach corridor. Kelari Party Rentals delivers tables, chairs, canopies, and décor to all Encinitas parks, arriving early to set up and returning after the event for pickup — zero heavy lifting for you. One family booked the lower lawn at Encinitas Community Park for a 50-person birthday party; we set up two canopies, five tables, and 50 folding chairs with linens in under 90 minutes.",
+          "Encinitas parks offer some of North County's most beautiful outdoor event settings. Encinitas Community Park provides a wide open lawn ideal for tent setups, while Cottonwood Creek Park offers a more intimate feel near the beach corridor. Kelari Party Rentals delivers tables, chairs, canopies, and décor to all Encinitas parks, arriving early to drop everything off and returning after the event for pickup — zero heavy lifting for you. One family booked the lower lawn at Encinitas Community Park for a 50-person birthday party; we delivered two canopies, five tables, and 50 folding chairs with linens in under 90 minutes.",
         localVenue:
           "Encinitas Community Park and Cottonwood Creek Park are Encinitas's most popular park party destinations, with open lawns and easy vehicle access for delivery.",
         deliveryNote:
@@ -511,7 +511,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to Cottonwood Creek Park in Encinitas?",
             answer:
-              "Yes — Cottonwood Creek Park is a popular delivery location for us. We set up at your reserved area and coordinate timing around your park reservation window.",
+              "Yes — Cottonwood Creek Park is a popular delivery location for us. We deliver to your reserved area and coordinate timing around your park reservation window.",
           },
           {
             question: "Do I need a permit for a party at Encinitas Community Park?",
@@ -556,7 +556,7 @@ export const cities: City[] = [
               "Yes — we serve all Encinitas neighborhoods for quinceañeras. We recommend booking 3–4 weeks ahead to secure your date and finalize your colors and quantities.",
           },
           {
-            question: "Can you handle a large quinceañera setup in an Olivenhain backyard?",
+            question: "Can you handle a large quinceañera delivery in an Olivenhain backyard?",
             answer:
               "Absolutely. Olivenhain properties are some of the most spacious in Encinitas and work beautifully for large quinceañera setups. We bring Chiavari chairs, round tables, premium linens, and a frame tent for outdoor coverage if needed.",
           },
@@ -577,9 +577,9 @@ export const cities: City[] = [
     },
     headline: "Oceanside Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your Oceanside venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your Oceanside venue — stress-free.",
     intro:
-      "Oceanside's vibrant community deserves vibrant celebrations. From pier-adjacent parties downtown to backyard barbecues in Rancho Del Oro, Kelari Party Rentals provides everything you need — tables, chairs, tents, linens, and décor, delivered and set up.",
+      "Oceanside's vibrant community deserves vibrant celebrations. From pier-adjacent parties downtown to backyard barbecues in Rancho Del Oro, Kelari Party Rentals provides everything you need — tables, chairs, tents, linens, and décor, delivered right to your venue.",
     neighborhoods: [
       "Downtown Oceanside",
       "South Oceanside",
@@ -632,14 +632,14 @@ export const cities: City[] = [
       {
         question: "Do you rent tents and canopies for Oceanside backyard parties?",
         answer:
-          "Yes — we carry pop-up canopies and frame tents in multiple sizes, perfect for backyard parties in Oceanside. We deliver, set up, and pick up after your event.",
+          "Yes — we carry pop-up canopies and frame tents in multiple sizes, perfect for backyard parties in Oceanside. We deliver and pick up after your event.",
       },
     ],
     cityServiceContent: {
       "party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Oceanside has a bold, community-driven party culture fueled by its diverse population and vibrant neighborhoods. From large family reunions at Guajome Regional Park to backyard block parties in Rancho del Oro, the city knows how to celebrate with scale and heart. Kelari Party Rentals delivers full party rental packages — tables, chairs, tents, linens, and décor — throughout Oceanside, with delivery from our nearby Carlsbad warehouse. One Rancho del Oro family recently hosted a three-generation reunion for 90 guests; we delivered 10 round tables, 90 folding chairs, a 30×30 frame tent, and coordinated linens and had everything set up the morning of the event.",
+          "Oceanside has a bold, community-driven party culture fueled by its diverse population and vibrant neighborhoods. From large family reunions at Guajome Regional Park to backyard block parties in Rancho del Oro, the city knows how to celebrate with scale and heart. Kelari Party Rentals delivers full party rental packages — tables, chairs, tents, linens, and décor — throughout Oceanside, with delivery from our nearby Carlsbad warehouse. One Rancho del Oro family recently hosted a three-generation reunion for 90 guests; we delivered 10 round tables, 90 folding chairs, a 30×30 frame tent, and coordinated linens and had everything delivered the morning of the event.",
         localVenue:
           "Guajome Regional Park and backyard spaces in Rancho del Oro are among Oceanside's most popular settings for full party rental setups.",
         deliveryNote:
@@ -669,7 +669,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver birthday party rentals to Buddy Todd Park in Oceanside?",
             answer:
-              "Yes — Buddy Todd Park is one of our most-requested Oceanside delivery locations. We coordinate with your park reservation and arrive early to have everything set up before guests arrive.",
+              "Yes — Buddy Todd Park is one of our most-requested Oceanside delivery locations. We coordinate with your park reservation and arrive early to have everything delivered and ready before guests arrive.",
           },
           {
             question: "Do you have themed birthday party options for Oceanside events?",
@@ -681,7 +681,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Oceanside backyards host some of the most spirited celebrations in North County — military homecoming parties in Jeffries Ranch, quinceañeras in Rancho del Oro, block parties in Fire Mountain. Whatever the occasion, Kelari Party Rentals delivers the tables, chairs, tents, and décor to make any outdoor space the right venue. Our team handles delivery, setup, and pickup so you can focus entirely on your guests. One Jeffries Ranch family hosted a surprise military homecoming for 70 guests in their backyard; we had a 20×30 frame tent, eight round tables, and navy-and-gold linens fully assembled three hours before the guest of honor arrived.",
+          "Oceanside backyards host some of the most spirited celebrations in North County — military homecoming parties in Jeffries Ranch, quinceañeras in Rancho del Oro, block parties in Fire Mountain. Whatever the occasion, Kelari Party Rentals delivers the tables, chairs, tents, and décor to make any outdoor space the right venue. Our team handles delivery and pickup so you can focus entirely on your guests. One Jeffries Ranch family hosted a surprise military homecoming for 70 guests in their backyard; we delivered a 20×30 frame tent, eight round tables, and navy-and-gold linens three hours before the guest of honor arrived.",
         localVenue:
           "Rancho del Oro and Jeffries Ranch neighborhoods offer generous backyard spaces well-suited for tent rentals and large party setups.",
         deliveryNote:
@@ -702,7 +702,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Baby showers in Oceanside bring together families from across the city's diverse neighborhoods, from South Oceanside homes to Rancho del Oro backyard patios. The style varies but the warmth is constant. Kelari Party Rentals delivers elegant tables, linens, centerpieces, and seating for baby showers of every size — and handles setup and pickup so the host can focus on celebrating the mom-to-be. One South Oceanside host threw a 45-person baby shower in her backyard; we delivered blush linens, tiered floral centerpieces, and Chiavari chairs that matched her pink-and-gold theme perfectly.",
+          "Baby showers in Oceanside bring together families from across the city's diverse neighborhoods, from South Oceanside homes to Rancho del Oro backyard patios. The style varies but the warmth is constant. Kelari Party Rentals delivers elegant tables, linens, centerpieces, and seating for baby showers of every size — and handles delivery and pickup so the host can focus on celebrating the mom-to-be. One South Oceanside host threw a 45-person baby shower in her backyard; we delivered blush linens, tiered floral centerpieces, and Chiavari chairs that matched her pink-and-gold theme perfectly.",
         localVenue:
           "Backyard patios in South Oceanside and Rancho del Oro are popular baby shower venues with easy access for delivery and setup.",
         deliveryNote:
@@ -711,7 +711,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to South Oceanside?",
             answer:
-              "Yes — South Oceanside is a frequent delivery destination for us. We deliver tables, chairs, linens, and centerpieces and arrange everything before the shower begins.",
+              "Yes — South Oceanside is a frequent delivery destination for us. We deliver tables, chairs, linens, and centerpieces and walk you through setup before the shower begins.",
           },
           {
             question: "What linen and décor styles are popular for Oceanside baby showers?",
@@ -744,7 +744,7 @@ export const cities: City[] = [
       "engagement-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Engagement parties in Oceanside reflect the city's warm, community spirit. Whether hosted in a Rancho del Oro backyard or a downtown Oceanside patio, these celebrations bring together friends and family to honor the newly engaged couple. Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and ambient lighting — everything needed to create a beautiful engagement party setting in Oceanside. One Rancho del Oro family hosted an engagement party for 55 guests under the oak trees in their backyard; we set up round tables with ivory linens, votive candles, and string lights for an evening everyone remembered.",
+          "Engagement parties in Oceanside reflect the city's warm, community spirit. Whether hosted in a Rancho del Oro backyard or a downtown Oceanside patio, these celebrations bring together friends and family to honor the newly engaged couple. Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and ambient lighting — everything needed to create a beautiful engagement party setting in Oceanside. One Rancho del Oro family hosted an engagement party for 55 guests under the oak trees in their backyard; we delivered round tables with ivory linens, votive candles, and string lights for an evening everyone remembered.",
         localVenue:
           "Backyard patios in Rancho del Oro and the growing downtown Oceanside area offer stylish settings for engagement party celebrations.",
         deliveryNote:
@@ -840,7 +840,7 @@ export const cities: City[] = [
     },
     headline: "San Marcos Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your San Marcos venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your San Marcos venue — stress-free.",
     intro:
       "San Marcos families love celebrating — and Kelari Party Rentals makes it easy. Whether you're hosting at home in Twin Oaks Valley or throwing a birthday party at a local park, we deliver tables, chairs, tents, linens, and décor right to your venue.",
     neighborhoods: [
@@ -943,7 +943,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "San Marcos backyards are built for entertaining. San Elijo Hills homes sit on well-sized lots with room for tent setups, and Twin Oaks Valley properties often have expansive yards perfect for large family gatherings. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to San Marcos homes and handles delivery and pickup. One San Elijo Hills family hosted a 55-person birthday bash in their backyard; we delivered a 20×20 frame tent, six round tables, 55 folding chairs, and string lights — and were done setting up before lunch.",
+          "San Marcos backyards are built for entertaining. San Elijo Hills homes sit on well-sized lots with room for tent setups, and Twin Oaks Valley properties often have expansive yards perfect for large family gatherings. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to San Marcos homes and handles delivery and pickup. One San Elijo Hills family hosted a 55-person birthday bash in their backyard; we delivered a 20×20 frame tent, six round tables, 55 folding chairs, and string lights well before lunch.",
         localVenue:
           "San Elijo Hills and Twin Oaks Valley neighborhoods have generously sized backyards that accommodate full tent setups and large guest counts.",
         deliveryNote:
@@ -957,7 +957,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver backyard party rentals to Twin Oaks Valley in San Marcos?",
             answer:
-              "Absolutely. Twin Oaks Valley is a frequent delivery destination for backyard party rentals. We bring everything to your home, set up, and return for pickup after your event.",
+              "Absolutely. Twin Oaks Valley is a frequent delivery destination for backyard party rentals. We bring everything to your home, walk you through setup, and return for pickup after your event.",
           },
         ],
       },
@@ -973,7 +973,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a San Elijo Hills home in San Marcos?",
             answer:
-              "Yes — San Elijo Hills is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and arrange everything before your guests arrive.",
+              "Yes — San Elijo Hills is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup before your guests arrive.",
           },
           {
             question: "What linen colors are popular for San Marcos baby showers?",
@@ -1006,7 +1006,7 @@ export const cities: City[] = [
       "engagement-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Engagement parties in San Marcos reflect the community's warmth and close-knit character. Whether the celebration is in a San Elijo Hills backyard with hillside views or a private community space in The Crossings, Kelari Party Rentals brings premium tables, Chiavari chairs, luxury linens, and ambient lighting to make the setting feel as special as the occasion. One Discovery Hills couple recently celebrated their engagement with 50 guests in their backyard; we set up round tables with champagne linens, votive clusters, and string lights for a warm, intimate evening.",
+          "Engagement parties in San Marcos reflect the community's warmth and close-knit character. Whether the celebration is in a San Elijo Hills backyard with hillside views or a private community space in The Crossings, Kelari Party Rentals brings premium tables, Chiavari chairs, luxury linens, and ambient lighting to make the setting feel as special as the occasion. One Discovery Hills couple recently celebrated their engagement with 50 guests in their backyard; we delivered round tables with champagne linens, votive clusters, and string lights for a warm, intimate evening.",
         localVenue:
           "San Elijo Hills backyards with hillside views and community spaces in The Crossings provide naturally scenic settings for San Marcos engagement parties.",
         deliveryNote:
@@ -1020,7 +1020,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver engagement party rentals to Discovery Hills or San Elijo Hills in San Marcos?",
             answer:
-              "Absolutely. Both neighborhoods are popular delivery destinations for engagement parties. We deliver and set up everything so the hosts can focus on welcoming their guests.",
+              "Absolutely. Both neighborhoods are popular delivery destinations for engagement parties. We deliver everything ready to go so the hosts can focus on welcoming their guests.",
           },
         ],
       },
@@ -1034,7 +1034,7 @@ export const cities: City[] = [
           "We deliver to all San Marcos parks from our Carlsbad warehouse — delivery fee is quoted upfront, and complimentary pickup is available if you prefer to transport items yourself.",
         faqs: [
           {
-            question: "Do you need a permit to set up party rentals at San Marcos parks?",
+            question: "Do you need a permit to have party rentals delivered to San Marcos parks?",
             answer:
               "Most San Marcos parks require a reservation or facility permit for events with equipment. We recommend checking with the City of San Marcos Parks & Recreation before booking — we can advise on typical logistics.",
           },
@@ -1057,7 +1057,7 @@ export const cities: City[] = [
           {
             question: "How long does delivery from Carlsbad to San Marcos take?",
             answer:
-              "Most San Marcos addresses are 20–30 minutes from our Carlsbad warehouse. We confirm your delivery window at booking and arrive with enough lead time to set up before your event starts.",
+              "Most San Marcos addresses are 20–30 minutes from our Carlsbad warehouse. We confirm your delivery window at booking and arrive with enough lead time before your event starts.",
           },
           {
             question: "Can I pick up party rentals from your Carlsbad warehouse for a San Marcos event?",
@@ -1102,9 +1102,9 @@ export const cities: City[] = [
     },
     headline: "Bressi Ranch Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your Bressi Ranch venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your Bressi Ranch venue — stress-free.",
     intro:
-      "Bressi Ranch's beautiful planned community is one of Carlsbad's most popular spots for backyard celebrations and neighborhood gatherings. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your Bressi Ranch home — we set up and pick up so you can enjoy every moment.",
+      "Bressi Ranch's beautiful planned community is one of Carlsbad's most popular spots for backyard celebrations and neighborhood gatherings. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your Bressi Ranch home — we deliver and pick up so you can enjoy every moment.",
     neighborhoods: [
       "Bressi Ranch Village",
       "Bressi Ranch West",
@@ -1140,7 +1140,7 @@ export const cities: City[] = [
           "Yes — we deliver throughout Bressi Ranch. Our Carlsbad headquarters is just minutes away. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is always available.",
       },
       {
-        question: "Can you set up party rentals at Bressi Ranch Community Park?",
+        question: "Can rentals be delivered to Bressi Ranch Community Park?",
         answer:
           "Absolutely. We regularly deliver to Bressi Ranch Community Park and nearby Alga Norte and Poinsettia Park. We handle delivery and pickup so you can focus on your guests.",
       },
@@ -1201,7 +1201,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Bressi Ranch backyards are among Carlsbad's best-proportioned outdoor party spaces — larger lots, clean landscaping, and wide side yards that accommodate frame tent setups with ease. Whether you're hosting 25 close friends or 70 neighbors for a block party, Kelari Party Rentals delivers everything to make your Bressi Ranch backyard the venue of the evening. Our warehouse is just minutes away, making us one of the fastest delivery options in North County. One Bressi Ranch couple hosted a 65-person anniversary party in their backyard; we delivered a 20×20 frame tent, eight round tables, 65 Chiavari chairs, and string lights — and had everything set up well before cocktail hour.",
+          "Bressi Ranch backyards are among Carlsbad's best-proportioned outdoor party spaces — larger lots, clean landscaping, and wide side yards that accommodate frame tent setups with ease. Whether you're hosting 25 close friends or 70 neighbors for a block party, Kelari Party Rentals delivers everything to make your Bressi Ranch backyard the venue of the evening. Our warehouse is just minutes away, making us one of the fastest delivery options in North County. One Bressi Ranch couple hosted a 65-person anniversary party in their backyard; we delivered a 20×20 frame tent, eight round tables, 65 Chiavari chairs, and string lights — and had everything delivered well before cocktail hour.",
         localVenue:
           "Bressi Ranch's newer-construction homes with large, level backyards are ideal for frame tent setups — one of our most tent-friendly delivery neighborhoods.",
         deliveryNote:
@@ -1222,7 +1222,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Bressi Ranch is full of young families, and baby showers are one of the neighborhood's most beloved celebrations. Whether the shower is hosted in a beautifully landscaped backyard or a community space near Village Square, Kelari Party Rentals provides elegantly coordinated tables, linens, centerpieces, and seating to make every shower feel like an event. We deliver, arrange everything beautifully, and return for pickup — so the host can be a guest at her own party. One Bressi Ranch host recently threw a 50-person baby shower in her backyard; we delivered blush and gold linens, floral centerpieces, and Chiavari chairs — and guests complimented the décor for weeks.",
+          "Bressi Ranch is full of young families, and baby showers are one of the neighborhood's most beloved celebrations. Whether the shower is hosted in a beautifully landscaped backyard or a community space near Village Square, Kelari Party Rentals provides elegantly coordinated tables, linens, centerpieces, and seating to make every shower feel like an event. We deliver everything ready to set up beautifully and return for pickup — so the host can be a guest at her own party. One Bressi Ranch host recently threw a 50-person baby shower in her backyard; we delivered blush and gold linens, floral centerpieces, and Chiavari chairs — and guests complimented the décor for weeks.",
         localVenue:
           "Beautifully landscaped Bressi Ranch backyards are the most popular venue for baby showers in the neighborhood, with community spaces near Village Square as an alternative.",
         deliveryNote:
@@ -1231,7 +1231,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a Bressi Ranch home?",
             answer:
-              "Yes — Bressi Ranch is one of our closest delivery neighborhoods. We deliver tables, chairs, linens, and centerpieces and arrange everything before guests arrive, making the morning stress-free for the host.",
+              "Yes — Bressi Ranch is one of our closest delivery neighborhoods. We deliver tables, chairs, linens, and centerpieces and walk you through setup before guests arrive, making the morning stress-free for the host.",
           },
           {
             question: "What linen and décor styles are popular for Bressi Ranch baby showers?",
@@ -1243,7 +1243,7 @@ export const cities: City[] = [
       "graduation-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Bressi Ranch families celebrate their graduates with the style the neighborhood is known for. Whether the party is for a Carlsbad High senior or a La Costa Canyon grad, backyard graduation parties in Bressi Ranch are a spring tradition — and Kelari Party Rentals is right around the corner. We deliver tables, chairs, tents, and school-colored linens and have the party set up before the first guests arrive. One Bressi Ranch family hosted a 75-person graduation party for their Carlsbad High senior; we delivered a 20×30 frame tent, nine round tables, and navy-and-gold linens the morning of the ceremony — it was all set before they got home.",
+          "Bressi Ranch families celebrate their graduates with the style the neighborhood is known for. Whether the party is for a Carlsbad High senior or a La Costa Canyon grad, backyard graduation parties in Bressi Ranch are a spring tradition — and Kelari Party Rentals is right around the corner. We deliver tables, chairs, tents, and school-colored linens and have the party ready before the first guests arrive. One Bressi Ranch family hosted a 75-person graduation party for their Carlsbad High senior; we delivered a 20×30 frame tent, nine round tables, and navy-and-gold linens the morning of the ceremony — it was all set before they got home.",
         localVenue:
           "Large Bressi Ranch backyards and nearby Stagecoach Park are popular graduation party venues for Bressi Ranch families.",
         deliveryNote:
@@ -1264,7 +1264,7 @@ export const cities: City[] = [
       "engagement-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Engagement parties in Bressi Ranch often set a high bar — this is a community that appreciates quality and attention to detail. Whether the celebration is an intimate garden dinner for 30 or a full backyard affair for 70, Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and romantic lighting to create a setting that honors the occasion. One Bressi Ranch couple hosted an engagement party for 55 guests in their backyard; we set up round tables with ivory floor-length linens, gold Chiavari chairs, votive clusters, and bistro lights — and the couple said it was exactly the vibe they'd envisioned.",
+          "Engagement parties in Bressi Ranch often set a high bar — this is a community that appreciates quality and attention to detail. Whether the celebration is an intimate garden dinner for 30 or a full backyard affair for 70, Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and romantic lighting to create a setting that honors the occasion. One Bressi Ranch couple hosted an engagement party for 55 guests in their backyard; we delivered round tables with ivory floor-length linens, gold Chiavari chairs, votive clusters, and bistro lights — and the couple said it was exactly the vibe they'd envisioned.",
         localVenue:
           "Bressi Ranch's well-maintained private backyards are the go-to venue for engagement parties in the neighborhood, offering upscale surroundings without a venue fee.",
         deliveryNote:
@@ -1285,7 +1285,7 @@ export const cities: City[] = [
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Bressi Ranch Community Park is the neighborhood's central gathering spot — well-maintained lawns, pavilion access, and easy parking make it ideal for birthday parties, HOA events, and family reunions. Alga Norte Community Park and Poinsettia Park are both within a short drive for larger setups. Kelari Party Rentals delivers tables, chairs, canopies, and décor to all parks in and around Bressi Ranch, arriving early to have everything in place before your event begins. One neighborhood family used Bressi Ranch Community Park for a 60-person birthday celebration; we delivered two canopies, five tables, and 60 folding chairs with linens — setup complete an hour before guests arrived.",
+          "Bressi Ranch Community Park is the neighborhood's central gathering spot — well-maintained lawns, pavilion access, and easy parking make it ideal for birthday parties, HOA events, and family reunions. Alga Norte Community Park and Poinsettia Park are both within a short drive for larger setups. Kelari Party Rentals delivers tables, chairs, canopies, and décor to all parks in and around Bressi Ranch, arriving early to have everything in place before your event begins. One neighborhood family used Bressi Ranch Community Park for a 60-person birthday celebration; we delivered two canopies, five tables, and 60 folding chairs with linens an hour before guests arrived.",
         localVenue:
           "Bressi Ranch Community Park is the neighborhood's most popular park party venue, with open lawns and pavilion facilities for events of any size.",
         deliveryNote:
@@ -1294,7 +1294,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver party rentals to Bressi Ranch Community Park?",
             answer:
-              "Yes — Bressi Ranch Community Park is one of our most-requested delivery locations. We coordinate with your reservation time and have everything set up before the event begins.",
+              "Yes — Bressi Ranch Community Park is one of our most-requested delivery locations. We coordinate with your reservation time and have everything delivered before the event begins.",
           },
           {
             question: "Do I need a permit to use rental equipment at Bressi Ranch Community Park?",
@@ -1360,9 +1360,9 @@ export const cities: City[] = [
     },
     headline: "La Costa Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your La Costa venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your La Costa venue — stress-free.",
     intro:
-      "La Costa is one of North County San Diego's most sought-after communities — and Kelari Party Rentals is proud to serve it. From elegant backyard celebrations to casual family gatherings, we deliver everything you need: tables, chairs, tents, linens, and décor. We set up, you celebrate, we pick up.",
+      "La Costa is one of North County San Diego's most sought-after communities — and Kelari Party Rentals is proud to serve it. From elegant backyard celebrations to casual family gatherings, we deliver everything you need: tables, chairs, tents, linens, and décor. We deliver, you celebrate, we pick up.",
     neighborhoods: [
       "La Costa Valley",
       "La Costa Oaks",
@@ -1454,7 +1454,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver kids' birthday party rentals to La Costa Canyon Park?",
             answer:
-              "Absolutely. La Costa Canyon Park is a great venue for kids' birthday parties. We deliver to your reserved area and set up tables, chairs, and a canopy before your guests arrive.",
+              "Absolutely. La Costa Canyon Park is a great venue for kids' birthday parties. We deliver tables, chairs, and a canopy to your reserved area before your guests arrive.",
           },
         ],
       },
@@ -1491,7 +1491,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a La Costa home?",
             answer:
-              "Yes — La Costa is one of our most frequently served neighborhoods for baby showers. We deliver tables, chairs, linens, and centerpieces and arrange everything so the host doesn't have to lift a finger.",
+              "Yes — La Costa is one of our most frequently served neighborhoods for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup so the host has everything she needs.",
           },
           {
             question: "What décor styles are popular for La Costa baby showers?",
@@ -1524,7 +1524,7 @@ export const cities: City[] = [
       "engagement-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "La Costa is one of the most romantic settings in North County for an engagement party. The Omni La Costa Resort sets the tone for the neighborhood's upscale event culture, and private estate gardens in La Costa Valley and La Costa Oaks live up to that reputation. Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and ambient lighting to create an engagement party setting that honors the occasion. One La Costa Valley couple recently hosted an engagement party for 60 guests in their garden; we set up round tables with ivory floor-length linens, gold Chiavari chairs, floral centerpieces, and bistro lights strung across the pergola — the space looked more stunning than any event venue.",
+          "La Costa is one of the most romantic settings in North County for an engagement party. The Omni La Costa Resort sets the tone for the neighborhood's upscale event culture, and private estate gardens in La Costa Valley and La Costa Oaks live up to that reputation. Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and ambient lighting to create an engagement party setting that honors the occasion. One La Costa Valley couple recently hosted an engagement party for 60 guests in their garden; we delivered round tables with ivory floor-length linens, gold Chiavari chairs, floral centerpieces, and bistro lights strung across the pergola — the space looked more stunning than any event venue.",
         localVenue:
           "Private estate gardens in La Costa Valley and La Costa Oaks are La Costa's most sought-after engagement party settings, rivaling the Omni La Costa Resort in beauty without the venue fee.",
         deliveryNote:
@@ -1545,7 +1545,7 @@ export const cities: City[] = [
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "La Costa Canyon Park is the neighborhood's top outdoor event venue — its well-maintained lawns and natural surroundings are a natural choice for birthday parties, family reunions, and community celebrations. Stagecoach Community Park is a popular nearby alternative for larger setups. Kelari Party Rentals delivers tables, chairs, canopies, and décor to both parks, arriving early to have everything in place before your first guest. One family reserved the lower lawn at La Costa Canyon Park for a 55-person birthday party; we delivered two canopies, five tables, and 55 folding chairs with linens — everything set up 90 minutes before the first guest arrived.",
+          "La Costa Canyon Park is the neighborhood's top outdoor event venue — its well-maintained lawns and natural surroundings are a natural choice for birthday parties, family reunions, and community celebrations. Stagecoach Community Park is a popular nearby alternative for larger setups. Kelari Party Rentals delivers tables, chairs, canopies, and décor to both parks, arriving early to have everything delivered and in place before your first guest. One family reserved the lower lawn at La Costa Canyon Park for a 55-person birthday party; we delivered two canopies, five tables, and 55 folding chairs with linens — everything set up 90 minutes before the first guest arrived.",
         localVenue:
           "La Costa Canyon Park and Stagecoach Community Park are La Costa's most popular outdoor venues for park party rental setups.",
         deliveryNote:
@@ -1554,7 +1554,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to La Costa Canyon Park?",
             answer:
-              "Yes — La Costa Canyon Park is one of our most-requested La Costa delivery locations. We coordinate with your park reservation and arrive early to set up before guests arrive.",
+              "Yes — La Costa Canyon Park is one of our most-requested La Costa delivery locations. We coordinate with your park reservation and arrive early to drop everything off before guests arrive.",
           },
           {
             question: "Do I need a permit for a party at La Costa Canyon Park?",
@@ -1587,7 +1587,7 @@ export const cities: City[] = [
       "quinceanera-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Quinceañeras in La Costa are some of the most beautiful we set up — the neighborhood's elegant homes and manicured outdoor spaces create a natural backdrop for this milestone celebration. Whether the party is hosted in a La Costa Valley estate garden or a large La Costa Oaks backyard, Kelari Party Rentals delivers Chiavari chairs, premium floor-length linens, candelabra centerpieces, and full tent coverage to make the setting worthy of the occasion. One La Costa family recently celebrated their daughter's quinceañera with 100 guests in their backyard; we delivered gold Chiavari chairs, round tables with floor-length rose gold linens, floral centerpieces for every table, and a 20×30 frame tent.",
+          "Quinceañeras in La Costa are some of the most beautiful we deliver for — the neighborhood's elegant homes and manicured outdoor spaces create a natural backdrop for this milestone celebration. Whether the party is hosted in a La Costa Valley estate garden or a large La Costa Oaks backyard, Kelari Party Rentals delivers Chiavari chairs, premium floor-length linens, candelabra centerpieces, and full tent coverage to make the setting worthy of the occasion. One La Costa family recently celebrated their daughter's quinceañera with 100 guests in their backyard; we delivered gold Chiavari chairs, round tables with floor-length rose gold linens, floral centerpieces for every table, and a 20×30 frame tent.",
         localVenue:
           "Private estate gardens in La Costa Valley and La Costa Oaks are among the most beautiful quinceañera settings in North County — no hall rental required.",
         deliveryNote:
@@ -1620,9 +1620,9 @@ export const cities: City[] = [
     },
     headline: "Olde Carlsbad Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your Olde Carlsbad venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your Olde Carlsbad venue — stress-free.",
     intro:
-      "Olde Carlsbad's charming neighborhoods and tree-lined streets are the perfect backdrop for memorable celebrations. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor directly to your Olde Carlsbad home or venue — we handle setup and pickup so you can focus on your guests.",
+      "Olde Carlsbad's charming neighborhoods and tree-lined streets are the perfect backdrop for memorable celebrations. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor directly to your Olde Carlsbad home or venue — we handle delivery and pickup so you can focus on your guests.",
     neighborhoods: [
       "Carlsbad Village",
       "Harding Street",
@@ -1660,7 +1660,7 @@ export const cities: City[] = [
           "Yes — we deliver throughout Olde Carlsbad and the surrounding Village area. Our headquarters is just minutes away. Delivery is priced by distance and quoted upfront.",
       },
       {
-        question: "Can you set up party rentals at Holiday Park or Hosp Grove?",
+        question: "Can rentals be delivered to Holiday Park or Hosp Grove?",
         answer:
           "Absolutely. We regularly deliver to Holiday Park, Hosp Grove, and Pine Avenue Park. We handle delivery and pickup — you just show up and celebrate.",
       },
@@ -1709,7 +1709,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver birthday party rentals to Holiday Park in Olde Carlsbad?",
             answer:
-              "Yes — Holiday Park is one of our most-requested Olde Carlsbad delivery locations. We coordinate with your reservation time and have everything set up before your guests arrive.",
+              "Yes — Holiday Park is one of our most-requested Olde Carlsbad delivery locations. We coordinate with your reservation time and have everything delivered and ready before your guests arrive.",
           },
           {
             question: "Can you set up a birthday party in a small Olde Carlsbad backyard?",
@@ -1721,7 +1721,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Olde Carlsbad's compact craftsman yards are a unique challenge and a unique charm. These cottage-style backyards — smaller than newer Carlsbad developments — call for thoughtful setup that makes the space feel festive rather than crowded. Kelari Party Rentals is experienced with just this kind of space: we select the right tent or canopy size, arrange tables efficiently, and transform a cozy lot into a welcoming gathering spot. One Jefferson Street homeowner was skeptical that a party for 35 guests would work in her backyard — we delivered a 10×20 canopy, four round tables, and 35 chairs in the exact arrangement that made it feel spacious, and she texted us the next day to say it was perfect.",
+          "Olde Carlsbad's compact craftsman yards are a unique challenge and a unique charm. These cottage-style backyards — smaller than newer Carlsbad developments — call for thoughtful setup that makes the space feel festive rather than crowded. Kelari Party Rentals is experienced with just this kind of space: we help you select the right tent or canopy size and recommend the most efficient table layout to transform a cozy lot into a welcoming gathering spot. One Jefferson Street homeowner was skeptical that a party for 35 guests would work in her backyard — we delivered a 10×20 canopy, four round tables, and 35 chairs in the exact arrangement that made it feel spacious, and she texted us the next day to say it was perfect.",
         localVenue:
           "Craftsman bungalow backyards along Magnolia Avenue, Elm Avenue, and Jefferson Street are Olde Carlsbad's signature backyard party settings.",
         deliveryNote:
@@ -1751,7 +1751,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a Carlsbad Village home in Olde Carlsbad?",
             answer:
-              "Yes — Carlsbad Village is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and arrange everything before the guests arrive.",
+              "Yes — Carlsbad Village is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup before the guests arrive.",
           },
           {
             question: "What linen styles work well for an Olde Carlsbad cottage-style baby shower?",
@@ -1777,7 +1777,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver graduation party rentals to Holiday Park in Olde Carlsbad?",
             answer:
-              "Absolutely. Holiday Park is one of our most-requested Olde Carlsbad park delivery locations for graduation parties. We coordinate with your reservation and have everything set up in advance.",
+              "Absolutely. Holiday Park is one of our most-requested Olde Carlsbad park delivery locations for graduation parties. We coordinate with your reservation and have everything delivered in advance.",
           },
         ],
       },
@@ -1805,7 +1805,7 @@ export const cities: City[] = [
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Holiday Park is the heart of Olde Carlsbad's outdoor social life — a beautiful community park within walking distance of the Village, with mature oak trees, open lawns, and a beloved local atmosphere. Whether you're reserving the main lawn for a big family birthday, setting up a shaded gathering under the oaks, or celebrating at Hosp Grove Park nearby, Kelari Party Rentals delivers tables, chairs, canopies, and décor and handles delivery and pickup. Holiday Park's walkability makes it a favorite for Village guests who can stroll over. One family hosted a 45-person park birthday at Holiday Park; we delivered a 20×20 canopy, five round tables, and 45 chairs — set up under the oaks an hour before the party started.",
+          "Holiday Park is the heart of Olde Carlsbad's outdoor social life — a beautiful community park within walking distance of the Village, with mature oak trees, open lawns, and a beloved local atmosphere. Whether you're reserving the main lawn for a big family birthday, setting up a shaded gathering under the oaks, or celebrating at Hosp Grove Park nearby, Kelari Party Rentals delivers tables, chairs, canopies, and décor and handles delivery and pickup. Holiday Park's walkability makes it a favorite for Village guests who can stroll over. One family hosted a 45-person park birthday at Holiday Park; we delivered a 20×20 canopy, five round tables, and 45 chairs under the oaks an hour before the party started.",
         localVenue:
           "Holiday Park is Olde Carlsbad's most beloved park venue, with open lawns and mature trees that create natural shade and character for outdoor party setups.",
         deliveryNote:
@@ -1814,7 +1814,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to Holiday Park in Olde Carlsbad?",
             answer:
-              "Yes — Holiday Park is our most-requested Olde Carlsbad park delivery location. We coordinate with your reservation time and have tables, chairs, and canopies set up before your guests arrive.",
+              "Yes — Holiday Park is our most-requested Olde Carlsbad park delivery location. We coordinate with your reservation time and have tables, chairs, and canopies delivered before your guests arrive.",
           },
           {
             question: "Do I need a permit for a party at Holiday Park in Carlsbad?",
@@ -1880,7 +1880,7 @@ export const cities: City[] = [
     },
     headline: "Aviara Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your Aviara venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your Aviara venue — stress-free.",
     intro:
       "Aviara is one of Carlsbad's most beautiful master-planned communities, and its stunning homes and manicured surroundings set the stage for truly special celebrations. Kelari Party Rentals provides tables, chairs, tents, linens, and décor with professional delivery available across Carlsbad and surrounding communities.",
     neighborhoods: [
@@ -1920,7 +1920,7 @@ export const cities: City[] = [
           "Yes — we deliver throughout Aviara including Aviara Oaks, Aviara Point, Four Seasons Aviara, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
       },
       {
-        question: "Can you handle upscale party setups in Aviara?",
+        question: "Can you handle upscale party deliveries in Aviara?",
         answer:
           "Absolutely. We provide linens, Chiavari chairs, canopies, and full décor packages suited to Aviara's elegant settings.",
       },
@@ -1974,7 +1974,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver kids' birthday party rentals to Aviara Community Park?",
             answer:
-              "Absolutely. Aviara Community Park is a beautiful venue for kids' birthday parties. We deliver to your reserved area, set up tables, chairs, and a canopy, and have everything ready before your guests arrive.",
+              "Absolutely. Aviara Community Park is a beautiful venue for kids' birthday parties. We deliver tables, chairs, and a canopy to your reserved area and have everything ready before your guests arrive.",
           },
         ],
       },
@@ -2002,7 +2002,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Baby showers in Aviara naturally lean toward elegance — the community's luxury homes, manicured garden spaces, and Park Hyatt Aviara–adjacent atmosphere call for coordinated linens, refined centerpieces, and Chiavari chairs that match the neighborhood's style. Kelari Party Rentals provides fully coordinated baby shower setups delivered to Aviara homes, with tables, chairs, linens, and centerpieces arranged beautifully before guests arrive. One homeowner in the Four Seasons Aviara neighborhood hosted a 40-person garden baby shower; we delivered sage and ivory linens, botanical centerpieces, and Chiavari chairs arranged in her garden — guests said it was the most beautiful shower they'd ever attended.",
+          "Baby showers in Aviara naturally lean toward elegance — the community's luxury homes, manicured garden spaces, and Park Hyatt Aviara–adjacent atmosphere call for coordinated linens, refined centerpieces, and Chiavari chairs that match the neighborhood's style. Kelari Party Rentals provides fully coordinated baby shower setups delivered to Aviara homes, with tables, chairs, linens, and centerpieces ready for you to arrange beautifully before guests arrive. One homeowner in the Four Seasons Aviara neighborhood hosted a 40-person garden baby shower; we delivered sage and ivory linens, botanical centerpieces, and Chiavari chairs arranged in her garden — guests said it was the most beautiful shower they'd ever attended.",
         localVenue:
           "Private garden settings in Aviara Oaks and the Four Seasons Aviara neighborhood are Aviara's most elegant and sought-after baby shower venues.",
         deliveryNote:
@@ -2011,7 +2011,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver an elegant baby shower setup to an Aviara home?",
             answer:
-              "Yes — Aviara is one of our most frequently served neighborhoods for upscale baby showers. We deliver tables, chairs, coordinated linens, and centerpieces and arrange everything before the first guest arrives.",
+              "Yes — Aviara is one of our most frequently served neighborhoods for upscale baby showers. We deliver tables, chairs, coordinated linens, and centerpieces and walk you through setup before the first guest arrives.",
           },
           {
             question: "What décor styles are popular for Aviara baby showers?",
@@ -2023,7 +2023,7 @@ export const cities: City[] = [
       "graduation-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Graduations are milestone moments, and Aviara families celebrate them with the style the neighborhood is known for. Grads from Pacific Ridge School, La Costa Canyon High, and other North County schools are honored with full outdoor parties in Aviara estate gardens and at Aviara Community Park. Kelari Party Rentals delivers tables, chairs, tents, and school-colored linens for graduation parties of any size in Aviara, arriving early and handling all setup so the family can be present for the moment the grad walks through the door. One Aviara Oaks family celebrated their son's graduation with 75 guests; we delivered a 20×20 tent, eight round tables, 75 chairs, and navy and gold linens — everything ready before the ceremony ended.",
+          "Graduations are milestone moments, and Aviara families celebrate them with the style the neighborhood is known for. Grads from Pacific Ridge School, La Costa Canyon High, and other North County schools are honored with full outdoor parties in Aviara estate gardens and at Aviara Community Park. Kelari Party Rentals delivers tables, chairs, tents, and school-colored linens for graduation parties of any size in Aviara, arriving early and walking the family through setup so they can be present for the moment the grad walks through the door. One Aviara Oaks family celebrated their son's graduation with 75 guests; we delivered a 20×20 tent, eight round tables, 75 chairs, and navy and gold linens — everything ready before the ceremony ended.",
         localVenue:
           "Aviara estate gardens and Aviara Community Park are Aviara's most popular graduation party venues, accommodating groups of 40 to 100+ guests.",
         deliveryNote:
@@ -2037,14 +2037,14 @@ export const cities: City[] = [
           {
             question: "Do you deliver graduation party rentals to Aviara Community Park?",
             answer:
-              "Absolutely. Aviara Community Park is a beautiful venue for larger graduation gatherings. We coordinate with your park reservation and have everything set up well before guests arrive.",
+              "Absolutely. Aviara Community Park is a beautiful venue for larger graduation gatherings. We coordinate with your park reservation and have everything delivered well before guests arrive.",
           },
         ],
       },
       "engagement-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Aviara is one of the most romantic settings in all of North County San Diego for an engagement celebration. The Park Hyatt Aviara Resort and Aviara Golf Club set the tone for the community's upscale event culture, and private estate gardens — many with direct views of Batiquitos Lagoon — provide the most beautiful private venues imaginable. Kelari Party Rentals provides premium engagement party setups with round tables, Chiavari chairs, luxury floor-length linens, floral centerpieces, and ambient lighting that honors the occasion. One Aviara Point couple celebrated their engagement with 55 guests in their estate garden; we set up round tables with ivory linens, gold Chiavari chairs, floral centerpieces, and string lights with Batiquitos Lagoon views as the backdrop — a setting guests said was more beautiful than any venue they'd ever toured.",
+          "Aviara is one of the most romantic settings in all of North County San Diego for an engagement celebration. The Park Hyatt Aviara Resort and Aviara Golf Club set the tone for the community's upscale event culture, and private estate gardens — many with direct views of Batiquitos Lagoon — provide the most beautiful private venues imaginable. Kelari Party Rentals provides premium engagement party setups with round tables, Chiavari chairs, luxury floor-length linens, floral centerpieces, and ambient lighting that honors the occasion. One Aviara Point couple celebrated their engagement with 55 guests in their estate garden; we delivered round tables with ivory linens, gold Chiavari chairs, floral centerpieces, and string lights with Batiquitos Lagoon views as the backdrop — a setting guests said was more beautiful than any venue they'd ever toured.",
         localVenue:
           "Private estate gardens in Aviara Point and Aviara Oaks, with Batiquitos Lagoon views and proximity to the Park Hyatt Aviara, are among the most breathtaking engagement party settings in North County.",
         deliveryNote:
@@ -2074,10 +2074,10 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to Aviara Community Park?",
             answer:
-              "Yes — Aviara Community Park is a frequent delivery location for us. We coordinate with your reservation time and set up tables, chairs, and canopies before your guests arrive.",
+              "Yes — Aviara Community Park is a frequent delivery location for us. We coordinate with your reservation time and deliver tables, chairs, and canopies before your guests arrive.",
           },
           {
-            question: "Do I need a permit to set up rental equipment at Aviara Community Park?",
+            question: "Do I need a permit to have rental equipment delivered to Aviara Community Park?",
             answer:
               "Most events with equipment at Aviara Community Park require a park reservation or facility permit. Check with the City of Carlsbad Parks and Recreation Department — we can advise on typical logistics once your reservation is confirmed.",
           },
@@ -2140,9 +2140,9 @@ export const cities: City[] = [
     },
     headline: "Vista Party Rentals",
     subheadline:
-      "Tables, chairs, tents & décor delivered and set up at your Vista venue — stress-free.",
+      "Tables, chairs, tents & décor delivered to your Vista venue — stress-free.",
     intro:
-      "From backyard celebrations in Shadowridge to park parties at Brengle Terrace, Kelari Party Rentals is Vista's full-service source for tables, chairs, tents, linens, and décor. We deliver, set up, and pick up so you can enjoy every moment with your guests.",
+      "From backyard celebrations in Shadowridge to park parties at Brengle Terrace, Kelari Party Rentals is Vista's full-service source for tables, chairs, tents, linens, and décor. We deliver and pick up so you can enjoy every moment with your guests.",
     neighborhoods: [
       "Shadowridge",
       "Buena Creek",
@@ -2243,7 +2243,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Vista's established neighborhoods — especially Shadowridge — are known for larger-lot homes that make excellent backyard party venues. Multi-generational gatherings and community celebrations happen regularly in Vista backyards, often with 50 to 100+ guests. Kelari Party Rentals delivers frame tents, tables, chairs, lighting, and décor to Vista homes and handles delivery and pickup. One Shadowridge family hosted a 90-person backyard barbecue for a family reunion; we set up a 30×30 tent, 10 round tables, 90 folding chairs, and café lights — ready before the food hit the grill.",
+          "Vista's established neighborhoods — especially Shadowridge — are known for larger-lot homes that make excellent backyard party venues. Multi-generational gatherings and community celebrations happen regularly in Vista backyards, often with 50 to 100+ guests. Kelari Party Rentals delivers frame tents, tables, chairs, lighting, and décor to Vista homes and handles delivery and pickup. One Shadowridge family hosted a 90-person backyard barbecue for a family reunion; we delivered a 30×30 tent, 10 round tables, 90 folding chairs, and café lights — ready before the food hit the grill.",
         localVenue:
           "Shadowridge is Vista's top neighborhood for large backyard party rentals, with established lot sizes that comfortably accommodate full frame tent setups.",
         deliveryNote:
@@ -2273,7 +2273,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a home in Shadowridge in Vista?",
             answer:
-              "Yes — Shadowridge is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and arrange everything before guests arrive.",
+              "Yes — Shadowridge is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup before guests arrive.",
           },
           {
             question: "What linen styles work well for Vista baby showers?",
@@ -2306,7 +2306,7 @@ export const cities: City[] = [
       "engagement-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Engagement parties in Vista reflect the community's close family ties and generous spirit — bringing together extended family and longtime friends to honor the newly engaged couple. Whether hosted in a Shadowridge backyard or the hillside setting of an Alta Vista home, Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and ambient lighting to create a beautifully styled setting. One Alta Vista couple celebrated their engagement with 60 guests in a Shadowridge backyard; we set up round tables with ivory and gold linens, votive clusters, floral centerpieces, and string lights that sparkled through the evening.",
+          "Engagement parties in Vista reflect the community's close family ties and generous spirit — bringing together extended family and longtime friends to honor the newly engaged couple. Whether hosted in a Shadowridge backyard or the hillside setting of an Alta Vista home, Kelari Party Rentals provides premium tables, Chiavari chairs, luxury linens, and ambient lighting to create a beautifully styled setting. One Alta Vista couple celebrated their engagement with 60 guests in a Shadowridge backyard; we delivered round tables with ivory and gold linens, votive clusters, floral centerpieces, and string lights that sparkled through the evening.",
         localVenue:
           "Shadowridge backyards and elevated hillside properties in Alta Vista offer scenic settings for Vista engagement party celebrations.",
         deliveryNote:
@@ -2336,7 +2336,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to Brengle Terrace Park in Vista?",
             answer:
-              "Yes — Brengle Terrace Park is our most-requested Vista park delivery location. We coordinate with your reservation time and have everything set up before your guests arrive.",
+              "Yes — Brengle Terrace Park is our most-requested Vista park delivery location. We coordinate with your reservation time and have everything delivered and ready before your guests arrive.",
           },
           {
             question: "Do I need a permit for a party at Brengle Terrace Park in Vista?",

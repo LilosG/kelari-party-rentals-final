@@ -58,9 +58,9 @@ export const services: Service[] = [
     headline: "Party Rentals in North County San Diego",
     cityHeadline: "Party Rentals in {city}",
     subheadline:
-      "Everything you need for a picture-perfect celebration — delivered, set up, and picked up.",
+      "Everything you need for a picture-perfect celebration — delivered and picked up.",
     citySubheadline:
-      "Tables, chairs, tents & décor delivered to your {city} venue — we set up and pick up.",
+      "Tables, chairs, tents & décor delivered to your {city} venue — we deliver and pick up.",
     intro:
       "Kelari Party Rentals takes the stress out of event planning. Whether it's a birthday, baby shower, graduation, or backyard get-together, we provide premium tables, chairs, tents, linens, and décor with delivery available across North County San Diego.",
     cityIntro:
@@ -111,7 +111,7 @@ export const services: Service[] = [
           "We offer tables, chairs, tents, canopies, linens, table runners, centerpieces, lighting, and décor packages. Browse our inventory or request a custom quote.",
       },
       {
-        question: "Is delivery and setup included?",
+        question: "Is delivery and pickup included?",
         answer:
           "We deliver across North County San Diego — Carlsbad, Encinitas, Oceanside, San Marcos, and surrounding communities. Delivery is priced by distance. Complimentary pickup is available at our Carlsbad warehouse.",
       },
@@ -151,9 +151,9 @@ export const services: Service[] = [
     subheadline:
       "Tables, chairs, tents & themed décor to make every birthday celebration unforgettable.",
     citySubheadline:
-      "Everything you need for an amazing birthday party in {city} — delivered and set up.",
+      "Everything you need for an amazing birthday party in {city} — delivered right to your venue.",
     intro:
-      "From first birthdays to milestone celebrations, Kelari Party Rentals has the tables, chairs, tents, and décor to make your birthday party special. We handle delivery, setup, and pickup so you can focus on the guest of honor.",
+      "From first birthdays to milestone celebrations, Kelari Party Rentals has the tables, chairs, tents, and décor to make your birthday party special. We handle delivery and pickup so you can focus on the guest of honor.",
     cityIntro:
       "Throwing a birthday party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and themed décor right to your venue. From kids' parties at the park to backyard adult celebrations, we handle it all.",
     icon: "🎂",
@@ -204,7 +204,7 @@ export const services: Service[] = [
       {
         question: "Can you deliver birthday party rentals to a park?",
         answer:
-          "Absolutely. We deliver to public parks throughout North County San Diego. We arrive early to set up and return after the party for pickup.",
+          "Absolutely. We deliver to public parks throughout North County San Diego. We arrive early to drop everything off and return after the party for pickup.",
       },
       {
         question: "How many tables and chairs do I need for a birthday party?",
@@ -219,7 +219,7 @@ export const services: Service[] = [
       {
         question: "What's the most popular birthday rental setup in North County San Diego?",
         answer:
-          "Backyard and park parties are the most popular. A typical setup includes a pop-up canopy, two or three banquet tables, folding chairs, and coordinated linens — all delivered and assembled for you.",
+          "Backyard and park parties are the most popular. A typical setup includes a pop-up canopy, two or three banquet tables, folding chairs, and coordinated linens — all delivered and ready for your setup.",
       },
     ],
   },
@@ -277,7 +277,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery Available",
         description:
-          "We deliver to your home and set up in your yard. Complimentary warehouse pickup is also available at our Carlsbad location.",
+          "We deliver to your home and walk you through setup in your yard. Complimentary warehouse pickup is also available at our Carlsbad location.",
       },
       {
         icon: "📋",
@@ -293,9 +293,9 @@ export const services: Service[] = [
           "Most backyard parties need tables, chairs, a tent or canopy for shade, linens, and lighting. We can customize a package based on your guest count and style.",
       },
       {
-        question: "Do you set up tents in backyards?",
+        question: "Can tents be set up in backyards?",
         answer:
-          "Yes — we set up pop-up canopies and frame tents in backyards of all sizes. We'll work with your space to find the best layout.",
+          "Yes — we deliver pop-up canopies and frame tents to backyards of all sizes and walk you through setup on arrival. We'll work with your space to find the best layout.",
       },
       {
         question: "Do you offer lighting for evening backyard parties?",
@@ -333,11 +333,11 @@ export const services: Service[] = [
     subheadline:
       "Elegant tables, chairs, linens & décor for a beautiful baby shower.",
     citySubheadline:
-      "Beautiful baby shower rentals delivered and set up at your {city} venue.",
+      "Beautiful baby shower rentals delivered to your {city} venue.",
     intro:
-      "Celebrate the mom-to-be with a beautifully styled baby shower. Kelari Party Rentals provides elegant tables, chairs, linens, centerpieces, and décor — all delivered, set up, and picked up so the host can enjoy every moment.",
+      "Celebrate the mom-to-be with a beautifully styled baby shower. Kelari Party Rentals provides elegant tables, chairs, linens, centerpieces, and décor — all delivered and picked up so the host can enjoy every moment.",
     cityIntro:
-      "Planning a baby shower in {city}? Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor delivered right to your venue. We handle setup and cleanup so you can celebrate.",
+      "Planning a baby shower in {city}? Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor delivered right to your venue. We handle delivery and pickup so you can celebrate.",
     icon: "👶",
     whatsIncluded: [
       {
@@ -368,7 +368,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery & Pickup",
         description:
-          "Delivery available to your venue. We arrive and arrange everything beautifully. Complimentary warehouse pickup also available.",
+          "Delivery available to your venue. We arrive on time and walk you through setup. Complimentary warehouse pickup also available.",
       },
       {
         icon: "📋",
@@ -384,9 +384,9 @@ export const services: Service[] = [
           "Yes — we offer styled baby shower packages with coordinated linens, centerpieces, and tableware. Contact us to customize colors and themes.",
       },
       {
-        question: "Can you set up a baby shower at a restaurant or venue?",
+        question: "Can rentals be delivered to a baby shower at a restaurant or venue?",
         answer:
-          "We deliver to private homes, restaurants, parks, and event venues. Just let us know the location and we'll coordinate delivery and setup.",
+          "We deliver to private homes, restaurants, parks, and event venues. Just let us know the location and we'll coordinate delivery timing.",
       },
       {
         question: "What colors do you carry for baby shower linens?",
@@ -399,9 +399,9 @@ export const services: Service[] = [
           "We size packages for showers of any scale — intimate gatherings of 10 to larger celebrations of 60 or more. We'll customize the table count, chairs, and linens to match your guest list.",
       },
       {
-        question: "Do you set up baby showers at private homes in North County San Diego?",
+        question: "Do you deliver baby shower rentals to private homes in North County San Diego?",
         answer:
-          "Yes — home setups are very common. We deliver to addresses throughout Carlsbad, Encinitas, Oceanside, and San Marcos and arrange everything so the host can focus on guests.",
+          "Yes — home deliveries are very common. We deliver to addresses throughout Carlsbad, Encinitas, Oceanside, and San Marcos and walk you through setup so the host can focus on guests.",
       },
     ],
   },
@@ -424,9 +424,9 @@ export const services: Service[] = [
     subheadline:
       "Celebrate their achievement with tables, tents, décor & everything you need for the perfect grad party.",
     citySubheadline:
-      "Graduation party rentals delivered and set up at your {city} venue — celebrate in style.",
+      "Graduation party rentals delivered to your {city} venue — celebrate in style.",
     intro:
-      "They worked hard — now it's time to celebrate. Kelari Party Rentals provides tables, chairs, tents, banners, linens, and décor for graduation parties of every size. We deliver, set up, and pick up so you can focus on the graduate.",
+      "They worked hard — now it's time to celebrate. Kelari Party Rentals provides tables, chairs, tents, banners, linens, and décor for graduation parties of every size. We deliver and pick up so you can focus on the graduate.",
     cityIntro:
       "Hosting a graduation party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your home, backyard, or local park. We handle delivery and pickup so you can celebrate the big milestone.",
     icon: "🎓",
@@ -492,7 +492,7 @@ export const services: Service[] = [
       {
         question: "What's the best way to plan a graduation party rental?",
         answer:
-          "Start with your expected guest count and venue type (backyard, park, or venue), then submit a quote request. We'll recommend a complete package and confirm timing so setup is done well before guests arrive.",
+          "Start with your expected guest count and venue type (backyard, park, or venue), then submit a quote request. We'll recommend a complete package and confirm timing so everything is delivered well before guests arrive.",
       },
     ],
   },
@@ -515,9 +515,9 @@ export const services: Service[] = [
     subheadline:
       "Elegant tables, linens & décor to celebrate the newly engaged couple.",
     citySubheadline:
-      "Engagement party rentals delivered and set up at your {city} venue — elegant and stress-free.",
+      "Engagement party rentals delivered to your {city} venue — elegant and stress-free.",
     intro:
-      "Mark the start of their journey together with a beautifully styled engagement party. Kelari Party Rentals offers premium tables, chairs, linens, glassware, and décor — delivered, set up, and picked up.",
+      "Mark the start of their journey together with a beautifully styled engagement party. Kelari Party Rentals offers premium tables, chairs, linens, glassware, and décor — delivered and picked up.",
     cityIntro:
       "Hosting an engagement party in {city}? Kelari Party Rentals delivers elegant tables, chairs, linens, and décor to create a memorable celebration. We take care of delivery and pickup after your event.",
     icon: "💍",
@@ -602,9 +602,9 @@ export const services: Service[] = [
     citySubheadline:
       "Party rentals delivered to {city} parks — tables, chairs, tents & décor with delivery.",
     intro:
-      "Park parties are a North County San Diego tradition. Kelari Party Rentals delivers tables, chairs, tents, and décor directly to your reserved park spot. We arrive early to set up and return after the event for pickup — all you do is show up and celebrate.",
+      "Park parties are a North County San Diego tradition. Kelari Party Rentals delivers tables, chairs, tents, and décor directly to your reserved park spot. We arrive early to drop everything off and return after the event for pickup — all you do is show up and celebrate.",
     cityIntro:
-      "Throwing a park party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your favorite {city} park. We set up before your guests arrive and pick up after they leave.",
+      "Throwing a park party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your favorite {city} park. We deliver before your guests arrive and pick up after they leave.",
     icon: "🌳",
     whatsIncluded: [
       {
@@ -666,7 +666,7 @@ export const services: Service[] = [
           "Popular spots include Calavera Hills Community Park in Carlsbad, Moonlight Beach in Encinitas, Luiseno Park in Oceanside, and Bradley Park in San Marcos. We deliver to all of these and can advise on space and permit needs.",
       },
       {
-        question: "Can you set up at a park without a dedicated parking lot nearby?",
+        question: "Can rentals be delivered to a park without a dedicated parking lot nearby?",
         answer:
           "Yes — our team is experienced with park logistics. We'll walk the site on arrival and carry equipment to your reserved spot regardless of parking distance.",
       },
@@ -674,8 +674,8 @@ export const services: Service[] = [
   },
   {
     slug: "delivery-setup-pickup",
-    name: "Delivery, Setup & Pickup",
-    shortName: "Delivery & Setup",
+    name: "Delivery & Pickup",
+    shortName: "Delivery & Pickup",
     meta: {
       title: "Delivery & Pickup | Kelari Party Rentals",
       description:
@@ -782,7 +782,7 @@ export const services: Service[] = [
     subheadline:
       "Elegant tables, chairs, linens & décor for a beautiful quinceañera celebration.",
     citySubheadline:
-      "Quinceañera rentals delivered and set up at your {city} venue — elegant, full-service, stress-free.",
+      "Quinceañera rentals delivered to your {city} venue — elegant, full-service, stress-free.",
     intro:
       "A quinceañera deserves a beautiful setting. Kelari Party Rentals provides elegant tables, Chiavari chairs, premium linens, centerpieces, and décor for quinceañera celebrations across North County San Diego. Professional delivery is available across North County SD — so the family can focus on the birthday girl.",
     cityIntro:
