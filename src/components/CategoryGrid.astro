@@ -9,6 +9,12 @@ import galleryTablescape from '../assets/images/gallery-tablescape.jpg';
 import galleryCanopy from '../assets/images/gallery-canopy.jpg';
 import galleryMarquee from '../assets/images/gallery-marquee.jpg';
 import comingSoonImage from '../assets/images/coming-soon-decorations.png';
+import tablesCard from '../assets/images/category-cards/tables-card.png';
+import chairsCard from '../assets/images/category-cards/chairs-card.png';
+import linensCard from '../assets/images/category-cards/linens-card.png';
+import tableRunnersCard from '../assets/images/category-cards/table-runners-card.png';
+import tentWhite10x10Open from '../assets/images/tent-white-10x10-open.png';
+import marqueeLettersMrMrs from '../assets/images/marquee-letters-mr-mrs.jpg';
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 
@@ -45,13 +51,12 @@ const {
 const isDark = bg === "dark";
 
 const categoryImages: Record<string, ImageMetadata> = {
-  tables: galleryTablescape,
-  chairs: backyardParty,
-  "tents-canopies": galleryCanopy,
-  linens: babyShower,
-  "table-runners": babyShower,
-  decorations: comingSoonImage,
-  "marquee-letters": galleryMarquee,
+  tables: tablesCard,
+  chairs: chairsCard,
+  "tents-canopies": tentWhite10x10Open,
+  linens: linensCard,
+  "table-runners": tableRunnersCard,
+  "marquee-letters": marqueeLettersMrMrs,
   "add-ons": galleryMarquee,
 };
 
