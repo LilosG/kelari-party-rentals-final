@@ -12,6 +12,7 @@ import chairChiavariWooden from '../assets/images/chair-chiavari-wooden.png';
 import chairWhiteFolding from '../assets/images/chair-white-folding.png';
 import chairBrownIvoryCushion from '../assets/images/chair-brown-ivory-cushion.png';
 import kelariWhiteResinChair from '../assets/images/kelari-party-rentals-white-resin-chair.jpg';
+import chairWhiteResinFolding from '../assets/images/chair-white-resin-folding.jpg';
 import kelariChairNoCushion from '../assets/images/kelari-party-rentals-chair-no-cushion.png';
 // linens - rectangular tablecloths
 import tableclothRectWhiteLong from '../assets/images/tablecloth-rect-white-long.png';
@@ -232,14 +233,14 @@ export const categories: Category[] = [
         image: kelariChairNoCushion,
       },
       {
-        name: "Chiavari Chair with Ivory Cushion",
-        description: "Light fruitwood Chiavari chair with a 2-inch ivory cushion add-on. Elevated comfort and style for showers, quinceañeras, and milestone events.",
-        image: chairChiavariWooden,
-      },
-      {
         name: "Chiavari Cushion – 2-inch Ivory",
         description: "Add-on ivory cushion for Chiavari chairs. Adds comfort and a polished finish to any formal event setup.",
         image: chairBrownIvoryCushion,
+      },
+      {
+        name: "Chiavari Chair with Ivory Cushion",
+        description: "Light fruitwood Chiavari chair with a 2-inch ivory cushion add-on. Elevated comfort and style for showers, quinceañeras, and milestone events.",
+        image: chairWhiteResinFolding,
       },
     ],
     whatsIncluded: [
