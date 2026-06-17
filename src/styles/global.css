@@ -493,9 +493,3 @@ a {
   background: var(--color-brand-pink-dark);
   color: #ffffff;
 }
-
-@media (max-width: 1023px) {
-  body {
-    padding-bottom: calc(72px + env(safe-area-inset-bottom));
-  }
-}
