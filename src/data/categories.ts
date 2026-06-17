@@ -2,8 +2,8 @@ import type { ImageMetadata } from 'astro';
 import type { HeroImageConfig } from './heroImages';
 import { heroImages } from './heroImages';
 // tables
-import tableCocktail from '../assets/images/table-cocktail.png';
-import tableCocktailHightop from '../assets/images/table-cocktail-hightop.jpg';
+import kelariCocktailTable from '../assets/images/kelari-party-rentals-cocktail-table-carlsbad-north-county-san-diego.webp';
+import kelariBellyUpTable from '../assets/images/kelari-party-rentals-belly-up-table-carlsbad-north-county-san-diego.webp';
 import comingSoonImage from '../assets/images/coming-soon-decorations.png';
 import tableRectangularFolding from '../assets/images/table-rectangular-folding.png';
 import tableRoundFolding from '../assets/images/table-round-folding.png';
@@ -140,9 +140,15 @@ export const categories: Category[] = [
       },
       {
         name: "Cocktail Table",
-        description: "High-top bar-height table for standing receptions, cocktail hours, and lounge setups.",
+        description: "30-inch round cocktail table for standing receptions, drink stations, appetizer displays, and mingling areas.",
         sizes: ['30" Round'],
-        image: tableCocktailHightop,
+        image: kelariCocktailTable,
+      },
+      {
+        name: "Belly-Up Table",
+        description: "Bar-height belly-up table for cocktail-style events, lounge areas, check-in stations, and casual standing setups.",
+        sizes: ['30" Round'],
+        image: kelariBellyUpTable,
       },
     ],
     whatsIncluded: [
