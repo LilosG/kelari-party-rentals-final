@@ -223,6 +223,24 @@ const cityLinks = cities.map((c) => ({
       </button>
 
     </div>
+
+    <!-- Mobile sticky CTA row -->
+    <div class="lg:hidden grid grid-cols-2 gap-2 pb-3">
+      <a
+        href={booqableStore}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex min-w-0 items-center justify-center rounded-lg bg-brand-pink px-3 py-2.5 text-sm font-semibold text-white shadow-sm"
+      >
+        Book Now
+      </a>
+      <a
+        href={`tel:${nap.contact.phone.replace(/\D/g, "")}`}
+        class="inline-flex min-w-0 items-center justify-center rounded-lg border border-brand-pink/30 bg-brand-pink-light px-3 py-2.5 text-sm font-semibold text-brand-pink"
+      >
+        Call Now
+      </a>
+    </div>
   </div>
 
   <!-- Mobile menu -->

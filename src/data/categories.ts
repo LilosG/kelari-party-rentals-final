@@ -53,6 +53,11 @@ import tentWhite10x10Open from '../assets/images/tent-white-10x10-open.png';
 import tentWhite10x10Walls from '../assets/images/tent-white-10x10-walls.png';
 import tentWhite10x20Open from '../assets/images/tent-white-10x20-open.png';
 import tentWhite10x20Walls from '../assets/images/tent-white-10x20-walls.png';
+import addOnBalloonSquareFrame from '../assets/images/add-ons/kelari-party-rentals-balloon-square-frame.png';
+import addOnBalloonCircleFrame from '../assets/images/add-ons/kelari-party-rentals-balloon-circle-frame.png';
+import addOnBalloonPillars from '../assets/images/add-ons/kelari-party-rentals-baloon-pillars.png';
+import addOnWoodBackdrop from '../assets/images/add-ons/kelari-party-rentals-wood-back-drop.png';
+import addOnWoodTableCovering from '../assets/images/add-ons/kelari-party-rentals-wood-table-covering.png';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -847,22 +852,27 @@ export const categories: Category[] = [
     items: [
       {
         name: "Over-the-Table Balloon Arch Stand",
+        image: addOnBalloonSquareFrame,
         description: "Adjustable rod stand with clamps, 31\"–110\" length, 31\"–64\" height. Mounts directly over a table for balloon arch displays.",
       },
       {
         name: "Balloon Arch Stand (7.5ft Round Backdrop Frame)",
+        image: addOnBalloonCircleFrame,
         description: "Adjustable half-circle arch with a large round backdrop frame — ideal for photo walls and entrances.",
       },
       {
         name: "Balloon Column Kit (2-Set, 3-in-1)",
+        image: addOnBalloonPillars,
         description: "Reusable metal column kit with base, set of 2, for birthdays, weddings, graduations, and showers.",
       },
       {
         name: "Wooden Backdrop / Photo Wall",
+        image: addOnWoodBackdrop,
         description: "Wooden balloon arch and photo wall backdrop for event styling.",
       },
       {
         name: "Wooden Table Covers",
+        image: addOnWoodTableCovering,
         description: "Wood-style table covers used in place of traditional linens for a rustic or natural look.",
       },
     ],
