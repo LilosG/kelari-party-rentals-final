@@ -2,6 +2,7 @@
 import { site } from "../data/site";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import FloatingCTA from "../components/FloatingCTA.astro";
 import "../styles/global.css";
 
 export interface Props {
@@ -108,5 +109,7 @@ const isHomepage = Astro.url.pathname === "/";
     </main>
 
     <Footer variant={isHomepage ? "home" : "default"} />
+
+    <FloatingCTA />
   </body>
 </html>

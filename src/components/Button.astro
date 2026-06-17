@@ -2,7 +2,7 @@
 interface Props {
   href?: string;
   type?: "button" | "submit" | "reset";
-  variant?: "brand" | "brand-soft" | "outline-light";
+  variant?: "brand" | "brand-soft" | "outline-light" | "outline-brand";
   size?: "sm" | "md";
   pill?: boolean;
   class?: string;
@@ -25,7 +25,7 @@ const classes = [
   "btn",
   size === "sm" ? "btn--sm" : "btn--md",
   pill ? "btn--pill" : "",
-  variant === "brand" ? "btn--brand" : variant === "brand-soft" ? "btn--brand-soft" : "btn--outline-light",
+  variant === "brand" ? "btn--brand" : variant === "brand-soft" ? "btn--brand-soft" : variant === "outline-brand" ? "btn--outline-brand" : "btn--outline-light",
   className,
 ];
 ---

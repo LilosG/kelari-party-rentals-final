@@ -228,6 +228,7 @@ a {
   }
 
   .hero-shell {
+    width: 100%;
     aspect-ratio: 21 / 10;
     min-height: 380px;
   }
@@ -360,6 +361,16 @@ a {
 .btn--outline-light:hover {
   background: #ffffff;
   color: #111111;
+}
+
+.btn--outline-brand {
+  border: 2px solid var(--color-brand-pink);
+  color: var(--color-brand-pink);
+  background: #ffffff;
+}
+
+.btn--outline-brand:hover {
+  background: var(--color-brand-pink-light);
 }
 
 
