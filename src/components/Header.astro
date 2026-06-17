@@ -27,7 +27,7 @@ const cityLinks = cities.map((c) => ({
 
 <header
   id="site-header"
-  class="site-header sticky top-0 z-50 backdrop-blur-sm border-b border-neutral-100 transition-shadow duration-300"
+  class="site-header fixed inset-x-0 top-0 z-50 backdrop-blur-sm border-b border-neutral-100 transition-shadow duration-300 lg:sticky lg:inset-auto lg:top-0"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-[58px] md:h-[64px]">
@@ -356,6 +356,28 @@ const cityLinks = cities.map((c) => ({
     </nav>
   </div>
 </header>
+<div aria-hidden="true" class="h-[58px] lg:hidden"></div>
+
+<!-- Mobile bottom conversion bar -->
+<div class="mobile-bottom-cta lg:hidden fixed inset-x-0 bottom-0 z-50 border-t border-neutral-200 bg-white/95 px-4 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] pt-2 shadow-[0_-8px_30px_rgba(0,0,0,0.10)] backdrop-blur-md">
+  <div class="grid grid-cols-2 gap-2">
+    <a
+      href={booqableStore}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex min-w-0 items-center justify-center rounded-lg bg-brand-pink px-3 py-3 text-sm font-semibold text-white shadow-sm"
+    >
+      Book Now
+    </a>
+    <a
+      href={`tel:${nap.contact.phone.replace(/\D/g, "")}`}
+      class="inline-flex min-w-0 items-center justify-center rounded-lg border border-brand-pink/30 bg-brand-pink-light px-3 py-3 text-sm font-semibold text-brand-pink"
+    >
+      Call Now
+    </a>
+  </div>
+</div>
+
 
 <script>
   // Main mobile menu toggle

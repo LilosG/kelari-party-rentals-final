@@ -107,9 +107,9 @@ const emphasisTail = hasEmphasisPattern
   <!-- Pink radial glow top-left -->
   <div class="hero-pink-glow absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full pointer-events-none"></div>
 
-  <div class="relative z-10 w-full">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-2xl">
+  <div class="relative z-10 w-full min-w-0">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-28">
+      <div class="max-w-2xl min-w-0">
 
         {resolvedBreadcrumbs.length > 0 && (
           <nav class="mb-6" aria-label="Breadcrumb">
@@ -149,7 +149,7 @@ const emphasisTail = hasEmphasisPattern
           </ul>
         )}
 
-        <h1 class="hero-title font-display text-white leading-[1.06] tracking-tight text-[2.15rem] sm:text-[2.7rem] lg:text-[3.35rem] xl:text-[3.8rem] max-w-[19ch]">
+        <h1 class="hero-title font-display text-white leading-[1.06] tracking-tight text-[2rem] min-[380px]:text-[2.15rem] sm:text-[2.7rem] lg:text-[3.35rem] xl:text-[3.8rem] max-w-[18ch] break-words">
           {hasEmphasisPattern ? (
             <>
               <span class="hero-title-intro block">{introTitle}</span>
@@ -164,22 +164,23 @@ const emphasisTail = hasEmphasisPattern
         </h1>
 
         {resolvedSubtitle && (
-          <p class="hero-subtitle mt-6 text-lg text-white/80 leading-relaxed max-w-xl">
+          <p class="hero-subtitle mt-5 text-base sm:text-lg text-white/85 leading-relaxed max-w-[30ch] sm:max-w-xl break-words">
             {resolvedSubtitle}
           </p>
         )}
 
-        <div class="mt-8 flex flex-wrap gap-3">
+        <div class="mt-8 grid grid-cols-1 min-[380px]:grid-cols-2 gap-3 max-w-xl">
           <Button
             href={resolvedPrimaryCta.href}
             variant="brand"
             size="md"
+            class="w-full justify-center"
             target={resolvedPrimaryCta.href.startsWith("http") ? "_blank" : undefined}
             rel={resolvedPrimaryCta.href.startsWith("http") ? "noopener noreferrer" : undefined}
           >
             {resolvedPrimaryCta.label}
           </Button>
-          <Button href={resolvedSecondaryCta.href} variant="outline-light" size="md">
+          <Button href={resolvedSecondaryCta.href} variant="outline-light" size="md" class="w-full justify-center">
             {resolvedSecondaryCta.label}
           </Button>
         </div>
