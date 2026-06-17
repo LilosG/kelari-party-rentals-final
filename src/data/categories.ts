@@ -228,8 +228,8 @@ export const categories: Category[] = [
         image: kelariWhiteResinChair,
       },
       {
-        name: "Chiavari Chair – Light Fruitwood",
-        description: "Elegant light fruitwood Chiavari chair without cushion. Clean natural wood finish for a polished, formal look.",
+        name: "Chiavari Chair – Fruitwood",
+        description: "Fruitwood Chiavari chair without cushion. A clean natural wood chair option for showers, milestone events, weddings, and polished backyard celebrations.",
         image: kelariChairNoCushion,
       },
       {
@@ -238,8 +238,8 @@ export const categories: Category[] = [
         image: chairBrownIvoryCushion,
       },
       {
-        name: "Chiavari Chair with Ivory Cushion",
-        description: "Light fruitwood Chiavari chair with a 2-inch ivory cushion add-on. Elevated comfort and style for showers, quinceañeras, and milestone events.",
+        name: "White Folding Chair",
+        description: "Simple white folding chair for casual parties, park events, backyard gatherings, and extra guest seating. Lightweight, clean, and practical for flexible event setups.",
         image: chairWhiteResinFolding,
       },
     ],
