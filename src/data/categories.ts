@@ -11,8 +11,8 @@ import tableRoundFolding from '../assets/images/table-round-folding.png';
 import chairChiavariWooden from '../assets/images/chair-chiavari-wooden.png';
 import chairWhiteFolding from '../assets/images/chair-white-folding.png';
 import chairBrownIvoryCushion from '../assets/images/chair-brown-ivory-cushion.png';
-import chairWhiteResinFolding from '../assets/images/chair-white-resin-folding.jpg';
-import chairChiavariNoCushion from '../assets/images/chair-chiavari-no-cushion.jpg';
+import kelariWhiteResinChair from '../assets/images/kelari-party-rentals-white-resin-chair.jpg';
+import kelariChairNoCushion from '../assets/images/kelari-party-rentals-chair-no-cushion.png';
 // linens - rectangular tablecloths
 import tableclothRectWhiteLong from '../assets/images/tablecloth-rect-white-long.png';
 import tableclothRectBlack from '../assets/images/tablecloth-rect-black.png';
@@ -224,12 +224,12 @@ export const categories: Category[] = [
       {
         name: "White Resin Folding Chair",
         description: "Standard white plastic resin folding chair. The most popular chair rental for backyard parties, park events, and casual celebrations.",
-        image: chairWhiteResinFolding,
+        image: kelariWhiteResinChair,
       },
       {
         name: "Chiavari Chair – Light Fruitwood",
         description: "Elegant light fruitwood Chiavari chair without cushion. Clean natural wood finish for a polished, formal look.",
-        image: chairChiavariNoCushion,
+        image: kelariChairNoCushion,
       },
       {
         name: "Chiavari Chair with Ivory Cushion",
