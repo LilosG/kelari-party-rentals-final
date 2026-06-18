@@ -2,8 +2,8 @@ import type { ImageMetadata } from 'astro';
 import type { HeroImageConfig } from './heroImages';
 import { heroImages } from './heroImages';
 // tables
-import kelariCocktailTable from '../assets/images/kelari-party-rentals-cocktail-table-carlsbad-north-county-san-diego.webp';
-import kelariBellyUpTable from '../assets/images/kelari-party-rentals-belly-up-table-carlsbad-north-county-san-diego.webp';
+import kelariCocktailTable from '../assets/images/kelari-party-rentals-cocktail-table-carlsbad-north-county-san-diego-new.png';
+import kelariBellyUpTable from '../assets/images/kelari-party-rentals-belly-up-table-carlsbad-north-county-san-diego-new.png';
 import comingSoonImage from '../assets/images/coming-soon-decorations.png';
 import tableRectangularFolding from '../assets/images/table-rectangular-folding.png';
 import tableRoundFolding from '../assets/images/table-round-folding.png';
