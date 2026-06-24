@@ -23,7 +23,7 @@ interface AreaEntry {
 const SERVICE_REGISTRY: ServiceEntry[] = [
   { slug: "backyard-party-rentals", name: "Backyard Party Rentals", href: "/services/backyard-party-rentals/", shortDesc: "Tables, chairs, linens, and accessories for backyard events of any size." },
   { slug: "birthday-party-rentals", name: "Birthday Party Rentals", href: "/services/birthday-party-rentals/", shortDesc: "Complete rental packages for birthday celebrations in North County San Diego." },
-  { slug: "graduation-party-rentals", name: "Graduation Party Rentals", href: "/services/graduation-party-rentals/", shortDesc: "Graduation party setups with delivery, setup, and pickup included." },
+  { slug: "graduation-party-rentals", name: "Graduation Party Rentals", href: "/services/graduation-party-rentals/", shortDesc: "Graduation party rentals with delivery and pickup included." },
   { slug: "baby-shower-rentals", name: "Baby Shower Rentals", href: "/services/baby-shower-rentals/", shortDesc: "Elegant table and chair rentals for baby shower celebrations." },
   { slug: "park-party-rentals", name: "Park Party Rentals", href: "/services/park-party-rentals/", shortDesc: "USDA-permitted park event rentals across Carlsbad, Encinitas, and Oceanside." },
   { slug: "party-rentals", name: "Full Rental Inventory", href: "/rentals/", shortDesc: "Browse our complete inventory of chairs, tables, linens, and accessories." },
@@ -187,7 +187,7 @@ if (faqs.length > 0) {
         <div class="sticky top-8 space-y-6">
           <div class="bg-brand-pink/10 border border-brand-pink/20 rounded-2xl p-6">
             <h3 class="font-display font-semibold text-neutral-900 text-lg mb-2">Need rentals for your event?</h3>
-            <p class="text-sm text-neutral-500 mb-4">We deliver, set up, and pick up across North County San Diego.</p>
+            <p class="text-sm text-neutral-500 mb-4">We deliver and pick up across North County San Diego.</p>
             <a href="/quote/" class="block w-full text-center bg-brand-pink text-white font-semibold text-sm py-3 px-4 rounded-xl hover:bg-brand-pink-dark transition-colors mb-3">Get a Free Quote</a>
             <a href={`tel:${nap.contact.phone.replace(/\D/g, "")}`} class="block w-full text-center border border-brand-pink/30 text-brand-pink font-semibold text-sm py-3 px-4 rounded-xl hover:bg-brand-pink/5 transition-colors">Call {nap.contact.phone}</a>
           </div>
