@@ -239,7 +239,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver engagement party rentals to Aviara homes in Carlsbad?",
             answer:
-              "Yes — Aviara is a frequent delivery destination for elegant engagement parties. We deliver everything ready to go and walk you through setup so the hosts can get back to their guests quickly.",
+              "Yes — Aviara is a frequent delivery destination for elegant engagement parties. We deliver everything ready to go and walk you through the delivery so the hosts can get back to their guests quickly.",
           },
         ],
       },
@@ -445,7 +445,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Encinitas has a strong wellness and community culture, and baby showers here tend to be heartfelt, beautifully styled, and grounded in that coastal-bohemian spirit. Whether the shower is hosted in a New Encinitas home or at Encinitas Community Park, Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor to set the right tone. We handle delivery and pickup, and walk you through setup, so the host can be fully present. One New Encinitas host threw a garden-style baby shower for 35 guests in her backyard; we delivered sage-and-blush linens, floral centerpieces, and draped Chiavari chairs that had every guest asking who did the styling.",
+          "Encinitas has a strong wellness and community culture, and baby showers here tend to be heartfelt, beautifully styled, and grounded in that coastal-bohemian spirit. Whether the shower is hosted in a New Encinitas home or at Encinitas Community Park, Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor to set the right tone. We handle delivery and pickup, and walk you through the delivery, so the host can be fully present. One New Encinitas host threw a garden-style baby shower for 35 guests in her backyard; we delivered sage-and-blush linens, floral centerpieces, and draped Chiavari chairs that had every guest asking who did the styling.",
         localVenue:
           "Backyard gardens in New Encinitas and Olivenhain are popular baby shower venues, with Encinitas Community Park as a parkside alternative for larger gatherings.",
         deliveryNote:
@@ -454,7 +454,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a home in New Encinitas?",
             answer:
-              "Yes — New Encinitas is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup so the host has everything she needs.",
+              "Yes — New Encinitas is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through the delivery so the host has everything she needs.",
           },
           {
             question: "What décor styles work well for Encinitas baby showers?",
@@ -718,7 +718,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to South Oceanside?",
             answer:
-              "Yes — South Oceanside is a frequent delivery destination for us. We deliver tables, chairs, linens, and centerpieces and walk you through setup before the shower begins.",
+              "Yes — South Oceanside is a frequent delivery destination for us. We deliver tables, chairs, linens, and centerpieces and walk you through the delivery before the shower begins.",
           },
           {
             question: "What linen and décor styles are popular for Oceanside baby showers?",
@@ -965,7 +965,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver backyard party rentals to Twin Oaks Valley in San Marcos?",
             answer:
-              "Absolutely. Twin Oaks Valley is a frequent delivery destination for backyard party rentals. We bring everything to your home, walk you through setup, and return for pickup after your event.",
+              "Absolutely. Twin Oaks Valley is a frequent delivery destination for backyard party rentals. We bring everything to your home, walk you through the delivery, and return for pickup after your event.",
           },
         ],
       },
@@ -981,7 +981,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a San Elijo Hills home in San Marcos?",
             answer:
-              "Yes — San Elijo Hills is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup before your guests arrive.",
+              "Yes — San Elijo Hills is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through the delivery before your guests arrive.",
           },
           {
             question: "What linen colors are popular for San Marcos baby showers?",
@@ -1240,7 +1240,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a Bressi Ranch home?",
             answer:
-              "Yes — Bressi Ranch is one of our closest delivery neighborhoods. We deliver tables, chairs, linens, and centerpieces and walk you through setup before guests arrive, making the morning stress-free for the host.",
+              "Yes — Bressi Ranch is one of our closest delivery neighborhoods. We deliver tables, chairs, linens, and centerpieces and walk you through the delivery before guests arrive, making the morning stress-free for the host.",
           },
           {
             question: "What linen and décor styles are popular for Bressi Ranch baby showers?",
@@ -1501,7 +1501,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a La Costa home?",
             answer:
-              "Yes — La Costa is one of our most frequently served neighborhoods for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup so the host has everything she needs.",
+              "Yes — La Costa is one of our most frequently served neighborhoods for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through the delivery so the host has everything she needs.",
           },
           {
             question: "What décor styles are popular for La Costa baby showers?",
@@ -1762,7 +1762,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a Carlsbad Village home in Olde Carlsbad?",
             answer:
-              "Yes — Carlsbad Village is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup before the guests arrive.",
+              "Yes — Carlsbad Village is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through the delivery before the guests arrive.",
           },
           {
             question: "What linen styles work well for an Olde Carlsbad cottage-style baby shower?",
@@ -2023,7 +2023,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver an elegant baby shower setup to an Aviara home?",
             answer:
-              "Yes — Aviara is one of our most frequently served neighborhoods for upscale baby showers. We deliver tables, chairs, coordinated linens, and centerpieces and walk you through setup before the first guest arrives.",
+              "Yes — Aviara is one of our most frequently served neighborhoods for upscale baby showers. We deliver tables, chairs, coordinated linens, and centerpieces and walk you through the delivery before the first guest arrives.",
           },
           {
             question: "What décor styles are popular for Aviara baby showers?",
@@ -2286,7 +2286,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver baby shower rentals to a home in Shadowridge in Vista?",
             answer:
-              "Yes — Shadowridge is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through setup before guests arrive.",
+              "Yes — Shadowridge is a frequent delivery destination for baby showers. We deliver tables, chairs, linens, and centerpieces and walk you through the delivery before guests arrive.",
           },
           {
             question: "What linen styles work well for Vista baby showers?",

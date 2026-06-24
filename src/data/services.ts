@@ -76,7 +76,7 @@ export const services: Service[] = [
         icon: "🪑",
         title: "Tables & Chairs",
         description:
-          "Rectangular, round, and Chiavari options in multiple styles, delivered clean and set up at your venue.",
+          "Rectangular, round, and Chiavari options in multiple styles, delivered clean and ready to place at your venue.",
       },
       {
         icon: "⛺",
@@ -225,7 +225,7 @@ export const services: Service[] = [
       {
         question: "What's the most popular birthday rental setup in North County San Diego?",
         answer:
-          "Backyard and park parties are the most popular. A typical setup includes a pop-up canopy, two or three banquet tables, folding chairs, and coordinated linens — all delivered and ready for your setup.",
+          "Backyard and park parties are the most popular. A typical setup includes a pop-up canopy, two or three banquet tables, folding chairs, and coordinated linens — all delivered and ready to go.",
       },
     ],
   },
@@ -284,7 +284,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery Available",
         description:
-          "We deliver to your home and walk you through setup in your yard. Complimentary warehouse pickup is also available at our Carlsbad location.",
+          "We deliver to your home and walk you through any items that need assembly. Complimentary warehouse pickup is also available at our Carlsbad location.",
       },
       {
         icon: "📋",
@@ -302,7 +302,7 @@ export const services: Service[] = [
       {
         question: "Can tents be set up in backyards?",
         answer:
-          "Yes — we deliver pop-up canopies and frame tents to backyards of all sizes and walk you through setup on arrival. We'll work with your space to find the best layout.",
+          "Yes — we deliver pop-up canopies and frame tents to backyards of all sizes and walk you through assembly on arrival. We'll work with your space to find the best layout.",
       },
       {
         question: "Do you offer lighting for evening backyard parties?",
@@ -376,7 +376,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery & Pickup",
         description:
-          "Delivery available to your venue. We arrive on time and walk you through setup. Complimentary warehouse pickup also available.",
+          "Delivery available to your venue. We arrive on time and walk you through anything that needs demonstrating. Complimentary warehouse pickup also available.",
       },
       {
         icon: "📋",
@@ -409,7 +409,7 @@ export const services: Service[] = [
       {
         question: "Do you deliver baby shower rentals to private homes in North County San Diego?",
         answer:
-          "Yes — home deliveries are very common. We deliver to addresses throughout Carlsbad, Encinitas, Oceanside, and San Marcos and walk you through setup so the host can focus on guests.",
+          "Yes — home deliveries are very common. We deliver to addresses throughout Carlsbad, Encinitas, Oceanside, and San Marcos and walk you through everything delivered so the host can focus on guests.",
       },
     ],
   },
@@ -491,7 +491,7 @@ export const services: Service[] = [
       {
         question: "Can you accommodate large graduation parties in North County San Diego?",
         answer:
-          "Yes — we regularly set up for 80 to 150+ guests. Large parties may need multiple tents, extra tables, and additional seating. Request a quote with your expected guest count and we'll build a package.",
+          "Yes — we regularly deliver for events of 80 to 150+ guests. Large parties may need multiple tents, extra tables, and additional seating. Request a quote with your expected guest count and we'll build a package.",
       },
       {
         question: "Do you deliver graduation rentals to parks and backyards?",
@@ -585,7 +585,7 @@ export const services: Service[] = [
           "Yes — we carry glassware including champagne flutes, wine glasses, and water glasses. These can be added to any engagement package to complete the tablescape.",
       },
       {
-        question: "Can you set up a romantic outdoor engagement party setting in North County San Diego?",
+        question: "Do you deliver for romantic outdoor engagement parties in North County San Diego?",
         answer:
           "Absolutely. String lights, soft linen colors, and floral centerpieces are our most popular combination for engagement parties in coastal North County San Diego. We can build a complete outdoor setup for your backyard or a park.",
       },
@@ -704,9 +704,9 @@ export const services: Service[] = [
     citySubheadline:
       "Delivery available for party rentals in {city} — complimentary warehouse pickup always available.",
     intro:
-      "At Kelari Party Rentals, getting your rentals to your event is simple. Professional delivery is available to venues across North County San Diego, priced by distance and quoted upfront. Prefer to handle transport yourself? Complimentary pickup and dropoff is always available at our Carlsbad warehouse — no fee, no hassle. Ask us about our full-service delivery and arrangement option for your event.",
+      "At Kelari Party Rentals, getting your rentals to your event is simple. Professional delivery is available to venues across North County San Diego, priced by distance and quoted upfront. Prefer to handle transport yourself? Complimentary pickup and dropoff is always available at our Carlsbad warehouse — no fee, no hassle.",
     cityIntro:
-      "Kelari Party Rentals makes delivery simple for {city} events. Professional delivery is available to your venue, priced by distance and quoted upfront. Complimentary pickup at our Carlsbad warehouse is always available. Ask us about our full-service delivery and arrangement option for your event.",
+      "Kelari Party Rentals makes delivery simple for {city} events. Professional delivery is available to your venue, priced by distance and quoted upfront. Complimentary pickup at our Carlsbad warehouse is always available.",
     icon: "🚚",
     heroImage: heroImages.backyardPartyHero,
     whatsIncluded: [
@@ -764,15 +764,11 @@ export const services: Service[] = [
           "Our primary service area covers Carlsbad, Encinitas, Oceanside, and San Marcos. For locations just outside this area, contact us — we accommodate many nearby zip codes and will confirm availability.",
       },
       {
-        question: "How long does setup take?",
+        question: "How long does delivery take?",
         answer:
-          "Most deliveries take 30–60 minutes depending on the package size. Larger events with tents and lighting may take longer. We plan the delivery window to ensure everything is in place before your guests arrive. Ask us about our full-service delivery option if you'd like our team to handle arrangement at your venue.",
+          "Most deliveries take 30–60 minutes depending on the package size. Larger orders with tents may take longer. We coordinate the delivery window so everything is unloaded and any instructions confirmed before your guests arrive.",
       },
-      {
-        question: "Do you offer delivery with professional arrangement?",
-        answer:
-          "Ask us about our full-service delivery option for your event — we're happy to discuss what's available for your date and venue.",
-      },
+
     ],
   },
   {

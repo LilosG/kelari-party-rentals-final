@@ -114,7 +114,7 @@ export const categories: Category[] = [
         "Rectangular, round & cocktail table rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
     },
     headline: "Table Rentals",
-    subheadline: "Rectangular, round & cocktail tables for every event size — delivered clean and set up at your venue.",
+    subheadline: "Rectangular, round & cocktail tables for every event size — delivered clean and ready to use.",
     intro:
       "Tables are the foundation of every event setup, and getting the right style and quantity makes everything else fall into place. Kelari Party Rentals offers rectangular, round, and cocktail tables for parties of every size across North County San Diego. Every table arrives clean, ready for you to place at your venue, and is picked up after your event — no hauling, no cleanup from you. Whether you're hosting a backyard birthday in Carlsbad, a graduation party at a San Marcos park, or a baby shower in Encinitas, we have the right table configuration for your space and guest count.",
     icon: "🪑",
@@ -322,7 +322,7 @@ export const categories: Category[] = [
     headline: "Tent & Canopy Rentals",
     subheadline: "Pop-up canopies and frame tents for shade and shelter at any outdoor event.",
     intro:
-      "In North County San Diego, a tent or canopy isn't optional for daytime outdoor events — it's what makes the difference between a comfortable celebration and guests checking the time. Kelari Party Rentals carries pop-up canopies and professional frame tents in multiple sizes for backyard parties, park events, and outdoor celebrations across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver every structure and walk you through setup, weighting, and staking on-site, then return for same-day pickup after your event. Whether you need a compact 10x10 canopy for a food station or a 20x40 frame tent for a 100-guest graduation party, we have the right coverage for your venue and guest count.",
+      "In North County San Diego, a tent or canopy isn't optional for daytime outdoor events — it's what makes the difference between a comfortable celebration and guests checking the time. Kelari Party Rentals carries pop-up canopies and professional frame tents in multiple sizes for backyard parties, park events, and outdoor celebrations across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. We deliver every structure and walk you through assembly, weighting, and staking on-site — so you're fully ready to go. We return for same-day pickup after your event. Whether you need a compact 10x10 canopy for a food station or a 20x40 frame tent for a 100-guest graduation party, we have the right coverage for your venue and guest count.",
     icon: "⛺",
     heroImage: heroImages.tentWhite10x20Open,
     items: [
@@ -363,8 +363,8 @@ export const categories: Category[] = [
       },
       {
         icon: "🔧",
-        title: "Assembled & Anchored",
-        description: "Every tent and canopy is delivered ready to assemble — we walk you through weighting or staking based on your surface type.",
+        title: "Assembly Instructions Included",
+        description: "Every tent and canopy comes with a full on-site walkthrough of assembly, weighting, and staking for your specific surface — delivered with everything you need.",
       },
       {
         icon: "⚓",
@@ -746,7 +746,7 @@ export const categories: Category[] = [
     headline: "Marquee Letter Rentals",
     subheadline: "Light-up marquee letters and numbers that make every celebration photo-ready — delivered to your venue.",
     intro:
-      "Marquee letters are one of the most photographed elements at any celebration. A glowing LOVE, BABY, GRAD, or CHEERS sign instantly creates the focal point guests gravitate toward all night. Kelari Party Rentals carries warm Edison-bulb marquee letters and numbers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every letter arrives fully functional and ready to place, and is collected after your event. Whether you're spelling out a name, a word, or a milestone year, marquee letters elevate any setup from a party to a moment.",
+      "Marquee letters are one of the most photographed elements at any celebration. A glowing LOVE, BABY, GRAD, or CHEERS sign instantly creates the focal point guests gravitate toward all night. Kelari Party Rentals carries warm Edison-bulb marquee letters and numbers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every letter arrives fully functional and ready to place, and is collected after your event. Whether you're spelling out a name, a word, or a milestone year, marquee letters elevate any celebration from a party to a moment.",
     icon: "🔤",
     heroImage: heroImages.marqueeLettersNew,
     items: [
@@ -853,7 +853,7 @@ export const categories: Category[] = [
     headline: "Party Add-Ons",
     subheadline: "Balloon arch stands, column kits, wooden backdrops & table covers to round out your setup.",
     intro:
-      "Add-ons are the finishing pieces that take a standard table-and-chair setup to the next level. Kelari Party Rentals carries balloon arch stands, reusable balloon column kits, wooden backdrop and photo wall frames, and wooden-style table covers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every add-on arrives clean and ready for you to set up at your venue, and is picked up after your event. Pair them with your tables, chairs, and linens for a complete, coordinated look.",
+      "Add-ons are the finishing pieces that take a standard table-and-chair setup to the next level. Kelari Party Rentals carries balloon arch stands, reusable balloon column kits, wooden backdrop and photo wall frames, and wooden-style table covers for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Every add-on arrives clean and ready for you to place and assemble at your venue, and is picked up after your event. Pair them with your tables, chairs, and linens for a complete, coordinated look.",
     icon: "🎈",
     heroImage: heroImages.decorationsNew,
     items: [
@@ -919,7 +919,7 @@ export const categories: Category[] = [
     faqs: [
       {
         question: "Do I need to assemble the balloon arch stands myself?",
-        answer: "Yes — all add-on stands, frames, and covers are delivered clean and ready for you to set up at your venue. The rod stands and column kits use clamps and bases designed for quick assembly without tools.",
+        answer: "Yes — all add-on stands, frames, and covers are delivered clean and ready for you to assemble at your venue. The rod stands and column kits use clamps and bases designed for quick assembly without tools.",
       },
       {
         question: "What sizes do the balloon arch stands come in?",

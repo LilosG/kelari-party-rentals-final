@@ -69,7 +69,7 @@ export const howItWorksSteps: Step[] = [
     number: "02",
     title: "We Deliver",
     description:
-      "Our team arrives at your venue and brings everything you ordered, ready to go. We walk you through setup so everything's clear before your first guest walks in.",
+      "Our team arrives at your venue and unloads everything. For items like tents and marquee letters, we walk you through assembly and confirm everything is working before we leave — so you're ready before your first guest arrives.",
   },
   {
     number: "03",
@@ -99,7 +99,7 @@ export const testimonials: Testimonial[] = [
     name: "Jessica T.",
     location: "Encinitas",
     rating: 5,
-    text: "We were stressed about hosting a baby shower in our backyard, but Kelari took care of everything. The linens, the setup, the décor — it was beautiful and completely hassle-free.",
+    text: "We were stressed about hosting a baby shower in our backyard, but Kelari made it easy. The linens and décor arrived beautifully and everything looked stunning — completely hassle-free.",
     date: "Sep 2024",
   },
   {
