@@ -68,6 +68,7 @@ export interface CategoryItem {
   sizes?: string[];
   colors?: string[];
   image?: ImageMetadata;
+  bookingUrl?: string;
 }
 
 export interface CategoryIncludedItem {
@@ -125,30 +126,35 @@ export const categories: Category[] = [
         description: "Seats 8–10 guests. Perfect for formal dining, centerpieces, and banquet-style layouts.",
         sizes: ['60"'],
         image: tableRoundFolding,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/round-plastic-folding-table-60",
       },
       {
         name: "6-Foot Rectangular Table",
         description: "Seats 6–8 guests. Great for dining, buffet setups, and gift tables.",
         sizes: ["6 ft"],
         image: tableRectangularFolding,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/rectangular-plastic-table-6ft",
       },
       {
         name: "8-Foot Rectangular Table",
         description: "Seats 8–10 guests. Ideal for larger dining setups, buffets, and banquets.",
         sizes: ["8 ft"],
         image: tableRectangularFolding,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/rectangular-plastic-table-8ft",
       },
       {
         name: "Cocktail Table",
         description: "30-inch round cocktail table for standing receptions, drink stations, appetizer displays, and mingling areas.",
         sizes: ['30" Round'],
         image: kelariCocktailTable,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/cocktail-table-30-round",
       },
       {
         name: "Belly-Up Table",
         description: "Bar-height belly-up table for cocktail-style events, lounge areas, check-in stations, and casual standing setups.",
         sizes: ['30" Round'],
         image: kelariBellyUpTable,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/belly-up-30-round",
       },
     ],
     whatsIncluded: [
@@ -232,21 +238,25 @@ export const categories: Category[] = [
         name: "White Resin Folding Chair",
         description: "Standard white plastic resin folding chair. The most popular chair rental for backyard parties, park events, and casual celebrations.",
         image: kelariWhiteResinChair,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/resin-folding-chair-white",
       },
       {
         name: "Chiavari Chair – Fruitwood",
         description: "Fruitwood Chiavari chair without cushion. A clean natural wood chair option for showers, milestone events, weddings, and polished backyard celebrations.",
         image: kelariChairNoCushion,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/wood-chiavari-chair-light-fruitwood-no-cushion",
       },
       {
         name: "Chiavari Cushion – 2-inch Ivory",
         description: "Add-on ivory cushion for Chiavari chairs. Adds comfort and a polished finish to any formal event setup.",
         image: chairBrownIvoryCushion,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/wood-chiavari-chair-light-fruitwood",
       },
       {
         name: "White Folding Chair",
         description: "Simple white folding chair for casual parties, park events, backyard gatherings, and extra guest seating. Lightweight, clean, and practical for flexible event setups.",
         image: chairWhiteResinFolding,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/white-plastic-folding-chair",
       },
     ],
     whatsIncluded: [
@@ -332,6 +342,7 @@ export const categories: Category[] = [
         sizes: ["10×10"],
         colors: ["White", "Black"],
         image: tentWhite10x10Open,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/steel-frame-canopy-10-x-10-white",
       },
       {
         name: "10×10 Pop-Up Canopy with Walls",
@@ -339,6 +350,7 @@ export const categories: Category[] = [
         sizes: ["10×10"],
         colors: ["White", "Black"],
         image: tentWhite10x10Walls,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/10-x10-waterproof-pop-up-canopy-tent-with-sides",
       },
       {
         name: "10×20 Pop-Up Canopy",
@@ -346,6 +358,7 @@ export const categories: Category[] = [
         sizes: ["10×20"],
         colors: ["White", "Black"],
         image: tentWhite10x20Open,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/steel-frame-canopy-10-x-20-white",
       },
       {
         name: "10×20 Pop-Up Canopy with Walls",
@@ -353,6 +366,7 @@ export const categories: Category[] = [
         sizes: ["10×20"],
         colors: ["White", "Black"],
         image: tentWhite10x20Walls,
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/10-x20-waterproof-pop-up-canopy-tent-with-sides-white",
       },
     ],
     whatsIncluded: [
@@ -612,11 +626,11 @@ export const categories: Category[] = [
     icon: "🎀",
     heroImage: heroImages.tableRunnersNew,
     items: [
-      { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths.", image: runnerWhite },
-      { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations.", image: runnerPink },
-      { name: "Table Runner – Baby Blue", description: "10ft runner in baby blue. Great for baby showers and outdoor events.", image: runnerBabyBlue },
-      { name: "Table Runner – Tan", description: "10ft runner in tan. Versatile neutral that pairs with almost any tablecloth.", image: runnerIvory },
-      { name: "Table Runner – Green", description: "10ft runner in green. Fresh accent for garden parties and outdoor celebrations.", image: runnerGreen },
+      { name: "Table Runner – Off White", description: "10ft satin runner in off white. Coordinates with ivory and white tablecloths.", image: runnerWhite, bookingUrl: "https://rentals.kelaripartyrentals.com/products/table-runner-10ft-off-white" },
+      { name: "Table Runner – Pink", description: "10ft runner in pink. Popular for baby showers and birthday celebrations.", image: runnerPink, bookingUrl: "https://rentals.kelaripartyrentals.com/products/table-runner-10ft-pink" },
+      { name: "Table Runner – Baby Blue", description: "10ft runner in baby blue. Great for baby showers and outdoor events.", image: runnerBabyBlue, bookingUrl: "https://rentals.kelaripartyrentals.com/products/table-runner-10ft-baby-blue" },
+      { name: "Table Runner – Tan", description: "10ft runner in tan. Versatile neutral that pairs with almost any tablecloth.", image: runnerIvory, bookingUrl: "https://rentals.kelaripartyrentals.com/products/table-runner-10ft-tan" },
+      { name: "Table Runner – Green", description: "10ft runner in green. Fresh accent for garden parties and outdoor celebrations.", image: runnerGreen, bookingUrl: "https://rentals.kelaripartyrentals.com/products/table-runner-10ft-green" },
       { name: "See It All Come Together", description: "See how our runners, linens, and chairs create a complete tablescape for any event.", image: eventSetupTablescape },
     ],
     whatsIncluded: [
@@ -861,26 +875,31 @@ export const categories: Category[] = [
         name: "Over-the-Table Balloon Arch Stand",
         image: addOnBalloonSquareFrame,
         description: "Adjustable rod stand with clamps, 31\"–110\" length, 31\"–64\" height. Mounts directly over a table for balloon arch displays.",
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/walk-through-balloon-arch-stand-8-7ft",
       },
       {
         name: "Balloon Arch Stand (7.5ft Round Backdrop Frame)",
         image: addOnBalloonCircleFrame,
         description: "Adjustable half-circle arch with a large round backdrop frame — ideal for photo walls and entrances.",
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/round-balloon-backdrop-stand-7-5ft",
       },
       {
         name: "Balloon Column Kit (2-Set, 3-in-1)",
         image: addOnBalloonPillars,
         description: "Reusable metal column kit with base, set of 2, for birthdays, weddings, graduations, and showers.",
+        bookingUrl: "https://rentals.kelaripartyrentals.com/products/balloon-column-kit-pair",
       },
       {
         name: "Wooden Backdrop / Photo Wall",
         image: addOnWoodBackdrop,
         description: "Wooden balloon arch and photo wall backdrop for event styling.",
+        bookingUrl: "https://rentals.kelaripartyrentals.com/collections/balloon-display-structures",
       },
       {
         name: "Wooden Table Covers",
         image: addOnWoodTableCovering,
         description: "Wood-style table covers used in place of traditional linens for a rustic or natural look.",
+        bookingUrl: "https://rentals.kelaripartyrentals.com/collections/balloon-display-structures",
       },
     ],
     whatsIncluded: [
