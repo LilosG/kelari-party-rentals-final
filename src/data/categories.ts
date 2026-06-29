@@ -32,6 +32,7 @@ import tableclothSpandexWhite from '../assets/images/tablecloth-spandex-white.pn
 import tableclothSpandexBlack from '../assets/images/tablecloth-spandex-black.png';
 import tableclothSpandexWhiteLong from '../assets/images/tablecloth-spandex-white-long.png';
 import tableclothSpandexWhiteRound from '../assets/images/tablecloth-spandex-white-round.png';
+import tableclothSpandexBlackRound from '../assets/images/tablecloth-spandex-black-round.jpg';
 // linens - cocktail covers
 import tableclothCocktailWhiteSpandex from '../assets/images/tablecloth-cocktail-white-spandex.png';
 import tableclothCocktailBlackSpandex from '../assets/images/tablecloth-cocktail-black-spandex.png';
@@ -71,6 +72,12 @@ export interface CategoryItem {
   bookingUrl?: string;
 }
 
+export interface CategoryItemGroup {
+  title: string;
+  cols?: 2 | 3 | 4;
+  items: CategoryItem[];
+}
+
 export interface CategoryIncludedItem {
   icon: string;
   title: string;
@@ -97,6 +104,7 @@ export interface Category {
   icon: string;
   heroImage?: HeroImageConfig;
   items: CategoryItem[];
+  groups?: CategoryItemGroup[];
   whatsIncluded: CategoryIncludedItem[];
   faqs: CategoryFAQ[];
   gridCols?: 2 | 3 | 4;
@@ -444,111 +452,155 @@ export const categories: Category[] = [
       "Linens are the single highest-impact, lowest-cost upgrade available for any event setup. A bare folding table looks like a company picnic. The same table with a floor-length tablecloth looks like an intentional celebration. Kelari Party Rentals carries tablecloths in a wide range of colors and fabrics for events across Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Table runners are available separately — browse our full runner selection on the table runners page. Every linen is freshly laundered and pressed before delivery. We help you coordinate colors to your event palette — share your theme and we'll build a complete linen package that ties the whole setup together.",
     icon: "🎀",
     heroImage: heroImages.linensNew,
-    items: [
-      // GROUP 1 — Rectangle Tablecloths
+    items: [],
+    groups: [
       {
-        name: "Rectangular Tablecloth",
-        description: "Floor-length white polyester tablecloth for 6-ft and 8-ft tables.",
-        sizes: ["90×132", "90×156"],
-        image: tableclothRectWhiteLong,
+        title: "Rectangular Tablecloths",
+        cols: 3,
+        items: [
+          {
+            name: "Rectangular Tablecloth – White",
+            description: "Polyester tablecloth for 6ft and 8ft rectangular tables. Clean white finish for any event.",
+            sizes: ["6ft", "8ft"],
+            image: tableclothRectWhiteLong,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x156-white",
+          },
+          {
+            name: "Rectangular Tablecloth – Black",
+            description: "Polyester tablecloth for 6ft and 8ft rectangular tables. Sleek black finish for modern events.",
+            sizes: ["6ft", "8ft"],
+            image: tableclothRectBlack,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x156-black",
+          },
+          {
+            name: "Rectangular Tablecloth – Ivory",
+            description: "Polyester tablecloth for 6ft rectangular tables. Warm ivory finish for elegant setups.",
+            sizes: ["6ft"],
+            image: tableclothRectIvory,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x132-tan-ivory",
+          },
+        ],
       },
       {
-        name: "Black Rectangular Tablecloth",
-        description: "Floor-length black polyester tablecloth for 6-ft and 8-ft tables.",
-        sizes: ["90×132", "90×156"],
-        image: tableclothRectBlack,
+        title: "Round Tablecloths – 60″ Dining Tables",
+        cols: 3,
+        items: [
+          {
+            name: "Round Tablecloth – White",
+            description: 'Floor-length white tablecloth for 60" round dining tables.',
+            sizes: ['60" Round'],
+            image: tableclothRoundWhiteLarge,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-white",
+          },
+          {
+            name: "Round Tablecloth – Black",
+            description: 'Floor-length black tablecloth for 60" round dining tables.',
+            sizes: ['60" Round'],
+            image: tableclothRoundBlackLarge,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-black",
+          },
+          {
+            name: "Round Tablecloth – Ivory",
+            description: 'Floor-length ivory tablecloth for 60" round dining tables.',
+            sizes: ['60" Round'],
+            image: tableclothRoundIvoryLarge,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-tan-ivory",
+          },
+        ],
       },
       {
-        name: "Black Rectangular Tablecloth (Long)",
-        description: "Extended floor-length black tablecloth for 8-ft tables with a full trailing drop.",
-        sizes: ["90×156"],
-        image: tableclothRectBlackLong,
+        title: "Cocktail Table Linens – 30″ Round Tables",
+        cols: 3,
+        items: [
+          {
+            name: "Cocktail Linen – White",
+            description: 'Round tablecloth for 30" cocktail and belly-up tables. Clean white finish.',
+            sizes: ['30" Round'],
+            image: tableclothRoundWhite,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-white",
+          },
+          {
+            name: "Cocktail Linen – Black",
+            description: 'Round tablecloth for 30" cocktail and belly-up tables. Sleek black finish.',
+            sizes: ['30" Round'],
+            image: tableclothRoundBlack,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black",
+          },
+          {
+            name: "Cocktail Linen – Ivory",
+            description: 'Round tablecloth for 30" cocktail and belly-up tables. Warm ivory finish.',
+            sizes: ['30" Round'],
+            image: tableclothRoundIvory,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory",
+          },
+        ],
       },
       {
-        name: "Ivory Rectangular Tablecloth",
-        description: "Floor-length ivory polyester tablecloth for 6-ft and 8-ft tables.",
-        sizes: ["90×132", "90×156"],
-        image: tableclothRectIvory,
+        title: "Banquet Spandex Covers",
+        cols: 3,
+        items: [
+          {
+            name: "Banquet Spandex – White",
+            description: "Stretch-fit white spandex cover for 6ft and 8ft rectangular tables. Wrinkle-free fitted finish.",
+            sizes: ["6ft", "8ft"],
+            image: tableclothSpandexWhiteLong,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-8ft-banquet-white",
+          },
+          {
+            name: "Banquet Spandex – Black",
+            description: "Stretch-fit black spandex cover for 6ft and 8ft rectangular tables. Clean tailored look.",
+            sizes: ["6ft", "8ft"],
+            image: tableclothSpandexBlack,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-8ft-banquet-black",
+          },
+        ],
       },
       {
-        name: "Ivory Rectangular Tablecloth (Long)",
-        description: "Extended floor-length ivory tablecloth for 8-ft tables with a full trailing drop.",
-        sizes: ["90×156"],
-        image: tableclothRectIvoryLong,
-      },
-      // GROUP 2 — Round Tablecloths
-      {
-        name: "Round Tablecloth",
-        description: 'Floor-length white polyester tablecloth for 60" round tables.',
-        sizes: ['120"'],
-        image: tableclothRoundWhite,
-      },
-      {
-        name: "White Round Tablecloth (Large)",
-        description: 'Extra-full floor-length white tablecloth for 60" round tables with generous drop.',
-        sizes: ['132"'],
-        image: tableclothRoundWhiteLarge,
-      },
-      {
-        name: "Black Round Tablecloth",
-        description: 'Floor-length black polyester tablecloth for 60" round tables.',
-        sizes: ['120"'],
-        image: tableclothRoundBlack,
-      },
-      {
-        name: "Black Round Tablecloth (Large)",
-        description: 'Extra-full floor-length black tablecloth for 60" round tables with generous drop.',
-        sizes: ['132"'],
-        image: tableclothRoundBlackLarge,
+        title: "Cocktail Spandex Covers",
+        cols: 3,
+        items: [
+          {
+            name: "Cocktail Spandex – White",
+            description: 'Stretch-fit white spandex cover for 30" cocktail tables. Clean fitted finish.',
+            sizes: ['30" Round'],
+            image: tableclothCocktailWhiteSpandex,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-30-cocktail-white",
+          },
+          {
+            name: "Cocktail Spandex – Black",
+            description: 'Stretch-fit black spandex cover for 30" cocktail tables. Sleek modern finish.',
+            sizes: ['30" Round'],
+            image: tableclothCocktailBlackSpandex,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-30-cocktail-black",
+          },
+          {
+            name: "Cocktail Spandex – Ivory",
+            description: 'Stretch-fit ivory spandex cover for 30" cocktail tables. Warm elegant finish.',
+            sizes: ['30" Round'],
+            image: tableclothCocktailIvorySpandex,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-30-cocktail-tan-ivory",
+          },
+        ],
       },
       {
-        name: "Ivory Round Tablecloth",
-        description: 'Floor-length ivory polyester tablecloth for 60" round tables.',
-        sizes: ['120"'],
-        image: tableclothRoundIvory,
-      },
-      {
-        name: "Ivory Round Tablecloth (Large)",
-        description: 'Extra-full floor-length ivory tablecloth for 60" round tables with generous drop.',
-        sizes: ['132"'],
-        image: tableclothRoundIvoryLarge,
-      },
-      // GROUP 3 — Spandex Covers
-      {
-        name: "White Spandex Tablecloth",
-        description: "Stretch-fit white spandex cover for a sleek, modern fitted look.",
-        image: tableclothSpandexWhite,
-      },
-      {
-        name: "White Rectangular Spandex Tablecloth",
-        description: "Stretch-fit white spandex cover for rectangular tables — wrinkle-free fitted finish.",
-        image: tableclothSpandexWhiteLong,
-      },
-      {
-        name: "White Round Spandex Tablecloth",
-        description: "Stretch-fit white spandex cover for round tables — full-length form-fitting look.",
-        image: tableclothSpandexWhiteRound,
-      },
-      {
-        name: "Black Spandex Tablecloth",
-        description: "Stretch-fit black spandex cover for a clean, tailored look.",
-        image: tableclothSpandexBlack,
-      },
-      // GROUP 4 — Cocktail Covers
-      {
-        name: "White Cocktail Table Cover",
-        description: "Spandex stretch cover for cocktail-height tables. Clean white finish for upscale setups.",
-        image: tableclothCocktailWhiteSpandex,
-      },
-      {
-        name: "Black Cocktail Table Cover",
-        description: "Spandex stretch cover for cocktail-height tables. Sleek black finish for modern events.",
-        image: tableclothCocktailBlackSpandex,
-      },
-      {
-        name: "Ivory Cocktail Table Cover",
-        description: "Spandex stretch cover for cocktail-height tables. Warm ivory finish for elegant setups.",
-        image: tableclothCocktailIvorySpandex,
+        title: "Round Spandex Covers",
+        cols: 3,
+        items: [
+          {
+            name: "Round Spandex – White",
+            description: 'Stretch-fit white spandex cover for 60" round dining tables. Full-length form-fitting look.',
+            sizes: ['60" Round'],
+            image: tableclothSpandexWhiteRound,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-60-round-white",
+          },
+          {
+            name: "Round Spandex – Black",
+            description: 'Stretch-fit black spandex cover for 60" round dining tables. Clean tailored finish.',
+            sizes: ['60" Round'],
+            image: tableclothSpandexBlackRound,
+            bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-60-round-black",
+          },
+        ],
       },
     ],
     whatsIncluded: [
