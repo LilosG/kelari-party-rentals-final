@@ -111,7 +111,7 @@ export const cities: City[] = [
       {
         question: "Can I rent tables and chairs for a party at a Carlsbad park?",
         answer:
-          "Absolutely. We regularly deliver to Poinsettia Park, Alga Norte, Holiday Park, Stagecoach Park, and other Carlsbad parks. We handle delivery and pickup so you can enjoy the event.",
+          "Absolutely. We regularly deliver to Poinsettia Park, Alga Norte, Holiday Park, Stagecoach Park, and other Carlsbad parks. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
       {
         question: "How far in advance should I book party rentals in Carlsbad?",
@@ -128,7 +128,7 @@ export const cities: City[] = [
       "party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Carlsbad's year-round sunshine and spacious neighborhoods make it one of North County's most active party destinations. Whether you're hosting a garden party on an Aviara estate, a backyard gathering in Bressi Ranch, or a community celebration at Calavera Hills Community Park, Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your venue. We scale every package to your guest count and handle delivery and pickup so you can focus entirely on your guests. One La Costa family recently hosted a 65-person milestone birthday in their backyard; we delivered round tables, a 20×20 frame tent, and coordinating linens and had everything delivered two hours before guests arrived.",
+          "Carlsbad's year-round sunshine and spacious neighborhoods make it one of North County's most active party destinations. Whether you're hosting a garden party on an Aviara estate, a backyard gathering in Bressi Ranch, or a community celebration at Calavera Hills Community Park, Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your venue. We scale every package to your guest count. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse. One La Costa family recently hosted a 65-person milestone birthday in their backyard; we delivered round tables, a 20×20 frame tent, and coordinating linens and had everything delivered two hours before guests arrived.",
         localVenue:
           "Calavera Hills Community Park and private estates in Aviara are among Carlsbad's most popular settings for full party rental setups.",
         deliveryNote:
@@ -170,7 +170,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Carlsbad backyards were made for entertaining. Bressi Ranch's planned community homes, La Costa's generous lot sizes, and Aviara's resort-style properties all offer the space to host a truly impressive outdoor party with the right rental equipment. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to your Carlsbad home and handles delivery and pickup, so you never have to move a heavy table. One Bressi Ranch couple recently hosted a 60-person retirement party in their backyard; we deliver a 20×30 frame tent, eight round tables, and café string lights the evening before and had everything ready by morning.",
+          "Carlsbad backyards were made for entertaining. Bressi Ranch's planned community homes, La Costa's generous lot sizes, and Aviara's resort-style properties all offer the space to host a truly impressive outdoor party with the right rental equipment. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to your Carlsbad home for an additional fee — so you never have to move a heavy table yourself — or you can pick up free at our Carlsbad warehouse if you'd rather handle transport on your own. One Bressi Ranch couple recently hosted a 60-person retirement party in their backyard; we deliver a 20×30 frame tent, eight round tables, and café string lights the evening before and had everything ready by morning.",
         localVenue:
           "Bressi Ranch and La Costa neighborhoods are Carlsbad's most popular areas for backyard party rentals, with lot sizes well-suited for tent setups.",
         deliveryNote:
