@@ -1,49 +1,28 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import LocalHero from "../../components/LocalHero.astro";
-import TrustBar from "../../components/TrustBar.astro";
-import Section from "../../components/Section.astro";
-import SectionHeader from "../../components/SectionHeader.astro";
-import WhatsIncluded from "../../components/WhatsIncluded.astro";
-import NeighborhoodTags from "../../components/NeighborhoodTags.astro";
-import ParksList from "../../components/ParksList.astro";
-import CtaBand from "../../components/CtaBand.astro";
-import FAQAccordion from "../../components/FAQAccordion.astro";
-import CityCards from "../../components/CityCards.astro";
-import QuoteForm from "../../components/QuoteForm.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LocalHero from "../components/LocalHero.astro";
+import TrustBar from "../components/TrustBar.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import WhatsIncluded from "../components/WhatsIncluded.astro";
+import NeighborhoodTags from "../components/NeighborhoodTags.astro";
+import ParksList from "../components/ParksList.astro";
+import CtaBand from "../components/CtaBand.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CityCards from "../components/CityCards.astro";
+import QuoteForm from "../components/QuoteForm.astro";
 
-import { site, nap, booqableStore } from "../../data/site";
-import { cities, type City } from "../../data/cities";
+import { site, nap, booqableStore } from "../data/site";
+import { cities, type City } from "../data/cities";
 import {
   services,
   type Service,
   getServiceBySlug,
   renderCityTemplate,
-} from "../../data/services";
-import { testimonials, galleryImages } from "../../data/homepage";
-import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
-import ImageGallery from "../../components/ImageGallery.astro";
-
-export function getStaticPaths() {
-  const paths: {
-    params: { city: string; service: string };
-    props: { city: City; service: Service };
-  }[] = [];
-
-  for (const city of cities) {
-    for (const serviceSlug of city.services) {
-      const service = getServiceBySlug(serviceSlug);
-      if (service) {
-        paths.push({
-          params: { city: city.slug, service: service.slug },
-          props: { city, service },
-        });
-      }
-    }
-  }
-
-  return paths;
-}
+} from "../data/services";
+import { testimonials, galleryImages } from "../data/homepage";
+import TestimonialCarousel from "../components/TestimonialCarousel.astro";
+import ImageGallery from "../components/ImageGallery.astro";
 
 interface Props {
   city: City;
@@ -133,6 +112,7 @@ const schema = [
   },
 ];
 ---
+
 
 <BaseLayout
   title={pageTitle}

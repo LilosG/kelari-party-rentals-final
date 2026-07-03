@@ -34,11 +34,16 @@ interface Props {
 
 const { category } = Astro.props;
 
-const cityCards = cities.map((c) => ({
-  name: c.name,
-  description: `${category.name} rentals in ${c.name}.`,
-  href: `/${c.slug}/`,
-}));
+// Only link to cities where this category actually has a page —
+// falling back to the city hub would send bottom-funnel clicks to a
+// page without the product, which is worse than not linking at all.
+const cityCards = cities
+  .filter((c) => c.categories.includes(category.slug))
+  .map((c) => ({
+    name: c.name,
+    description: `${category.name} rentals in ${c.name}.`,
+    href: `/${c.slug}/${category.citySlug}/`,
+  }));
 
 const heroImage = category.heroImage;
 

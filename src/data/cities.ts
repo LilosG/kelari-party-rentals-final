@@ -34,9 +34,16 @@ export interface City {
   deliveryNote: string;
   heroImage?: HeroImageConfig;
   services: string[];
+  /** Category slugs (from categories.ts) enabled for this city's product pages */
+  categories: string[];
   faqs: CityFAQ[];
   cityServiceContent?: {
     [serviceSlug: string]: CityServiceContent;
+  };
+  /** Optional per-city override content for category pages, same shape as
+   *  cityServiceContent — reused directly rather than duplicating the type. */
+  cityCategoryContent?: {
+    [categorySlug: string]: CityServiceContent;
   };
 }
 
@@ -45,6 +52,7 @@ export interface City {
 export const cities: City[] = [
   {
     slug: "carlsbad",
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
     name: "Carlsbad",
     county: "San Diego",
     state: "CA",
@@ -310,6 +318,7 @@ export const cities: City[] = [
   },
   {
     slug: "encinitas",
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
     name: "Encinitas",
     county: "San Diego",
     state: "CA",
@@ -572,6 +581,7 @@ export const cities: City[] = [
   },
   {
     slug: "oceanside",
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
     name: "Oceanside",
     county: "San Diego",
     state: "CA",
@@ -836,6 +846,7 @@ export const cities: City[] = [
   },
   {
     slug: "san-marcos",
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
     name: "San Marcos",
     county: "San Diego",
     state: "CA",
@@ -1099,6 +1110,7 @@ export const cities: City[] = [
   },
   {
     slug: "bressi-ranch",
+    categories: [], // Phase 1: not yet enabled — see rollout notes
     name: "Bressi Ranch",
     county: "San Diego",
     state: "CA",
@@ -1358,6 +1370,7 @@ export const cities: City[] = [
   },
   {
     slug: "la-costa",
+    categories: [], // Phase 1: not yet enabled — see rollout notes
     name: "La Costa",
     county: "San Diego",
     state: "CA",
@@ -1619,6 +1632,7 @@ export const cities: City[] = [
   },
   {
     slug: "olde-carlsbad",
+    categories: [], // Phase 1: not yet enabled — see rollout notes
     name: "Olde Carlsbad",
     county: "San Diego",
     state: "CA",
@@ -1880,6 +1894,7 @@ export const cities: City[] = [
   },
   {
     slug: "aviara",
+    categories: [], // Phase 1: not yet enabled — see rollout notes
     name: "Aviara",
     county: "San Diego",
     state: "CA",
@@ -2141,6 +2156,7 @@ export const cities: City[] = [
   },
   {
     slug: "vista",
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
     name: "Vista",
     county: "San Diego",
     state: "CA",

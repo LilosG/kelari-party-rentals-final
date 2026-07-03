@@ -6,6 +6,7 @@ import OccasionStrip from "../../components/OccasionStrip.astro";
 import Section from "../../components/Section.astro";
 import SectionHeader from "../../components/SectionHeader.astro";
 import ServiceGrid from "../../components/ServiceGrid.astro";
+import CityCategoryGrid from "../../components/CityCategoryGrid.astro";
 import NeighborhoodTags from "../../components/NeighborhoodTags.astro";
 import ParksList from "../../components/ParksList.astro";
 import CtaBand from "../../components/CtaBand.astro";
@@ -143,6 +144,19 @@ const schema = [
     columns={4}
     bg="light"
   />
+
+  <!-- 4b · Products — white ──────────────────── -->
+  {city.categories.length > 0 && (
+    <CityCategoryGrid
+      eyebrow="SHOP BY PRODUCT"
+      title={`Browse ${city.name} Rentals by Product`}
+      subtitle={`Tables, chairs, tents & more delivered to your ${city.name} venue.`}
+      slugs={city.categories}
+      citySlug={city.slug}
+      columns={4}
+      bg="white"
+    />
+  )}
 
   <!-- 5 · Neighborhoods — light (compact) ──────── -->
   <NeighborhoodTags

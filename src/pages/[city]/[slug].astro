@@ -1,0 +1,53 @@
+---
+// Unified city x (service | category) route. Astro matches routes by
+// pattern, not param name, so a single dynamic segment under /[city]/
+// must be handled by one file. This dispatcher builds paths from both
+// data sources and delegates rendering to the matching layout template.
+import { cities, type City } from "../../data/cities";
+import { services, type Service, getServiceBySlug } from "../../data/services";
+import { categories, type Category, getCategoryBySlug } from "../../data/categories";
+import CityServiceTemplate from "../../layouts/CityServiceTemplate.astro";
+import CityCategoryTemplate from "../../layouts/CityCategoryTemplate.astro";
+
+type ServicePath = { kind: "service"; city: City; service: Service };
+type CategoryPath = { kind: "category"; city: City; category: Category };
+
+export function getStaticPaths() {
+  const paths: {
+    params: { city: string; slug: string };
+    props: ServicePath | CategoryPath;
+  }[] = [];
+
+  for (const city of cities) {
+    for (const serviceSlug of city.services) {
+      const service = getServiceBySlug(serviceSlug);
+      if (service) {
+        paths.push({
+          params: { city: city.slug, slug: service.slug },
+          props: { kind: "service", city, service },
+        });
+      }
+    }
+    for (const categorySlug of city.categories) {
+      const category = getCategoryBySlug(categorySlug);
+      if (category && !category.hidden) {
+        paths.push({
+          params: { city: city.slug, slug: category.citySlug },
+          props: { kind: "category", city, category },
+        });
+      }
+    }
+  }
+
+  return paths;
+}
+
+type Props = ServicePath | CategoryPath;
+const props = Astro.props;
+---
+
+{props.kind === "service" ? (
+  <CityServiceTemplate city={props.city} service={props.service} />
+) : (
+  <CityCategoryTemplate city={props.city} category={props.category} />
+)}

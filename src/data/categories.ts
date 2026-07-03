@@ -109,6 +109,20 @@ export interface Category {
   faqs: CategoryFAQ[];
   gridCols?: 2 | 3 | 4;
   relatedServices: string[];
+  /** Slug used for city-level routes: /{city}/{citySlug}/ — separate from the
+   *  generic /rentals/{slug}/ slug so existing indexed URLs never change. */
+  citySlug: string;
+  /** Meta templates with {city} token for city+category money pages */
+  cityMeta: {
+    title: string;
+    description: string;
+  };
+  /** Headline template with {city} token */
+  cityHeadline: string;
+  /** Subheadline template with {city} token */
+  citySubheadline: string;
+  /** Intro template with {city} token */
+  cityIntro: string;
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -116,6 +130,17 @@ export interface Category {
 export const categories: Category[] = [
   {
     slug: "tables",
+    citySlug: "table-rentals",
+    cityMeta: {
+      title: "Table Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Rectangular, round & cocktail table rentals delivered to {city}. Free delivery, setup, and pickup with Kelari Party Rentals.",
+    },
+    cityHeadline: "Table Rentals in {city}",
+    citySubheadline:
+      "Rectangular, round & cocktail tables delivered and ready for your {city} event.",
+    cityIntro:
+      "Planning an event in {city}? Kelari Party Rentals delivers rectangular, round, and cocktail tables right to your venue — clean, ready to use, and picked up after your event. Whether you're hosting a backyard birthday, a graduation party at a local park, or a baby shower at home, we'll help you figure out the right table count and configuration for your {city} space and guest list.",
     name: "Tables",
     meta: {
       title: "Table Rentals in North County San Diego | Kelari Party Rentals",
@@ -229,6 +254,17 @@ export const categories: Category[] = [
   },
   {
     slug: "chairs",
+    citySlug: "chair-rentals",
+    cityMeta: {
+      title: "Chair Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Folding & Chiavari chair rentals delivered to {city}. Free delivery, setup, and pickup with Kelari Party Rentals.",
+    },
+    cityHeadline: "Chair Rentals in {city}",
+    citySubheadline:
+      "Folding & Chiavari chairs delivered to your {city} venue — clean and ready to use.",
+    cityIntro:
+      "Hosting an event in {city}? Kelari Party Rentals delivers folding and Chiavari chairs right to your venue. Standard folding chairs work great for casual backyard and park parties, while Chiavari chairs elevate showers, graduations, and milestone celebrations. We'll help you confirm the right count and style for your {city} event.",
     name: "Chairs",
     meta: {
       title: "Chair Rentals in North County San Diego | Kelari Party Rentals",
@@ -330,6 +366,17 @@ export const categories: Category[] = [
   },
   {
     slug: "tents-canopies",
+    citySlug: "tent-rentals",
+    cityMeta: {
+      title: "Tent & Canopy Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Pop-up canopies & frame tents delivered to {city} for outdoor events. Free delivery, setup guidance, and pickup.",
+    },
+    cityHeadline: "Tent & Canopy Rentals in {city}",
+    citySubheadline:
+      "Pop-up canopies and frame tents delivered to your {city} venue for shade and shelter.",
+    cityIntro:
+      "Outdoor events in {city} need shade — Kelari Party Rentals delivers pop-up canopies and frame tents in multiple sizes right to your venue. We'll walk you through assembly, weighting, and staking on-site, then return for same-day pickup. Tell us your {city} yard or park dimensions and guest count, and we'll recommend the right size.",
     name: "Tents & Canopies",
     gridCols: 4,
     meta: {
@@ -440,6 +487,17 @@ export const categories: Category[] = [
   },
   {
     slug: "linens",
+    citySlug: "linen-rentals",
+    cityMeta: {
+      title: "Linen Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Tablecloths in dozens of colors delivered to {city}. Freshly laundered and pressed, with free delivery and pickup.",
+    },
+    cityHeadline: "Linen Rentals in {city}",
+    citySubheadline:
+      "Freshly laundered tablecloths delivered to your {city} venue.",
+    cityIntro:
+      "A bare table looks like a company picnic — a tablecloth makes it look intentional. Kelari Party Rentals delivers freshly laundered and pressed tablecloths in dozens of colors to events across {city}. Share your color palette and we'll help you put together a coordinated linen package for your {city} celebration.",
     name: "Linens",
     meta: {
       title: "Linen Rentals in North County San Diego | Kelari Party Rentals",
@@ -665,6 +723,17 @@ export const categories: Category[] = [
   },
   {
     slug: "table-runners",
+    citySlug: "table-runner-rentals",
+    cityMeta: {
+      title: "Table Runner Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Satin & fabric table runners delivered to {city}. The perfect finishing touch, freshly pressed and ready to use.",
+    },
+    cityHeadline: "Table Runner Rentals in {city}",
+    citySubheadline:
+      "Satin & fabric runners delivered to your {city} venue — the perfect finishing touch.",
+    cityIntro:
+      "A table runner layered over a tablecloth is the easiest way to add color and texture to your {city} event. Kelari Party Rentals delivers freshly pressed runners in a range of colors, ready to coordinate with your linens, chairs, and décor for your {city} celebration.",
     name: "Table Runners",
     meta: {
       title: "Table Runner Rentals in North County San Diego | Kelari Party Rentals",
@@ -708,6 +777,17 @@ export const categories: Category[] = [
   },
     {
     slug: "decorations",
+    citySlug: "decoration-rentals",
+    cityMeta: {
+      title: "Decoration Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Centerpieces, arches, backdrops & accents arriving soon for {city} events.",
+    },
+    cityHeadline: "Decoration Rentals in {city}",
+    citySubheadline:
+      "Centerpieces, arches, backdrops & accents for your {city} celebration.",
+    cityIntro:
+      "Decoration rentals are arriving soon for {city} events — contact us to reserve early access for centerpieces, balloon arches, and backdrop frames.",
     name: "Decorations",
     comingSoon: true,
     hidden: true,
@@ -803,6 +883,17 @@ export const categories: Category[] = [
   },
   {
     slug: "marquee-letters",
+    citySlug: "marquee-letter-rentals",
+    cityMeta: {
+      title: "Marquee Letter Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Light-up marquee letters & numbers delivered to {city}. LOVE, BABY, GRAD, CHEERS & custom numbers 0-9.",
+    },
+    cityHeadline: "Marquee Letter Rentals in {city}",
+    citySubheadline:
+      "Light-up marquee letters delivered to your {city} celebration.",
+    cityIntro:
+      "Marquee letters are one of the most photographed pieces at any event. Kelari Party Rentals delivers warm Edison-bulb marquee letters and numbers to celebrations across {city}, fully tested and ready to place.",
     name: "Marquee Letters",
     meta: {
       title: "Marquee Letter Rentals in North County San Diego | Kelari Party Rentals",
@@ -910,6 +1001,17 @@ export const categories: Category[] = [
   },
   {
     slug: "add-ons",
+    citySlug: "party-add-on-rentals",
+    cityMeta: {
+      title: "Party Add-On Rentals in {city}, CA | Kelari Party Rentals",
+      description:
+        "Balloon arch stands, column kits & backdrop frames delivered to {city} events.",
+    },
+    cityHeadline: "Party Add-Ons in {city}",
+    citySubheadline:
+      "Balloon arch stands, column kits & backdrop frames delivered to your {city} event.",
+    cityIntro:
+      "Add-ons are the finishing pieces that take a standard setup to the next level. Kelari Party Rentals delivers balloon arch stands, column kits, and backdrop frames to events across {city}, ready for you to assemble and style.",
     name: "Add-Ons",
     meta: {
       title: "Party Add-On Rentals in North County San Diego | Kelari Party Rentals",
@@ -1020,4 +1122,14 @@ export function getCategoryBySlug(slug: string): Category | undefined {
 
 export function getAllCategorySlugs(): string[] {
   return categories.map((c) => c.slug);
+}
+
+/**
+ * Replace {city} token in a template string with the given city name.
+ * Mirrors services.ts's renderCityTemplate — kept as a separate export
+ * here (rather than importing across data files) to avoid a circular
+ * dependency between categories.ts and services.ts.
+ */
+export function renderCategoryCityTemplate(template: string, cityName: string): string {
+  return template.replace(/\{city\}/g, cityName);
 }
