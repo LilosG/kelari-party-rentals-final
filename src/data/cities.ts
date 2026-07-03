@@ -941,7 +941,7 @@ export const cities: City[] = [
       "birthday-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "San Marcos is full of families, and birthday parties here range from casual backyard gatherings in Twin Oaks to themed celebrations at Bradley Park and Richmar Park. Kelari Party Rentals delivers birthday party tables, chairs, canopies, and themed décor throughout San Marcos, handling delivery and pickup so parents can focus on the birthday kid. One Twin Oaks family recently celebrated their son's 9th birthday at Bradley Park with a canopy, tables, chairs, and a themed linen set — by the time guests arrived, the party was already set and waiting.",
+          "San Marcos is full of families, and birthday parties here range from casual backyard gatherings in Twin Oaks to themed celebrations at Bradley Park and Richmar Park. Kelari Party Rentals delivers birthday party tables, chairs, canopies, and themed décor throughout San Marcos. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, parents can focus on the birthday kid. One Twin Oaks family recently celebrated their son's 9th birthday at Bradley Park with a canopy, tables, chairs, and a themed linen set — by the time guests arrived, the party was already set and waiting.",
         localVenue:
           "Bradley Park and Richmar Park are San Marcos's most popular birthday party venues, with open lawn areas and picnic facilities suited for tent and table setups.",
         deliveryNote:
@@ -962,7 +962,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "San Marcos backyards are built for entertaining. San Elijo Hills homes sit on well-sized lots with room for tent setups, and Twin Oaks Valley properties often have expansive yards perfect for large family gatherings. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to San Marcos homes and handles delivery and pickup. One San Elijo Hills family hosted a 55-person birthday bash in their backyard; we delivered a 20×20 frame tent, six round tables, 55 folding chairs, and string lights well before lunch.",
+          "San Marcos backyards are built for entertaining. San Elijo Hills homes sit on well-sized lots with room for tent setups, and Twin Oaks Valley properties often have expansive yards perfect for large family gatherings. Kelari Party Rentals delivers tables, chairs, tents, lighting, and décor to San Marcos homes, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. One San Elijo Hills family hosted a 55-person birthday bash in their backyard; we delivered a 20×20 frame tent, six round tables, 55 folding chairs, and string lights well before lunch.",
         localVenue:
           "San Elijo Hills and Twin Oaks Valley neighborhoods have generously sized backyards that accommodate full tent setups and large guest counts.",
         deliveryNote:
@@ -1034,7 +1034,7 @@ export const cities: City[] = [
           {
             question: "Can you create an elegant engagement party setup in a San Marcos backyard?",
             answer:
-              "Yes — string lights, round tables with floor-length linens, Chiavari chairs, and floral centerpieces are our most popular combination for San Marcos engagement parties. We handle delivery and pickup after your event.",
+              "Yes — string lights, round tables with floor-length linens, Chiavari chairs, and floral centerpieces are our most popular combination for San Marcos engagement parties. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
           },
           {
             question: "Do you deliver engagement party rentals to Discovery Hills or San Elijo Hills in San Marcos?",
