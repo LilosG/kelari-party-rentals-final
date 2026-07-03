@@ -1425,7 +1425,7 @@ export const cities: City[] = [
       {
         question: "Can you deliver to La Costa parks and community spaces?",
         answer:
-          "Absolutely. We regularly deliver to La Costa Canyon Park, Alga Norte, Stagecoach Park, and other nearby venues. Full delivery and pickup included.",
+          "Absolutely. We regularly deliver to La Costa Canyon Park, Alga Norte, Stagecoach Park, and other nearby venues. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
       {
         question: "How early should I book party rentals in La Costa?",
@@ -1535,7 +1535,7 @@ export const cities: City[] = [
           {
             question: "Can you handle a large graduation party in La Costa?",
             answer:
-              "Yes — La Costa properties often have space for 20×20 or 20×30 tents and 60–100+ guests. We handle full delivery and pickup so the family can focus on celebrating the graduate.",
+              "Yes — La Costa properties often have space for 20×20 or 20×30 tents and 60–100+ guests. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, the family can focus on celebrating the graduate.",
           },
           {
             question: "How early should I book graduation party rentals for a La Costa Canyon High grad party?",
