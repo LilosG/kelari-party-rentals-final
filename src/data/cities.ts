@@ -1646,7 +1646,7 @@ export const cities: City[] = [
     subheadline:
       "Tables, chairs, tents & décor delivered to your Olde Carlsbad venue — stress-free.",
     intro:
-      "Olde Carlsbad's charming neighborhoods and tree-lined streets are the perfect backdrop for memorable celebrations. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor directly to your Olde Carlsbad home or venue — we handle delivery and pickup so you can focus on your guests.",
+      "Olde Carlsbad's charming neighborhoods and tree-lined streets are the perfect backdrop for memorable celebrations. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor directly to your Olde Carlsbad home or venue. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, you can focus on your guests.",
     neighborhoods: [
       "Carlsbad Village",
       "Harding Street",
@@ -1687,7 +1687,7 @@ export const cities: City[] = [
       {
         question: "Can rentals be delivered to Holiday Park or Hosp Grove?",
         answer:
-          "Absolutely. We regularly deliver to Holiday Park, Hosp Grove, and Pine Avenue Park. We handle delivery and pickup — you just show up and celebrate.",
+          "Absolutely. We regularly deliver to Holiday Park, Hosp Grove, and Pine Avenue Park. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
       {
         question: "What party rental items are available in Olde Carlsbad?",
@@ -1713,7 +1713,7 @@ export const cities: City[] = [
           {
             question: "Can you deliver party rentals to the Carlsbad Village area in Olde Carlsbad?",
             answer:
-              "Yes — the Village area is one of our most-requested Olde Carlsbad delivery destinations. We deliver tables, chairs, tents, and décor and handle delivery and pickup.",
+              "Yes — the Village area is one of our most-requested Olde Carlsbad delivery destinations. We deliver tables, chairs, tents, and décor, with delivery available for an additional fee or free pickup at our Carlsbad warehouse.",
           },
           {
             question: "Can you fit a party tent in a compact Olde Carlsbad backyard?",
@@ -1830,7 +1830,7 @@ export const cities: City[] = [
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Holiday Park is the heart of Olde Carlsbad's outdoor social life — a beautiful community park within walking distance of the Village, with mature oak trees, open lawns, and a beloved local atmosphere. Whether you're reserving the main lawn for a big family birthday, setting up a shaded gathering under the oaks, or celebrating at Hosp Grove Park nearby, Kelari Party Rentals delivers tables, chairs, canopies, and décor and handles delivery and pickup. Holiday Park's walkability makes it a favorite for Village guests who can stroll over. One family hosted a 45-person park birthday at Holiday Park; we delivered a 20×20 canopy, five round tables, and 45 chairs under the oaks an hour before the party started.",
+          "Holiday Park is the heart of Olde Carlsbad's outdoor social life — a beautiful community park within walking distance of the Village, with mature oak trees, open lawns, and a beloved local atmosphere. Whether you're reserving the main lawn for a big family birthday, setting up a shaded gathering under the oaks, or celebrating at Hosp Grove Park nearby, Kelari Party Rentals delivers tables, chairs, canopies, and décor, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. Holiday Park's walkability makes it a favorite for Village guests who can stroll over. One family hosted a 45-person park birthday at Holiday Park; we delivered a 20×20 canopy, five round tables, and 45 chairs under the oaks an hour before the party started.",
         localVenue:
           "Holiday Park is Olde Carlsbad's most beloved park venue, with open lawns and mature trees that create natural shade and character for outdoor party setups.",
         deliveryNote:
