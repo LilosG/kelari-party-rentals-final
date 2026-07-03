@@ -1954,7 +1954,7 @@ export const cities: City[] = [
       {
         question: "What parks and venues in Aviara do you deliver to?",
         answer:
-          "We deliver to Aviara Community Park, Poinsettia Park, Alga Norte, and private homes throughout the Aviara community. We handle delivery and pickup after your event.",
+          "We deliver to Aviara Community Park, Poinsettia Park, Alga Norte, and private homes throughout the Aviara community. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
       {
         question: "How far in advance should I book for an Aviara event?",
@@ -2008,7 +2008,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Aviara estate backyards are some of the finest outdoor party settings in all of North County San Diego. With luxury homes, designer landscaping, and ocean or Batiquitos Lagoon views from the upper community, Aviara backyards reward an elevated rental package. Kelari Party Rentals delivers frame tents, Chiavari chairs, premium linens, ambient lighting, and custom décor to Aviara properties and handles delivery and pickup. We've worked in Aviara at Cabrillo, Aviara Point, and Pacific Coast Estates — the spacious, well-maintained lots are a joy to work with. One Pacific Coast Estates family hosted an outdoor dinner party for 80 guests; we delivered a 20×30 frame tent, nine round tables, Chiavari chairs, floor-length linens, and café lights — the backyard looked like a private luxury event venue.",
+          "Aviara estate backyards are some of the finest outdoor party settings in all of North County San Diego. With luxury homes, designer landscaping, and ocean or Batiquitos Lagoon views from the upper community, Aviara backyards reward an elevated rental package. Kelari Party Rentals delivers frame tents, Chiavari chairs, premium linens, ambient lighting, and custom décor to Aviara properties, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. We've worked in Aviara at Cabrillo, Aviara Point, and Pacific Coast Estates — the spacious, well-maintained lots are a joy to work with. One Pacific Coast Estates family hosted an outdoor dinner party for 80 guests; we delivered a 20×30 frame tent, nine round tables, Chiavari chairs, floor-length linens, and café lights — the backyard looked like a private luxury event venue.",
         localVenue:
           "Estate backyards throughout Aviara Oaks, Aviara Point, and Pacific Coast Estates provide luxury-level outdoor settings for Aviara's most memorable backyard celebrations.",
         deliveryNote:
@@ -2059,7 +2059,7 @@ export const cities: City[] = [
           {
             question: "Can you set up a large graduation party in an Aviara estate backyard?",
             answer:
-              "Yes — Aviara's spacious lots are among our most tent-friendly delivery sites. We handle full delivery and pickup for graduation parties of any scale so the family can focus on celebrating.",
+              "Yes — Aviara's spacious lots are among our most tent-friendly delivery sites. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, the family can focus on celebrating.",
           },
           {
             question: "Do you deliver graduation party rentals to Aviara Community Park?",
@@ -2092,7 +2092,7 @@ export const cities: City[] = [
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Aviara Community Park is a gem of a venue — beautifully maintained, spacious, and set within the community's elegant master-planned surroundings. Whether you're planning a birthday party, family reunion, or community celebration, the park's open lawns accommodate full tent setups and groups of all sizes. Alga Norte Community Park is nearby for even larger gatherings, and the Batiquitos Lagoon trail adjacency gives the whole area a serene, natural character. Kelari Party Rentals delivers tables, chairs, canopies, and décor to Aviara Community Park and nearby venues, handling delivery and pickup. One family reserved the main lawn for a 50-person birthday celebration; we delivered two 10×20 canopies, five round tables, 50 chairs, and linens — party-ready well before the first guests arrived.",
+          "Aviara Community Park is a gem of a venue — beautifully maintained, spacious, and set within the community's elegant master-planned surroundings. Whether you're planning a birthday party, family reunion, or community celebration, the park's open lawns accommodate full tent setups and groups of all sizes. Alga Norte Community Park is nearby for even larger gatherings, and the Batiquitos Lagoon trail adjacency gives the whole area a serene, natural character. Kelari Party Rentals delivers tables, chairs, canopies, and décor to Aviara Community Park and nearby venues, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. One family reserved the main lawn for a 50-person birthday celebration; we delivered two 10×20 canopies, five round tables, 50 chairs, and linens — party-ready well before the first guests arrived.",
         localVenue:
           "Aviara Community Park is Aviara's primary outdoor party venue, with beautiful maintained lawns and a community park setting that accommodates events of all sizes.",
         deliveryNote:
