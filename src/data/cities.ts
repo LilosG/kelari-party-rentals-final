@@ -2170,7 +2170,7 @@ export const cities: City[] = [
     subheadline:
       "Tables, chairs, tents & décor delivered to your Vista venue — stress-free.",
     intro:
-      "From backyard celebrations in Shadowridge to park parties at Brengle Terrace, Kelari Party Rentals is Vista's full-service source for tables, chairs, tents, linens, and décor. We deliver and pick up so you can enjoy every moment with your guests.",
+      "From backyard celebrations in Shadowridge to park parties at Brengle Terrace, Kelari Party Rentals is Vista's full-service source for tables, chairs, tents, linens, and décor. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, you can enjoy every moment with your guests.",
     neighborhoods: [
       "Shadowridge",
       "Buena Creek",
@@ -2213,7 +2213,7 @@ export const cities: City[] = [
       {
         question: "Can I rent tables and chairs for a party at a Vista park?",
         answer:
-          "Absolutely. We regularly deliver to Brengle Terrace Park, Guajome Regional Park, Vista Sports Park, and other Vista parks. We handle delivery and pickup so you can enjoy the event.",
+          "Absolutely. We regularly deliver to Brengle Terrace Park, Guajome Regional Park, Vista Sports Park, and other Vista parks. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
       {
         question: "How far in advance should I book party rentals in Vista?",
@@ -2239,7 +2239,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver party rentals to Shadowridge in Vista?",
             answer:
-              "Yes — Shadowridge is one of our most-requested Vista delivery neighborhoods. We deliver tables, chairs, tents, and décor and handle delivery and pickup.",
+              "Yes — Shadowridge is one of our most-requested Vista delivery neighborhoods. We deliver tables, chairs, tents, and décor, with delivery available for an additional fee or free pickup at our Carlsbad warehouse.",
           },
           {
             question: "What's a typical party rental package for a large Vista family gathering?",
@@ -2272,7 +2272,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Vista's established neighborhoods — especially Shadowridge — are known for larger-lot homes that make excellent backyard party venues. Multi-generational gatherings and community celebrations happen regularly in Vista backyards, often with 50 to 100+ guests. Kelari Party Rentals delivers frame tents, tables, chairs, lighting, and décor to Vista homes and handles delivery and pickup. One Shadowridge family hosted a 90-person backyard barbecue for a family reunion; we delivered a 30×30 tent, 10 round tables, 90 folding chairs, and café lights — ready before the food hit the grill.",
+          "Vista's established neighborhoods — especially Shadowridge — are known for larger-lot homes that make excellent backyard party venues. Multi-generational gatherings and community celebrations happen regularly in Vista backyards, often with 50 to 100+ guests. Kelari Party Rentals delivers frame tents, tables, chairs, lighting, and décor to Vista homes, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. One Shadowridge family hosted a 90-person backyard barbecue for a family reunion; we delivered a 30×30 tent, 10 round tables, 90 folding chairs, and café lights — ready before the food hit the grill.",
         localVenue:
           "Shadowridge is Vista's top neighborhood for large backyard party rentals, with established lot sizes that comfortably accommodate full frame tent setups.",
         deliveryNote:
@@ -2286,7 +2286,7 @@ export const cities: City[] = [
           {
             question: "Do you deliver backyard party rentals to Rancho Buena Vista in Vista?",
             answer:
-              "Yes — Rancho Buena Vista is a frequent delivery destination. We handle delivery and pickup and are experienced with Vista's varied lot sizes.",
+              "Yes — Rancho Buena Vista is a frequent delivery destination. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — we're experienced with Vista's varied lot sizes either way.",
           },
         ],
       },
@@ -2323,12 +2323,12 @@ export const cities: City[] = [
           {
             question: "Can you set up a large graduation party in a Vista backyard?",
             answer:
-              "Yes — Shadowridge and Rancho Buena Vista have large enough lots for multi-tent graduation setups. We handle full delivery and pickup so the family can enjoy the celebration.",
+              "Yes — Shadowridge and Rancho Buena Vista have large enough lots for multi-tent graduation setups. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, the family can enjoy the celebration.",
           },
           {
             question: "Do you deliver graduation party rentals to Brengle Terrace Park in Vista?",
             answer:
-              "Absolutely. Brengle Terrace Park is a great venue for larger Vista graduation gatherings. We coordinate with your park reservation and handle delivery and pickup.",
+              "Absolutely. Brengle Terrace Park is a great venue for larger Vista graduation gatherings. We coordinate with your park reservation, and delivery is available for an additional fee or free pickup at our Carlsbad warehouse.",
           },
         ],
       },
@@ -2349,14 +2349,14 @@ export const cities: City[] = [
           {
             question: "Do you deliver engagement party rentals to Shadowridge in Vista?",
             answer:
-              "Yes — Shadowridge is one of our most-requested Vista delivery neighborhoods for engagement parties. We handle delivery and pickup so the hosts can focus on their guests.",
+              "Yes — Shadowridge is one of our most-requested Vista delivery neighborhoods for engagement parties. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, the hosts can focus on their guests.",
           },
         ],
       },
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Vista's parks are a cornerstone of the community's social life. Brengle Terrace Park is the go-to venue for large outdoor events — its wide open lawns and easy parking make it ideal for tent setups and gatherings of 50+ guests. Bobier Vista Park is a neighborhood favorite for more intimate events, and Guajome Regional Park handles the largest gatherings. Kelari Party Rentals delivers tables, chairs, canopies, and décor to all Vista parks and handles delivery and pickup. One family used the main lawn at Brengle Terrace Park for a 70-person birthday party; we delivered two canopies, seven tables, 70 chairs, and linens — party-ready 90 minutes before guests arrived.",
+          "Vista's parks are a cornerstone of the community's social life. Brengle Terrace Park is the go-to venue for large outdoor events — its wide open lawns and easy parking make it ideal for tent setups and gatherings of 50+ guests. Bobier Vista Park is a neighborhood favorite for more intimate events, and Guajome Regional Park handles the largest gatherings. Kelari Party Rentals delivers tables, chairs, canopies, and décor to all Vista parks, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. One family used the main lawn at Brengle Terrace Park for a 70-person birthday party; we delivered two canopies, seven tables, 70 chairs, and linens — party-ready 90 minutes before guests arrived.",
         localVenue:
           "Brengle Terrace Park is Vista's premier outdoor party venue, with ample lawn space and parking to support full tent and table setups.",
         deliveryNote:
