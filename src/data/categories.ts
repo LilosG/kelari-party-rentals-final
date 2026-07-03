@@ -491,7 +491,7 @@ export const categories: Category[] = [
     cityMeta: {
       title: "Linen Rentals in {city}, CA | Kelari Party Rentals",
       description:
-        "Tablecloths in dozens of colors delivered to {city}. Freshly laundered and pressed, with free delivery and pickup.",
+        "Tablecloths in dozens of colors delivered to {city}. Freshly laundered and pressed, with delivery available for an additional fee or free pickup at our Carlsbad warehouse.",
     },
     cityHeadline: "Linen Rentals in {city}",
     citySubheadline:
