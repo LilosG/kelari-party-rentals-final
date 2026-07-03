@@ -19,6 +19,10 @@ export interface Props {
   subtitle?: string;
   bg?: "white" | "light" | "dark" | "pink-light";
   padding?: "default" | "compact" | "featured" | "none";
+  /** Adds a trailing "Browse All Rentals" tile linking to /rentals/.
+   *  Defaults to true -- escape hatch for categories not yet enabled for
+   *  this city (e.g. decorations, once live), and rounds out the grid. */
+  showBrowseAll?: boolean;
 }
 
 const {
@@ -30,6 +34,7 @@ const {
   subtitle,
   bg = "white",
   padding = "default",
+  showBrowseAll = true,
 } = Astro.props;
 
 const isDark = bg === "dark";
@@ -44,6 +49,16 @@ const cards = slugs
     href: `/${citySlug}/${c.citySlug}/`,
     image: c.heroImage?.image ?? heroParty,
   }));
+
+if (showBrowseAll) {
+  cards.push({
+    icon: "",
+    name: "Browse All Rentals",
+    description: "See every rental category we offer, including new arrivals.",
+    href: "/rentals/",
+    image: heroParty,
+  });
+}
 
 const colClass = {
   2: "grid-cols-1 sm:grid-cols-2",

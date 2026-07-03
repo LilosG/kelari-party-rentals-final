@@ -134,18 +134,7 @@ const schema = [
     </div>
   </Section>
 
-  <!-- 4 · Services — light ─────────────────────── -->
-  <ServiceGrid
-    eyebrow="OUR SERVICES"
-    title={`Party Rental Services in ${city.name}`}
-    subtitle={`Professional delivery available throughout ${city.name} and surrounding North County communities.`}
-    slugs={city.services}
-    citySlug={city.slug}
-    columns={4}
-    bg="light"
-  />
-
-  <!-- 4b · Products — white ──────────────────── -->
+  <!-- 4 · Products — light ─────────────────────── -->
   {city.categories.length > 0 && (
     <CityCategoryGrid
       eyebrow="SHOP BY PRODUCT"
@@ -154,9 +143,20 @@ const schema = [
       slugs={city.categories}
       citySlug={city.slug}
       columns={4}
-      bg="white"
+      bg="light"
     />
   )}
+
+  <!-- 4b · Services — white ─────────────────────── -->
+  <ServiceGrid
+    eyebrow="OUR SERVICES"
+    title={`Party Rental Services in ${city.name}`}
+    subtitle={`Professional delivery available throughout ${city.name} and surrounding North County communities.`}
+    slugs={city.services}
+    citySlug={city.slug}
+    columns={4}
+    bg="white"
+  />
 
   <!-- 5 · Neighborhoods — light (compact) ──────── -->
   <NeighborhoodTags

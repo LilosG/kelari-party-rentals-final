@@ -52,7 +52,7 @@ export interface City {
 export const cities: City[] = [
   {
     slug: "carlsbad",
-    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners", "marquee-letters", "add-ons"],
     name: "Carlsbad",
     county: "San Diego",
     state: "CA",
@@ -318,7 +318,7 @@ export const cities: City[] = [
   },
   {
     slug: "encinitas",
-    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners", "marquee-letters", "add-ons"],
     name: "Encinitas",
     county: "San Diego",
     state: "CA",
@@ -581,7 +581,7 @@ export const cities: City[] = [
   },
   {
     slug: "oceanside",
-    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners", "marquee-letters", "add-ons"],
     name: "Oceanside",
     county: "San Diego",
     state: "CA",
@@ -846,7 +846,7 @@ export const cities: City[] = [
   },
   {
     slug: "san-marcos",
-    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners", "marquee-letters", "add-ons"],
     name: "San Marcos",
     county: "San Diego",
     state: "CA",
@@ -2156,7 +2156,7 @@ export const cities: City[] = [
   },
   {
     slug: "vista",
-    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners"],
+    categories: ["tables", "chairs", "tents-canopies", "linens", "table-runners", "marquee-letters", "add-ons"],
     name: "Vista",
     county: "San Diego",
     state: "CA",
