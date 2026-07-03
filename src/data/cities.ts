@@ -332,7 +332,7 @@ export const cities: City[] = [
     subheadline:
       "Tables, chairs, tents & décor delivered to your Encinitas venue — stress-free.",
     intro:
-      "Whether you're hosting a laid-back gathering in Leucadia or an elegant celebration in Olivenhain, Kelari Party Rentals brings everything you need to your door. Tables, chairs, tents, linens, and décor — delivered and picked up.",
+      "Whether you're hosting a laid-back gathering in Leucadia or an elegant celebration in Olivenhain, Kelari Party Rentals brings everything you need to your door. Tables, chairs, tents, linens, and décor — delivery available for an additional fee, or free pickup at our Carlsbad warehouse.",
     neighborhoods: [
       "Leucadia",
       "Cardiff-by-the-Sea",
@@ -426,14 +426,14 @@ export const cities: City[] = [
           {
             question: "Do you deliver kids' birthday party rentals to Encinitas parks?",
             answer:
-              "Yes — Encinitas Community Park and Cottonwood Creek Park are popular delivery locations for kids' birthdays. We handle delivery and pickup so you can focus on the birthday kid.",
+              "Yes — Encinitas Community Park and Cottonwood Creek Park are popular delivery locations for kids' birthdays. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
           },
         ],
       },
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Encinitas backyards range from cozy Leucadia cottage gardens to expansive Olivenhain properties with room for a full tent setup. Kelari Party Rentals brings the right equipment for both. Whether you need a compact 10×10 shade canopy and a couple of tables for an intimate gathering, or a 30×30 frame tent with café lights for a Saturday night celebration, we deliver and pick up so you never have to borrow a folding table from a neighbor. One Olivenhain couple hosted their annual garden party for 80 guests with a frame tent, eight round tables, Chiavari chairs, and soft white linens — guests kept asking who they'd hired as the event planner.",
+          "Encinitas backyards range from cozy Leucadia cottage gardens to expansive Olivenhain properties with room for a full tent setup. Kelari Party Rentals brings the right equipment for both. Whether you need a compact 10×10 shade canopy and a couple of tables for an intimate gathering, or a 30×30 frame tent with café lights for a Saturday night celebration, delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, you'll never have to borrow a folding table from a neighbor. One Olivenhain couple hosted their annual garden party for 80 guests with a frame tent, eight round tables, Chiavari chairs, and soft white linens — guests kept asking who they'd hired as the event planner.",
         localVenue:
           "Olivenhain is Encinitas's top neighborhood for large backyard party rentals, with spacious lots that can accommodate full frame tent setups.",
         deliveryNote:
@@ -454,7 +454,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Encinitas has a strong wellness and community culture, and baby showers here tend to be heartfelt, beautifully styled, and grounded in that coastal-bohemian spirit. Whether the shower is hosted in a New Encinitas home or at Encinitas Community Park, Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor to set the right tone. We handle delivery and pickup, and walk you through the delivery, so the host can be fully present. One New Encinitas host threw a garden-style baby shower for 35 guests in her backyard; we delivered sage-and-blush linens, floral centerpieces, and draped Chiavari chairs that had every guest asking who did the styling.",
+          "Encinitas has a strong wellness and community culture, and baby showers here tend to be heartfelt, beautifully styled, and grounded in that coastal-bohemian spirit. Whether the shower is hosted in a New Encinitas home or at Encinitas Community Park, Kelari Party Rentals provides elegant tables, linens, centerpieces, and décor to set the right tone. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, we'll walk you through setup so the host can be fully present. One New Encinitas host threw a garden-style baby shower for 35 guests in her backyard; we delivered sage-and-blush linens, floral centerpieces, and draped Chiavari chairs that had every guest asking who did the styling.",
         localVenue:
           "Backyard gardens in New Encinitas and Olivenhain are popular baby shower venues, with Encinitas Community Park as a parkside alternative for larger gatherings.",
         deliveryNote:
