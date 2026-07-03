@@ -639,7 +639,7 @@ export const cities: City[] = [
       {
         question: "Can I rent party supplies for an event at an Oceanside park?",
         answer:
-          "Absolutely. We deliver to Buddy Todd Park, Guajome Regional Park, Buccaneer Park, and other Oceanside parks. We handle delivery and pickup for you.",
+          "Absolutely. We deliver to Buddy Todd Park, Guajome Regional Park, Buccaneer Park, and other Oceanside parks. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
       {
         question: "What's the delivery range from your Carlsbad location to Oceanside?",
@@ -649,7 +649,7 @@ export const cities: City[] = [
       {
         question: "Do you rent tents and canopies for Oceanside backyard parties?",
         answer:
-          "Yes — we carry pop-up canopies and frame tents in multiple sizes, perfect for backyard parties in Oceanside. We deliver and pick up after your event.",
+          "Yes — we carry pop-up canopies and frame tents in multiple sizes, perfect for backyard parties in Oceanside. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
     ],
     cityServiceContent: {
@@ -677,7 +677,7 @@ export const cities: City[] = [
       "birthday-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Birthday parties are a big deal in Oceanside — the city's diverse, close-knit community turns birthdays into neighborhood events, from first-birthday bashes to milestone adult celebrations. Kids' parties at Buddy Todd Park and Mance Buchanon Park are a local staple, while Fire Mountain backyards often host larger adult gatherings. Kelari Party Rentals delivers birthday party tables, chairs, tents, and décor throughout Oceanside with delivery and pickup included. One Fire Mountain family celebrated their daughter's 10th birthday at Buddy Todd Park with a canopy, four tables, chairs, and a balloon arch — the birthday girl said it was the best day ever.",
+          "Birthday parties are a big deal in Oceanside — the city's diverse, close-knit community turns birthdays into neighborhood events, from first-birthday bashes to milestone adult celebrations. Kids' parties at Buddy Todd Park and Mance Buchanon Park are a local staple, while Fire Mountain backyards often host larger adult gatherings. Kelari Party Rentals delivers birthday party tables, chairs, tents, and décor throughout Oceanside, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. One Fire Mountain family celebrated their daughter's 10th birthday at Buddy Todd Park with a canopy, four tables, chairs, and a balloon arch — the birthday girl said it was the best day ever.",
         localVenue:
           "Buddy Todd Park and Luiseno Park are Oceanside's most popular venues for kids' birthday parties, with open lawn areas and easy parking for delivery.",
         deliveryNote:
@@ -698,7 +698,7 @@ export const cities: City[] = [
       "backyard-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Oceanside backyards host some of the most spirited celebrations in North County — military homecoming parties in Jeffries Ranch, quinceañeras in Rancho del Oro, block parties in Fire Mountain. Whatever the occasion, Kelari Party Rentals delivers the tables, chairs, tents, and décor to make any outdoor space the right venue. Our team handles delivery and pickup so you can focus entirely on your guests. One Jeffries Ranch family hosted a surprise military homecoming for 70 guests in their backyard; we delivered a 20×30 frame tent, eight round tables, and navy-and-gold linens three hours before the guest of honor arrived.",
+          "Oceanside backyards host some of the most spirited celebrations in North County — military homecoming parties in Jeffries Ranch, quinceañeras in Rancho del Oro, block parties in Fire Mountain. Whatever the occasion, Kelari Party Rentals delivers the tables, chairs, tents, and décor to make any outdoor space the right venue. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse. One Jeffries Ranch family hosted a surprise military homecoming for 70 guests in their backyard; we delivered a 20×30 frame tent, eight round tables, and navy-and-gold linens three hours before the guest of honor arrived.",
         localVenue:
           "Rancho del Oro and Jeffries Ranch neighborhoods offer generous backyard spaces well-suited for tent rentals and large party setups.",
         deliveryNote:
@@ -719,7 +719,7 @@ export const cities: City[] = [
       "baby-shower-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Baby showers in Oceanside bring together families from across the city's diverse neighborhoods, from South Oceanside homes to Rancho del Oro backyard patios. The style varies but the warmth is constant. Kelari Party Rentals delivers elegant tables, linens, centerpieces, and seating for baby showers of every size — and handles delivery and pickup so the host can focus on celebrating the mom-to-be. One South Oceanside host threw a 45-person baby shower in her backyard; we delivered blush linens, tiered floral centerpieces, and Chiavari chairs that matched her pink-and-gold theme perfectly.",
+          "Baby showers in Oceanside bring together families from across the city's diverse neighborhoods, from South Oceanside homes to Rancho del Oro backyard patios. The style varies but the warmth is constant. Kelari Party Rentals delivers elegant tables, linens, centerpieces, and seating for baby showers of every size. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, the host can focus on celebrating the mom-to-be. One South Oceanside host threw a 45-person baby shower in her backyard; we delivered blush linens, tiered floral centerpieces, and Chiavari chairs that matched her pink-and-gold theme perfectly.",
         localVenue:
           "Backyard patios in South Oceanside and Rancho del Oro are popular baby shower venues with easy access for delivery and setup.",
         deliveryNote:
@@ -782,7 +782,7 @@ export const cities: City[] = [
       "park-party-rentals": {
         // TODO: replace with real customer story
         intro:
-          "Oceanside is home to some of North County's largest and most beautiful parks, and they're a natural gathering place for the city's community-minded residents. Guajome Regional Park offers shaded pavilions and open lawns for events of 80+ guests, while Buddy Todd Park and Luiseno Park are perfect for family-sized birthday and reunion setups. Kelari Party Rentals delivers tables, chairs, tents, and décor to all Oceanside parks — full delivery and pickup included. One family reunion at Guajome Regional Park brought together 80 relatives; we delivered three canopies, eight banquet tables, and 80 chairs for a full-day celebration.",
+          "Oceanside is home to some of North County's largest and most beautiful parks, and they're a natural gathering place for the city's community-minded residents. Guajome Regional Park offers shaded pavilions and open lawns for events of 80+ guests, while Buddy Todd Park and Luiseno Park are perfect for family-sized birthday and reunion setups. Kelari Party Rentals delivers tables, chairs, tents, and décor to all Oceanside parks, with delivery available for an additional fee or free pickup at our Carlsbad warehouse. One family reunion at Guajome Regional Park brought together 80 relatives; we delivered three canopies, eight banquet tables, and 80 chairs for a full-day celebration.",
         localVenue:
           "Guajome Regional Park is Oceanside's top park venue for large events, with pavilion facilities and open lawns that accommodate full tent and table setups.",
         deliveryNote:
