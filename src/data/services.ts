@@ -40,6 +40,10 @@ export interface Service {
   heroImage?: HeroImageConfig;
   whatsIncluded: ServiceIncludedItem[];
   faqs: ServiceFAQ[];
+  /** Excludes this service from ServiceGrid card layouts. The page itself
+   *  (/services/{slug}/, /{city}/{slug}/) is unaffected and stays fully
+   *  indexable -- mirrors Category.hidden in categories.ts. */
+  hidden?: boolean;
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -773,6 +777,7 @@ export const services: Service[] = [
   },
   {
     slug: "quinceanera-rentals",
+    hidden: true,
     name: "Quinceañera Rentals",
     shortName: "Quinceañera Rentals",
     meta: {
