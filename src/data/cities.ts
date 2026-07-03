@@ -1124,7 +1124,7 @@ export const cities: City[] = [
     subheadline:
       "Tables, chairs, tents & décor delivered to your Bressi Ranch venue — stress-free.",
     intro:
-      "Bressi Ranch's beautiful planned community is one of Carlsbad's most popular spots for backyard celebrations and neighborhood gatherings. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your Bressi Ranch home — we deliver and pick up so you can enjoy every moment.",
+      "Bressi Ranch's beautiful planned community is one of Carlsbad's most popular spots for backyard celebrations and neighborhood gatherings. Kelari Party Rentals delivers tables, chairs, tents, linens, and décor right to your Bressi Ranch home. Delivery is available for an additional fee, or you can pick up free at our Carlsbad warehouse — either way, you can enjoy every moment.",
     neighborhoods: [
       "Bressi Ranch Village",
       "Bressi Ranch West",
@@ -1163,7 +1163,7 @@ export const cities: City[] = [
       {
         question: "Can rentals be delivered to Bressi Ranch Community Park?",
         answer:
-          "Absolutely. We regularly deliver to Bressi Ranch Community Park and nearby Alga Norte and Poinsettia Park. We handle delivery and pickup so you can focus on your guests.",
+          "Absolutely. We regularly deliver to Bressi Ranch Community Park and nearby Alga Norte and Poinsettia Park. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
       },
       {
         question: "What party rental items are available for Bressi Ranch events?",
