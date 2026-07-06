@@ -56,7 +56,7 @@ export const services: Service[] = [
     meta: {
       title: "Party Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Tables, chairs, tents, linens & décor for any celebration. Serving Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Tables, chairs, tents, linens & décor for any celebration. Serving Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     cityMeta: {
       title: "{city} Party Rentals – Packages & Pricing | Kelari Party Rentals",
@@ -122,7 +122,7 @@ export const services: Service[] = [
       {
         question: "Is delivery and pickup included?",
         answer:
-          "We deliver across North County San Diego — Carlsbad, Encinitas, Oceanside, San Marcos, and surrounding communities. Delivery is priced by distance. Complimentary pickup is available at our Carlsbad warehouse.",
+          "We deliver across North County San Diego — Carlsbad, Encinitas, Oceanside, San Marcos, Vista, and surrounding communities. Delivery is priced by distance. Complimentary pickup is available at our Carlsbad warehouse.",
       },
       {
         question: "How far in advance should I book party rentals?",
@@ -132,7 +132,7 @@ export const services: Service[] = [
       {
         question: "What areas do you serve?",
         answer:
-          "We serve Carlsbad, Encinitas, Oceanside, and San Marcos, plus surrounding neighborhoods throughout North County San Diego.",
+          "We serve Carlsbad, Encinitas, Oceanside, San Marcos, and Vista, plus surrounding neighborhoods throughout North County San Diego.",
       },
       {
         question: "How do I get a quote?",
@@ -413,7 +413,7 @@ export const services: Service[] = [
       {
         question: "Do you deliver baby shower rentals to private homes in North County San Diego?",
         answer:
-          "Yes — home deliveries are very common. We deliver to addresses throughout Carlsbad, Encinitas, Oceanside, and San Marcos and walk you through everything delivered so the host can focus on guests.",
+          "Yes — home deliveries are very common. We deliver to addresses throughout Carlsbad, Encinitas, Oceanside, San Marcos, and Vista and walk you through everything delivered so the host can focus on guests.",
       },
     ],
   },
@@ -500,7 +500,7 @@ export const services: Service[] = [
       {
         question: "Do you deliver graduation rentals to parks and backyards?",
         answer:
-          "We deliver to both. Parks are popular for graduation parties in Carlsbad, Encinitas, Oceanside, and San Marcos. Just confirm your park reservation before booking and we'll coordinate delivery around your time slot.",
+          "We deliver to both. Parks are popular for graduation parties in Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Just confirm your park reservation before booking and we'll coordinate delivery around your time slot.",
       },
       {
         question: "What's the best way to plan a graduation party rental?",
@@ -663,7 +663,7 @@ export const services: Service[] = [
       {
         question: "Which parks do you deliver to?",
         answer:
-          "We deliver to all public parks in Carlsbad, Encinitas, Oceanside, and San Marcos. Contact us with your park location and we'll confirm logistics.",
+          "We deliver to all public parks in Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Contact us with your park location and we'll confirm logistics.",
       },
       {
         question: "Do I need a park permit for rentals?",
@@ -678,7 +678,7 @@ export const services: Service[] = [
       {
         question: "What are some popular parks for parties in North County San Diego?",
         answer:
-          "Popular spots include Calavera Hills Community Park in Carlsbad, Moonlight Beach in Encinitas, Luiseno Park in Oceanside, and Bradley Park in San Marcos. We deliver to all of these and can advise on space and permit needs.",
+          "Popular spots include Calavera Hills Community Park in Carlsbad, Moonlight Beach in Encinitas, Luiseno Park in Oceanside, Bradley Park in San Marcos, and Wildwood Park in Vista. We deliver to all of these and can advise on space and permit needs.",
       },
       {
         question: "Can rentals be delivered to a park without a dedicated parking lot nearby?",
@@ -765,7 +765,7 @@ export const services: Service[] = [
       {
         question: "Do you deliver to addresses outside your standard service area?",
         answer:
-          "Our primary service area covers Carlsbad, Encinitas, Oceanside, and San Marcos. For locations just outside this area, contact us — we accommodate many nearby zip codes and will confirm availability.",
+          "Our primary service area covers Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. For locations just outside this area, contact us — we accommodate many nearby zip codes and will confirm availability.",
       },
       {
         question: "How long does delivery take?",
@@ -864,7 +864,7 @@ export const services: Service[] = [
       {
         question: "Do you serve the Hispanic community with quinceañera rentals throughout North County San Diego?",
         answer:
-          "Yes — quinceañeras are one of our most requested events. We serve families in Carlsbad, Encinitas, Oceanside, San Marcos, and surrounding communities and are experienced with the scale and detail these celebrations require.",
+          "Yes — quinceañeras are one of our most requested events. We serve families in Carlsbad, Encinitas, Oceanside, San Marcos, Vista, and surrounding communities and are experienced with the scale and detail these celebrations require.",
       },
     ],
   },
