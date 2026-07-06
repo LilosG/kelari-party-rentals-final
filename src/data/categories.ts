@@ -134,7 +134,7 @@ export const categories: Category[] = [
     cityMeta: {
       title: "Table Rentals in {city}, CA | Kelari Party Rentals",
       description:
-        "Rectangular, round & cocktail table rentals delivered to {city}. Free delivery, setup, and pickup with Kelari Party Rentals.",
+        "Rectangular, round & cocktail table rentals delivered to {city}. Delivery available for an additional fee, or free pickup at our Carlsbad warehouse.",
     },
     cityHeadline: "Table Rentals in {city}",
     citySubheadline:
@@ -145,7 +145,7 @@ export const categories: Category[] = [
     meta: {
       title: "Table Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Rectangular, round & cocktail table rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Rectangular, round & cocktail table rentals for parties and events in Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     headline: "Table Rentals",
     subheadline: "Rectangular, round & cocktail tables for every event size — delivered clean and ready to use.",
@@ -258,7 +258,7 @@ export const categories: Category[] = [
     cityMeta: {
       title: "Chair Rentals in {city}, CA | Kelari Party Rentals",
       description:
-        "Folding & Chiavari chair rentals delivered to {city}. Free delivery, setup, and pickup with Kelari Party Rentals.",
+        "Folding & Chiavari chair rentals delivered to {city}. Delivery available for an additional fee, or free pickup at our Carlsbad warehouse.",
     },
     cityHeadline: "Chair Rentals in {city}",
     citySubheadline:
@@ -269,7 +269,7 @@ export const categories: Category[] = [
     meta: {
       title: "Chair Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Folding chairs & Chiavari chairs for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Folding chairs & Chiavari chairs for parties and events in Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     headline: "Chair Rentals",
     subheadline: "Folding & Chiavari chairs for every style and budget — delivered to your venue.",
@@ -370,7 +370,7 @@ export const categories: Category[] = [
     cityMeta: {
       title: "Tent & Canopy Rentals in {city}, CA | Kelari Party Rentals",
       description:
-        "Pop-up canopies & frame tents delivered to {city} for outdoor events. Free delivery, setup guidance, and pickup.",
+        "Pop-up canopies & frame tents delivered to {city} for outdoor events. We walk you through setup on arrival — delivery available for an additional fee, or free pickup at our Carlsbad warehouse.",
     },
     cityHeadline: "Tent & Canopy Rentals in {city}",
     citySubheadline:
@@ -382,7 +382,7 @@ export const categories: Category[] = [
     meta: {
       title: "Tent & Canopy Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Pop-up canopies and frame tents in multiple sizes for outdoor events in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Pop-up canopies and frame tents in multiple sizes for outdoor events in Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     headline: "Tent & Canopy Rentals",
     subheadline: "Pop-up canopies and frame tents for shade and shelter at any outdoor event.",
@@ -502,7 +502,7 @@ export const categories: Category[] = [
     meta: {
       title: "Linen Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Tablecloths in dozens of colors for party and event rentals. Delivered across Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Tablecloths in dozens of colors for party and event rentals. Delivered across Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     headline: "Linen Rentals",
     subheadline: "Tablecloths in dozens of colors — freshly laundered and pressed.",
@@ -738,7 +738,7 @@ export const categories: Category[] = [
     meta: {
       title: "Table Runner Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Satin & fabric table runners in multiple colors for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Satin & fabric table runners in multiple colors for parties and events in Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     headline: "Table Runner Rentals",
     subheadline: "Satin & fabric runners in multiple colors — the perfect finishing touch for any table.",
@@ -794,7 +794,7 @@ export const categories: Category[] = [
     meta: {
       title: "Decoration Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Decoration rentals arriving soon to North County San Diego — centerpieces, arches, backdrops & accents for parties in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Decoration rentals arriving soon to North County San Diego — centerpieces, arches, backdrops & accents for parties in Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     headline: "Decoration Rentals",
     subheadline: "Centerpieces, arches, backdrops & accents to transform any space into a celebration-ready venue.",
@@ -898,7 +898,7 @@ export const categories: Category[] = [
     meta: {
       title: "Marquee Letter Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Light-up marquee letter and number rentals for parties and events in Carlsbad, Encinitas, Oceanside & San Marcos. LOVE, BABY, GRAD, CHEERS & custom numbers 0–9.",
+        "Light-up marquee letter and number rentals for parties and events in Carlsbad, Encinitas, Oceanside, San Marcos & Vista. LOVE, BABY, GRAD, CHEERS & custom numbers 0–9.",
     },
     headline: "Marquee Letter Rentals",
     subheadline: "Light-up marquee letters and numbers that make every celebration photo-ready — delivered to your venue.",
@@ -1016,7 +1016,7 @@ export const categories: Category[] = [
     meta: {
       title: "Party Add-On Rentals in North County San Diego | Kelari Party Rentals",
       description:
-        "Balloon arch stands, balloon column kits, wooden backdrops & wooden table covers for parties in Carlsbad, Encinitas, Oceanside & San Marcos.",
+        "Balloon arch stands, balloon column kits, wooden backdrops & wooden table covers for parties in Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
     headline: "Party Add-Ons",
     subheadline: "Balloon arch stands, column kits, wooden backdrops & table covers to round out your setup.",
