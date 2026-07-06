@@ -104,7 +104,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery & Pickup",
         description:
-          "Delivery available to your venue across North County SD. Prefer to pick up? Complimentary warehouse pickup is always available at our Carlsbad location.",
+          "Delivery available to your venue across North County SD. Complimentary warehouse pickup always available at our Carlsbad location.",
       },
       {
         icon: "📋",
@@ -286,9 +286,9 @@ export const services: Service[] = [
       },
       {
         icon: "🚚",
-        title: "Delivery Available",
+        title: "Delivery & Pickup",
         description:
-          "We deliver to your home and walk you through any items that need assembly. Complimentary warehouse pickup is also available at our Carlsbad location.",
+          "Delivery available to your venue across North County SD. Complimentary warehouse pickup always available at our Carlsbad location.",
       },
       {
         icon: "📋",
@@ -380,7 +380,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery & Pickup",
         description:
-          "Delivery available to your venue. We arrive on time and walk you through anything that needs demonstrating. Complimentary warehouse pickup also available.",
+          "Delivery available to your venue across North County SD. Complimentary warehouse pickup always available at our Carlsbad location.",
       },
       {
         icon: "📋",
@@ -564,7 +564,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery & Pickup",
         description:
-          "Delivery available to your venue. Complimentary warehouse pickup always available at our Carlsbad location.",
+          "Delivery available to your venue across North County SD. Complimentary warehouse pickup always available at our Carlsbad location.",
       },
     ],
     faqs: [
@@ -648,9 +648,9 @@ export const services: Service[] = [
       },
       {
         icon: "🚚",
-        title: "On-Site Delivery",
+        title: "Delivery & Pickup",
         description:
-          "We arrive at your park, deliver and position every item, and pick up after the event — no heavy lifting for you.",
+          "Delivery available to your venue across North County SD. Complimentary warehouse pickup always available at our Carlsbad location.",
       },
       {
         icon: "📋",
@@ -837,7 +837,7 @@ export const services: Service[] = [
         icon: "🚚",
         title: "Delivery & Pickup",
         description:
-          "Professional delivery available to your venue across North County SD. Complimentary warehouse pickup always available at our Carlsbad location.",
+          "Delivery available to your venue across North County SD. Complimentary warehouse pickup always available at our Carlsbad location.",
       },
     ],
     faqs: [
