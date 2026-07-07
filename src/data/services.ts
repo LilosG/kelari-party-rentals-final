@@ -54,7 +54,7 @@ export const services: Service[] = [
     name: "Party Rentals",
     shortName: "Party Rentals",
     meta: {
-      title: "Party Rentals in North County San Diego | Kelari Party Rentals",
+      title: "Party Rentals in North County | Kelari Party Rentals",
       description:
         "Tables, chairs, tents, linens & décor for any celebration. Serving Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
@@ -781,7 +781,7 @@ export const services: Service[] = [
     name: "Quinceañera Rentals",
     shortName: "Quinceañera Rentals",
     meta: {
-      title: "Quinceañera Rentals in North County San Diego | Kelari Party Rentals",
+      title: "Quinceañera Rentals in North County | Kelari Party Rentals",
       description:
         "Elegant tables, chairs, linens & décor for quinceañeras in Carlsbad, Encinitas, Oceanside, San Marcos & Vista.",
     },
