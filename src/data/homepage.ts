@@ -24,7 +24,7 @@ import galleryCanopyImg from "../assets/images/gallery-canopy.jpg";
 export interface TrustBarItem {
   title: string;
   subtitle: string;
-  icon: "sparkles" | "clock" | "check" | "chat" | "pin";
+  icon: "sparkles" | "clock" | "check" | "chat" | "pin" | "globe";
 }
 
 // ── Hero ──────────────────────────────────────────────────────────────────────

@@ -41,7 +41,7 @@ const isDark = bg === "dark";
 
 const cards = slugs
   .map((s) => allCategories.find((c) => c.slug === s))
-  .filter((c): c is (typeof allCategories)[0] => Boolean(c) && !c.hidden)
+  .filter((c): c is (typeof allCategories)[0] => c !== undefined && !c.hidden)
   .map((c) => ({
     icon: c.icon,
     name: c.name,

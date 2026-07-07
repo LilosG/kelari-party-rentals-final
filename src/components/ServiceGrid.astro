@@ -52,7 +52,7 @@ let resolvedServices: (ServiceCard & { slug: string })[] = services
       const pool = slugs
         ? slugs
             .map((s) => allServices.find((sv) => sv.slug === s))
-            .filter((s): s is (typeof allServices)[0] => Boolean(s) && !s.hidden)
+            .filter((s): s is (typeof allServices)[0] => s !== undefined && !s.hidden)
         : allServices.filter((s) => !s.hidden);
       return pool.map((s) => ({
         icon: s.icon,
