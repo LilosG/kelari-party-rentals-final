@@ -67,21 +67,21 @@ export const howItWorksSteps: Step[] = [
   },
   {
     number: "02",
-    title: "We Deliver",
+    title: "Delivery or Pickup",
     description:
-      "Our team arrives at your venue and unloads everything. For items like tents and marquee letters, we walk you through assembly and confirm everything is working before we leave — so you're ready before your first guest arrives.",
+      "Pick up and return everything at our Carlsbad warehouse for free, or we deliver and set up at your venue for a quoted fee.",
   },
   {
     number: "03",
     title: "Enjoy Your Event",
     description:
-      "Relax and celebrate. The logistics are handled — just focus on making memories with the people you love.",
+      "Relax and celebrate — the logistics are handled so you can focus on the people you love.",
   },
   {
     number: "04",
     title: "We Handle Pickup",
     description:
-      "When the party's over, we return and collect everything. Prefer to drop off at our Carlsbad location? Complimentary warehouse pickup is always available.",
+      "Drop everything off at our warehouse at no charge, or we'll pick up from your venue for a quoted fee.",
   },
 ];
 
