@@ -2,8 +2,8 @@ import type { ImageMetadata } from 'astro';
 import type { HeroImageConfig } from './heroImages';
 import { heroImages } from './heroImages';
 // tables
-import kelariCocktailTable from '../assets/images/kelari-party-rentals-cocktail-table-carlsbad-north-county-san-diego-new.png';
-import kelariBellyUpTable from '../assets/images/kelari-party-rentals-belly-up-table-carlsbad-north-county-san-diego-new.png';
+import kelariCocktailTable from '../assets/images/kelari-party-rentals-cocktail-table.png';
+import kelariBellyUpTable from '../assets/images/kelari-party-rentals-belly-up.png';
 import comingSoonImage from '../assets/images/coming-soon-decorations.png';
 import tableRectangularFolding from '../assets/images/table-rectangular-folding.png';
 import tableRoundFolding from '../assets/images/table-round-folding.png';
@@ -177,15 +177,15 @@ export const categories: Category[] = [
       },
       {
         name: "Cocktail Table",
-        description: "30-inch round cocktail table for standing receptions, drink stations, appetizer displays, and mingling areas.",
-        sizes: ['30" Round'],
+        description: "30-inch round table with standard-height pole, ideal for display tables, dessert stations, and smaller event setups.",
+        sizes: ["Standard Height"],
         image: kelariCocktailTable,
         bookingUrl: "https://rentals.kelaripartyrentals.com/products/cocktail-table-30-round",
       },
       {
         name: "Belly-Up Table",
-        description: "Bar-height belly-up table for cocktail-style events, lounge areas, check-in stations, and casual standing setups.",
-        sizes: ['30" Round'],
+        description: "30-inch round table with a 42-inch bar-height pole, ideal for cocktail hours, drink stations, and standing receptions.",
+        sizes: ['42" Bar Height'],
         image: kelariBellyUpTable,
         bookingUrl: "https://rentals.kelaripartyrentals.com/products/belly-up-30-round",
       },
