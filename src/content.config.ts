@@ -17,7 +17,12 @@ const blog = defineCollection({
     ]),
     tags: z.array(z.string()).default([]),
     ogImage: z.string().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
     featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+    relatedServices: z.array(z.string()).default([]),
+    serviceAreas: z.array(z.string()).default([]),
     faqs: z
       .array(
         z.object({
