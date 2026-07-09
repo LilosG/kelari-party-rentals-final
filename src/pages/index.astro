@@ -12,6 +12,7 @@ import CategoryGrid from "../components/CategoryGrid.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import CtaBand from "../components/CtaBand.astro";
 import ImageGallery from "../components/ImageGallery.astro";
+import { heroImages } from "../data/heroImages";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import FAQAccordion from "../components/FAQAccordion.astro";
 import CityCards from "../components/CityCards.astro";
@@ -166,7 +167,7 @@ const schema = [
         class="group relative block overflow-hidden rounded-2xl aspect-[4/3]"
       >
         <Image
-          src={heroParty}
+          src={heroImages.kelariPartyRentalsAviaraPartyRentals.image}
           alt="View all party rental services"
           widths={[400, 800]}
           sizes="(max-width: 639px) 50vw, 25vw"

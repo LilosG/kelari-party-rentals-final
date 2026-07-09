@@ -28,6 +28,14 @@ import graduationNew from '../assets/images/heroes/graduation-wide.jpg';
 import engagementNew from '../assets/images/heroes/engagement-wide.jpg';
 import parkPartyNew from '../assets/images/heroes/park-party-wide.jpg';
 import quinceaneraNew from '../assets/images/heroes/quinceanera-wide.jpg';
+import kelariPartyRentalsAviaraPartyRentals from '../assets/images/heroes/kelari-party-rentals-aviara-party-rentals.png';
+import kelariPartyRentalsVistaPartyRentals from '../assets/images/heroes/kelari-party-rentals-vista-party-rentals.png';
+import kelariPartyRentalsTableRunnerRentals from '../assets/images/heroes/kelari-party-rentals-table-runner-rentals.png';
+import kelariPartyRentalsOldeCarlsbadPartyRentals from '../assets/images/heroes/kelari-party-rentals-olde-carlsbad-party-rentals.png';
+import kelariPartyRentalsTableRentals from '../assets/images/heroes/kelari-party-rentals-table-rentals.png';
+import kelariPartyRentalsChairRentals from '../assets/images/heroes/kelari-party-rentals-chair-rentals.png';
+import kelariPartyRentalsBressiRanchBackyardPartyRentals from '../assets/images/heroes/kelari-party-rentals-bressi-ranch-backyard-party-rentals.png';
+import kelariPartyRentalsMarqueeLettersWide from '../assets/images/heroes/marquee-letters-wide.jpg';
 
 export interface HeroImageConfig {
   image: ImageMetadata;
@@ -63,4 +71,46 @@ export const heroImages = {
   engagementNew: { image: engagementNew, focalPoint: '50% 55%' },
   parkPartyNew: { image: parkPartyNew, focalPoint: '50% 50%' },
   quinceaneraNew: { image: quinceaneraNew, focalPoint: '50% 55%' },
+
+  kelariPartyRentalsAviaraPartyRentals: {
+    image: kelariPartyRentalsAviaraPartyRentals,
+    alt: 'Kelari Party Rentals outdoor party rental setup in Aviara and North County San Diego',
+    focalPoint: 'center center',
+  },
+  kelariPartyRentalsVistaPartyRentals: {
+    image: kelariPartyRentalsVistaPartyRentals,
+    alt: 'Kelari Party Rentals backyard party rental setup in Vista and North County San Diego',
+    focalPoint: 'center center',
+  },
+  kelariPartyRentalsTableRunnerRentals: {
+    image: kelariPartyRentalsTableRunnerRentals,
+    alt: 'Kelari Party Rentals table runner and event rental setup in North County San Diego',
+    focalPoint: 'center center',
+  },
+  kelariPartyRentalsOldeCarlsbadPartyRentals: {
+    image: kelariPartyRentalsOldeCarlsbadPartyRentals,
+    alt: 'Kelari Party Rentals outdoor party rental setup in Olde Carlsbad and North County San Diego',
+    focalPoint: 'center center',
+  },
+  kelariPartyRentalsTableRentals: {
+    image: kelariPartyRentalsTableRentals,
+    alt: 'Kelari Party Rentals table rental setup in Carlsbad and North County San Diego',
+    focalPoint: 'center center',
+  },
+
+  kelariPartyRentalsChairRentals: {
+    image: kelariPartyRentalsChairRentals,
+    alt: 'Kelari Party Rentals chair rental setup in La Costa and North County San Diego',
+    focalPoint: 'center center',
+  },
+  kelariPartyRentalsBressiRanchBackyardPartyRentals: {
+    image: kelariPartyRentalsBressiRanchBackyardPartyRentals,
+    alt: 'Kelari Party Rentals backyard party setup in Bressi Ranch and North County San Diego',
+    focalPoint: 'center center',
+  },
+  kelariPartyRentalsMarqueeLettersWide: {
+    image: kelariPartyRentalsMarqueeLettersWide,
+    alt: 'Kelari Party Rentals marquee letter rentals in North County San Diego',
+    focalPoint: 'center center',
+  },
 } satisfies Record<string, HeroImageConfig>;

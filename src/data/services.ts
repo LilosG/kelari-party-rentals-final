@@ -620,7 +620,7 @@ export const services: Service[] = [
     cityIntro:
       "Throwing a park party in {city}? Kelari Party Rentals delivers tables, chairs, tents, and décor to your favorite {city} park. We deliver before your guests arrive and pick up after they leave.",
     icon: "🌳",
-    heroImage: heroImages.parkPartyNew,
+    heroImage: heroImages.kelariPartyRentalsOldeCarlsbadPartyRentals,
     whatsIncluded: [
       {
         icon: "🪑",
