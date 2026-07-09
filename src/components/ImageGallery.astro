@@ -21,7 +21,7 @@ export interface Props {
 
 const {
   images,
-  columns = 3,
+  columns = 4,
   eyebrow,
   title,
   subtitle,
@@ -30,6 +30,7 @@ const {
 } = Astro.props;
 
 const isDark = bg === "dark";
+const galleryItems = images.slice(0, 8);
 
 const colClass = {
   2: "grid-cols-2",
@@ -46,7 +47,7 @@ const colClass = {
   )}
 
   <div class={`grid gap-4 ${colClass}`}>
-    {images.map((img) => (
+    {galleryItems.map((img) => (
       <div class="rounded-xl overflow-hidden aspect-[4/3] group">
         <Image
           src={img.src}

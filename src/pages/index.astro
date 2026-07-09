@@ -167,7 +167,7 @@ const schema = [
         class="group relative block overflow-hidden rounded-2xl aspect-[4/3]"
       >
         <Image
-          src={heroImages.kelariPartyRentalsAviaraPartyRentals.image}
+          src={heroParty}
           alt="View all party rental services"
           widths={[400, 800]}
           sizes="(max-width: 639px) 50vw, 25vw"
@@ -196,12 +196,16 @@ const schema = [
 
   <!-- 5 · How It Works — white ─────────────────── -->
   <div class="h-px bg-neutral-100"></div>
-  <HowItWorks
-    eyebrow="HOW IT WORKS"
-    title="How It Works"
-    subtitle="We handle every step so you can focus on what matters — celebrating with your people."
-    steps={howItWorksSteps}
-  />
+  <div id="how-it-works" class="scroll-mt-28">
+    <HowItWorks
+      eyebrow="HOW IT WORKS"
+      title="How It Works"
+      subtitle="We handle every step so you can focus on what matters — celebrating with your people."
+      image={heroImages.kelariPartyRentalsAviaraPartyRentals.image}
+      imageAlt="Kelari Party Rentals event setup showing how party rentals work in North County San Diego"
+      steps={howItWorksSteps}
+    />
+  </div>
 
   <!-- 6 · City Cards — light ──────────────────── -->
   <CityCards

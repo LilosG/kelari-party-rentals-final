@@ -135,16 +135,38 @@ export const testimonials: Testimonial[] = [
 // ── Gallery ───────────────────────────────────────────────────────────────────
 
 export const galleryImages: GalleryImage[] = [
-  { src: heroPartyImg, alt: "Party rental setup with tables and decorations" },
-  { src: birthdayPartyImg, alt: "Birthday party rental setup" },
-  { src: backyardPartyImg, alt: "Backyard party with tables and chairs" },
-  { src: babyShowerImg, alt: "Elegant baby shower table setup with linens" },
-  { src: graduationPartyImg, alt: "Graduation celebration party setup" },
-  { src: engagementPartyImg, alt: "Engagement party with elegant décor" },
-  { src: parkPartyImg, alt: "Park party rental setup with canopy" },
-  { src: galleryTablescapeImg, alt: "Tablescape with linens and tableware" },
-  { src: galleryMarqueeImg, alt: "Marquee letters and party decorations" },
-  { src: galleryCanopyImg, alt: "White canopy tent at outdoor party" },
+  {
+    src: heroImages.kelariPartyRentalsAviaraPartyRentals.image,
+    alt: "Kelari Party Rentals outdoor party setup in North County San Diego",
+  },
+  {
+    src: heroImages.kelariPartyRentalsVistaPartyRentals.image,
+    alt: "Kelari Party Rentals backyard party rental setup with tables and chairs",
+  },
+  {
+    src: heroImages.kelariPartyRentalsTableRunnerRentals.image,
+    alt: "Kelari Party Rentals table runner and event table setup",
+  },
+  {
+    src: heroImages.kelariPartyRentalsOldeCarlsbadPartyRentals.image,
+    alt: "Kelari Party Rentals outdoor celebration setup in Carlsbad",
+  },
+  {
+    src: heroImages.kelariPartyRentalsTableRentals.image,
+    alt: "Kelari Party Rentals table rental setup for outdoor events",
+  },
+  {
+    src: heroImages.kelariPartyRentalsChairRentals.image,
+    alt: "Kelari Party Rentals chair rental setup for North County events",
+  },
+  {
+    src: heroImages.kelariPartyRentalsBressiRanchBackyardPartyRentals.image,
+    alt: "Kelari Party Rentals backyard party setup in Bressi Ranch",
+  },
+  {
+    src: heroImages.kelariPartyRentalsOceansideEventRentals.image,
+    alt: "Kelari Party Rentals event rental setup in Oceanside",
+  },
 ];
 
 // ── FAQ ───────────────────────────────────────────────────────────────────────
