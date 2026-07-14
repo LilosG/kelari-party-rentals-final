@@ -12,14 +12,24 @@ const { item, icon } = Astro.props;
 
 <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm p-6 flex flex-col">
   {item.image ? (
-    <div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white">
+    <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white">
       <Image
         src={item.image}
-        alt={item.name}
+        alt={item.comingSoon ? `${item.name} — coming soon` : item.name}
         width={400}
         height={300}
         class="w-full h-full object-contain"
       />
+      {item.comingSoon && (
+        <div
+          role="status"
+          class="absolute inset-0 flex items-center justify-center bg-[#4B1528]/60 backdrop-blur-[1px]"
+        >
+          <span class="font-display font-bold text-sm tracking-widest uppercase px-4 py-1.5 rounded-full bg-[#FBEAF0] text-[#72243E] border border-[#F4C0D1]">
+            Coming Soon
+          </span>
+        </div>
+      )}
     </div>
   ) : (
     <div class="aspect-[4/3] rounded-xl bg-brand-pink-light mb-4 flex items-center justify-center">

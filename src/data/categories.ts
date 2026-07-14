@@ -911,31 +911,37 @@ export const categories: Category[] = [
         name: "LOVE",
         description: "Four-letter marquee sign with warm Edison bulbs. Perfect for engagement parties, anniversaries, and weddings.",
         image: marqueeLettersHero,
+        comingSoon: true,
       },
       {
         name: "CHEERS",
         description: "Six-letter marquee sign for celebrations, toasts, and milestone events.",
         image: marqueeLettersEvent,
+        comingSoon: true,
       },
       {
         name: "BABY",
         description: "Four-letter marquee sign for baby showers and gender reveals.",
         image: galleryMarquee,
+        comingSoon: true,
       },
       {
         name: "GRAD",
         description: "Four-letter marquee sign for graduation parties and senior celebrations.",
         image: marqueeLettersGrad,
+        comingSoon: true,
       },
       {
         name: "Mr & Mrs",
         description: "Classic Mr & Mrs marquee sign for weddings and bridal events.",
         image: marqueeLettersMrMrs,
+        comingSoon: true,
       },
       {
         name: "Numbers 0–9",
         description: "Individual number marquee signs for milestone birthdays, anniversaries, and graduation years. Mix and match any combination.",
         image: marqueeLettersNumbers,
+        comingSoon: true,
       },
     ],
     whatsIncluded: [
