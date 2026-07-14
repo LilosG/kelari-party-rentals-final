@@ -922,25 +922,25 @@ export const categories: Category[] = [
       {
         name: "BABY",
         description: "Four-letter marquee sign for baby showers and gender reveals.",
-        image: galleryMarquee,
+        image: marqueeLettersMrMrs,
         comingSoon: true,
       },
       {
         name: "GRAD",
         description: "Four-letter marquee sign for graduation parties and senior celebrations.",
-        image: marqueeLettersGrad,
+        image: marqueeLettersNumbers,
         comingSoon: true,
       },
       {
         name: "Mr & Mrs",
         description: "Classic Mr & Mrs marquee sign for weddings and bridal events.",
-        image: marqueeLettersMrMrs,
-        comingSoon: true,
+        image: galleryMarquee,
+        comingSoon: true, // TODO: no real Mr & Mrs photo exists yet — replace when sourced
       },
       {
         name: "Numbers 0–9",
         description: "Individual number marquee signs for milestone birthdays, anniversaries, and graduation years. Mix and match any combination.",
-        image: marqueeLettersNumbers,
+        image: marqueeLettersGrad,
         comingSoon: true,
       },
     ],
