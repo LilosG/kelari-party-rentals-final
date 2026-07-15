@@ -31,8 +31,8 @@ import tableclothRoundIvoryLarge from '../assets/images/tablecloth-round-ivory-l
 import tableclothSpandexWhite from '../assets/images/tablecloth-spandex-white.png';
 import tableclothSpandexBlack from '../assets/images/tablecloth-spandex-black.png';
 import tableclothSpandexWhiteLong from '../assets/images/tablecloth-spandex-white-long.png';
-import tableclothSpandexWhiteRound from '../assets/images/tablecloth-spandex-white-round.png';
-import tableclothSpandexBlackRound from '../assets/images/tablecloth-spandex-black-round.jpg';
+import tableclothSpandexWhiteRound from '../assets/images/tablecloth-spandex-white-round-lifestyle.png';
+import tableclothSpandexBlackRound from '../assets/images/tablecloth-spandex-black-round-lifestyle.png';
 // linens - cocktail covers
 import tableclothCocktailWhiteSpandex from '../assets/images/tablecloth-cocktail-white-spandex.png';
 import tableclothCocktailBlackSpandex from '../assets/images/tablecloth-cocktail-black-spandex.png';
