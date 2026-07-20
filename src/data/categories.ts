@@ -1054,12 +1054,14 @@ export const categories: Category[] = [
         image: addOnWoodBackdrop,
         description: "Wooden balloon arch and photo wall backdrop for event styling.",
         bookingUrl: "https://rentals.kelaripartyrentals.com/collections/balloon-display-structures",
+        comingSoon: true,
       },
       {
         name: "Wooden Table Covers",
         image: addOnWoodTableCovering,
         description: "Wood-style table covers used in place of traditional linens for a rustic or natural look.",
         bookingUrl: "https://rentals.kelaripartyrentals.com/collections/balloon-display-structures",
+        comingSoon: true,
       },
     ],
     whatsIncluded: [
