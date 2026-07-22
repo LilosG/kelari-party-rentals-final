@@ -572,21 +572,21 @@ export const categories: Category[] = [
         items: [
           {
             name: "Cocktail Linen – White",
-            description: 'Round tablecloth for 30" cocktail and belly-up tables. Clean white finish.',
+            description: 'Round tablecloth for 30" cocktail tables. Clean white finish.',
             sizes: ['30" Round'],
             image: tableclothRoundWhite,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-white",
           },
           {
             name: "Cocktail Linen – Black",
-            description: 'Round tablecloth for 30" cocktail and belly-up tables. Sleek black finish.',
+            description: 'Round tablecloth for 30" cocktail tables. Sleek black finish.',
             sizes: ['30" Round'],
             image: tableclothRoundBlack,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black",
           },
           {
             name: "Cocktail Linen – Ivory",
-            description: 'Round tablecloth for 30" cocktail and belly-up tables. Warm ivory finish.',
+            description: 'Round tablecloth for 30" cocktail tables. Warm ivory finish.',
             sizes: ['30" Round'],
             image: tableclothRoundIvory,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory",
