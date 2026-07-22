@@ -644,14 +644,12 @@ export const categories: Category[] = [
           {
             name: "Round Spandex – White",
             description: 'Stretch-fit white spandex cover for 60" round dining tables. Full-length form-fitting look.',
-            sizes: ['60" Round'],
             image: tableclothSpandexWhiteRound,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-60-round-white",
           },
           {
             name: "Round Spandex – Black",
             description: 'Stretch-fit black spandex cover for 60" round dining tables. Clean tailored finish.',
-            sizes: ['60" Round'],
             image: tableclothSpandexBlackRound,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-60-round-black",
           },
