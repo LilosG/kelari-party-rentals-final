@@ -614,7 +614,7 @@ export const categories: Category[] = [
         ],
       },
       {
-        title: "Cocktail Spandex Covers",
+        title: "Belly-Up Spandex Covers",
         cols: 3,
         items: [
           {
