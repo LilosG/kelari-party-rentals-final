@@ -21,12 +21,12 @@ import tableclothRectBlackLong from '../assets/images/tablecloth-rect-black-long
 import tableclothRectIvory from '../assets/images/tablecloth-rect-ivory.png';
 import tableclothRectIvoryLong from '../assets/images/tablecloth-rect-ivory-long.png';
 // linens - round tablecloths
-import tableclothRoundWhite from '../assets/images/tablecloth-round-white.png';
 import tableclothRoundWhiteLarge from '../assets/images/tablecloth-round-white-large.png';
-import tableclothRoundBlack from '../assets/images/tablecloth-round-black.png';
 import tableclothRoundBlackLarge from '../assets/images/tablecloth-round-black-large.png';
-import tableclothRoundIvory from '../assets/images/tablecloth-round-ivory.png';
 import tableclothRoundIvoryLarge from '../assets/images/tablecloth-round-ivory-large.png';
+import cocktailLinenWhiteLifestyle from '../assets/images/kelari-cocktail-table-linen-white.png';
+import cocktailLinenBlackLifestyle from '../assets/images/kelari-cocktail-table-linen-black.png';
+import cocktailLinenIvoryLifestyle from '../assets/images/kelari-cocktail-table-linen-ivory.png';
 // linens - spandex tablecloths
 import tableclothSpandexWhite from '../assets/images/tablecloth-spandex-white.png';
 import tableclothSpandexBlack from '../assets/images/tablecloth-spandex-black.png';
@@ -574,21 +574,21 @@ export const categories: Category[] = [
             name: "Cocktail Linen – White",
             description: 'Round tablecloth for 30" cocktail tables. Clean white finish.',
             sizes: ['30" Round'],
-            image: tableclothRoundWhite,
+            image: cocktailLinenWhiteLifestyle,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-white",
           },
           {
             name: "Cocktail Linen – Black",
             description: 'Round tablecloth for 30" cocktail tables. Sleek black finish.',
             sizes: ['30" Round'],
-            image: tableclothRoundBlack,
+            image: cocktailLinenBlackLifestyle,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black",
           },
           {
             name: "Cocktail Linen – Ivory",
             description: 'Round tablecloth for 30" cocktail tables. Warm ivory finish.',
             sizes: ['30" Round'],
-            image: tableclothRoundIvory,
+            image: cocktailLinenIvoryLifestyle,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory",
           },
         ],
