@@ -580,7 +580,7 @@ export const categories: Category[] = [
           {
             name: "Cocktail Linen – Black",
             description: 'Round tablecloth for 30" cocktail tables. Sleek black finish.',
-            sizes: ['30" Round'],
+            sizes: ['90" Round'],
             image: cocktailLinenBlackLifestyle,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black",
           },
