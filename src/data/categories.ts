@@ -37,6 +37,10 @@ import tableclothSpandexBlackRound from '../assets/images/tablecloth-spandex-bla
 import tableclothCocktailWhiteSpandex from '../assets/images/tablecloth-cocktail-white-spandex.png';
 import tableclothCocktailBlackSpandex from '../assets/images/tablecloth-cocktail-black-spandex.png';
 import tableclothCocktailIvorySpandex from '../assets/images/tablecloth-cocktail-ivory-spandex.png';
+// linens - belly up loose linens
+import bellyUpLinenBlack from '../assets/images/belly-up-linen-black.png';
+import bellyUpLinenWhite from '../assets/images/belly-up-linen-white.png';
+import bellyUpLinenIvory from '../assets/images/belly-up-linen-ivory.png';
 // runners
 import runnerWhite from '../assets/images/runner-white.png';
 import runnerBabyBlue from '../assets/images/runner-baby-blue.png';
@@ -600,6 +604,42 @@ export const categories: Category[] = [
             sizes: ['108" Round'],
             image: cocktailLinenIvoryLifestyle,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory",
+          },
+        ],
+      },
+      {
+        title: "Belly Up Linens",
+        cols: 3,
+        items: [
+          {
+            name: "Belly Up Linen – Black",
+            description: 'Round loose-drape tablecloth for 30" belly-up cocktail tables. Sleek black finish.',
+            sizes: ['90" Round', '120" Round'],
+            image: bellyUpLinenBlack,
+            bookingUrls: [
+              { label: '90"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black" },
+              { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-black" },
+            ],
+          },
+          {
+            name: "Belly Up Linen – White",
+            description: 'Round loose-drape tablecloth for 30" belly-up cocktail tables. Clean white finish.',
+            sizes: ['90" Round', '120" Round'],
+            image: bellyUpLinenWhite,
+            bookingUrls: [
+              { label: '90"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-white" },
+              { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-white" },
+            ],
+          },
+          {
+            name: "Belly Up Linen – Ivory",
+            description: 'Round loose-drape tablecloth for 30" belly-up cocktail tables. Warm ivory finish.',
+            sizes: ['90" Round', '120" Round'],
+            image: bellyUpLinenIvory,
+            bookingUrls: [
+              { label: '90"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory" },
+              { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-tan-ivory" },
+            ],
           },
         ],
       },
