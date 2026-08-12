@@ -618,19 +618,19 @@ export const categories: Category[] = [
         cols: 3,
         items: [
           {
-            name: "Cocktail Spandex – White",
+            name: "Belly Up Spandex – White",
             description: 'Stretch-fit white spandex cover for 30" cocktail tables. Clean fitted finish.',
             image: tableclothCocktailWhiteSpandex,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-30-cocktail-white",
           },
           {
-            name: "Cocktail Spandex – Black",
+            name: "Belly Up Spandex – Black",
             description: 'Stretch-fit black spandex cover for 30" cocktail tables. Sleek modern finish.',
             image: tableclothCocktailBlackSpandex,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-30-cocktail-black",
           },
           {
-            name: "Cocktail Spandex – Ivory",
+            name: "Belly Up Spandex – Ivory",
             description: 'Stretch-fit ivory spandex cover for 30" cocktail tables. Warm elegant finish.',
             image: tableclothCocktailIvorySpandex,
             bookingUrl: "https://rentals.kelaripartyrentals.com/products/spandex-cover-30-cocktail-tan-ivory",
