@@ -614,30 +614,30 @@ export const categories: Category[] = [
           {
             name: "Belly Up Linen – Black",
             description: 'Round loose-drape tablecloth for 30" belly-up cocktail tables. Sleek black finish.',
-            sizes: ['90" Round', '120" Round'],
+            sizes: ['108" Round', '120" Round'],
             image: bellyUpLinenBlack,
             bookingUrls: [
-              { label: '90"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black" },
+              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black" },
               { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-black" },
             ],
           },
           {
             name: "Belly Up Linen – White",
             description: 'Round loose-drape tablecloth for 30" belly-up cocktail tables. Clean white finish.',
-            sizes: ['90" Round', '120" Round'],
+            sizes: ['108" Round', '120" Round'],
             image: bellyUpLinenWhite,
             bookingUrls: [
-              { label: '90"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-white" },
+              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-white" },
               { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-white" },
             ],
           },
           {
             name: "Belly Up Linen – Ivory",
             description: 'Round loose-drape tablecloth for 30" belly-up cocktail tables. Warm ivory finish.',
-            sizes: ['90" Round', '120" Round'],
+            sizes: ['108" Round', '120" Round'],
             image: bellyUpLinenIvory,
             bookingUrls: [
-              { label: '90"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory" },
+              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory" },
               { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-tan-ivory" },
             ],
           },
