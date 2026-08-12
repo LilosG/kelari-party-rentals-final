@@ -1039,7 +1039,7 @@ export const categories: Category[] = [
         bookingUrl: "https://rentals.kelaripartyrentals.com/products/round-balloon-backdrop-stand-7-5ft",
       },
       {
-        name: "Balloon Column Kit (2-Set, 3-in-1)",
+        name: "Balloon Column Kit (2-Set)",
         image: addOnBalloonPillars,
         description: "Reusable metal column kit with base, set of 2, for birthdays, weddings, graduations, and showers.",
         bookingUrl: "https://rentals.kelaripartyrentals.com/products/balloon-column-kit-pair",
