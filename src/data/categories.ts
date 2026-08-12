@@ -70,6 +70,7 @@ export interface CategoryItem {
   colors?: string[];
   image?: ImageMetadata;
   bookingUrl?: string;
+  bookingUrls?: { label: string; url: string }[];
 }
 
 export interface CategoryItemGroup {
@@ -521,21 +522,30 @@ export const categories: Category[] = [
             description: "Polyester tablecloth for 6ft and 8ft rectangular tables. Clean white finish for any event.",
             sizes: ["6ft", "8ft"],
             image: tableclothRectWhiteLong,
-            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x156-white",
+            bookingUrls: [
+              { label: "6ft", url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x132-white" },
+              { label: "8ft", url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x156-white" },
+            ],
           },
           {
             name: "Rectangular Tablecloth – Black",
             description: "Polyester tablecloth for 6ft and 8ft rectangular tables. Sleek black finish for modern events.",
             sizes: ["6ft", "8ft"],
             image: tableclothRectBlack,
-            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x156-black",
+            bookingUrls: [
+              { label: "6ft", url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x132-black" },
+              { label: "8ft", url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x156-black" },
+            ],
           },
           {
             name: "Rectangular Tablecloth – Beige",
             description: "Polyester tablecloth for 6ft and 8ft rectangular tables. Warm beige finish for elegant setups.",
             sizes: ["6ft", "8ft"],
             image: tableclothRectIvory,
-            bookingUrl: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x132-tan-ivory",
+            bookingUrls: [
+              { label: "6ft", url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x132-tan-ivory" },
+              { label: "8ft", url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-x156-tan-ivory" },
+            ],
           },
         ],
       },

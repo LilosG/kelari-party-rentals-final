@@ -54,7 +54,23 @@ const { item, icon } = Astro.props;
       ))}
     </div>
   )}
-  {item.bookingUrl && (
+  {item.bookingUrls && item.bookingUrls.length > 0 ? (
+    <div class="mt-4 flex gap-2">
+      {item.bookingUrls.map((entry) => (
+        <a
+          href={entry.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-brand-pink px-3 py-2.5 text-sm font-semibold text-white hover:bg-brand-pink/90 transition-colors duration-200"
+        >
+          Book Now · {entry.label}
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true" class="flex-shrink-0">
+            <path d="M2 9L9 2M9 2H4.5M9 2V6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      ))}
+    </div>
+  ) : item.bookingUrl ? (
     <a
       href={item.bookingUrl}
       target="_blank"
@@ -66,5 +82,5 @@ const { item, icon } = Astro.props;
         <path d="M2 9L9 2M9 2H4.5M9 2V6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
-  )}
+  ) : null}
 </div>
