@@ -617,7 +617,7 @@ export const categories: Category[] = [
             sizes: ['108" Round', '120" Round'],
             image: bellyUpLinenBlack,
             bookingUrls: [
-              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-black" },
+              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-108-round-black" },
               { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-black" },
             ],
           },
@@ -627,7 +627,7 @@ export const categories: Category[] = [
             sizes: ['108" Round', '120" Round'],
             image: bellyUpLinenWhite,
             bookingUrls: [
-              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-white" },
+              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-108-round-white" },
               { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-white" },
             ],
           },
@@ -637,7 +637,7 @@ export const categories: Category[] = [
             sizes: ['108" Round', '120" Round'],
             image: bellyUpLinenIvory,
             bookingUrls: [
-              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-90-round-tan-ivory" },
+              { label: '108"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-108-round-tan-ivory" },
               { label: '120"', url: "https://rentals.kelaripartyrentals.com/products/tablecloth-120-round-tan-ivory" },
             ],
           },
