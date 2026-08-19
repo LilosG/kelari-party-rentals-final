@@ -80,6 +80,7 @@ export interface CategoryItem {
 export interface CategoryItemGroup {
   title: string;
   cols?: 2 | 3 | 4;
+  hidden?: boolean;
   items: CategoryItem[];
 }
 
@@ -520,6 +521,7 @@ export const categories: Category[] = [
       {
         title: "Rectangular Tablecloths",
         cols: 3,
+        hidden: true,
         items: [
           {
             name: "Rectangular Tablecloth – White",
@@ -556,6 +558,7 @@ export const categories: Category[] = [
       {
         title: "Round Tablecloths – 60″ Dining Tables",
         cols: 3,
+        hidden: true,
         items: [
           {
             name: "Round Tablecloth – White",
@@ -583,6 +586,7 @@ export const categories: Category[] = [
       {
         title: "Cocktail Table Linens – 30″ Round Tables",
         cols: 3,
+        hidden: true,
         items: [
           {
             name: "Cocktail Linen – White",
@@ -610,6 +614,7 @@ export const categories: Category[] = [
       {
         title: "Belly Up Linens",
         cols: 3,
+        hidden: true,
         items: [
           {
             name: "Belly Up Linen – Black",
