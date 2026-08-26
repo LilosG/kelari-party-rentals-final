@@ -6,11 +6,10 @@ import TrustBar from "../components/TrustBar.astro";
 import Section from "../components/Section.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import QuoteForm from "../components/QuoteForm.astro";
-import ConversionProofPoints from "../components/ConversionProofPoints.astro";
 import ContactMetadata from "../components/ContactMetadata.astro";
 
 import { site } from "../data/site";
-import { contactMetaItems, conversionProofPoints } from "../data/conversion";
+import { contactMetaItems } from "../data/conversion";
 
 const title = "Get a Free Quote | Kelari Party Rentals";
 const description =
@@ -51,23 +50,6 @@ const quoteContactItems = contactMetaItems.filter(({ label }) => ["Phone", "Emai
   />
 
   <TrustBar />
-
-  <Section bg="white">
-    <div class="mx-auto max-w-5xl">
-      <div class="mb-10">
-        <SectionHeader
-          eyebrow="HOW IT WORKS"
-          title="Here's What Happens Next"
-          subtitle="Submit your details and we'll respond within 2 hours with a custom quote — delivery and pickup always included."
-        />
-      </div>
-      <ConversionProofPoints items={conversionProofPoints} />
-
-      <div class="mt-8">
-        <ContactMetadata items={quoteContactItems} layout="cards" />
-      </div>
-    </div>
-  </Section>
 
   <QuoteForm
     heading="Request Your Quote"
