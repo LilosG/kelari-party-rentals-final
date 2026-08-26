@@ -24,6 +24,8 @@ import { services as allServices } from "../data/services";
 import { testimonials, galleryImages } from "../data/homepage";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import ImageGallery from "../components/ImageGallery.astro";
+import OccasionStrip from "../components/OccasionStrip.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
 
 interface Props {
   city: City;
@@ -135,6 +137,9 @@ const schema = [
 
   <!-- 2 - Trust Bar -->
   <TrustBar />
+
+  <!-- 2b - Occasion Strip -->
+  <OccasionStrip heading="We Specialize In" />
 
   <!-- 2b - Coming soon notice (mirrors /rentals/[category]/ behavior) -->
   {category.comingSoon && (
@@ -271,7 +276,14 @@ const schema = [
     bg="light"
   />
 
-  <!-- 11 - Related event types in this city -->
+  <!-- 11 - Related Blog Posts -->
+  <RelatedPosts
+    tags={[category.slug, city.slug]}
+    heading="Party Planning Resources"
+    bg="white"
+  />
+
+  <!-- 12 - Related event types in this city -->
   {relatedCityServices.length > 0 && (
     <Section bg="white">
       <div class="mb-10 md:mb-12">

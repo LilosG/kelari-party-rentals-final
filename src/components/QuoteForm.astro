@@ -283,7 +283,7 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
       });
       var json = await res.json();
       if (json.success) {
-        grecaptcha.reset();
+        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
         var showSuccess = function() {
           form.style.display = 'none';
           successEl.style.display = 'block';

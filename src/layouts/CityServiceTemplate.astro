@@ -23,6 +23,8 @@ import {
 import { testimonials, galleryImages } from "../data/homepage";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import ImageGallery from "../components/ImageGallery.astro";
+import OccasionStrip from "../components/OccasionStrip.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
 
 interface Props {
   city: City;
@@ -137,6 +139,9 @@ const schema = [
   <!-- 2 · Trust Bar ────────────────────────────── -->
   <TrustBar />
 
+  <!-- 2b · Occasion Strip ─────────────────────── -->
+  <OccasionStrip heading="We Specialize In" />
+
   <!-- 3 · Intro — white ────────────────────────── -->
   <Section bg="white">
     <div class="max-w-3xl mx-auto text-center">
@@ -225,7 +230,14 @@ const schema = [
     bg="light"
   />
 
-  <!-- 10 · Nearby Cities — light ──────────────── -->
+  <!-- 10 · Related Blog Posts — white ───────────── -->
+  <RelatedPosts
+    tags={[service.slug, city.slug]}
+    heading="Party Planning Resources"
+    bg="white"
+  />
+
+  <!-- 11 · Nearby Cities — light ──────────────── -->
   <CityCards
     eyebrow="NEARBY CITIES"
     title={`${service.shortName} in Nearby Cities`}
