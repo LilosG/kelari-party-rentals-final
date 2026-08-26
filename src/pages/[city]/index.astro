@@ -11,7 +11,7 @@ import NeighborhoodTags from "../../components/NeighborhoodTags.astro";
 import ParksList from "../../components/ParksList.astro";
 import CtaBand from "../../components/CtaBand.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
-import CityCards from "../../components/CityCards.astro";
+import MapEmbed from "../../components/MapEmbed.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
 import LocalIntroWithForm from "../../components/LocalIntroWithForm.astro";
@@ -219,15 +219,42 @@ const schema = [
     bg="light"
   />
 
-  <!-- 11 · Nearby Cities — white ───────────────── -->
-  <CityCards
-    eyebrow="NEARBY CITIES"
-    title="We Also Serve"
-    subtitle="Professional delivery available across every North County San Diego city."
-    cities={nearbyAreas.map((a) => ({ name: a.name, description: a.tagline, href: a.href }))}
-    bg="light"
-    padding="default"
-  />
+  <!-- 11 · Nearby Cities + Map — white ───────────── -->
+  <Section bg="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-4 text-brand-pink">
+          NEARBY CITIES
+        </p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-4">
+          Party Rentals Across North County San Diego
+        </h2>
+        <p class="text-base text-neutral-600 leading-relaxed mb-8">
+          We deliver to every North County community — or pick up free at our Carlsbad warehouse on El Camino Real.
+        </p>
+        <div class="grid grid-cols-2 gap-3">
+          {nearbyAreas.map((area) => (
+            <a
+              href={area.href}
+              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 border-l-[3px] border-l-brand-pink hover:bg-white hover:border-brand-pink/30 hover:shadow-sm transition-all duration-200"
+            >
+              <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{area.name}</span>
+              <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+        <a
+          href="/service-area/"
+          class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-brand-pink hover:underline"
+        >
+          See full service area →
+        </a>
+      </div>
+      <div>
+        <MapEmbed />
+      </div>
+    </div>
+  </Section>
 
   <!-- 10 · FAQ — white ─────────────────────────── -->
   <FAQAccordion
