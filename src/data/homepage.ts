@@ -204,6 +204,13 @@ export const homepageFaqs: FAQ[] = [
   },
 ];
 
+// ── Local intro (homepage LocalIntroWithForm section) ────────────────────────
+
+export const localIntro = {
+  heading: "Professional Chair, Table & Party Equipment Rentals in Carlsbad, CA",
+  body: "Kelari Party Rentals supplies tables, chairs, linens, canopies, and event décor to North County San Diego. Our inventory is professionally cleaned and photo-ready for every event — whether you're hosting a backyard gathering in Bressi Ranch, a park party at Poinsettia Park, or a milestone celebration in Aviara. We deliver across Carlsbad, Encinitas, Oceanside, and San Marcos, or you can pick up free at our Carlsbad warehouse.",
+};
+
 // ── Top service slugs ──────────────────────────────────────────────────────────
 
 export const topServiceSlugs = [
