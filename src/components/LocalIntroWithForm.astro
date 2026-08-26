@@ -29,33 +29,36 @@ const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "5ab53834-d854-45c6-a
       </div>
 
       <!-- Right: mini quote form -->
-      <div class="bg-[--color-soft-bg] rounded-2xl border border-neutral-200 p-7 lg:p-8">
-        <p class="font-body uppercase tracking-widest text-xs font-bold text-brand-pink mb-1">GET A FREE QUOTE</p>
-        <h3 class="font-display text-xl font-bold text-neutral-900 mb-6">Tell Us About Your Event</h3>
+      <div class="relative bg-brand-dark rounded-2xl p-7 lg:p-8 overflow-hidden">
+        <!-- decorative glow -->
+        <div class="pointer-events-none absolute -top-16 -right-16 w-64 h-64 rounded-full bg-brand-pink/20 blur-3xl" aria-hidden="true"></div>
 
-        <form data-mini-form class="space-y-4" novalidate>
+        <p class="relative font-body uppercase tracking-widest text-xs font-bold text-brand-pink mb-1">GET A FREE QUOTE</p>
+        <h3 class="relative font-display text-xl font-bold text-white mb-6">Tell Us About Your Event</h3>
+
+        <form data-mini-form class="relative space-y-4" novalidate>
           <div style="position:absolute; left:-5000px;" aria-hidden="true">
             <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label for="mf-name" class="form-label">Full Name <span class="text-brand-pink">*</span></label>
+              <label for="mf-name" class="form-label text-neutral-200">Full Name <span class="text-brand-pink">*</span></label>
               <input type="text" id="mf-name" name="name" required autocomplete="name" class="form-input" placeholder="Your name" />
             </div>
             <div>
-              <label for="mf-phone" class="form-label">Phone <span class="text-brand-pink">*</span></label>
+              <label for="mf-phone" class="form-label text-neutral-200">Phone <span class="text-brand-pink">*</span></label>
               <input type="tel" id="mf-phone" name="phone" required autocomplete="tel" class="form-input" placeholder="(760) 000-0000" />
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label for="mf-date" class="form-label">Event Date</label>
+              <label for="mf-date" class="form-label text-neutral-200">Event Date</label>
               <input type="date" id="mf-date" name="event_date" class="form-input" />
             </div>
             <div>
-              <label for="mf-occasion" class="form-label">Occasion</label>
+              <label for="mf-occasion" class="form-label text-neutral-200">Occasion</label>
               <select id="mf-occasion" name="occasion" class="form-select">
                 <option value="">Select occasion</option>
                 <option value="Birthday Party">Birthday Party</option>
@@ -71,20 +74,20 @@ const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "5ab53834-d854-45c6-a
           {city && <input type="hidden" name="city" value={city} />}
           {service && <input type="hidden" name="service" value={service} />}
 
-          <p data-mini-error role="alert" class="text-sm text-red-500 min-h-[1.25rem]"></p>
+          <p data-mini-error role="alert" class="text-sm text-red-400 min-h-[1.25rem]"></p>
 
           <button type="submit" class="btn btn--brand btn--md w-full justify-center py-4">
             Request My Free Quote →
           </button>
-          <p class="text-center text-xs font-body text-neutral-500">We respond within 2 hours. No spam, ever.</p>
+          <p class="text-center text-xs font-body text-neutral-400">We respond within 2 hours. No spam, ever.</p>
         </form>
 
-        <div data-mini-success class="hidden text-center py-8">
+        <div data-mini-success class="relative hidden text-center py-8">
           <svg class="mx-auto h-10 w-10 text-brand-pink mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">We'll be in touch soon!</h3>
-          <p class="text-sm text-neutral-600">Quote request received. We respond within 2 hours during business hours.</p>
+          <h3 class="font-display text-xl font-bold text-white mb-2">We'll be in touch soon!</h3>
+          <p class="text-sm text-neutral-300">Quote request received. We respond within 2 hours during business hours.</p>
         </div>
       </div>
 

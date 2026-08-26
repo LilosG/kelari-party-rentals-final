@@ -242,14 +242,14 @@ const schema = [
         <p class="text-base text-neutral-600 leading-relaxed mb-8">
           We deliver tables, chairs, linens, and canopies throughout North County — or pick up free at our Carlsbad warehouse on El Camino Real.
         </p>
-        <div class="grid grid-cols-2 gap-x-8 gap-y-3">
+        <div class="grid grid-cols-2 gap-3">
           {serviceAreaLinks.map((area) => (
             <a
               href={area.href}
-              class="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-pink transition-colors"
+              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 hover:bg-white hover:border-brand-pink/40 hover:shadow-sm transition-all duration-200"
             >
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-pink shrink-0" aria-hidden="true"></span>
-              {area.name}
+              <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{area.name}</span>
+              <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
             </a>
           ))}
         </div>
