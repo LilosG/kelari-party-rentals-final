@@ -169,17 +169,52 @@ const deliverySteps = [
     </div>
   </Section>
 
-  <!-- 7 · Location Map — white ─────────────────── -->
+  <!-- 7 · Service Areas + Map — white ─────────── -->
   <Section bg="white">
-    <div class="mb-10 md:mb-14">
-      <SectionHeader
-        eyebrow="OUR LOCATION"
-        title="Our Carlsbad Location"
-        subtitle={nap.address.full}
-      />
-    </div>
-    <div class="max-w-2xl mx-auto">
-      <MapEmbed />
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Left: area links -->
+      <div>
+        <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-4 text-brand-pink">
+          WHERE WE DELIVER
+        </p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-4">
+          Party Equipment Rentals Delivered Across North County San Diego
+        </h2>
+        <p class="text-base text-neutral-600 leading-relaxed mb-8">
+          We deliver tables, chairs, linens, and canopies throughout North County — or pick up free at our Carlsbad warehouse on El Camino Real.
+        </p>
+        <div class="grid grid-cols-2 gap-3">
+          {[
+            { name: "Carlsbad", href: "/carlsbad/" },
+            { name: "Encinitas", href: "/encinitas/" },
+            { name: "Oceanside", href: "/oceanside/" },
+            { name: "San Marcos", href: "/san-marcos/" },
+            { name: "Bressi Ranch", href: "/bressi-ranch/" },
+            { name: "La Costa", href: "/la-costa/" },
+            { name: "Aviara", href: "/aviara/" },
+            { name: "Olde Carlsbad", href: "/olde-carlsbad/" },
+            { name: "Vista", href: "/vista/" },
+            { name: "Leucadia", href: "/encinitas/" },
+            { name: "Carlsbad Village", href: "/carlsbad/" },
+            { name: "San Elijo Hills", href: "/san-marcos/" },
+          ].map((area) => (
+            <a
+              href={area.href}
+              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 border-l-[3px] border-l-brand-pink hover:bg-white hover:border-brand-pink/30 hover:shadow-sm transition-all duration-200"
+            >
+              <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{area.name}</span>
+              <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: map -->
+      <div>
+        <MapEmbed />
+      </div>
+
     </div>
   </Section>
 
