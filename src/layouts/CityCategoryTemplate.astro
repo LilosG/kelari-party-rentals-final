@@ -187,7 +187,7 @@ const schema = [
     </div>
     {category.groups && category.groups.length > 0 ? (
       <div class="space-y-12 md:space-y-16">
-        {category.groups.map((group) => (
+        {category.groups.filter((g) => !g.hidden).map((group) => (
           <div>
             <h3 class="font-display text-xl font-bold text-neutral-800 mb-6 pb-3 border-b border-neutral-200">
               {group.title}
@@ -276,7 +276,7 @@ const schema = [
     <Section bg="white">
       <div class="mb-10 md:mb-12">
         <SectionHeader
-          eyebrow="POPULAR IN {city.name}"
+          eyebrow={`POPULAR IN ${city.name}`}
           title={`${category.name} for Every Event Type`}
           subtitle={`See how ${city.name} hosts use ${category.name.toLowerCase()} across their events.`}
         />
