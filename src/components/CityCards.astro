@@ -57,16 +57,14 @@ function getCityImage(city: CityCard): ImageMetadata {
   )}
 
   {variant === "pills" ? (
-    <div class="flex flex-wrap justify-center gap-3">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
       {cities.map((city) => (
         <a
           href={city.href}
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-200 bg-white text-sm font-semibold text-neutral-700 hover:border-brand-pink hover:text-brand-pink hover:bg-pink-50 transition-all duration-200 shadow-sm"
+          class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 border-l-[3px] border-l-brand-pink hover:bg-white hover:border-brand-pink/30 hover:shadow-sm transition-all duration-200"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 shrink-0 text-brand-pink" aria-hidden="true">
-            <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd" />
-          </svg>
-          {city.name}
+          <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{city.name}</span>
+          <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
         </a>
       ))}
     </div>
