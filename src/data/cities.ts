@@ -644,7 +644,7 @@ export const cities: City[] = [
       {
         question: "What's the delivery range from your Carlsbad location to Oceanside?",
         answer:
-          "Oceanside is just minutes from our Carlsbad headquarters. Delivery is free to all Oceanside neighborhoods — no extra charge.",
+          "Oceanside is just minutes from our Carlsbad headquarters. Delivery fees are calculated by distance from our Carlsbad warehouse — request a free quote to see the exact fee for your Oceanside neighborhood.",
       },
       {
         question: "Do you rent tents and canopies for Oceanside backyard parties?",

@@ -18,7 +18,7 @@ Kelari Party Rentals — local SEO-focused party rental website for North County
 - **Framework**: Astro 6 (static site generation, file-based routing)
 - **Styling**: Tailwind CSS 4 via `@tailwindcss/vite` plugin, CSS custom properties in `src/styles/global.css`
 - **TypeScript**: Strict mode, extends `astro/tsconfigs/strict`
-- **Fonts**: Cormorant Garamond (headings), DM Sans (body) — loaded via Google Fonts with preconnect
+- **Fonts**: Playfair Display (headings), DM Sans (body) — loaded via @fontsource packages
 
 ### Data-Driven Architecture
 
@@ -51,4 +51,4 @@ Dynamic routes read from data files: `[city].astro` reads `cities.ts`, `[service
 
 ### NAP (use identically everywhere)
 
-Kelari Party Rentals | 5674 El Camino Real Suite M-2, Carlsbad, CA 92008 | (760) 000-0000 | hello@kelaripartyrentals.com | Mon–Sun 9AM–7PM
+Kelari Party Rentals | 5674 El Camino Real Suite M-2, Carlsbad, CA 92008 | (760) 385-8501 | hello@kelaripartyrentals.com | Mon–Sun 9AM–7PM

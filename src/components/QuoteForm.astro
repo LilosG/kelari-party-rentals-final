@@ -3,9 +3,10 @@ import ContactMetadata from "./ContactMetadata.astro";
 import ConversionProofPoints from "./ConversionProofPoints.astro";
 import { contactMetaItems, conversionProofPoints } from "../data/conversion";
 import { recaptchaSiteKey } from "../data/site";
+import { categories } from "../data/categories";
 
 const ACCESS_KEY = "5ab53834-d854-45c6-a84d-1e981ea8cf51";
-const RENTAL_ITEMS = ["Tables", "Chairs", "Tents & Canopies", "Linens", "Tableware", "Decorations", "Marquee Letters"];
+const RENTAL_ITEMS = categories.filter((c) => !c.hidden).map((c) => c.name);
 
 interface Props {
   heading?: string;
