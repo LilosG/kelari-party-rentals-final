@@ -5,7 +5,7 @@ import { contactMetaItems, conversionProofPoints } from "../data/conversion";
 import { recaptchaSiteKey } from "../data/site";
 import { categories } from "../data/categories";
 
-const ACCESS_KEY = "5ab53834-d854-45c6-a84d-1e981ea8cf51";
+const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "5ab53834-d854-45c6-a84d-1e981ea8cf51";
 const RENTAL_ITEMS = categories.filter((c) => !c.hidden).map((c) => c.name);
 
 interface Props {
@@ -307,3 +307,6 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
   });
 })();
 </script>
+
+<!-- reCAPTCHA — loaded only on pages that render QuoteForm -->
+<script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>
