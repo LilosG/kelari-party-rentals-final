@@ -2,7 +2,6 @@
 import ContactMetadata from "./ContactMetadata.astro";
 import ConversionProofPoints from "./ConversionProofPoints.astro";
 import { contactMetaItems, conversionProofPoints } from "../data/conversion";
-import { recaptchaSiteKey } from "../data/site";
 import { categories } from "../data/categories";
 
 const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "5ab53834-d854-45c6-a84d-1e981ea8cf51";
@@ -106,7 +105,6 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
       {city && <input type="hidden" name="city" value={city} />}
       {service && <input type="hidden" name="service" value={service} />}
 
-      <div class="g-recaptcha" data-sitekey={recaptchaSiteKey}></div>
       <p data-quote-error role="alert" class="text-sm text-red-400 min-h-[1.25rem]"></p>
 
       <button type="submit" class="w-full inline-flex items-center justify-center bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-6 py-3.5 rounded-lg text-sm transition-colors">
@@ -214,7 +212,6 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
               {city && <input type="hidden" name="city" value={city} />}
               {service && <input type="hidden" name="service" value={service} />}
 
-              <div class="g-recaptcha" data-sitekey={recaptchaSiteKey}></div>
               <p data-quote-error role="alert" class="text-sm text-red-400 min-h-[1.25rem]"></p>
 
               <button type="submit" class="btn btn--brand btn--md w-full justify-center py-4">
@@ -283,7 +280,6 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
       });
       var json = await res.json();
       if (json.success) {
-        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
         var showSuccess = function() {
           form.style.display = 'none';
           successEl.style.display = 'block';
@@ -308,5 +304,3 @@ const priorityContactItems = contactMetaItems.filter(({ label }) =>
 })();
 </script>
 
-<!-- reCAPTCHA — loaded only on pages that render QuoteForm -->
-<script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>
