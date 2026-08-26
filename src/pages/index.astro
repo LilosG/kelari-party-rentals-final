@@ -207,7 +207,7 @@ const schema = [
   </Section>
 
   <!-- 7 · How It Works — light ─────────────────── -->
-  <div class="h-px bg-neutral-100"></div>
+  <div class="h-[3px] bg-gradient-to-r from-transparent via-[--color-border] to-transparent" aria-hidden="true"></div>
   <div id="how-it-works" class="scroll-mt-28">
     <HowItWorks
       eyebrow="HOW IT WORKS"
@@ -246,7 +246,7 @@ const schema = [
           {serviceAreaLinks.map((area) => (
             <a
               href={area.href}
-              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 hover:bg-white hover:border-brand-pink/40 hover:shadow-sm transition-all duration-200"
+              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 border-l-[3px] border-l-brand-pink hover:bg-white hover:border-brand-pink/30 hover:shadow-sm transition-all duration-200"
             >
               <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{area.name}</span>
               <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
@@ -287,6 +287,8 @@ const schema = [
     {testimonials}
     bg="white"
   />
+
+  <div class="h-[3px] bg-gradient-to-r from-transparent via-[--color-border] to-transparent" aria-hidden="true"></div>
 
   <!-- 12 · FAQ — light ──────────────────────────── -->
   <FAQAccordion
