@@ -99,6 +99,7 @@ const schema = [
   description={service.meta.description}
   canonical={`${site.domain}/services/${service.slug}/`}
   schema={schema}
+  robots={service.hidden ? "noindex, nofollow" : "index, follow"}
 >
 
   <!-- 1 · Hero ─────────────────────────────────── -->

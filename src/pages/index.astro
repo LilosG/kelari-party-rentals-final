@@ -6,22 +6,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import LocalHero from "../components/LocalHero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import OccasionStrip from "../components/OccasionStrip.astro";
+import LocalIntroWithForm from "../components/LocalIntroWithForm.astro";
 import Section from "../components/Section.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import CategoryGrid from "../components/CategoryGrid.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import CtaBand from "../components/CtaBand.astro";
+import MapEmbed from "../components/MapEmbed.astro";
 import ImageGallery from "../components/ImageGallery.astro";
 import { heroImages } from "../data/heroImages";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import FAQAccordion from "../components/FAQAccordion.astro";
-import CityCards from "../components/CityCards.astro";
-import MapEmbed from "../components/MapEmbed.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
 
 import { site, nap } from "../data/site";
 import { categories } from "../data/categories";
-import { cities } from "../data/cities";
 import { services as allServices } from "../data/services";
 import {
   hero,
@@ -32,6 +31,7 @@ import {
   galleryImages,
   homepageFaqs,
   topServiceSlugs,
+  localIntro,
 } from "../data/homepage";
 
 const title = `Party Rentals in Carlsbad & North County San Diego | ${nap.name}`;
@@ -48,12 +48,6 @@ const categoryCards = categories
     comingSoon: c.comingSoon ?? false,
   }));
 
-const cityCards = cities.map((c) => ({
-  name: c.name,
-  description: c.subheadline,
-  href: `/${c.slug}/`,
-}));
-
 const featuredServices = topServiceSlugs
   .map((slug) => allServices.find((s) => s.slug === slug))
   .filter((s): s is (typeof allServices)[number] => Boolean(s))
@@ -62,6 +56,18 @@ const featuredServices = topServiceSlugs
     href: `/services/${s.slug}/`,
     image: s.heroImage?.image ?? heroParty,
   }));
+
+const serviceAreaLinks = [
+  { name: "Carlsbad", href: "/carlsbad/" },
+  { name: "Encinitas", href: "/encinitas/" },
+  { name: "Oceanside", href: "/oceanside/" },
+  { name: "San Marcos", href: "/san-marcos/" },
+  { name: "Bressi Ranch", href: "/bressi-ranch/" },
+  { name: "La Costa", href: "/la-costa/" },
+  { name: "Aviara", href: "/aviara/" },
+  { name: "Olde Carlsbad", href: "/olde-carlsbad/" },
+  { name: "Vista", href: "/vista/" },
+];
 
 const schema = [
   {
@@ -122,10 +128,27 @@ const schema = [
   <!-- 2 · Trust Bar ────────────────────────────── -->
   <TrustBar items={trustBarItems} />
 
-  <!-- 2b · Occasion Strip ─────────────────── -->
+  <!-- 3 · Occasion Strip ───────────────────────── -->
   <OccasionStrip heading="We Specialize In" />
 
-  <!-- 3 · Services — white ─────────────────────── -->
+  <!-- 4 · Local Intro + Mini Form ─────────────── -->
+  <LocalIntroWithForm
+    heading={localIntro.heading}
+    body={localIntro.body}
+  />
+
+  <!-- 5 · Equipment Inventory — light ─────────── -->
+  <CategoryGrid
+    eyebrow="OUR INVENTORY"
+    title="Everything You Need, All in One Place"
+    subtitle="From tables and chairs to linens, canopies, and décor — one team handles it all."
+    categories={categoryCards.slice(0, 6)}
+    columns={3}
+    bg="light"
+    padding="default"
+  />
+
+  <!-- 6 · Services by Occasion — white ───────── -->
   <Section bg="white" spacing="default" width="wide">
     <div class="mb-12 md:mb-16">
       <SectionHeader
@@ -181,21 +204,10 @@ const schema = [
         </div>
       </a>
     </div>
-    </Section>
+  </Section>
 
-  <!-- 4 · Inventory — light ────────────────────── -->
-  <CategoryGrid
-    eyebrow="OUR INVENTORY"
-    title="Everything You Need, All in One Place"
-    subtitle="From tables and chairs to linens, tableware, and décor accents — one team handles it all."
-    categories={categoryCards.slice(0, 6)}
-    columns={3}
-    bg="light"
-    padding="default"
-  />
-
-  <!-- 5 · How It Works — white ─────────────────── -->
-  <div class="h-px bg-neutral-100"></div>
+  <!-- 7 · How It Works — light ─────────────────── -->
+  <div class="h-[3px] bg-gradient-to-r from-transparent via-[--color-border] to-transparent" aria-hidden="true"></div>
   <div id="how-it-works" class="scroll-mt-28">
     <HowItWorks
       eyebrow="HOW IT WORKS"
@@ -207,29 +219,6 @@ const schema = [
     />
   </div>
 
-  <!-- 6 · City Cards — light ──────────────────── -->
-  <CityCards
-    eyebrow="SERVICE AREAS"
-    title="Serving North County San Diego"
-    subtitle="We deliver to every neighborhood across our four core cities — delivery available for an additional fee, or free pickup at our Carlsbad warehouse."
-    cities={cityCards}
-    bg="light"
-  />
-
-  <!-- 7 · Location Map — white ─────────────────── -->
-  <Section bg="white">
-    <div class="mb-10 md:mb-14">
-      <SectionHeader
-        eyebrow="FIND US"
-        title="Find Us in Carlsbad"
-        subtitle={nap.address.full}
-      />
-    </div>
-    <div class="max-w-2xl mx-auto">
-      <MapEmbed />
-    </div>
-  </Section>
-
   <!-- 8 · CTA Band — dark ──────────────────────── -->
   <CtaBand
     title={ctaBand.title}
@@ -238,39 +227,83 @@ const schema = [
     secondaryCta={{ label: "Get a Free Quote", href: "/quote/" }}
   />
 
-  <!-- 9 · Gallery — white ──────────────────────── -->
+  <!-- 9 · Service Areas + Map — white ─────────── -->
+  <Section bg="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Left: SEO-optimized heading + linked area list -->
+      <div>
+        <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-4 text-brand-pink">
+          SERVICE AREAS
+        </p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-4">
+          Party Equipment Rentals Delivered Across North County San Diego
+        </h2>
+        <p class="text-base text-neutral-600 leading-relaxed mb-8">
+          We deliver tables, chairs, linens, and canopies throughout North County — or pick up free at our Carlsbad warehouse on El Camino Real.
+        </p>
+        <div class="grid grid-cols-2 gap-3">
+          {serviceAreaLinks.map((area) => (
+            <a
+              href={area.href}
+              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 border-l-[3px] border-l-brand-pink hover:bg-white hover:border-brand-pink/30 hover:shadow-sm transition-all duration-200"
+            >
+              <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{area.name}</span>
+              <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+        <a
+          href="/service-area/"
+          class="inline-flex items-center gap-1.5 mt-8 text-sm font-semibold text-brand-pink hover:gap-2.5 transition-all duration-200"
+        >
+          See full service area <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Right: map -->
+      <div>
+        <MapEmbed />
+      </div>
+
+    </div>
+  </Section>
+
+  <!-- 10 · Gallery — light ────────────────────── -->
   <ImageGallery
     eyebrow="RECENT DELIVERIES"
     title="Real Events, Real Celebrations"
     subtitle="A look at some of the parties we've helped bring to life across North County San Diego."
     images={galleryImages}
     columns={4}
-    bg="white"
+    bg="light"
   />
 
-  <!-- 10 · Testimonials — light ─────────────────── -->
+  <!-- 11 · Testimonials — white ─────────────────── -->
   <TestimonialCarousel
     eyebrow="REVIEWS"
     title="Trusted by Families Across North County"
     subtitle="Hundreds of events served across Carlsbad, Encinitas, Oceanside, and San Marcos."
     {testimonials}
-    bg="light"
+    bg="white"
   />
 
-  <!-- 11 · FAQ — white ──────────────────────────── -->
+  <div class="h-[3px] bg-gradient-to-r from-transparent via-[--color-border] to-transparent" aria-hidden="true"></div>
+
+  <!-- 12 · FAQ — light ──────────────────────────── -->
   <FAQAccordion
     eyebrow="FAQ"
     title="Frequently Asked Questions"
     faqs={homepageFaqs}
-    bg="white"
+    bg="light"
   />
 
-  <!-- 12 · From Our Blog — light ──────────────── -->
+  <!-- 13 · From Our Blog — white ──────────────── -->
   <RelatedPosts
     tags={[]}
     limit={3}
     heading="From Our Blog"
-    bg="light"
+    bg="white"
   />
 
 </BaseLayout>

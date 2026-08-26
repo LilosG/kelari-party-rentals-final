@@ -65,27 +65,24 @@ const isHomepage = Astro.url.pathname === "/";
 
     <meta name="generator" content={Astro.generator} />
 
-    <!-- reCAPTCHA v2 -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     <!-- Ahrefs Web Analytics -->
-    <script
-      src="https://analytics.ahrefs.com/analytics.js"
-      data-key="6DULq3XKFEa8Zva0m4wgeQ"
-      async
-    ></script>
+    {import.meta.env.PUBLIC_AHREFS_KEY && (
+      <script
+        src="https://analytics.ahrefs.com/analytics.js"
+        data-key={import.meta.env.PUBLIC_AHREFS_KEY}
+        async
+      ></script>
+    )}
 
     <!-- Google Analytics (GA4) -->
     {import.meta.env.PUBLIC_GA_MEASUREMENT_ID && (
       <Fragment>
-        <meta name="ga-id" content={import.meta.env.PUBLIC_GA_MEASUREMENT_ID} />
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID}`}></script>
-        <script is:inline>
-          var _gaId = document.querySelector('meta[name="ga-id"]').content;
+        <script is:inline define:vars={{ gaId: import.meta.env.PUBLIC_GA_MEASUREMENT_ID }}>
           window.dataLayer = window.dataLayer || [];
           window.gtag = function() { window.dataLayer.push(arguments); };
           window.gtag('js', new Date());
-          window.gtag('config', _gaId, { send_page_view: true });
+          window.gtag('config', gaId, { send_page_view: true });
           document.addEventListener('click', function(e) {
             var el = e.target.closest('a[href^="tel:"]');
             if (!el) return;
@@ -108,7 +105,7 @@ const isHomepage = Astro.url.pathname === "/";
       <slot />
     </main>
 
-    <Footer variant={isHomepage ? "home" : "default"} />
+    <Footer variant="default" />
 
     <FloatingCTA />
   </body>

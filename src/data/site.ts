@@ -117,7 +117,7 @@ export const social: SocialLinks = {
 
 export const tokens: DesignTokens = {
   colors: {
-    primary: "#E8356D",
+    primary: "#D64D8A",
     primaryLight: "#FCE4EC",
     primaryDark: "#B5264F",
     dark: "#222222",

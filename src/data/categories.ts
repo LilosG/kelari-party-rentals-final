@@ -945,6 +945,7 @@ export const categories: Category[] = [
     cityIntro:
       "Marquee letters are one of the most photographed pieces at any event. Kelari Party Rentals delivers warm Edison-bulb marquee letters and numbers to celebrations across {city}, fully tested and ready to place.",
     name: "Marquee Letters",
+    comingSoon: true,
     meta: {
       title: "Marquee Letter Rentals | North County | Kelari Party Rentals",
       description:
