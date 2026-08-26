@@ -3,7 +3,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import LocalHero from "../../components/LocalHero.astro";
 import TrustBar from "../../components/TrustBar.astro";
 import OccasionStrip from "../../components/OccasionStrip.astro";
-import Section from "../../components/Section.astro";
 import WhatsIncluded from "../../components/WhatsIncluded.astro";
 import HowItWorks from "../../components/HowItWorks.astro";
 import CtaBand from "../../components/CtaBand.astro";
@@ -11,6 +10,7 @@ import CityCards from "../../components/CityCards.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
+import LocalIntroWithForm from "../../components/LocalIntroWithForm.astro";
 
 import { site, nap, booqableStore } from "../../data/site";
 import { services, type Service } from "../../data/services";
@@ -121,19 +121,12 @@ const schema = [
   <!-- 2b · Occasion Strip ─────────────────── -->
   <OccasionStrip heading="We Specialize In" />
 
-  <!-- 3 · Intro — white ────────────────────────── -->
-  <Section bg="white">
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-5 text-brand-pink">
-        ABOUT THIS SERVICE
-      </p>
-      <div class="border-t border-neutral-200 pt-6">
-        <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
-          {service.intro}
-        </p>
-      </div>
-    </div>
-  </Section>
+  <!-- 3 · Intro + Mini Form ───────────────────── -->
+  <LocalIntroWithForm
+    heading={service.headline}
+    body={service.intro}
+    service={service.slug}
+  />
 
   <!-- 4 · What's Included — light ──────────────── -->
   <WhatsIncluded
