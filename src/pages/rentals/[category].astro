@@ -20,6 +20,7 @@ import { services as allServices } from "../../data/services";
 import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials } from "../../data/homepage";
 import RentalCard from "../../components/RentalCard.astro";
+import LocalIntroWithForm from "../../components/LocalIntroWithForm.astro";
 
 export function getStaticPaths() {
   return categories.map((cat) => ({
@@ -156,19 +157,11 @@ const schema = [
   <!-- 3 · Occasion Strip ───────────────────────── -->
   <OccasionStrip heading="We Specialize In" />
 
-  <!-- 4 · Intro — white ────────────────────────── -->
-  <Section bg="white">
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-5 text-brand-pink">
-        ABOUT THIS RENTAL
-      </p>
-      <div class="border-t border-neutral-200 pt-6">
-        <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
-          {category.intro}
-        </p>
-      </div>
-    </div>
-  </Section>
+  <!-- 4 · Intro + Mini Form ───────────────────── -->
+  <LocalIntroWithForm
+    heading={category.headline}
+    body={category.intro}
+  />
 
   <!-- 5 · Items Grid — light ───────────────────── -->
   <Section bg="light">

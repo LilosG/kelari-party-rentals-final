@@ -25,6 +25,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import ImageGallery from "../components/ImageGallery.astro";
 import OccasionStrip from "../components/OccasionStrip.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
+import LocalIntroWithForm from "../components/LocalIntroWithForm.astro";
 
 interface Props {
   city: City;
@@ -143,19 +144,13 @@ const schema = [
   <!-- 2b · Occasion Strip ─────────────────────── -->
   <OccasionStrip heading="We Specialize In" />
 
-  <!-- 3 · Intro — white ────────────────────────── -->
-  <Section bg="white">
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-5 text-brand-pink">
-        ABOUT THIS SERVICE
-      </p>
-      <div class="border-t border-neutral-200 pt-6">
-        <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
-          {cityContent?.intro ?? intro}
-        </p>
-      </div>
-    </div>
-  </Section>
+  <!-- 3 · Intro + Mini Form ───────────────────── -->
+  <LocalIntroWithForm
+    heading={headline}
+    body={cityContent?.intro ?? intro}
+    city={city.slug}
+    service={service.slug}
+  />
 
   <!-- 3b · Local Venue Callout — white (conditional) ── -->
   {cityContent?.localVenue && (
