@@ -8,6 +8,9 @@ interface Props {
 
 const { heading, body, city, service } = Astro.props;
 
+import { categories } from "../data/categories";
+const RENTAL_ITEMS = categories.filter((c) => !c.hidden).map((c) => c.name);
+
 const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "5ab53834-d854-45c6-a84d-1e981ea8cf51";
 ---
 
@@ -58,15 +61,12 @@ const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "5ab53834-d854-45c6-a
               <input type="date" id="mf-date" name="event_date" class="form-input" />
             </div>
             <div>
-              <label for="mf-occasion" class="form-label text-neutral-200">Occasion</label>
-              <select id="mf-occasion" name="occasion" class="form-select">
-                <option value="">Select occasion</option>
-                <option value="Birthday Party">Birthday Party</option>
-                <option value="Baby Shower">Baby Shower</option>
-                <option value="Graduation">Graduation</option>
-                <option value="Backyard Party">Backyard Party</option>
-                <option value="Park Party">Park Party</option>
-                <option value="Other">Other</option>
+              <label for="mf-product" class="form-label text-neutral-200">Rental Product</label>
+              <select id="mf-product" name="product" class="form-select">
+                <option value="">What do you need?</option>
+                {RENTAL_ITEMS.map((item) => (
+                  <option value={item}>{item}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -116,7 +116,7 @@ const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "5ab53834-d854-45c6-a
       name: fd.get('name'),
       phone: fd.get('phone'),
       event_date: fd.get('event_date') || '',
-      occasion: fd.get('occasion') || '',
+      product: fd.get('product') || '',
       honeypot: fd.get('honeypot') || '',
       subject: 'Quick Quote – Kelari Party Rentals',
     };
