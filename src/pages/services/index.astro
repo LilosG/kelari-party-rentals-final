@@ -14,7 +14,8 @@ import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials, galleryImages } from "../../data/homepage";
 import TestimonialCarousel from "../../components/TestimonialCarousel.astro";
 import ImageGallery from "../../components/ImageGallery.astro";
-import CityCards from "../../components/CityCards.astro";
+import MapEmbed from "../../components/MapEmbed.astro";
+import LocalIntroWithForm from "../../components/LocalIntroWithForm.astro";
 
 const title = "Party Rental Services | Kelari Party Rentals";
 const cityCards = cities.map((c) => ({
@@ -67,14 +68,11 @@ const schema = [
   <!-- 2 · Trust Bar ────────────────────────────── -->
   <TrustBar />
 
-  <!-- 3 · Intro — white ────────────────────────── -->
-  <Section bg="white">
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
-        Whatever you're celebrating, Kelari Party Rentals provides the tables, chairs, tents, linens, and décor to make it special. Professional delivery is available across Carlsbad, Encinitas, Oceanside, and San Marcos.
-      </p>
-    </div>
-  </Section>
+  <!-- 3 · Intro + Mini Form ───────────────────── -->
+  <LocalIntroWithForm
+    heading="Party Rental Services Across North County San Diego"
+    body="Whatever you're celebrating, Kelari Party Rentals provides the tables, chairs, tents, linens, and décor to make it special. Professional delivery available across Carlsbad, Encinitas, Oceanside, San Marcos, and surrounding communities."
+  />
 
   <!-- 4 · All Services — light ─────────────────── -->
   <ServiceGrid
@@ -113,14 +111,39 @@ const schema = [
     bg="light"
   />
 
-  <!-- 6 · City Cards — light ──────────────────── -->
-  <CityCards
-    eyebrow="SERVICE AREAS"
-    title="Find Party Rentals in Your City"
-    subtitle="We deliver to every neighborhood across North County San Diego."
-    cities={cityCards}
-    bg="light"
-  />
+  <!-- 6 · Service Areas + Map — white ────────────── -->
+  <Section bg="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-4 text-brand-pink">
+          WHERE WE DELIVER
+        </p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-4">
+          Party Rentals Across North County San Diego
+        </h2>
+        <p class="text-base text-neutral-600 leading-relaxed mb-8">
+          We deliver to every neighborhood across North County — or pick up free at our Carlsbad warehouse on El Camino Real.
+        </p>
+        <div class="grid grid-cols-2 gap-3">
+          {cityCards.map((city) => (
+            <a
+              href={city.href}
+              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 border-l-[3px] border-l-brand-pink hover:bg-white hover:border-brand-pink/30 hover:shadow-sm transition-all duration-200"
+            >
+              <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{city.name}</span>
+              <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+        <a href="/service-area/" class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-brand-pink hover:underline">
+          See full service area →
+        </a>
+      </div>
+      <div>
+        <MapEmbed />
+      </div>
+    </div>
+  </Section>
 
   <!-- 7 · CTA Band — dark ──────────────────────── -->
   <CtaBand
