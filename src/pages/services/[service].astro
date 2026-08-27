@@ -6,7 +6,8 @@ import OccasionStrip from "../../components/OccasionStrip.astro";
 import WhatsIncluded from "../../components/WhatsIncluded.astro";
 import HowItWorks from "../../components/HowItWorks.astro";
 import CtaBand from "../../components/CtaBand.astro";
-import CityCards from "../../components/CityCards.astro";
+import Section from "../../components/Section.astro";
+import MapEmbed from "../../components/MapEmbed.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import QuoteForm from "../../components/QuoteForm.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
@@ -164,14 +165,39 @@ const schema = [
     bg="light"
   />
 
-  <!-- 9 · City Cards — white ───────────────────── -->
-  <CityCards
-    eyebrow="SERVICE AREAS"
-    title={`${service.name} by City`}
-    subtitle={`${service.shortName} available across North County San Diego. Choose your city for local details.`}
-    cities={cityCards}
-    bg="white"
-  />
+  <!-- 9 · Service Areas + Map — white ────────────── -->
+  <Section bg="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <p class="font-body uppercase tracking-[0.18em] text-[0.68rem] font-bold mb-4 text-brand-pink">
+          WHERE WE DELIVER
+        </p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-4">
+          {service.name} Across North County San Diego
+        </h2>
+        <p class="text-base text-neutral-600 leading-relaxed mb-8">
+          Professional {service.shortName.toLowerCase()} available throughout North County — or pick up free at our Carlsbad warehouse on El Camino Real.
+        </p>
+        <div class="grid grid-cols-2 gap-3">
+          {cityCards.map((city) => (
+            <a
+              href={city.href}
+              class="group flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 border-l-[3px] border-l-brand-pink hover:bg-white hover:border-brand-pink/30 hover:shadow-sm transition-all duration-200"
+            >
+              <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-pink transition-colors">{city.name}</span>
+              <span class="text-brand-pink/60 group-hover:text-brand-pink text-sm transition-colors" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+        <a href="/service-area/" class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-brand-pink hover:underline">
+          See full service area →
+        </a>
+      </div>
+      <div>
+        <MapEmbed />
+      </div>
+    </div>
+  </Section>
 
   <!-- 8 · FAQ — light ──────────────────────────── -->
   <FAQAccordion
