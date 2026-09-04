@@ -122,7 +122,7 @@ export const services: Service[] = [
       {
         question: "Is delivery and pickup included?",
         answer:
-          "We deliver across North County San Diego — Carlsbad, Encinitas, Oceanside, San Marcos, Vista, and surrounding communities. Delivery is priced by distance. Complimentary pickup is available at our Carlsbad warehouse.",
+          "Delivery is available across North County San Diego — Carlsbad, Encinitas, Oceanside, San Marcos, Vista, and surrounding communities. Delivery is a flat rate based on distance from our Carlsbad warehouse: $50 for up to 5 miles, $75 up to 10 miles, and $90 up to 15 miles. A $100 minimum order is required to qualify for delivery. Complimentary warehouse pickup is always available at our Carlsbad location.",
       },
       {
         question: "How far in advance should I book party rentals?",
@@ -755,7 +755,7 @@ export const services: Service[] = [
       {
         question: "How is delivery priced?",
         answer:
-          "Delivery is priced by distance from our Carlsbad location and quoted upfront — no surprise fees. Prefer to skip delivery? Complimentary pickup and dropoff is always available at our Carlsbad warehouse.",
+          "Delivery is a flat rate based on distance from our Carlsbad warehouse: $50 for up to 5 miles, $75 up to 10 miles, and $90 up to 15 miles. A minimum order of $100 (excluding security deposit) is required to qualify for delivery. Need delivery beyond 15 miles? Reach out and we'll see what we can do. Prefer to handle transport yourself? Complimentary pickup and dropoff is always available at our Carlsbad warehouse — no fee, no minimum.",
       },
       {
         question: "When do you deliver and pick up?",
@@ -849,7 +849,7 @@ export const services: Service[] = [
       {
         question: "Do you deliver quinceañera rentals to backyards and venues in North County San Diego?",
         answer:
-          "Yes — we deliver to private homes, backyards, parks, community centers, and event venues throughout our North County San Diego service area — Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is also always available.",
+          "Yes — we deliver to private homes, backyards, parks, community centers, and event venues throughout our North County San Diego service area — Carlsbad, Encinitas, Oceanside, San Marcos, and Vista. Delivery is a flat rate: $50 for up to 5 miles, $75 up to 10 miles, and $90 up to 15 miles from our Carlsbad warehouse. Complimentary warehouse pickup is also always available.",
       },
       {
         question: "How far in advance should I book quinceañera rentals?",

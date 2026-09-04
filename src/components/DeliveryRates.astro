@@ -1,0 +1,74 @@
+---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
+import { deliveryRates, nap } from "../data/site";
+
+export interface Props {
+  eyebrow?: string;
+  heading?: string;
+  subtitle?: string;
+  bg?: "white" | "light" | "pink-light";
+}
+
+const {
+  eyebrow = "TRANSPARENT PRICING",
+  heading = "Simple, Upfront Delivery Rates",
+  subtitle = "Flat-rate delivery from our Carlsbad warehouse — no surprise fees, no hidden charges.",
+  bg = "light",
+} = Astro.props;
+---
+
+<Section bg={bg}>
+  <div class="mb-10 md:mb-14">
+    <SectionHeader eyebrow={eyebrow} title={heading} subtitle={subtitle} />
+  </div>
+
+  <!-- Pricing tiers -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 max-w-3xl mx-auto">
+    {deliveryRates.tiers.map((tier, i) => {
+      const isMiddle = i === 1;
+      return (
+        <div class:list={[
+          "relative rounded-2xl border p-6 md:p-8 text-center transition-shadow",
+          isMiddle
+            ? "bg-white border-brand-pink shadow-[0_8px_40px_rgba(200,80,122,0.18)] ring-1 ring-brand-pink/20"
+            : "bg-white border-neutral-200 shadow-[0_2px_20px_rgba(0,0,0,0.07)]",
+        ]}>
+          {isMiddle && (
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-pink text-white text-[0.65rem] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Most Common
+            </span>
+          )}
+          <p class="text-sm font-semibold text-neutral-500 mb-3">
+            Up to {tier.upToMiles} miles
+          </p>
+          <p class:list={[
+            "font-display font-bold leading-none mb-3",
+            isMiddle ? "text-brand-pink text-5xl md:text-6xl" : "text-neutral-800 text-4xl md:text-5xl",
+          ]}>
+            ${tier.price}
+          </p>
+          <p class="text-xs text-neutral-400 font-medium uppercase tracking-wider">flat rate</p>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Minimum order notice -->
+  <div class="mt-8 max-w-3xl mx-auto">
+    <div class="flex items-start gap-3 bg-white border border-neutral-200 rounded-xl px-5 py-4">
+      <svg class="w-5 h-5 text-brand-pink flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+      </svg>
+      <p class="text-sm text-neutral-600 leading-relaxed">
+        <span class="font-semibold text-neutral-800">Minimum order of ${deliveryRates.minimumOrder} required</span> (excluding security deposit) to qualify for delivery. Complimentary warehouse pickup is always available at our Carlsbad location on El Camino Real — no minimum required.
+      </p>
+    </div>
+  </div>
+
+  <!-- Beyond range note -->
+  <p class="mt-5 text-center text-sm text-neutral-500 max-w-2xl mx-auto">
+    {deliveryRates.beyondRangeNote}{" "}
+    <a href="/contact/" class="text-brand-pink font-semibold hover:underline">Get in touch →</a>
+  </p>
+</Section>

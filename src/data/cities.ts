@@ -106,12 +106,12 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Carlsbad?",
         answer:
-          "Yes — we deliver throughout Carlsbad including the Village, Bressi Ranch, La Costa, Aviara, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is always available at our Carlsbad location.",
+          "Yes — we deliver throughout Carlsbad including the Village, Bressi Ranch, La Costa, Aviara, and all surrounding neighborhoods. Delivery is a flat rate: $50 for up to 5 miles, $75 up to 10 miles, and $90 up to 15 miles from our Carlsbad warehouse. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can I rent tables and chairs for a party at a Carlsbad park?",
         answer:
-          "Absolutely. We regularly deliver to Poinsettia Park, Alga Norte, Holiday Park, Stagecoach Park, and other Carlsbad parks. Delivery is available for an additional fee — or save the fee with free pickup at our Carlsbad warehouse.",
+          "Absolutely. We regularly deliver to Poinsettia Park, Alga Norte, Holiday Park, Stagecoach Park, and other Carlsbad parks. Delivery is a flat rate based on distance — $50 for up to 5 miles, $75 up to 10 miles, $90 up to 15 miles — or pick up free at our Carlsbad warehouse.",
       },
       {
         question: "How far in advance should I book party rentals in Carlsbad?",
@@ -289,7 +289,7 @@ export const cities: City[] = [
           {
             question: "How is delivery pricing determined for Carlsbad events?",
             answer:
-              "Delivery is priced by distance from our Carlsbad warehouse. For in-city addresses, rates are among our lowest. We quote the exact fee upfront so you can compare it against the free pickup option.",
+              "Delivery is a flat rate based on distance from our Carlsbad warehouse: $50 for up to 5 miles, $75 up to 10 miles, and $90 up to 15 miles. For most in-city Carlsbad addresses, the $50 rate applies. We always quote the exact fee upfront so you can compare it against the free pickup option.",
           },
         ],
       },
@@ -369,7 +369,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Encinitas?",
         answer:
-          "Yes — we deliver throughout Encinitas including Leucadia, Cardiff-by-the-Sea, Olivenhain, Old Encinitas, and New Encinitas. Delivery is priced by distance and quoted upfront.",
+          "Yes — we deliver throughout Encinitas including Leucadia, Cardiff-by-the-Sea, Olivenhain, Old Encinitas, and New Encinitas. Delivery is a flat rate based on distance from our Carlsbad warehouse — typically $50–$75 for most Encinitas addresses. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can rentals be delivered to Moonlight Beach or Encinitas parks?",
@@ -547,7 +547,7 @@ export const cities: City[] = [
           {
             question: "How much does delivery cost from Carlsbad to Encinitas?",
             answer:
-              "Delivery is priced by distance from our Carlsbad warehouse to your specific Encinitas address and quoted upfront. Prefer no delivery fee? Complimentary pickup at El Camino Real is always available.",
+              "Delivery is a flat rate based on distance from our Carlsbad warehouse: $50 for up to 5 miles, $75 up to 10 miles, and $90 up to 15 miles. Most Encinitas addresses fall in the $50–$75 range. Prefer no delivery fee? Complimentary pickup at El Camino Real is always available.",
           },
           {
             question: "How far in advance do you confirm delivery windows for Encinitas events?",
@@ -634,7 +634,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Oceanside?",
         answer:
-          "Yes — we deliver throughout Oceanside including Downtown, South O, Fire Mountain, Rancho Del Oro, Mission Mesa, and all surrounding areas. Delivery is priced by distance and quoted upfront.",
+          "Yes — we deliver throughout Oceanside including Downtown, South O, Fire Mountain, Rancho Del Oro, Mission Mesa, and all surrounding areas. Delivery is a flat rate: $75 for up to 10 miles, or $90 up to 15 miles from our Carlsbad warehouse. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can I rent party supplies for an event at an Oceanside park?",
@@ -812,7 +812,7 @@ export const cities: City[] = [
           {
             question: "How much does delivery from Carlsbad to Oceanside cost?",
             answer:
-              "Delivery to Oceanside is priced by distance from our Carlsbad warehouse to your specific address. We quote the exact fee upfront so you can compare it against our always-free warehouse pickup option.",
+              "Delivery to Oceanside is a flat rate based on distance from our Carlsbad warehouse: $75 for up to 10 miles, or $90 up to 15 miles — with a $100 minimum order to qualify. We quote the exact fee upfront so you can compare it against our always-free warehouse pickup option.",
           },
           {
             question: "Can I pick up rental items from your Carlsbad warehouse if I'm in Oceanside?",
@@ -898,7 +898,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to San Marcos?",
         answer:
-          "Yes — we deliver throughout San Marcos including Lake San Marcos, Twin Oaks Valley, San Elijo Hills, Discovery Hills, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
+          "Yes — we deliver throughout San Marcos including Lake San Marcos, Twin Oaks Valley, San Elijo Hills, Discovery Hills, and all surrounding neighborhoods. Delivery is a flat rate: $75 for up to 10 miles, or $90 up to 15 miles from our Carlsbad warehouse. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can you deliver to San Marcos parks?",
@@ -1158,7 +1158,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Bressi Ranch?",
         answer:
-          "Yes — we deliver throughout Bressi Ranch. Our Carlsbad headquarters is just minutes away. Delivery is priced by distance and quoted upfront. Complimentary warehouse pickup is always available.",
+          "Yes — we deliver throughout Bressi Ranch. Our Carlsbad headquarters is just minutes away. Delivery starts at $50 for up to 5 miles — Bressi Ranch is one of our nearest neighborhoods. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can rentals be delivered to Bressi Ranch Community Park?",
@@ -1341,7 +1341,7 @@ export const cities: City[] = [
           {
             question: "How does delivery pricing work for Bressi Ranch customers?",
             answer:
-              "Delivery is priced by distance from our Carlsbad warehouse. Bressi Ranch is one of our closest neighborhoods, so rates are among the lowest in our service area. We quote the exact fee upfront — and warehouse pickup is always free.",
+              "Delivery is a flat rate based on distance from our Carlsbad warehouse: $50 for up to 5 miles, $75 up to 10 miles, and $90 up to 15 miles. Bressi Ranch is one of our closest neighborhoods, so the $50 rate typically applies. Warehouse pickup is always free.",
           },
         ],
       },
@@ -1420,7 +1420,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to La Costa?",
         answer:
-          "Yes — we deliver throughout La Costa including La Costa Valley, La Costa Oaks, La Costa Greens, La Costa Ridge, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
+          "Yes — we deliver throughout La Costa including La Costa Valley, La Costa Oaks, La Costa Greens, La Costa Ridge, and all surrounding neighborhoods. Delivery is a flat rate starting at $50 for up to 5 miles from our Carlsbad warehouse. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can you deliver to La Costa parks and community spaces?",
@@ -1682,7 +1682,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Olde Carlsbad?",
         answer:
-          "Yes — we deliver throughout Olde Carlsbad and the surrounding Village area. Our headquarters is just minutes away. Delivery is priced by distance and quoted upfront.",
+          "Yes — we deliver throughout Olde Carlsbad and the surrounding Village area. Our headquarters is just minutes away. Delivery starts at $50 for up to 5 miles — Olde Carlsbad is one of our nearest delivery areas. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can rentals be delivered to Holiday Park or Hosp Grove?",
@@ -1944,7 +1944,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Aviara?",
         answer:
-          "Yes — we deliver throughout Aviara including Aviara Oaks, Aviara Point, Four Seasons Aviara, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
+          "Yes — we deliver throughout Aviara including Aviara Oaks, Aviara Point, Four Seasons Aviara, and all surrounding neighborhoods. Delivery starts at $50 for up to 5 miles from our Carlsbad warehouse. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can you handle upscale party deliveries in Aviara?",
@@ -2208,7 +2208,7 @@ export const cities: City[] = [
       {
         question: "Do you deliver party rentals to Vista?",
         answer:
-          "Yes — we deliver throughout Vista including Shadowridge, Buena Creek, North Vista, South Vista, Rancho Minerva, and all surrounding neighborhoods. Delivery is priced by distance and quoted upfront.",
+          "Yes — we deliver throughout Vista including Shadowridge, Buena Creek, North Vista, South Vista, Rancho Minerva, and all surrounding neighborhoods. Delivery is a flat rate based on distance from our Carlsbad warehouse — typically $75–$90 for most Vista addresses. Complimentary warehouse pickup is always available.",
       },
       {
         question: "Can I rent tables and chairs for a party at a Vista park?",
@@ -2386,7 +2386,7 @@ export const cities: City[] = [
           {
             question: "How is delivery priced from Carlsbad to Vista?",
             answer:
-              "Delivery is priced by distance from our Carlsbad warehouse to your specific Vista address, and the fee is quoted upfront before you book. Want to skip the delivery fee? Warehouse pickup at El Camino Real is always complimentary.",
+              "Delivery to Vista is a flat rate based on distance from our Carlsbad warehouse: $75 for up to 10 miles or $90 up to 15 miles, with a $100 minimum order. The fee is confirmed upfront before you book. Want to skip the delivery fee? Warehouse pickup at El Camino Real is always complimentary.",
           },
           {
             question: "Can Vista customers pick up rental items from your Carlsbad warehouse?",

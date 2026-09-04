@@ -10,6 +10,7 @@ import QuoteForm from "../components/QuoteForm.astro";
 import MapEmbed from "../components/MapEmbed.astro";
 
 import { site, nap, booqableStore } from "../data/site";
+import DeliveryRates from "../components/DeliveryRates.astro";
 import { cities } from "../data/cities";
 
 const title = "Party Rental Delivery Area | North County San Diego | Kelari Party Rentals";
@@ -168,6 +169,9 @@ const deliverySteps = [
       ))}
     </div>
   </Section>
+
+  <!-- 6b · Delivery Rates — white ────────────── -->
+  <DeliveryRates bg="white" />
 
   <!-- 7 · Service Areas + Map — white ─────────── -->
   <Section bg="white">

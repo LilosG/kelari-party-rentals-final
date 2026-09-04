@@ -14,6 +14,7 @@ import RelatedPosts from "../../components/RelatedPosts.astro";
 import LocalIntroWithForm from "../../components/LocalIntroWithForm.astro";
 
 import { site, nap, booqableStore } from "../../data/site";
+import DeliveryRates from "../../components/DeliveryRates.astro";
 import { services, type Service } from "../../data/services";
 import { cities } from "../../data/cities";
 import { howItWorksSteps, testimonials, galleryImages } from "../../data/homepage";
@@ -137,6 +138,11 @@ const schema = [
     columns={3}
     bg="light"
   />
+
+  <!-- 4b · Delivery Rates (delivery service only) -->
+  {service.slug === "delivery-setup-pickup" && (
+    <DeliveryRates bg="white" />
+  )}
 
   <!-- 5 · How It Works — white ─────────────────── -->
   <HowItWorks
