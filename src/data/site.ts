@@ -147,6 +147,18 @@ export const booqableStore = "https://rentals.kelaripartyrentals.com";
 
 export const gbpUrl = "https://maps.app.goo.gl/TpywTMtDzaqxq9FA7";
 
+export const deliveryRates = {
+  label: "Local Delivery",
+  description: "Flat-rate delivery from our Carlsbad warehouse. Priced by distance, quoted upfront — no surprise fees.",
+  tiers: [
+    { upToMiles: 5,  price: 50 },
+    { upToMiles: 10, price: 75 },
+    { upToMiles: 15, price: 90 },
+  ],
+  minimumOrder: 100,
+  beyondRangeNote: "Need delivery beyond 15 miles? We may still be able to help — contact us for a custom quote.",
+};
+
 export const site: SiteConfig = {
   nap,
   domain: "https://kelaripartyrentals.com",
